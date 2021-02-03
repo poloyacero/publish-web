@@ -1,0 +1,33 @@
+.carouselCaption {
+  left: 15%;
+  top: 20%;;
+  text-align: left;
+}
+
+.carouselCaption h3 {
+  font-size: 50px;
+  color: #7b6b5b;
+  margin-bottom: 15px;
+}
+
+.carouselCaption p {
+  color: #7b6b5b;
+  font-size: 20px;
+}
+
+.carouselImage {
+  position: absolute;
+  right: 15%;
+  top: 15%;
+  width: 40%;
+}
+
+.carouselLink {
+  position: absolute;
+  top: 65%;
+  left: 15%;
+  background-color: #7b6b5b;
+  color: #ffffff;
+  border-radius: 8px;
+  z-index: 10;
+}

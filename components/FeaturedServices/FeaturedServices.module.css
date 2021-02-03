@@ -1,0 +1,34 @@
+.featuredServices {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.featuredServices img {
+  display: block;
+  margin: auto;
+  width: 40%;
+}
+
+.featuredServices img:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.featuredServices h2{
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.featuredServices p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.featuredServices span {
+  text-align: center;
+  display: block;
+}

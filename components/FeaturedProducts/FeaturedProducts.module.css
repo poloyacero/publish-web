@@ -1,0 +1,20 @@
+.featuredProducts {
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+.featuredProducts h2{
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.featuredProducts p {
+  text-align: center;
+}
+
+.featuredProductImage {
+  width: 100%;
+}

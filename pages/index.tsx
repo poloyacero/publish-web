@@ -1,15 +1,27 @@
 import Head from 'next/head'
+import NavMenu from '../components/Nav'
 import styles from '../styles/Home.module.css'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from '../components/Footer';
+import CarouselSlider from '../components/Carousel';
+import FeaturedProducts from '../components/FeaturedProducts';
+import FeaturedServices from '../components/FeaturedServices';
+import FeaturedPackages from '../components/FeaturedPackages';
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
+      <NavMenu />
+      <CarouselSlider />
+      <FeaturedProducts />
+      <FeaturedServices />
+      <FeaturedPackages />
+      {/*<main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -48,9 +60,9 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
+      </main>*/}
+      <Footer />
+      {/*<footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
@@ -59,7 +71,7 @@ export default function Home() {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
-      </footer>
+  </footer>*/}
     </div>
   )
 }
