@@ -12,17 +12,17 @@ const Footer = ({ ...props }: FooterProps) => {
       <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
         <Row>
           <Col md={{ span: 6, offset: 3 }} className={styles.center}>
-            <Link href="/">
+            <Link href="/" passHref>
               <Nav.Link className={styles.footerMenus} href="/">
                 About
               </Nav.Link>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <Nav.Link className={styles.footerMenus} href="/">
                 Get Started
               </Nav.Link>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <Nav.Link className={styles.footerMenus} href="/">
                 Contact
               </Nav.Link>

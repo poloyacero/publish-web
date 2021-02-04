@@ -13,23 +13,26 @@ const NavMenu = ({ ...props }: NavProps) => {
         <Row>
           <Navbar className={styles.navbar} expand="lg">
           <Col md={4}>
-            <Navbar.Brand className={styles.brand} href="/">
+            <Link href="/" passHref>
+              <Navbar.Brand className={styles.brand}>
                 <h1>BRAND</h1>
                 <span>Publishing</span>
-            </Navbar.Brand>
+              </Navbar.Brand>
+            </Link>
           </Col>
           <Col md={4}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                  <Link href="/"><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
-                  <Link href="/"><Nav.Link className={styles.navmenu}>Who We Are</Nav.Link></Link>
-                  <Link href="/"><Nav.Link className={styles.navmenu}>Bookstore</Nav.Link></Link>
+                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
+                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Who We Are</Nav.Link></Link>
+                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Bookstore</Nav.Link></Link>
+                  <Link href="/pricing" passHref><Nav.Link className={styles.navmenu}>Pricing</Nav.Link></Link>
                 </Nav>
               </Navbar.Collapse>
           </Col>
           <Col md={4} className={styles.utilityMenu}>
-            <Link href="/">
+            <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus} href="/">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
@@ -37,14 +40,14 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </svg>
               </Nav.Link>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus} href="/">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-cart" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
                 </svg>
               </Nav.Link>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus} href="/">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
