@@ -7,7 +7,6 @@ interface PageLayoutProps {
 }
 
 const PageLayout = ({ children, ...props }: PageLayoutProps) => {
-  console.log(children.length)
   return (
     <div>
     {children}
