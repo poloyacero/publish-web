@@ -22,7 +22,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
               <p>Create and publish your<br/> own book in your way.</p>
             </Carousel.Caption>
             <Link href="/"><Nav.Link className={styles.carouselLink}>Get Started</Nav.Link></Link>
-            <Image className={styles.carouselImage} src="/img/books.png" />
+            <Image className={styles.carouselImage} src="/img/Slider.png" />
           </Carousel.Item>
           <Carousel.Item interval={1000}>
             <img
