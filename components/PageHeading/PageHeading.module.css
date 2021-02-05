@@ -1,0 +1,14 @@
+.pageHeading {
+  color: #7b6b5b;
+  margin: 35px 0px;
+}
+
+.pageHeading span {
+  font-size: 50px;
+}
+
+.pageHeading h2 {
+  width: 100%;
+  font-size: 45px;
+  text-align: center;
+}

@@ -21,8 +21,21 @@
 
 .navmenu {
   text-transform: uppercase;
-  color: #ffffff !important;
   font-size: 14px;
+  color: #ffffff !important;
+}
+
+.navmenu a {
+  color: #ffffff !important;
+}
+
+.navmenu div {
+  background: #000000 !important;
+  font-size: 13px;
+}
+
+.dropdownItem:hover {
+  background: none;
 }
 
 .utilityMenus {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Row, Col, Image } from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col, Image, NavDropdown } from 'react-bootstrap';
 import Link from 'next/link';
 
 import styles from './NavMenu.module.css';
@@ -20,18 +20,27 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={4}>
+          <Col md={5}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
+                  <NavDropdown title="Publish" id="collasible-nav-dropdown" className={styles.navmenu}>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/products">Products</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/create">Create</NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown title="How" id="collasible-nav-dropdown" className={styles.navmenu}>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish">To Self Publish</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish-cost">Much Does It Cost</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/design-a-book">To Design a Book</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/distribution">Distribution</NavDropdown.Item>
+                  </NavDropdown>
+                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
                   <Link href="/" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
-                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Who We Are</Nav.Link></Link>
-                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Bookstore</Nav.Link></Link>
-                  <Link href="/pricing" passHref><Nav.Link className={styles.navmenu}>Pricing</Nav.Link></Link>
+                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>About Us</Nav.Link></Link>
                 </Nav>
               </Navbar.Collapse>
           </Col>
-          <Col md={4} className={styles.utilityMenu}>
+          <Col md={3} className={styles.utilityMenu}>
             <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus} href="/">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

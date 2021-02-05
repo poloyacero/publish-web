@@ -423,7 +423,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
       </Row>
       <Row>
         <Col md={{ span: 3, offset: 3 }}>
-          <Button type="submit">Calculate</Button>
+          <Button type="submit">Submit</Button>
         </Col>
       </Row>
       </div>
