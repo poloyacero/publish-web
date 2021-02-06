@@ -13,19 +13,19 @@ const FeaturedProducts = ({ ...props }: FeaturedProductsProps) => {
         <Row className={styles.featuredProducts}>
           <h2>Products</h2>
           <Col md={3}>
-            <Link href="/" passHref><Nav.Link><Image className={styles.featuredProductImage} src="/img/print-book.png" /></Nav.Link></Link>
+            <Link href="/products" passHref><Nav.Link><Image className={styles.featuredProductImage} src="/img/print-book.png" /></Nav.Link></Link>
             <p>Print Book</p>
           </Col>
           <Col md={3}>
-            <Link href="/" passHref><Nav.Link><Image style={{ marginBottom: '6px' }} className={styles.featuredProductImage} src="/img/photo-book.png" /></Nav.Link></Link>
+            <Link href="/products" passHref><Nav.Link><Image style={{ marginBottom: '6px' }} className={styles.featuredProductImage} src="/img/photo-book.png" /></Nav.Link></Link>
             <p>Photo Book</p>
           </Col>
           <Col md={3}>
-            <Link href="/" passHref><Nav.Link><Image className={styles.featuredProductImage} src="/img/magazine.png" /></Nav.Link></Link>
+            <Link href="/products" passHref><Nav.Link><Image className={styles.featuredProductImage} src="/img/magazine.png" /></Nav.Link></Link>
             <p>Magazine</p>
           </Col>
           <Col md={3}>
-            <Link href="/" passHref><Nav.Link><Image className={styles.featuredProductImage} src="/img/comic-book.png" /></Nav.Link></Link>
+            <Link href="/products" passHref><Nav.Link><Image className={styles.featuredProductImage} src="/img/comic-book.png" /></Nav.Link></Link>
             <p>Comic Book</p>
           </Col>
         </Row>
