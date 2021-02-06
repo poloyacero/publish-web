@@ -9,10 +9,12 @@
   width: 100%;
   font-size: 50px;
   margin-bottom: 30px;
+  color: #7b6b5b;
 }
 
 .featuredProducts p {
   text-align: center;
+  color: #7b6b5b;
 }
 
 .featuredProductImage {

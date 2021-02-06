@@ -39,7 +39,7 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
             <Col className={styles.featuredPrice + ' ' + styles.featuredPriceRight} md={3}>
               <div>
                 <h3>Deluxe</h3><br/>
-                <span>$799</span>
+                <span>$1499</span>
               </div>
             </Col>
           </Row>
@@ -52,7 +52,7 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
             <Col className={styles.featuredPrice} md={3}>
               <div>
                 <h3>Pro</h3><br/>
-                <span>$799</span>
+                <span>$3500</span>
               </div>
             </Col>
             <Col className={styles.description} md={4}>
@@ -75,7 +75,7 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
             <Col className={styles.featuredPrice + ' ' + styles.featuredPriceRight} md={3}>
               <div>
                 <h3>Elite</h3><br/>
-                <span>$799</span>
+                <span>$15000</span>
               </div>
             </Col>
           </Row>

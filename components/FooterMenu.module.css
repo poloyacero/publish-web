@@ -3,8 +3,17 @@
   color: #ffffff;
 }
 
+.footerMenus:hover {
+  color: #7b6b5b !important;
+}
+
 .center {
   text-align: center;
+}
+
+.sendButton:hover {
+  background: #e7d2bc;
+  border-color: #7b6b5b;
 }
 
 .sendButton {
