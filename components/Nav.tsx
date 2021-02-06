@@ -26,12 +26,12 @@ const NavMenu = ({ ...props }: NavProps) => {
                 <Nav className="mr-auto">
                   <NavDropdown title="Publish" id="collasible-nav-dropdown" className={styles.navmenu}>
                     <NavDropdown.Item className={styles.dropdownItem} href="/products">Products</NavDropdown.Item>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/create">Create</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/pricing">Create</NavDropdown.Item>
                   </NavDropdown>
                   <NavDropdown title="How" id="collasible-nav-dropdown" className={styles.navmenu}>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish">To Self Publish</NavDropdown.Item>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish-cost">Much Does It Cost</NavDropdown.Item>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/design-a-book">To Design a Book</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish">How To Self Publish</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish-cost">How Much Does It Cost</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/design-a-book">How To Design a Book</NavDropdown.Item>
                     <NavDropdown.Item className={styles.dropdownItem} href="/distribution">Distribution</NavDropdown.Item>
                   </NavDropdown>
                   <Link href="/" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
