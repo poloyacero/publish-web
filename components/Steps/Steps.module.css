@@ -14,7 +14,7 @@
 }
 
 .steps p {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .steps span {
@@ -24,6 +24,7 @@
 }
 
 .subtitle {
-  font-size: 16px !important;
+  font-size: 14px !important;
   margin-right: 0px !important;
+  font-weight: bold !important;
 }

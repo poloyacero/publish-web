@@ -5,6 +5,7 @@ import PageLayout from '../components/Banner/PageLayout';
 import Footer from '../components/Footer';
 import NavMenu from '../components/Nav';
 import Package from '../components/Package';
+
 import styles from '../styles/Home.module.css'
 
 export default function PackagesPage() {

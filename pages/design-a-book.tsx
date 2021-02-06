@@ -18,7 +18,7 @@ export default function DesignABook() {
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <NavMenu />
-    <Banner title="How To Design a Book" img="/img/package3.png">
+    <Banner title="How To Design a Book" img="/img/Slider.png" bg="#faf6f2">
       <p>
         Books are judged by their covers!<br/>
         If you’re ready to learn how to make<br/>
@@ -28,7 +28,7 @@ export default function DesignABook() {
     </Banner>
     <Container fluid>
       <Container className="container">
-        <Row style={{ color: '#7b6b5b', marginLeft: '110px' }}>
+        <Row style={{ color: '#7b6b5b', marginLeft: '110px', marginTop: '30px' }}>
           <h2>Here, we’ll address everything from<br/>
             high-level basics down to specific<br/>
             details of book cover design, including:
@@ -46,7 +46,7 @@ export default function DesignABook() {
         Weights<br/>
       </p>
     </Steps>
-    <Steps variant="left" number={2} title="Book Formats" img="/img/5.png">
+    <Steps variant="left" number={2} title="Book Formats" img="/img/22.png">
       <p>We highly recommend that you publish in all formats—ebook, paperback, and hardcover. In this section, we’ll talk about print books vs. ebooks, the difference between paperback and hardcover, and the pros of publishing hardcover books.</p>
       <p><span className={stepStyle.subtitle}>Ebook and Printbooks</span><br/>
         One of the best ways to maximize your book’s potential success is to offer it in multiple formats. If a reader exclusively looks for books to read on their Kindle, they won’t find your book if there is no ebook version. On the other hand, if a reader exclusively shops for books in their local independent bookstore, they won’t find your book if there is no print version.

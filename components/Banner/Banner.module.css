@@ -1,8 +1,12 @@
 .banner {
   margin-top: 70px;
-  margin-bottom: 90px;
+  margin-bottom: 45px;
   color: #7b6b5b;
   padding: 0px 100px;
+}
+
+.banner h1 {
+  font-size: 50px;
 }
 
 .bannerCenter {

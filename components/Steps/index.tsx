@@ -6,8 +6,8 @@ import styles from './Steps.module.css';
 
 interface StepsProps {
   variant?: 'left' | 'right';
-  number: number;
-  title: string;
+  number?: number;
+  title?: string;
   img: string;
   children: any;
 }
@@ -18,7 +18,7 @@ const Steps = ({ children, ...props }: StepsProps) => {
       <Container className="container">
         <Row className={styles.steps}>
           <Col md={{ span: 5, offset: 1 }}>
-            <h3><span>{props.number}</span>{props.title}</h3>
+            {(props.title) ? <h3>{(props.number) ? <span>{props.number}</span> : ''} {props.title} </h3> : '' }
             {children}
           </Col>
           <Col md={5}>
@@ -35,7 +35,7 @@ const Steps = ({ children, ...props }: StepsProps) => {
             <Image src={props.img} />
           </Col>
           <Col md={5}>
-            <h3><span>{props.number}</span>{props.title}</h3>
+            {(props.title) ? <h3>{(props.number) ? <span>{props.number}</span> : ''} {props.title} </h3> : '' }
             {children}
           </Col>
         </Row>
