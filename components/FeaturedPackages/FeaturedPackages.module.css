@@ -59,6 +59,9 @@
   color: #7b6b5b;
   text-align: center;
   font-weight: 500;
+  width: 60%;
+  display: block;
+  margin: auto;
 }
 
 .link:hover {

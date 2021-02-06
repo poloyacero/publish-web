@@ -21,7 +21,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
               <h3>Publish</h3>
               <p>Create and publish your<br/> own book in your way.</p>
             </Carousel.Caption>
-            <Link href="/"><Nav.Link className={styles.carouselLink}>Get Started</Nav.Link></Link>
+            <Link href="/pricing"><Nav.Link className={styles.carouselLink}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} style={{ width: '40%' }} src="/img/Slider.png" />
           </Carousel.Item>
           <Carousel.Item interval={1000}>
@@ -34,7 +34,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
               <h3>Print</h3>
               <p>Print a book, magazine, novel,<br/> advertising material or any kind of book<br/> you can imagine.</p>
             </Carousel.Caption>
-            <Link href="/"><Nav.Link className={styles.carouselLink}>Get Started</Nav.Link></Link>
+            <Link href="/pricing"><Nav.Link className={styles.carouselLink}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/splash.png" />
           </Carousel.Item>
           <Carousel.Item>
@@ -47,7 +47,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
               <h3>Sell</h3>
               <p>Sell your book on your own website<br/> and around the world.</p>
             </Carousel.Caption>
-            <Link href="/"><Nav.Link className={styles.carouselLink}>Get Started</Nav.Link></Link>
+            <Link href="/pricing"><Nav.Link className={styles.carouselLink}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/stock.png" />
           </Carousel.Item>
         </Carousel>
