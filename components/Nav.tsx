@@ -34,7 +34,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                     <NavDropdown.Item className={styles.dropdownItem} href="/design-a-book">How To Design a Book</NavDropdown.Item>
                     <NavDropdown.Item className={styles.dropdownItem} href="/distribution">Distribution</NavDropdown.Item>
                   </NavDropdown>
-                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
+                  <Link href="/packages" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
                   <Link href="/" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
                   <Link href="/" passHref><Nav.Link className={styles.navmenu}>About Us</Nav.Link></Link>
                 </Nav>
