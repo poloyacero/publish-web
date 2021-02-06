@@ -1,0 +1,38 @@
+.package {
+  color: #7b6b5b;
+  padding: 6px;
+}
+
+.package h3 {
+  text-align: center;
+  background: #e7d2bc;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.bg {
+  background: #faf6f2;
+  padding-bottom: 20px;
+}
+
+.packageContent {
+  padding: 10px;
+  font-size: 13px;
+}
+
+.package button {
+  background-color: #7b6b5b;
+  border: none;
+  margin: auto;
+  display: block;
+}
+
+.package button:hover {
+  background-color: #7b6b5b;
+}
+
+.package span {
+  text-align: center;
+  display: block;
+  font-size: 35px;
+}

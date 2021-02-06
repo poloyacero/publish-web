@@ -7,10 +7,16 @@
 
 .bannerCenter {
   text-align: center !important;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
 }
 
 .bannerCenter img {
   width: 50% !important;
+}
+
+.bannerCenter p {
+  margin-top: 0px !important;
 }
 
 .banner p {
