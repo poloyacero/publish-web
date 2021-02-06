@@ -1,0 +1,30 @@
+.item {
+  color: #7b6b5b;
+}
+
+.item h3 {
+  margin-bottom: 0px;
+  line-height: 20px;
+}
+
+.item img {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.item p {
+  font-size: 28px;
+}
+
+.item span {
+  font-size: 13px;
+}
+
+.content p {
+  font-size: 14px !important;
+}
+
+.mgBottom {
+  margin-bottom: 25px !important;
+}

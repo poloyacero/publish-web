@@ -24,7 +24,7 @@ const FeaturedServices = ({ ...props }: FeaturedServicesProps) => {
           </Col>
           <Col md={4}>
             <Link href="/" passHref><Nav.Link><Image src="/img/sell.png" /></Nav.Link></Link>
-            <p>Sell</p>
+            <p>Marketing</p>
             <span>From our indie bookstore<br/> to global retailers, sell your<br/> way</span>
           </Col>
         </Row>

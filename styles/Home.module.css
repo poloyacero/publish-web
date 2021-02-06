@@ -119,3 +119,12 @@
     flex-direction: column;
   }
 }
+
+.heading {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #7b6b5b;
+}

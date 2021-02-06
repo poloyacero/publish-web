@@ -12,7 +12,7 @@ const NavMenu = ({ ...props }: NavProps) => {
       <Container className="container">
         <Row>
           <Navbar className={styles.navbar} expand="lg">
-          <Col md={4}>
+          <Col md={3}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
                 <h1>BRAND</h1>
@@ -20,7 +20,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={5}>
+          <Col md={6}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
@@ -35,8 +35,11 @@ const NavMenu = ({ ...props }: NavProps) => {
                     <NavDropdown.Item className={styles.dropdownItem} href="/distribution">Distribution</NavDropdown.Item>
                   </NavDropdown>
                   <Link href="/packages" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
-                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
-                  <Link href="/" passHref><Nav.Link className={styles.navmenu}>About Us</Nav.Link></Link>
+                  <NavDropdown title="Services" id="collasible-nav-dropdown" className={styles.navmenu}>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/marketing">Marketing</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/add-on">Add-on</NavDropdown.Item>
+                  </NavDropdown>
+                  {/*<Link href="/" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>*/}
                 </Nav>
               </Navbar.Collapse>
           </Col>
