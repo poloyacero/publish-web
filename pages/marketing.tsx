@@ -12,7 +12,7 @@ export default function MarketingPage() {
     return (
       <div className={styles.container}>
         <Head>
-          <title>Marketing</title>
+          <title>Marketing Services</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <NavMenu />
@@ -20,7 +20,7 @@ export default function MarketingPage() {
           <Container fluid>
             <Container className="container">
               <Row className={styles.heading}>
-                <h1>Marketing</h1>
+                <h1>Marketing Services</h1>
               </Row>
             </Container>
           </Container>

@@ -1,5 +1,10 @@
 .item {
   color: #7b6b5b;
+  margin-bottom: 40px;
+}
+
+.itemPad {
+  padding: 15px;
 }
 
 .item h3 {
