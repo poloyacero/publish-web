@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Button, Col } from 'react-bootstrap';
 
@@ -18,7 +19,7 @@ const Package = ({ children, ...props }: PackageProps) => {
         <h3>{props.title}</h3>
         <span>{props.currency + ' ' + props.price}</span>
         <div className={styles.packageContent}>{children}</div>
-        <Button>Get Package</Button>
+        <Link href="/pricing" passHref><Button className={styles.button}>Get Package</Button></Link>
       </div>
     </Col>
   );

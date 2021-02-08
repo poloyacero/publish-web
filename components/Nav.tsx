@@ -1,12 +1,15 @@
 import React from 'react';
-import { Navbar, Nav, Container, Row, Col, Image, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col, Image, NavDropdown, Form } from 'react-bootstrap';
 import Link from 'next/link';
 
 import styles from './NavMenu.module.css';
+import TheModal from './TheModal';
 
 interface NavProps {}
 
 const NavMenu = ({ ...props }: NavProps) => {
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <Container fluid style={{background: '#000000'}}>
       <Container className="container">
@@ -23,7 +26,7 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={6}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
+                <Nav className="mx-auto">
                   <NavDropdown title="Publish" id="collasible-nav-dropdown" className={styles.navmenu}>
                     <NavDropdown.Item className={styles.dropdownItem} href="/products">Products</NavDropdown.Item>
                     <NavDropdown.Item className={styles.dropdownItem} href="/pricing">Create</NavDropdown.Item>
@@ -59,19 +62,59 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </svg>
               </Nav.Link>
             </Link>
-            <Link href="/" passHref>
-              <Nav.Link className={styles.utilityMenus} href="/">
-                <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
-                  <path fillRule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                  <path fillRule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
-                </svg>
-              </Nav.Link>
-            </Link>
+            <Nav.Link className={styles.utilityMenus} onClick={() => setModalShow(true)}>
+              <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+                <path fillRule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                <path fillRule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+              </svg>
+            </Nav.Link>
           </Col>
         </Navbar>
         </Row>
       </Container>
+      <TheModal 
+        title="Create an Account"
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      >
+        <Container>
+          <Row>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Contact Name</Form.Label>
+                  <Form.Control type="text" name="contact-name"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Email</Form.Label>
+                  <Form.Control type="email" name="email"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Password</Form.Label>
+                  <Form.Control type="password" name="password"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Validate Password</Form.Label>
+                  <Form.Control type="password" name="validate"/>
+                </Col>
+              </Form.Group>
+            </Col>
+          </Row>
+        </Container>
+      </TheModal>
     </Container>
   );
 };

@@ -27,6 +27,14 @@
   display: block;
 }
 
+.package .button {
+  margin: auto;
+  display: block;
+  width: 55%;
+  background-color: #7b6b5b;
+  border: none;
+}
+
 .package button:hover {
   background-color: #7b6b5b;
 }

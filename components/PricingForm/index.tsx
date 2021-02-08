@@ -134,8 +134,8 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
             <Form.Control as="select" defaultValue=" ">
               <option value=""></option>
-              <option value="USA">  United States</option>
-              <option value="GBR"> United Kingdom</option>
+              <option value="USA">United States</option>
+              <option value="GBR">United Kingdom</option>
               <option value="AFG">Afghanistan</option>
               <option value="ALA">Åland Islands</option>
               <option value="ALB">Albania</option>
@@ -331,7 +331,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               <option value="SEN">Senegal</option>
               <option value="SRB">Serbia</option>
               <option value="SCG">Serbia and Montenegro</option>
-                <option value="SYC">Seychelles</option>
+              <option value="SYC">Seychelles</option>
               <option value="SLE">Sierra Leone</option>
               <option value="SGP">Singapore</option>
               <option value="SXM">Sint Maarten</option>
