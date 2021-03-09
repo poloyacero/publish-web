@@ -131,3 +131,8 @@
 .heading h1 {
   font-size: 50px;
 }
+
+.orderedlist li{
+  font-size: 14px;
+  padding-bottom: 15px;
+}

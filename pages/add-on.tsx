@@ -6,7 +6,7 @@ import NavMenu from '../components/Nav';
 
 import styles from '../styles/Home.module.css'
 import Item from '../components/Item';
-import { Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 
 export default function MarketingPage() {
     return (

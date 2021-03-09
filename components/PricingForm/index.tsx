@@ -64,13 +64,13 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
                 type="radio"
                 label="Black and White"
                 name="colorAndPaperRadio"
-                id="formHorizontalRadios1"
+                id="colorAndPaperRadio1"
               />
               <Form.Check
                 type="radio"
                 label="Color"
                 name="colorAndPaperRadio"
-                id="formHorizontalRadios2"
+                id="colorAndPaperRadio2"
               />
             </Col>
           </Form.Group>
@@ -84,8 +84,8 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               <Form.Check
                 type="radio"
                 label="Paperback"
-                name="paperbackRadio"
-                id="formHorizontalRadios1"
+                name="paperBackRadio"
+                id="paperBackRadio1"
               />
             </Col>
           </Form.Group>
@@ -100,13 +100,13 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
                 type="radio"
                 label="Gloss"
                 name="laminateTypeRadio"
-                id="formHorizontalRadios1"
+                id="laminateTypeRadio1"
               />
               <Form.Check
                 type="radio"
                 label="Matte"
                 name="laminateTypeRadio"
-                id="formHorizontalRadios2"
+                id="laminateTypeRadio2"
               />
             </Col>
           </Form.Group>
