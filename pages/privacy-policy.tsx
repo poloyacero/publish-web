@@ -62,7 +62,7 @@ export default function SelfPublish() {
                 </p>
                 <h4>Children Under the Age of 18</h4>
                 <p>
-                  Our Website is not for children under 18 years of age. No one under 18 years of age may provide information to or on the Website or through any of its features, register on the Website, make any purchases, or use any comment features of the Website. If you believe we have information from or about a child under 18, please contact us at privacy@ingramcontent.com.
+                  Our Website is not for children under 18 years of age. No one under 18 years of age may provide information to or on the Website or through any of its features, register on the Website, make any purchases, or use any comment features of the Website. If you believe we have information from or about a child under 18, please contact us at privacy@thepublishing.com.
                 </p>
                 <h4>Information We Collect</h4>
                 <p>
@@ -214,14 +214,14 @@ export default function SelfPublish() {
                   California residents may have additional personal information rights and choices. Please see Your California Privacy Rights for more information.
                 </p>
                 <p>
-                  Nevada residents who wish to exercise their sale opt-out rights under Nevada Revised Statutes Chapter 603A may submit a request to this designated address: privacy@ingramcontent.com. However, please know we do not currently sell data triggering that statutes opt-out requirements.
+                  Nevada residents who wish to exercise their sale opt-out rights under Nevada Revised Statutes Chapter 603A may submit a request to this designated address: privacy@thepublishing.com. However, please know we do not currently sell data triggering that statutes opt-out requirements.
                 </p>
                 <h4>Accessing and Correcting Your Information</h4>
                 <p>
                   To help us maintain accurate, current, and complete information about you, we require you to only provide true, accurate, and complete information whenever you provide personally identifiable information to us and promptly update your account whenever it changes.
                 </p>
                 <p>
-                  You may also send us an email at privacy@ingramcontent.com to request access to, correction of, or to delete any personal information that you have provided to us. We cannot delete your personal information except by also deleting your user account. We may not accommodate a request to change information if we believe the change would violate any law or legal requirement or cause the information to be incorrect.
+                  You may also send us an email at privacy@thepublishing.com to request access to, correction of, or to delete any personal information that you have provided to us. We cannot delete your personal information except by also deleting your user account. We may not accommodate a request to change information if we believe the change would violate any law or legal requirement or cause the information to be incorrect.
                 </p>
                 <p>
                   If you provide User Contributions on or through the Website, copies of your User Contributions may remain viewable in cached and archived pages or might have been copied or stored by other Website users.
