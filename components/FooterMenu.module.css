@@ -19,7 +19,7 @@
 .sendButton {
   right: 0;
   position: absolute;
-  top: 0;
+  bottom: 0;
   background: #e7d2bc;
   border-color: #e7d2bc;
   color: #7b6b5b;
@@ -35,6 +35,10 @@
 
 .formGroup {
   position: relative;
+}
+
+.privacy_policy a{
+  font-size: 13px
 }
 
 .copyright {

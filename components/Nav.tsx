@@ -18,8 +18,7 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={3}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
-                <h1>BRAND</h1>
-                <span>Publishing</span>
+                <h1>The Publishing</h1>
               </Navbar.Brand>
             </Link>
           </Col>
