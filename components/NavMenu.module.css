@@ -7,12 +7,15 @@
 }
 
 .brand {
-  color: #ffffff !important;
+  color: #7b6b5b !important;
 }
 
 .brand h1 {
   margin-bottom: 0px;
   font-size: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
 }
 
 .brand span {
@@ -23,16 +26,17 @@
 .navmenu {
   text-transform: uppercase;
   font-size: 14px;
-  color: #ffffff !important;
+  color: #7b6b5b !important;
   margin-right: 10px;
 }
 
 .navmenu a {
-  color: #ffffff !important;
+  color: #ffffff;
+  /*color: #7b6b5b !important;*/
 }
 
 .navmenu div {
-  background: #000000 !important;
+  background: #7b6b5b !important;
   font-size: 13px;
 }
 
@@ -42,9 +46,18 @@
 
 .utilityMenus {
   display: inline-block;
-  color: #ffffff;
+  color: #7b6b5b;
 }
 
 .utilityMenu {
   text-align: right;
+}
+
+.logo {
+  width: 40px;
+  display: inline-block;
+}
+
+.inlineBlock {
+  display: inline-block;
 }

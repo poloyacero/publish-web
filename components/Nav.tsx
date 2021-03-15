@@ -12,18 +12,19 @@ const NavMenu = ({ ...props }: NavProps) => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
-    <Container fluid style={{background: '#000000'}}>
+    <Container fluid style={{background: '#f0e3d5'}}>
       <Container className="container">
         <Row>
           <Navbar className={styles.navbar} expand="lg">
           <Col md={3}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
-                <h1>The Publishing</h1>
+              <Image src="/logo.png" className={styles.logo} />
+              <h1>The Publishing</h1>
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={6}>
+          <Col md={{ span: 3, offset: 2 }}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto">
@@ -46,7 +47,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </Nav>
               </Navbar.Collapse>
           </Col>
-          <Col md={3} className={styles.utilityMenu}>
+          <Col md={{ span: 3, offset: 1 }} className={styles.utilityMenu}>
             <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus} href="/">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

@@ -64,7 +64,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
           <Row>
             <Col md={{ span: 12, offset: 0 }}>
               <Form.Group as={Row}>
-                <Col md={6}>
+                <Col md={6} sm={12}>
                   <Form.Label className={styles.label}>First Name</Form.Label>
                   <Form.Control type="text" name="first-name"/>
                 </Col>
@@ -72,7 +72,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             </Col>
             <Col md={{ span: 12, offset: 0 }}>
               <Form.Group as={Row}>
-                <Col md={6}>
+                <Col md={6} sm={12}>
                   <Form.Label className={styles.label}>Last Name</Form.Label>
                   <Form.Control type="text" name="last-name"/>
                 </Col>
@@ -80,7 +80,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             </Col>
             <Col md={{ span: 12, offset: 0 }}>
               <Form.Group as={Row}>
-                <Col md={6}>
+                <Col md={6} sm={12}>
                   <Form.Label className={styles.label}>Email</Form.Label>
                   <Form.Control type="email" name="email"/>
                 </Col>
