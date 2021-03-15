@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import styles from './NavMenu.module.css';
 import TheModal from './TheModal';
+import EnquiryModal from './EnquiryModal';
 
 interface NavProps {}
 

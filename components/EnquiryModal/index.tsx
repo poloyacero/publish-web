@@ -1,16 +1,16 @@
 import React from 'react';
-import { Button, Container, Modal } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 
-import styles from './TheModal.module.css';
+import styles from './EnquiryModal.module.css';
 
-interface TheModalProps {
+interface EnquiryModalProps {
   title?: string;
   children?: any;
   show?: any;
   onHide?: any;
 }
 
-const TheModal = ({ children, ...props }: TheModalProps) => {
+const EnquiryModal = ({ children, ...props }: EnquiryModalProps) => {
   return (
     <Modal
       {...props}
@@ -27,10 +27,10 @@ const TheModal = ({ children, ...props }: TheModalProps) => {
         {children}
       </Modal.Body>
       <Modal.Footer>
-        <Button onClick={props.onHide} className={styles.createButton}>Create Account</Button>
+        <Button onClick={props.onHide} className={styles.submitButton}>Submit</Button>
       </Modal.Footer>
     </Modal>
   )
 }
 
-export default TheModal;
+export default EnquiryModal;
