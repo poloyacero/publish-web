@@ -16,15 +16,15 @@ const NavMenu = ({ ...props }: NavProps) => {
       <Container className="container">
         <Row>
           <Navbar className={styles.navbar} expand="lg">
-          <Col md={3}>
+          <Col md={3} className={styles.logoWrapper}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
               <Image src="/logo.png" className={styles.logo} />
-              <h1>The Publishing</h1>
+              {/*<h1>The Publishing</h1>*/}
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={{ span: 3, offset: 2 }}>
+          <Col md={{ span: 4, offset: 3 }}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto">
@@ -47,7 +47,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </Nav>
               </Navbar.Collapse>
           </Col>
-          <Col md={{ span: 3, offset: 1 }} className={styles.utilityMenu}>
+          <Col md={{ span: 2, offset: 0 }} className={styles.utilityMenu}>
             <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus} href="/">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
