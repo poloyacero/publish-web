@@ -148,3 +148,25 @@
 .privacy ul li {
   font-size: 15px;
 }
+
+.getStartedButton {
+  background-color: #7b6b5b;
+  border-color: #7b6b5b;
+  margin: auto;
+  width: 30%;
+  font-size: 35px;
+  margin-top: 20px;
+}
+
+.getStartedButton:hover {
+  background-color: #7b6b5b;
+  border-color: #7b6b5b;
+}
+
+.brown {
+  color: #7b6b5b;
+}
+
+.descriptionHeading {
+  font-weight: bold;
+}

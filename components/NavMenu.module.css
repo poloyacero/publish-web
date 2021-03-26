@@ -70,3 +70,39 @@
 .logoWrapper {
   padding-left: 0px;
 }
+
+.dropdownTopLevel {
+  padding: 0 1.5rem !important;
+  font-weight: 100 !important;
+
+}
+
+.dropdownTopLevel a {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  color: #ffffff !important;
+}
+
+.dropdownTopLevel div{
+  position: relative !important;
+  border: 0;
+  padding: 0px;
+}
+
+.dropdownTopLevel .collasible-nav-dropdown a:hover {
+  background: none !important;
+}
+
+.dropdownTopLevel .dropdown-menu a:hover {
+  background-color: none !important;
+}
+
+#dropdownNextLevel {
+  color: #fff !important;
+  padding-left: 25px !important;
+}
+
+#dropdownNextLevel:hover {
+  background: none !important;
+  color: #16181b !important;
+}

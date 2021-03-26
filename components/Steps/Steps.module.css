@@ -8,6 +8,11 @@
   font-size: 30px;
 }
 
+.steps h5 {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
 .steps img {
   display: block;
   margin: auto;

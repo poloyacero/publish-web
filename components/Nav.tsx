@@ -30,7 +30,10 @@ const NavMenu = ({ ...props }: NavProps) => {
                 <Nav className="mx-auto">
                   <NavDropdown title="Publish" id="collasible-nav-dropdown" className={styles.navmenu}>
                     <NavDropdown.Item className={styles.dropdownItem} href="/products">Products</NavDropdown.Item>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/pricing">Create</NavDropdown.Item>
+                    <NavDropdown id="" title="Create" className={styles.dropdownTopLevel}>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/print-book">Print Book</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/ebook">Ebook</NavDropdown.Item>
+                    </NavDropdown>
                   </NavDropdown>
                   <NavDropdown title="How" id="collasible-nav-dropdown" className={styles.navmenu}>
                     <NavDropdown.Item className={styles.dropdownItem} href="/self-publish">How To Self Publish</NavDropdown.Item>

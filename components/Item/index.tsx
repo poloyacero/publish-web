@@ -6,9 +6,9 @@ import styles from './Item.module.css'
 interface ItemProps {
   width: number;
   img: string;
-  title: string;
+  title?: string;
   subtitle?: string;
-  children: any;
+  children?: any;
   unit?: string;
   orientation?: 'left' | 'center' | 'right';
 }

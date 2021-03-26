@@ -4,7 +4,7 @@ import styles from './PageHeading.module.css';
 
 interface PageHeadingProps {
   number?: number;
-  title: string
+  title: string;
 }
 
 const PageHeading = ({ ...props }) => {
