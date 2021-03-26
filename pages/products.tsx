@@ -11,7 +11,7 @@ export default function ProductsPage() {
     <div className={styles.container}>
       <Head>
         <title>Products</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
       <ProductsLayout />

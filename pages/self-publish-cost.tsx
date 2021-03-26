@@ -14,7 +14,7 @@ export default function SelfPublishCost() {
     <div className={styles.container}>
       <Head>
         <title>How to Self-publish</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
       <Banner title="How much does it cost to Self-publish a Book" img="/img/8.png">

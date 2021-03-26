@@ -13,7 +13,7 @@ export default function PackagesPage() {
     <div className={styles.container}>
       <Head>
         <title>Packages</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
       <Banner title="Packages" img="/img/8.png" variant="center" bg="#faf6f2">

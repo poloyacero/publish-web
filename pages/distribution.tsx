@@ -13,7 +13,7 @@ export default function Distribution() {
     <div className={styles.container}>
       <Head>
         <title>Packages</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
       <Banner title="Global Book Distribution" img="/img/42.png" variant="left" bg="#faf6f2">

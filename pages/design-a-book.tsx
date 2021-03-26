@@ -15,7 +15,7 @@ export default function DesignABook() {
     <div className={styles.container}>
       <Head>
       <title>Design A Book</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/thepublishing.svg" />
     </Head>
     <NavMenu />
     <Banner title="How To Design a Book" img="/img/Slider.png" bg="#faf6f2">

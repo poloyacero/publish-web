@@ -13,7 +13,7 @@ export default function MarketingPage() {
       <div className={styles.container}>
         <Head>
           <title>Add-On Services</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/thepublishing.svg" />
         </Head>
         <NavMenu />
         <PageLayout>
