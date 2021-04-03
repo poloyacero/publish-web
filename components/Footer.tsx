@@ -50,7 +50,7 @@ const Footer = ({ ...props }: FooterProps) => {
               </Link>
             </div>
             <div className={styles.copyright}>
-              <p>Copyright © {(new Date().getFullYear())} DomainName-All Rights Reserved<br></br> Publishing</p>
+              <p>Copyright © {(new Date().getFullYear())} DomainName-All Rights Reserved<br></br> ThePublishing</p>
             </div>   
           </Col>
         </Row>

@@ -6,14 +6,16 @@ import styles from './NavMenu.module.css';
 import TheModal from './TheModal';
 import EnquiryModal from './EnquiryModal';
 
-interface NavProps {}
+interface NavProps {
+  className?: string;
+}
 
 const NavMenu = ({ ...props }: NavProps) => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
     <Container fluid style={{background: '#f0e3d5'}}>
-      <Container className="container">
+      <Container className={"container " + props.className} style={{width: '1030px'}}>
         <Row>
           <Navbar className={styles.navbar} expand="lg">
           <Col md={3} className={styles.logoWrapper}>
@@ -24,7 +26,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={{ span: 4, offset: 3 }}>
+          <Col md={{ span: 5, offset: 2 }}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto">
@@ -50,7 +52,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </Nav>
               </Navbar.Collapse>
           </Col>
-          <Col md={{ span: 2, offset: 0 }} className={styles.utilityMenu}>
+          <Col md={{ span: 3, offset: 0 }} className={styles.utilityMenu}>
             <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus} href="/">
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

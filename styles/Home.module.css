@@ -170,3 +170,11 @@
 .descriptionHeading {
   font-weight: bold;
 }
+
+.itemImage {
+  width: 34%;
+}
+
+.home {
+  border-bottom: 1px #7b6b5b solid;
+}

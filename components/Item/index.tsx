@@ -11,13 +11,14 @@ interface ItemProps {
   children?: any;
   unit?: string;
   orientation?: 'left' | 'center' | 'right';
+  className?: string;
 }
 
 const Item = ({ children, ...props }: ItemProps) => {
   return (
     <Col className={styles.item} md={props.width}>
       <div className={styles.itemPad}>
-        <Image src={props.img} />
+        <Image src={props.img} className={props.className}/>
         <h3 className={(props.subtitle) ? '' : styles.mgBottom}>{props.title}</h3>
         {(props.subtitle) ? <p> {props.subtitle} {(props.unit) ? <span>{props.unit}</span> : ''} </p> : ''  }
         <div className={styles.content}>

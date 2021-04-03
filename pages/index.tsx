@@ -16,7 +16,7 @@ export default function Home() {
         <title>Home</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
-      <NavMenu />
+      <NavMenu className={styles.home}/>
       <CarouselSlider />
       <FeaturedProducts />
       <FeaturedServices />

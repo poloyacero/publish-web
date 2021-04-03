@@ -24,7 +24,7 @@ export default function MarketingPage() {
               </Row>
             </Container>
           </Container>
-          <Item width={6} img="/img/services/52.png" title="Illustrations" subtitle="$300 - 1600" unit="/ 5 illustration">
+          <Item width={6} img="/img/services/52.png" title="Illustrations" subtitle="$300 - 1600" unit="/ 5 illustration" className={styles.itemImage}>
             <p>
               Let your imagination run wild and bring it to life, even if you’re not an experienced artist. Illustration Service has a team comprised of brilliant and skillful artists who can pick up and interpret your pictures for you.
             </p>
