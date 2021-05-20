@@ -1,6 +1,6 @@
 [build]
   functions = "out_functions"
-  publish   = "out_publish"
+  publish   = "site/out_publish"
   command   = "npm run build"
 
 [[plugins]]
