@@ -63,9 +63,9 @@ export default function SelfPublish() {
                   <li>E.	Expressing false statements without any written contract, and claiming that the following statements made are permitted from our company which makes us accountable to any damages it may result into.</li>
                   <li>F.	Any data transmission on the Site, or uploading of the following:
                     <ul>
-                      <li>o	Any object that is fraudulent, offensive, threatening, libelous, or in any manner of invading the third party’s rights and property.</li>
-                      <li>o	Any illegal transactions, or trading of private information to any third party</li>
-                      <li>o	Any form of unsolicited commercial communications, out of which are solicitations, chain messages, pyramid schemes, advertisement, and investment prospects otherwise authorized by The Publishing.</li>
+                      <li>Any object that is fraudulent, offensive, threatening, libelous, or in any manner of invading the third party’s rights and property.</li>
+                      <li>Any illegal transactions, or trading of private information to any third party</li>
+                      <li>Any form of unsolicited commercial communications, out of which are solicitations, chain messages, pyramid schemes, advertisement, and investment prospects otherwise authorized by The Publishing.</li>
                     </ul>
                   </li>
                 </ul>

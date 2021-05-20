@@ -30,11 +30,11 @@ export default function SelfPublish() {
 <p>The Publishing abides to every author’s personal information being entrusted to us. And with that, we have stipulated a privacy policy that will show the processes of our ways in collating our clients’ personal details as needed in the publication process. As an established publishing company, our prohibitions strictly includes sharing, selling, or any illicit transactions of personal information from our clients.</p>
 <h3>Personal Details Needed: </h3>
 <ul>
-<i>a) Name</i>
-<i>b) E-mail Address</i>
-<i>c) Phone Number(s)</i>
-<i>d) Physical/Billing Address</i>
-<i>e) Book Information</i>
+<li>a) Name</li>
+<li>b) E-mail Address</li>
+<li>c) Phone Number(s)</li>
+<li>d) Physical/Billing Address</li>
+<li>e) Book Information</li>
 </ul>
 <p>Authors can find our privacy policy through all forms of compiled and submitted information to either the company’s employees, through e-mail and phone, or from our website www.thepublishing.com. </p>
 <h3>Information Usage</h3>
