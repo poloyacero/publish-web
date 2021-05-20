@@ -19,38 +19,48 @@ export default function SelfPublish() {
       <NavMenu />
       <Banner title="How To Self-publish a Book" img="/img/package3.png">
         <p>
-          The book industry is thriving,<br/> and self-publishing is on the rise!<br/> 
-          If you want to learn more about<br/> how to self-publish a book,<br/>
-          you’ve come to the right place.
+        In today’s publishing marketplace, self-published authors are leading the pack. Embark on an incredible journey with us and get maximum results.
+
         </p>
       </Banner>
       <PageHeading number="7" title="Steps to Self-Publish a Book" />
       <Steps variant="left" number={1} title="Writing" img="/img/1.png">
-        <p>Writing a book is a huge accomplishment. If you’ve made it that far, we hope you take a moment to stop and congratulate yourself on a job well done. Now, let’s get ready to share it with the world!</p>
+        <p>Now that you know how to avoid the pitfalls after you write a book, let’s talk about what you should do next.
+</p>
       </Steps>
       <Steps variant="right" number={2} title="Book Editing" img="/img/2.png">
         <span className={stepStyle.subtitle}>Copyediting</span>
-        <p>A copyedit is often confused with a line edit, but they’re very different steps in the editing process. A copyedit reviews technical flaws—issues with spelling, grammar, and punctuation—and looks for internal inconsistencies throughout the text.</p>
+        <p>"Copyediting refers to making your copy easy to read and understand and ensure that your content smoothly flows from the beginning to the end. Your text should be correct,
+consistent, clear, concise and comprehensible. Copyeditors catch all the mistakes the author missed."
+</p>
         <span className={stepStyle.subtitle}>Proof reading</span>
-        <p>This is the final step in the editing process. A proofreader examines the final copy of the manuscript (usually after typesetting) for any awkward page breaks, and he or she might perform some light copyediting.</p>
+        <p>"Proofreading is the last line of defense against errors. It is not just looking for typos and misplaced punctuation but also searches for layout issues like page numbering, consistency with headings, placement of tables of figures in the text, bad line or page breaks, and more.
+Proofreaders catch all the mistakes the copyeditor missed."
+</p>
       </Steps>
       <Steps variant="left" number={3} title="Book Design" img="/img/3.png">
         <span className={stepStyle.subtitle}>Interior Book Design</span>
-        <p>To create a professionally published book. Typesetting, commonly referred to as book formatting, has “rules” for widows, orphans, hyphens, and various other elements within a book to make it more readable, ensuring a pleasant reading experience for your audience.</p>
+        <p>The art of designing a book's interior layout, known as book layout design, is also known as "typesetting." It includes all of the decisions that affect how readers interact with the content of your printed book, such as fonts, spacing, chapter heading styling, margins, and so on. A book layout designer will take care of all of this for you and create a print format that meets the needs of your readers.
+</p>
         <span className={stepStyle.subtitle}>Book Cover Design</span>
-        <p>Your book cover design is the first impression readers have of your book. While it’s important to be unique, it’s equally important to pay attention to what comparable covers in your genre look like. A professional book cover designer can help steer the creative direction—but you know your book best, and it’s important for you to bring your own ideas to help create a cover that brings your book to life.</p>
+        <p>A good cover design should not only look good on the shelf, but it should also clearly communicate the title, indicate the genre, and attract the right audience for the book. A professional cover designer understands what works in the market and has developed their own distinct style to make your book stand out. They'll collaborate with you to produce a cover that reflects your vision while also incorporating their understanding of genre tropes and publishing patterns to give your book that much-desired mass appeal.
+</p>
       </Steps>
       <Steps variant="right" number={4} title="Book Metadata" img="/img/4.png">
-        <p>Book Metadata consists of all the information that describes your book, including your title, subtitle, price, trim size, author name, book description, ISBN, Bisac Codes and more.</p>
+        <p>Whether you’re selling digital content or physical copies, book metadata is how potential readers find your work online. It tells websites simple facts about your book, like title, price, and author, but it can also find you new readers.
+</p>
       </Steps>
       <Steps variant="left" number={5} title="Publishing" img="/img/5.png">
-        <p>Offers indie authors and publishers the ability to create professional print books (paperback and hardcover) and ebooks. You can self-publish a book and make it available to 40,000+ retailers and libraries—in stores and online—through our global distribution network.</p>
+        <p>Offers book publishing and production services but not limited to book editing, formatting, cover design, illustration  to authors and publishers. Different platforms available that distribute your book to several online retailers.
+</p>
       </Steps>
       <Steps variant="right" number={6} title="Distribution" img="/img/6.png">
-        <p>Publishers can receive the same book distribution channels available to major traditional publishers. IngramSpark makes titles available to 40,000+ retailers, libraries, schools, and e-commerce companies including Amazon, Barnes & Noble, Indigo, Foyles, Waterstones, and more across the globe.</p>
+        <p>Publishers are offered an opportunity to make their print books available at various online retailers and physical bookstores, libraries, academic institutions and e-commerce companies around the world . Your book will be listed in the catalogs of distributors and can be ordered by sellers and libraries connected to the distributors’ ordering systems.
+</p>
       </Steps>
       <Steps variant="left" number={7} title="Marketing" img="/img/7.png">
-        <p>Steps in our self-publishing process, we highly suggest that you begin thinking about your marketing strategy during the writing process. Building an author platform doesn’t happen overnight.</p>
+        <p>During the writing stage of our self-publishing process, we strongly advise you to start thinking about your marketing plan. Building an author site is a long process.
+</p>
       </Steps>
       <Footer />
     </div>

@@ -20,20 +20,22 @@ export default function EBook() {
       <NavMenu />
       <Banner title="Self-Publish an Ebook" img="/img/Ebook-heading.png" bg="#faf6f2">
         <p>
-          Don't miss the world of readers<br/> who only read ebooks.<br/>
-          Successfully manage your ebook publishing from one platform.
+        The eBook market is growing at a rapid pace. If you don’t have an ebook version, you’re missing out on a chunk of readers. Using our platform, quickly publish your eBook to a wide variety of online stores in no time.
+
         </p>
       </Banner>
       <Steps variant="right" title="Ebook Self-Publishing" img="/img/ebook1.png">
-        <p>One platform to manage all of your ebook files.</p>
-        <p>No need to juggle multiple contracts for various individual distributors.</p>
-        <p>Book distribution to major ebook retailers around the world.</p>
+        <p>Realize and Materialize your authorial dreams using our exclusive platform. The platform will do the rest for you and will come out in the right format in a matter of seconds. It shouldn't take too long to get your book out into the world
+</p>
+        
       </Steps>
       <Steps variant="right" title="Publishing an Ebook" img="/img/ebook2.png">
         <h5>EPUB Interior and Conversion</h5>
-        <p>File for your book's interior.<br/> The EPUB format is the official standard of the IDPF(International Digital Publishing Forum) and is designed for reflowable content, meaning an EPUB reader can optimize text for any e-reading device.</p>
+        <p>ePubs adapt and fit whatever type of screen they are displaying on. It is programmed to do this automatically. This helps authors create eBooks that flow exactly as they intended. ePubs are the standard file format for eBooks now.
+</p>
         <h5>Cover</h5>
-        <p>High-res JPG image for your book cover to be used for display on retailer websites.</p>
+        <p>Our book cover artists are professional cover graphic designers, with the largest selection of original cover art in the world.
+</p>
       </Steps>
       <PageFooting title="Your Ebook Could Be Sold in Amazon, Apple, Kobo, Barnes & Noble, and More">
         <Link href="/pricing" passHref><Button className={styles.getStartedButton}>Get Started</Button></Link>

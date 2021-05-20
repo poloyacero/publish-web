@@ -32,26 +32,26 @@ export default function SelfPublishCost() {
         <p><span className={stepStyle.subtitle}>Genre:</span> some manuscripts require more work than others to produce a professional, ready-to-publish piece.</p>
         <p><span className={stepStyle.subtitle}>Experience:</span> some manuscripts require more work than others to produce a professional, ready-to-publish piece.</p>
         <p>Editorial charge per word, some charge per page,and some charge per hour. Here are some Editorial rough guidelines to give you an idea of common editorial rates.</p>
-        <p><span className={stepStyle.subtitle}>Developmental Editing</span> (estimated pace 1-6 ms pgs/hr): $45-65/hr</p>
-        <p><span className={stepStyle.subtitle}>Substantive or Line Edit</span> (estimated pace 1-5 ms pgs/hr): $50-60/hr</p>
-        <p><span className={stepStyle.subtitle}>Basic Copyediting</span> (estimated pace 5-10 ms pgs/hr): $35-45/hr</p>
-        <p><span className={stepStyle.subtitle}>Proofreading</span> (estimated pace 5-10 ms pgs/hr): $35-45/hr</p>
+        <p><span className={stepStyle.subtitle}>Developmental Editing</span> (estimated pace 1-6 ms pgs/hr): €45-65/hr</p>
+        <p><span className={stepStyle.subtitle}>Substantive or Line Edit</span> (estimated pace 1-5 ms pgs/hr): €50-60/hr</p>
+        <p><span className={stepStyle.subtitle}>Basic Copyediting</span> (estimated pace 5-10 ms pgs/hr): €35-45/hr</p>
+        <p><span className={stepStyle.subtitle}>Proofreading</span> (estimated pace 5-10 ms pgs/hr): €35-45/hr</p>
       </Steps>
       <Steps variant="left" number={2} title="Interior Design" img="/img/4.png">
         <p>The typesetting process mainly focuses on readability, such as proper spacing and fonts. The cost to typeset a book will vary depending on length, genre, and whether or not you’d like to package it with a final proofread.</p>
         <p>Common rates in market place for publishing professionals</p>
-        <p>$500 - $1500 for book formatting<br/>
+        <p>€500 - €1500 for book formatting<br/>
           The price of typesetting will increase based on the number of images, graphs, and tables in your book.
         </p>
       </Steps>
       <Steps variant="left" number={3} title="Book Cover Design" img="/img/5.png">
         <p>The typesetting process mainly focuses on readability, such as proper spacing and fonts. The cost to typeset a book will vary depending on length, genre, and whether or not you’d like to package it with a final proofread.</p>
-        <p>The price of cover design is directly related to a designer’s experience. If you’re going to publish both print and ebook versions (which we recommend), make sure to look for a cover designer who can design both the print and ebook cover. Ask to see examples of a designer’s work before signing a contract and expect to spend at least $500 for a professional cover design.</p>
+        <p>The price of cover design is directly related to a designer’s experience. If you’re going to publish both print and ebook versions (which we recommend), make sure to look for a cover designer who can design both the print and ebook cover. Ask to see examples of a designer’s work before signing a contract and expect to spend at least €500 for a professional cover design.</p>
       </Steps>
       <Steps variant="left" number={4} title="Publishing" img="/img/3.png">
-        <p>The cost to upload a print and ebook at the same time is $60. If you don’t want to upload both formats, a print book costs $60 to upload alone, and an ebook is $40 when uploaded alone.</p>
+        <p>The cost to upload a print and ebook at the same time is €60. If you don’t want to upload both formats, a print book costs €60 to upload alone, and an ebook is €40 when uploaded alone.</p>
         <p>Another publishing expense you’ll incur is purchasing an ISBN, if you choose not to use a free ISBN. This is necessary if you’d like to enable your book for distribution, and each format of each book you publish must have its own unique ISBN.</p>
-        <p>ISBNs are sold by country: In the U.S., ISBNs can be purchased from Bowker directly through your IngramSpark account for $100 each. You can also buy a block of ten ISBNs from Bowker for $300. In the UK, you can buy them from Nielsen Book, while Canadian publishers get ISBNs for free. A full list of ISBN distributors can be found on the International ISBN Agency's Website.</p>
+        
         <p>If you want your book to be available in brick-and-mortar bookstores, you’ll need a barcode in addition to your ISBN. Some ISBN services sell barcodes, as well as ISBNs.</p>
       </Steps>
       <Steps variant="left" number={5} title="Printing and Shipping" img="/img/6.png">
