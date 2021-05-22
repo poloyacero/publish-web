@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/publishing-website
+hooks:
+  ApplicationStop:
+    - location: cicdscripts/application_stop.sh
+      timeout: 300
+      runas: ubuntu
+  BeforeInstall:
+    - location: cicdscripts/before_install.sh
+      timeout: 300
+      runas: ubuntu
+  ApplicationStart:
+    - location: cicdscripts/application_start.sh
+      timeout: 300
+      runas: ubuntu
