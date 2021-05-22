@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ubuntu/publishing-website
+    destination: /home/ubuntu/publishing-app
 hooks:
   ApplicationStop:
     - location: cicdscripts/application_stop.sh
