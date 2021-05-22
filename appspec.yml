@@ -9,15 +9,15 @@ permissions:
     owner: ubuntu
     group: ubuntu
 hooks:
+  ApplicationStop:
+    - location: cicdscripts/application_stop.sh
+      timeout: 300
+      runas: ubuntu
   BeforeInstall:
     - location: cicdscripts/before_install.sh
       timeout: 300
       runas: ubuntu
   ApplicationStart:
     - location: cicdscripts/application_start.sh
-      timeout: 300
-      runas: ubuntu
-  ApplicationStop:
-    - location: cicdscripts/application_stop.sh
       timeout: 300
       runas: ubuntu
