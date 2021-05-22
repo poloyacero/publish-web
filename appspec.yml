@@ -11,5 +11,5 @@ hooks:
       runas: ubuntu
   ApplicationStart:
     - location: cicdscripts/application_start.sh
-      timeout: 300
+      timeout: 500
       runas: ubuntu
