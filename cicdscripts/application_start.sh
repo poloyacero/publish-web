@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #navigate into our working directory where we have all our github files
-cd /home/ec2-user/publishing-app
-sudo chmod -R 777 /home/ec2-user/publishing-app
+cd /home/ubuntu/publishing-app
+sudo chmod -R 777 /home/ubuntu/publishing-app
 
 #add npm and node to path
 export NVM_DIR="$HOME/.nvm"
