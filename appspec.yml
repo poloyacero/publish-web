@@ -3,11 +3,13 @@ os: linux
 files:
   - source: /
     destination: /home/ubuntu/publishing-app
+
 permissions:
   - object: /
     pattern: "**"
     owner: ubuntu
     group: ubuntu
+    
 hooks:
   ApplicationStop:
     - location: cicdscripts/application_stop.sh
