@@ -7,7 +7,7 @@ hooks:
   ApplicationStop:
     - location: cicdscripts/application_stop.sh
       timeout: 300
-      runas: ubuntu
+      runas: root
   BeforeInstall:
     - location: cicdscripts/before_install.sh
       timeout: 300
