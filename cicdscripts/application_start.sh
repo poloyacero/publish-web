@@ -1,4 +1,3 @@
-#!/bin/bash
 source /home/ubuntu/.bash_profile
 
 #navigate into our working directory where we have all our github files

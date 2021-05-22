@@ -1,4 +1,3 @@
-#!/bin/bash
 source /home/ubuntu/.bash_profile
 
 #Stopping existing node servers

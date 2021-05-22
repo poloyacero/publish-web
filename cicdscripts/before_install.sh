@@ -1,4 +1,3 @@
-#!/bin/bash
 source /home/ubuntu/.bash_profile
 
 #download node and npm
