@@ -13,7 +13,7 @@ permissions:
 hooks:
   ApplicationStop:
     - location: cicdscripts/application_stop.sh
-      timeout: 300
+      timeout: 120
       runas: ubuntu
   BeforeInstall:
     - location: cicdscripts/before_install.sh

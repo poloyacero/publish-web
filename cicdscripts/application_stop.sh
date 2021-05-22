@@ -1,4 +1,4 @@
-source /home/ubuntu/.bash_profile
+#!/bin/bash
 
 #Stopping existing node servers
 echo "Stopping any existing node servers"
