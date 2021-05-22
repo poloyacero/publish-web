@@ -1,4 +1,4 @@
-source /home/ubuntu/.bash_profile
+#!/bin/bash
 
 #navigate into our working directory where we have all our github files
 cd /home/ubuntu/publishing-app
