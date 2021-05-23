@@ -47,7 +47,7 @@ export default function Contact() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Email
                 </Form.Text>
-                <Form.Control type="text"  />
+                <Form.Control type="email"  />
               </Col>
                 
                 <Col>
@@ -61,7 +61,7 @@ export default function Contact() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                  Message
                 </Form.Text>
-                <Form.Control type="textarea" placeholder="Message" />
+                <Form.Control  as="textarea" placeholder="Message" rows={5}/>
                 <p></p>
                 <Button className={styles.sendButton} variant="primary" type="submit">SUBMIT</Button>
                 </Col></Row>
