@@ -113,6 +113,9 @@
   height: 1em;
 }
 
+.ctext{
+  color: #7b6b5b;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
