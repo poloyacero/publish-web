@@ -25,6 +25,7 @@ export default function IllustrationServices() {
               <Row className={styles.heading}>
                 <h1>Illustration Services</h1>
               </Row>
+              <Row><Col><br/></Col></Row>
               <Row className={styles.heading}>
                 <h3>Style Selection </h3>
               </Row>
@@ -240,7 +241,8 @@ export default function IllustrationServices() {
             
           </Col>
           </Row>
-
+          <Row><Col><br/></Col></Row>
+          <Row><Col><br/></Col></Row>
           < Row className={styles.heading}>
                 <h3>The Publishing Artist</h3>
               </Row>
