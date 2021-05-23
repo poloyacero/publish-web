@@ -64,7 +64,15 @@
   display: block;
   margin: auto;
 }
-
-.link:hover {
+.link2 {
+  background-color: #e7d2bc;
+  border: none;
+  color: #7b6b5b;
+  text-align: center;
+  font-weight: 500;
+  display: block;
+  margin: auto;
+}
+.link:hover, .link2:hover {
   color: #fff;
 }

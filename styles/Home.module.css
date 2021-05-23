@@ -116,6 +116,24 @@
 .ctext{
   color: #7b6b5b;
 }
+
+.imgpadding{
+  padding-top: 50px;
+}
+
+.illustrationbutton {
+  margin: auto;
+  display: block;
+  width: 25%;
+  background-color: #7b6b5b;
+  border: none;
+  margin-top: 50px;
+  padding:10px;
+}
+
+.illustrationbutton:hover {
+  background-color: #7b6b5b;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;

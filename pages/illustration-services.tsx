@@ -3,11 +3,15 @@ import React from 'react';
 import PageLayout from '../components/PageLayout';
 import Footer from '../components/Footer';
 import NavMenu from '../components/Nav';
+import Link from 'next/link';
+import styles2 from '../components/FeaturedPackages/FeaturedPackages.module.css';
+import styles from '../styles/Home.module.css';
+import { Col, Container, Row ,Form,Image,Nav,Button} from 'react-bootstrap';
 
-import styles from '../styles/Home.module.css'
-import { Col, Container, Row ,Form,Image} from 'react-bootstrap';
+
 
 export default function IllustrationServices() {
+
     return (
       <div className={styles.container}>
         <Head>
@@ -237,9 +241,86 @@ export default function IllustrationServices() {
           </Col>
           </Row>
 
+          < Row className={styles.heading}>
+                <h3>The Publishing Artist</h3>
+              </Row>
+              <Row className={(styles.products,styles.ctext)}>  
+                <Col className={styles.product} md={{ span: 2, offset: 1 }}>
+                <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Cleoward</Nav.Link></Link>
+                </Col>
+                <Col className={styles.product} md={2}>
+                <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Charlo</Nav.Link></Link>
+                </Col>
+                <Col className={styles.product} md={2}>             
+                <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Mark</Nav.Link></Link>
+                </Col>
+                <Col className={styles.product} md={2}>
+                <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Joel</Nav.Link></Link>
+                </Col>
+                <Col className={styles.product} md={2}>
+                <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Floyd</Nav.Link></Link>
+                </Col>
+            </Row>
+              <Row className={styles.products}>
+                <Col  className={styles.imgpadding}  md={4}>
+                <Image src="/img/services/Layer79.png" width="250px" height="auto"/>
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer77.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer87.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer94.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer71.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer78.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer86.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/pandas80.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer92.png" width="250px" height="auto" />
+                </Col>
+                <Col   className={styles.imgpadding} md={4}>
+                <Image src="/img/services/Layer83.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer90.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer89.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer85.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}  md={4}  >
+                <Image src="/img/services/Layer84.png" width="250px" height="auto" />
+                </Col>
+                <Col  className={styles.imgpadding}   md={4}>
+                <Image src="/img/services/Layer91.png" width="250px" height="auto" />
+                </Col>
+                <Col className={styles.product}> 
+                <Link href="/pricing" passHref><Button className={styles.illustrationbutton}>Get Package</Button></Link></Col>
+                </Row>
+
+               
+               
             </Container>           
           </Container>    
-              
+          <Container fluid>
+                 <Row className={styles.heading}>
+                  
+                 </Row>
+                
+                 </Container>
         </PageLayout>
         <Footer />
     </div>
