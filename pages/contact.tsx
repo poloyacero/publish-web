@@ -61,7 +61,7 @@ export default function Contact() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                  Message
                 </Form.Text>
-                <Form.Control  as="textarea" placeholder="Message" rows={5}/>
+                <Form.Control  as="textarea" rows={5}/>
                 <p></p>
                 <Button className={styles.sendButton} variant="primary" type="submit">SUBMIT</Button>
                 </Col></Row>
@@ -69,7 +69,7 @@ export default function Contact() {
             </Col></Row>
             </Form.Group>
             </Form>
-            <Row>
+            <Row className={styles.ctext}>
               <Col>
               <p><b>Office Hours</b></p>
               <p>
@@ -92,9 +92,9 @@ export default function Contact() {
            
               <Col>
               <p><b>Inquiries and Customer Service</b></p>
-              <p>
+              <h1>
                +45 2090 1011
-              </p>             
+              </h1>             
               
               </Col>
             </Row>
