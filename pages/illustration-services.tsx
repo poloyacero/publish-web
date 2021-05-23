@@ -310,7 +310,7 @@ export default function IllustrationServices() {
                 <Image src="/img/services/Layer91.png" width="250px" height="auto" />
                 </Col>
                 <Col className={styles.product}> 
-                <Link href="/pricing" passHref><Button className={styles.illustrationbutton}>Get Package</Button></Link></Col>
+                <Link href="/pricing" passHref><Button className={styles.illustrationbutton}>Get Started</Button></Link></Col>
                 </Row>
 
                
