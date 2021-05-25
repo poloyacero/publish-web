@@ -26,6 +26,7 @@ export default function IllustrationServices() {
                 <h1>Illustration Services</h1>
               </Row>
               <Row><Col><br/></Col></Row>
+              <Row><Col><br/></Col></Row>
               <Row className={styles.heading}>
                 <h3>Style Selection </h3>
               </Row>
@@ -35,52 +36,53 @@ export default function IllustrationServices() {
            <Row  className={styles.products}>  
               <Col className={styles.product} md={{ span: 2, offset: 1 }}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
-                <Form.Check type="checkbox" label="Cartoon" />
-                <Form.Check type="checkbox" label="Realistic" />
-                <Form.Check type="checkbox" label="Comic" />
-                <Form.Check type="checkbox" label="Caricature" />
+                <Form.Check type="radio" label="Cartoon" name="selectstyles"  id="styles1"/>
+                <Form.Check type="radio" label="Realistic" name="selectstyles" id="styles2"/>
+                <Form.Check type="radio" label="Comic" name="selectstyles" id="styles3"/>
+                <Form.Check type="radio" label="Caricature" name="selectstyles" id="styles4"/>
               </Form.Group>
               
                 </Col>
                 <Col className={styles.product} md={2}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
-                <Form.Check type="checkbox" label="Line Art" />
-                <Form.Check type="checkbox" label="Victor" />
-                <Form.Check type="checkbox" label="Isometric" />
-                <Form.Check type="checkbox" label="Fantasy" />
+                <Form.Check type="radio" label="Line Art" name="selectstyles" id="styles5"/>
+                <Form.Check type="radio" label="Victor" name="selectstyles" id="styles6"/>
+                <Form.Check type="radio" label="Isometric" name="selectstyles" id="styles7"/>
+                <Form.Check type="radio" label="Fantasy" name="selectstyles" id="styles8"/>
               </Form.Group>
               
                 </Col>
                 <Col className={styles.product} md={2}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
-                <Form.Check type="checkbox" label="3D Render" />
-                <Form.Check type="checkbox" label="Low Poly" />
-                <Form.Check type="checkbox" label="Pop Art" />
-                <Form.Check type="checkbox" label="Vintage" />
+                <Form.Check type="radio" label="3D Render" name="selectstyles" id="styles9"/>
+                <Form.Check type="radio" label="Low Poly"name="selectstyles"  id="styles10"/>
+                <Form.Check type="radio" label="Pop Art" name="selectstyles" id="styles11"/>
+                <Form.Check type="radio" label="Vintage" name="selectstyles" id="styles12"/>
               </Form.Group>
               
                 </Col>
                 <Col className={styles.product} md={2}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
-                <Form.Check type="checkbox" label="Painting" />
-                <Form.Check type="checkbox" label="Watercolor" />
-                <Form.Check type="checkbox" label="Charcoal" />
-                <Form.Check type="checkbox" label="Sketch" />
+                <Form.Check type="radio" label="Painting" name="selectstyles" id="styles13"/>
+                <Form.Check type="radio" label="Watercolor" name="selectstyles" id="styles14"/>
+                <Form.Check type="radio" label="Charcoal" name="selectstyles" id="styles15"/>
+                <Form.Check type="radio" label="Sketch" name="selectstyles" id="styles16"/>
               </Form.Group>
               
                 </Col>
                 <Col className={styles.product} md={2}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
-                <Form.Check type="checkbox" label="Abstract" />
-                <Form.Check type="checkbox" label="Mixed Media" />
-                <Form.Check type="checkbox" label="Collage" />
-                <Form.Check type="checkbox" label="Grafiti" />
+                <Form.Check type="radio" label="Abstract" name="selectstyles" id="styles17"/>
+                <Form.Check type="radio" label="Mixed Media" name="selectstyles" id="styles18"/>
+                <Form.Check type="radio" label="Collage" name="selectstyles" id="styles19"/>
+                <Form.Check type="radio" label="Grafiti" name="selectstyles" id="styles20"/>
               </Form.Group>              
                 </Col>
             </Row>
             </Form.Group>
             </Form>
-
+            <Row><Col><br/></Col></Row>
+            <Row><Col><br/></Col></Row>
             <Row className={styles.heading}>
                 <h3>Standard Packages</h3>
               </Row>
@@ -89,7 +91,7 @@ export default function IllustrationServices() {
           <Col className={styles.product} md={3}>
            
          <h3 className="text-center">Level 1</h3>
-            <Row>
+            <Row className={styles.myl}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€250</Col>
@@ -128,7 +130,7 @@ export default function IllustrationServices() {
           <Col className={styles.product} md={3}>
            
          <h3 className="text-center">Level 2</h3>
-            <Row>
+            <Row className={styles.myl}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€350</Col>
@@ -166,7 +168,7 @@ export default function IllustrationServices() {
           <Col className={styles.product} md={3}>
            
             <h3 className="text-center">Level 3</h3>
-            <Row>
+            <Row className={styles.myl}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€450</Col>
@@ -205,7 +207,7 @@ export default function IllustrationServices() {
           <Col className={styles.product} md={3}>
            
             <h3 className="text-center">Level 4</h3>
-            <Row>
+            <Row className={styles.myl}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€1000</Col>
