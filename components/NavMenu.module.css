@@ -6,6 +6,7 @@
   width: 100%;
   padding-left: 0px;
   padding-right: 0px;
+  padding-top: 30px;
 }
 
 .brand {
@@ -62,6 +63,7 @@
 .logo {
   width: 100%;
   display: inline-block;
+  margin-left:45px ;
 }
 
 .inlineBlock {
