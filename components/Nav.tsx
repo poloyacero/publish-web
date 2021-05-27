@@ -44,11 +44,11 @@ const NavMenu = ({ ...props }: NavProps) => {
                     <NavDropdown.Item className={styles.dropdownItem} href="/distribution">Distribution</NavDropdown.Item>
                   </NavDropdown>
                   <Link href="/packages" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
-                  <NavDropdown title="Services" id="collasible-nav-dropdown" className={styles.navmenu}>
+                  {/* <NavDropdown title="Services" id="collasible-nav-dropdown" className={styles.navmenu}>
                     <NavDropdown.Item className={styles.dropdownItem} href="/marketing">Marketing</NavDropdown.Item>
                     <NavDropdown.Item className={styles.dropdownItem} href="/add-on">Add-on</NavDropdown.Item>
-                  </NavDropdown>
-                  {/*<Link href="/" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>*/}
+                  </NavDropdown> */}
+                  <Link href="/services" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
                 </Nav>
               </Navbar.Collapse>
           </Col>

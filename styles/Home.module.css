@@ -139,6 +139,36 @@
  padding-left:20px;
  padding-right:20px;
 }
+
+.iservices{
+  font-size: 13px;
+  color: #7b6b5b;
+}
+.iservices ol{
+  padding-left: 3mm;
+}
+.iservices .servicesspan {
+  font-size: 13px; 
+  font-weight:normal; 
+
+}
+.iservices .servicesparag {
+  font-size: 20px;
+  font-weight:600; 
+  line-height:80%;
+}
+.iservices .servicestitle {
+  font-size: 36px;
+  font-weight:600; 
+  line-height:80%;
+}
+
+.iservices .servicestitlespan {
+  font-size: 28.5px; 
+  font-weight:600; 
+
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
