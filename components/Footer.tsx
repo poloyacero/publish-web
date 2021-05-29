@@ -10,7 +10,7 @@ interface FooterProps {}
 
 const Footer = ({ ...props }: FooterProps) => {
   return (
-    <Container fluid style={{background: '#e7d2bc'}}>
+    <Container fluid style={{background: '#f0e3d5'}}>
       <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
         <Row className="justify-content-md-center">
           <Col md={'auto'} className={styles.left}>
@@ -40,10 +40,17 @@ const Footer = ({ ...props }: FooterProps) => {
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                  Subject
                 </Form.Text> */}
-                <Form.Control type="text" className={styles.input} placeholder="Subject" />
+                {/* <Form.Control type="text" className={styles.input} placeholder="Subject" /> */}
+                <Form.Control className={styles.inputselect} as="select">
+                  <option disabled selected>Subject</option>
+                  <option>Subject sample 1</option>
+                  <option>Subject sample 2</option>
+                  <option>Subject sample 3</option>
+                  <option>Subject sample 4</option>
+                </Form.Control>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 <Row style={{flexWrap:'nowrap'}}><Col sm={1}><Form.Check type="checkbox" name="selectstyles"  id="styles1"/></Col>
-                <Col sm={11} style={{padding:"5px"}} className={styles.checkboxlabel}>I agree to the Privacy Policy and Terms and Condition</Col><Col></Col></Row>
+                <Col sm={12} style={{padding:"5px"}} className={styles.checkboxlabel}>I agree to the Privacy Policy and Terms and Condition</Col><Col></Col></Row>
                    <br/>             
                 <Button className={styles.sendmail}>SEND MAIL</Button>
               </Form.Group>
@@ -71,7 +78,7 @@ const Footer = ({ ...props }: FooterProps) => {
               <Row className="justify-content-md-center">
                 <Col>
                 <Row className={styles.center}><Col>
-               <Image src="/logo.png" width="100%" height="23px" />
+               <Image src="/logo.png" width="125%" height="30px" />
               <div className={styles.copyright}>
               <p>Copyright © {(new Date().getFullYear())} ThePublishing All Rights Reserved </p>
             </div> 

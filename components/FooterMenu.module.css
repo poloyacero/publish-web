@@ -51,7 +51,7 @@
 
 .footerh1 {
   width: 100%;
-  font-size: 35px;
+  font-size: 38px;
   text-align: center;
   color: #7b6b5b;
   padding:20px;
@@ -59,7 +59,7 @@
 }
 
 .sendmail {
-  width: 100%;
+  width: 108%;
   height: 50%;
   font-size: 25px;
   text-align: center;
@@ -69,7 +69,7 @@
 }
 
 .sendmail:hover {
-  width: 100%;
+  width: 115%;
   height: 50%;
   font-size: 25px;
   text-align: center;
@@ -81,6 +81,7 @@
 .footerlink a{
 text-decoration: none;
 color: #7b6b5b;
+font-size: 15px;
 }
 
 .footerlink a:hover{
@@ -97,23 +98,44 @@ color: #7b6b5b;
       outline: 0;
       border-width: 0 0 1.5px;
       border-color: #7b6b5b;
-      background: #e7d2bc;
-      padding-top:18px;
-      height: 20px;
-      width:255px;
+      background: #f0e3d5;
+      padding-top:10px;
+      padding-left:0;
+      height: 27px;
+      width:260px; 
+      -webkit-border-radius: 0; 
+      font-size: 12px;   
     }
+    .inputselect {
+      outline: 0;
+      border-width: 0 0 1.5px;
+      border-color: #7b6b5b;
+      background: #f0e3d5;
+      padding-left:0;
+      height: 33px;
+      width:260px; 
+      -webkit-border-radius: 0;
+      color: #7b6b5b; 
+      font-size: 12px;    
+    }
+    .inputselect:focus {
+      outline: 0;
+      border-width: 0 0 1.5px;
+      border-color: #e7d2bc;
+      background: #fce4cc;
+      }
     .input:focus {
       outline: 0;
       border-width: 0 0 1.5px;
       border-color: #e7d2bc;
       background: #fce4cc;
-      padding-top:18px;
+      padding-top:15px;
       }
 
     .checkboxlabel {
-      font-size: 8px;
+      font-size: 9px;
       padding-top:18px;
-      padding-left:0;
+      padding-left:0;     
       padding:5px;
       color: #7b6b5b;
     }
