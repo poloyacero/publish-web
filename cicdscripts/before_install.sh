@@ -9,6 +9,7 @@ nvm install node
 DIR="/home/ubuntu/publishing-app"
 if [ -d "$DIR" ]; then
   echo "${DIR} exists"
+  rm /home/ubuntu/publishing-app/package.json
 else
   echo "Creating ${DIR} directory"
   mkdir ${DIR}
