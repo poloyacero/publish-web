@@ -169,6 +169,27 @@
 
 }
 
+.iservices .serviceslink a {
+ cursor: pointer;  
+padding-top:30px;
+text-decoration: none;
+color: #7b6b5b;
+}
+.iservices .serviceslink a:hover {
+ color: rgb(53, 47, 40);
+ }
+
+.iservices .imgpadding {
+  padding-left: 60px;
+  padding-top:0px;
+}
+.iservices .servicesbg {
+ background:linear-gradient(to bottom, #7b6b5b 100%,white 100%) ;
+ padding:20px;
+ width: 100%;
+ height: auto;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

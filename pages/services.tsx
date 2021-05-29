@@ -4,7 +4,7 @@ import PageLayout from '../components/PageLayout';
 import Footer from '../components/Footer';
 import NavMenu from '../components/Nav';
 import Link from 'next/link';
-import styles2 from '../components/FeaturedPackages/FeaturedPackages.module.css';
+import styles2 from '../components/NavMenu.module.css';
 import styles from '../styles/Home.module.css';
 import { Col, Container, Row ,Form,Image,Nav,Button} from 'react-bootstrap';
 
@@ -20,9 +20,9 @@ export default function Services() {
         </Head>
         <NavMenu />
         <PageLayout>
-          <Container fluid  className={styles.iservices}>
+          <Container fluid  className={styles.iservices}>      
             <Container className="container">
-              <Row className="justify-content-md-left">
+                            <Row className="justify-content-md-left">
               <Col md={2}><br/></Col>
                 <Col md={'auto'}><p className={styles.servicestitle}>Self-Publish a Book <br/><span className={styles.servicestitlespan}>Guide and Services</span></p></Col>
                 
@@ -35,24 +35,26 @@ export default function Services() {
               <Row className="justify-content-md-left">
               <Col md={2}><br/></Col>
              <Col md={'auto'}>
-             <ol>
-               <li>Writing</li>
-               <li>Book Editing</li> 
-               <li>Book Design</li> 
-               <li>Book Metadata </li>
-               <li>Printing </li>
-               <li>Royalties</li> 
-               <li>Distribution </li>
-               <li>Marketing</li>
+             <ol className={styles.serviceslink}>
+               <Link href="#writing"><a><li>Writing</li></a></Link>
+               <Link href="#bookediting"><a><li>Book Editing</li></a></Link>  
+               <Link href="#bookdesign"><a><li>Book Design</li></a></Link>  
+               <Link href="#bookmetadata"><a><li>Book Metadata </li></a></Link> 
+               <Link href="#printing"><a><li>Printing </li></a></Link> 
+               <Link href="#royalties"><a><li>Royalties</li></a></Link> 
+               <Link href="#distribution"><a><li>Distribution </li></a></Link> 
+               <Link href="#marketing"><a><li>Marketing</li></a></Link> 
               </ol>
-              </Col>
-              <Col md={'auto'}><Image src="/img/Slider.png" height="auto" width="350px"/></Col>
-              </Row>
-              <Row><Col><br/><br/></Col></Row>
+              </Col>              
+              <Col md={6}><div className={styles.imgpadding}><Image src="/img/Slider.png" height="auto" width="350px"/></div> 
+              
+     </Col>
+              </Row>           
+              
             <Row><Col><br/><br/></Col></Row>
             <Row><Col><br/></Col></Row>
             <Row><Col><br/></Col></Row>
-            <Row><Col md={2}></Col><Col md={6}> <h1>1 Writing</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={6}> <h1 id="writing">1 Writing</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/1.png" height="auto" width="150px"/></Col>
               <Col md={8}>
@@ -61,7 +63,7 @@ export default function Services() {
             </Row>
             <Row><Col><br/><br/></Col></Row>
             
-            <Row><Col md={2}></Col><Col md={8}> <h1>2 Book Editing</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={8}> <h1 id="bookediting">2 Book Editing</h1></Col></Row>
             <Row>           
               <Col md={2}><Image src="/img/lapis.png" height="auto" width="150px"/></Col>
               <Col md={8}><p>Never allow your readers to comment when they see that typo. Even the world’s best writers have their manuscripts edited several times. From spelling, sentence structure, the works! A thoroughly edited work rids us of the embarrassment of promoting an imperfect book.
@@ -103,7 +105,7 @@ export default function Services() {
             </Row>
             <Row><Col><br/><br/></Col></Row>
             <Row><Col><br/><br/></Col></Row>
-            <Row><Col md={2}></Col><Col md={8}><h1>3 Book Design</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={8}><h1 id="bookdesign">3 Book Design</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/26.png" height="auto" width="150px"/></Col>
               <Col md={8}>
@@ -137,7 +139,7 @@ export default function Services() {
             </Row>
             <Row><Col><br/><br/></Col></Row>
             <Row><Col><br/><br/></Col></Row>
-            <Row><Col md={2}></Col><Col md={8}><h1>4 Book Metadata</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={8}><h1 id="bookmetadata">4 Book Metadata</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/lens.png" height="auto" width="150px"/></Col>
               <Col md={8}>
@@ -161,7 +163,7 @@ export default function Services() {
             </Row>
             <Row><Col><br/><br/></Col></Row>
             <Row><Col><br/><br/></Col></Row>
-            <Row><Col md={2}></Col><Col md={8}><h1>5 Printing</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={8}><h1 id="printing">5 Printing</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/bookinside2.png" height="auto" width="150px"/></Col>
               <Col md={8}>
@@ -177,7 +179,7 @@ export default function Services() {
             </Row>
             <Row><Col><br/><br/></Col></Row>
             <Row><Col><br/><br/></Col></Row>
-            <Row><Col md={2}></Col><Col md={8}><h1>6 Royalties</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={8}><h1 id="royalties">6 Royalties</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/coins.png" height="auto" width="150px"/></Col>
               <Col md={8}>
@@ -199,7 +201,7 @@ export default function Services() {
               </Col>
             </Row>
             <Row><Col><br/></Col></Row>
-            <Row><Col md={2}></Col><Col md={8}><h1>7 Distribution</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={8}><h1 id="distribution">7 Distribution</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/bookglobe.png" height="auto" width="150px"/></Col>
               <Col md={8}>
@@ -220,7 +222,7 @@ export default function Services() {
             </Row>
             <Row><Col><br/><br/></Col></Row>
             <Row><Col><br/><br/></Col></Row>
-            <Row><Col md={2}></Col><Col md={8}><h1>8 Marketing</h1></Col></Row>
+            <Row><Col md={2}></Col><Col md={8}><h1 id="marketing">8 Marketing</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/megaphone2.png" height="auto" width="150px"/></Col>
               <Col md={8}>

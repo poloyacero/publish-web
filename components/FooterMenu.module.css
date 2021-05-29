@@ -1,12 +1,15 @@
 .footerMenus {
   display: inline-block !important;
-  color: #ffffff;
+  color: #7b6b5b;
 }
 
 .footerMenus:hover {
   color: #7b6b5b !important;
 }
 
+.left {
+  text-align: left;
+}
 .center {
   text-align: center;
 }
@@ -42,6 +45,81 @@
 }
 
 .copyright {
-  color: #6c757d;
-  font-size: 11px;
+  color: #7b6b5b;
+  font-size: 10px;
 }
+
+.footerh1 {
+  width: 100%;
+  font-size: 35px;
+  text-align: center;
+  color: #7b6b5b;
+  padding:20px;
+  font-weight: 600;
+}
+
+.sendmail {
+  width: 100%;
+  height: 50%;
+  font-size: 25px;
+  text-align: center;
+  background: #7b6b5b;
+  border-color: #e7d2bc;
+  color: #ffffff;
+}
+
+.sendmail:hover {
+  width: 100%;
+  height: 50%;
+  font-size: 25px;
+  text-align: center;
+  background: #927f6b;
+  border-color: #e7d2bc;
+  color: #ffffff;
+}
+
+.footerlink a{
+text-decoration: none;
+color: #7b6b5b;
+}
+
+.footerlink a:hover{
+  text-decoration: none;
+  color: #251f19;
+  }
+
+  .footerlink:active:visited{
+    text-decoration: none;
+    color: #7b6b5b;
+    }
+
+    .input {
+      outline: 0;
+      border-width: 0 0 1.5px;
+      border-color: #7b6b5b;
+      background: #e7d2bc;
+      padding-top:18px;
+      height: 20px;
+      width:255px;
+    }
+    .input:focus {
+      outline: 0;
+      border-width: 0 0 1.5px;
+      border-color: #e7d2bc;
+      background: #fce4cc;
+      padding-top:18px;
+      }
+
+    .checkboxlabel {
+      font-size: 8px;
+      padding-top:18px;
+      padding-left:0;
+      padding:5px;
+      color: #7b6b5b;
+    }
+ 
+
+    .input::placeholder {
+      color: #7b6b5b;
+      opacity: 1; /* Firefox */
+    }
