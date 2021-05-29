@@ -11,5 +11,6 @@ export NVM_DIR="$HOME/.nvm"
 
 npm install
 npm run build
-npm run start
+(npm run start&)
+
 echo "Build and Deploy Success"
