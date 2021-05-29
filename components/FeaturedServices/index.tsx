@@ -12,19 +12,24 @@ const FeaturedServices = ({ ...props }: FeaturedServicesProps) => {
       <Container className="container">
         <Row className={styles.featuredServices}>
           <h2>Services</h2>
-          <Col md={4}>
+          <Col md={3}>
             <Link href="/products" passHref><Nav.Link><Image src="/img/publish.png" /></Nav.Link></Link>
             <p>Publish</p>
-            <span>A wide variety of publishing alternatives<br/> that offer a simpler or more flexible<br/> approach depending on your needs.</span>
+            <span>A wide variety of publishing alternatives that offer a simpler or more flexible approach depending on your needs.</span>
           </Col>
-          <Col md={4}>
+          <Col md={3}>
             <Link href="/pricing" passHref><Nav.Link><Image style={{ marginBottom: '7px' }} src="/img/print.png" /></Nav.Link></Link>
             <p>Print</p>
             <span>Easy, fast and <br/>cost-effective printing.	
 </span>
           </Col>
-          <Col md={4}>
-            <Link href="/marketing" passHref><Nav.Link><Image src="/img/sell.png" /></Nav.Link></Link>
+          <Col md={3}>
+            <Link href="/distribution" passHref><Nav.Link><Image src="/img/airplane.png" /></Nav.Link></Link>
+            <p>Distribute</p>
+            <span>Availability of your book<br/> online, retail stores and<br/> around the world.</span>
+          </Col>
+          <Col md={3}>
+            <Link href="/market" passHref><Nav.Link><Image src="/img/sell.png" /></Nav.Link></Link>
             <p>Marketing</p>
             <span>Save time and potentially money,<br/> by benefiting from our years of<br/> expert marketing experience.</span>
           </Col>

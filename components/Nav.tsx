@@ -21,7 +21,7 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={3} className={styles.logoWrapper}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
-              <Image src="/logo.png" className={styles.logo} />
+              <Image src="/logo.png" className={styles.logo}/>
               {/*<h1>The Publishing</h1>*/}
               </Navbar.Brand>
             </Link>
@@ -30,25 +30,18 @@ const NavMenu = ({ ...props }: NavProps) => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto">
-                  <NavDropdown title="Publish" id="collasible-nav-dropdown" className={styles.navmenu}>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/products">Products</NavDropdown.Item>
-                    <NavDropdown id="" title="Create" className={styles.dropdownTopLevel}>
-                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/print-book">Print Book</NavDropdown.Item>
+                <NavDropdown title="Create" id="collasible-nav-dropdown" className={styles.navmenu}>
+                  <NavDropdown.Item id={styles.dropdownNextLevel} href="/print-book">Print Book</NavDropdown.Item>
                       <NavDropdown.Item id={styles.dropdownNextLevel} href="/ebook">Ebook</NavDropdown.Item>
-                    </NavDropdown>
-                  </NavDropdown>
-                  <NavDropdown title="How" id="collasible-nav-dropdown" className={styles.navmenu}>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish">How To Self Publish</NavDropdown.Item>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/self-publish-cost">How Much Does It Cost</NavDropdown.Item>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/design-a-book">How To Design a Book</NavDropdown.Item>
-                    <NavDropdown.Item className={styles.dropdownItem} href="/distribution">Distribution</NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown>                 
+                  
                   <Link href="/packages" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
                   {/* <NavDropdown title="Services" id="collasible-nav-dropdown" className={styles.navmenu}>
                     <NavDropdown.Item className={styles.dropdownItem} href="/marketing">Marketing</NavDropdown.Item>
                     <NavDropdown.Item className={styles.dropdownItem} href="/add-on">Add-on</NavDropdown.Item>
                   </NavDropdown> */}
                   <Link href="/services" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
+                  <Link href="/products" passHref><Nav.Link className={styles.navmenu}>Products</Nav.Link></Link>
                 </Nav>
               </Navbar.Collapse>
           </Col>
