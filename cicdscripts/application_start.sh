@@ -12,4 +12,4 @@ export NVM_DIR="$HOME/.nvm"
 npm install
 npm run build
 
-pm2 --name PublishingApp start npm -- start
+sudo pm2 --name PublishingApp start npm -- start
