@@ -1,0 +1,47 @@
+.footerMenus {
+  display: inline-block !important;
+  color: #ffffff;
+}
+
+.footerMenus:hover {
+  color: #7b6b5b !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.sendButton:hover {
+  background: #e7d2bc;
+  border-color: #7b6b5b;
+}
+
+.sendButton {
+  right: 0;
+  position: absolute;
+  bottom: 0;
+  background: #e7d2bc;
+  border-color: #e7d2bc;
+  color: #7b6b5b;
+  font-weight: 500;
+}
+
+.form {
+  width: 60%;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.formGroup {
+  position: relative;
+}
+
+.privacy_policy a{
+  font-size: 13px
+}
+
+.copyright {
+  color: #6c757d;
+  font-size: 11px;
+}
