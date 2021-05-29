@@ -2,5 +2,5 @@
 
 #Stopping existing node servers
 echo "Stopping any existing node servers"
-pm2 delete PublishingApp
+sudo pm2 delete PublishingApp
 pkill node
