@@ -9,7 +9,9 @@ hooks:
       runas: ubuntu
   BeforeInstall:
     - location: cicdscripts/before_install.sh
+      timeout: 30
       runas: ubuntu
   ApplicationStart:
     - location: cicdscripts/application_start.sh
+      timeout: 30
       runas: ubuntu
