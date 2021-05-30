@@ -34,7 +34,7 @@ export default function Services() {
             </Row>
               <Row className="justify-content-md-left">
               <Col md={2}><br/></Col>
-             <Col md={'auto'}>
+             <Col md={'auto'} className={styles.serviceslinkcol}>
              <ol className={styles.serviceslink}>
                <Link href="#writing"><a><li>Writing</li></a></Link>
                <Link href="#bookediting"><a><li>Book Editing</li></a></Link>  
