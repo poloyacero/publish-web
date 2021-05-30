@@ -43,10 +43,39 @@ const Footer = ({ ...props }: FooterProps) => {
                 {/* <Form.Control type="text" className={styles.input} placeholder="Subject" /> */}
                 <Form.Control className={styles.inputselect} as="select">
                   <option disabled selected>Subject</option>
-                  <option>Subject sample 1</option>
-                  <option>Subject sample 2</option>
-                  <option>Subject sample 3</option>
-                  <option>Subject sample 4</option>
+                  <optgroup label="General Inquiries">                  
+                  <option>Services</option>
+                  <option>Book Printing</option>                  
+                  <option>Book Distribution</option>
+                  <option>Book Order</option>
+                  <option>Editorial</option>
+                  <option>Design</option>
+                  <option>Marketing</option>
+                  <option>Royalties</option>
+                  <option>Submission Inquiries</option>
+                  </optgroup>
+                  <optgroup label="Manuscript Status?">
+                  <option>Complete and Edited</option>
+                  <option>Complete but not edited</option>
+                  <option>Ongoing</option>
+                  <option>About to Start</option>
+                  </optgroup>
+                  <optgroup label="Type of Book">
+                  <option>Childrens Book</option>
+                  <option>Art and Photography</option>
+                  <option>Biography and Memoir</option>
+                  <option>Fiction</option>
+                  <option>Non Fiction</option>
+                  <option>Cook Book</option>
+                  <option>Health and Fitness</option>
+                  <option>Crafts and Hobbies</option>
+                  <option>Home and Garden</option>
+                  <option>Travel and Adventure</option>
+                  <option>Entertainment</option>
+                  <option>Family and Relationship</option>
+                  <option>Religion</option>
+                  </optgroup>
+
                 </Form.Control>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 <Row style={{flexWrap:'nowrap'}}><Col sm={1}><Form.Check type="checkbox" name="selectstyles"  id="styles1"/></Col>

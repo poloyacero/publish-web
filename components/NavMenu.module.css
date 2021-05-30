@@ -121,6 +121,15 @@
   font-size: 12px;
   justify-content: center;   
 }
+.inputnav1 {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  border-color: #ad9984; 
+  height: 27px;
+  width:323px;   
+  font-size: 12px;
+  justify-content: center;   
+}
 
 .label{
   color: #7b6b5b;
@@ -139,6 +148,13 @@
   color: #7b6b5b;
   font-size: 12px;  
   text-align: center;
+  padding:0px;
+}
+
+.forgotpasslink1{
+  color: #7b6b5b;
+  font-size: 12px;  
+  text-align: right;
   padding:0px;
 }
 .haveaccount{

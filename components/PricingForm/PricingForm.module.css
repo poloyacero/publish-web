@@ -1,6 +1,7 @@
 .pricingForm {
   margin-top: 70px;
   margin-bottom: 100px;
+  color: #7b6b5b;
 }
 
 .label {
@@ -10,3 +11,28 @@
 .additionals {
   font-size: 14px;
 }
+
+.pricingh1 {
+  width: 100%;
+  font-size: 38px;
+  text-align: center;
+  color: #7b6b5b;
+  padding:20px;
+  font-weight: 600;
+}
+
+.pricinglink a{
+  text-decoration: none;
+  color: #7b6b5b;
+  font-size: 15px;
+  }
+  
+  .pricinglink a:hover{
+    text-decoration: none;
+    color: #251f19;
+    }
+  
+    .pricinglink:active:visited{
+      text-decoration: none;
+      color: #7b6b5b;
+      }
