@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import PageLayout from '../PageLayout';
+import Link from "next/link"
 
 import styles from './PricingForm.module.css';
 
@@ -10,20 +11,19 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
   return (
     <Container fluid>
       <div className={styles.pricingForm + " container"}>
+      <h1 className={styles.pricingh1}> Let’s Get Started</h1>
+     
       <Row>
-        <Col md={{ span: 10, offset: 2 }}>
+        <Col md={{ span: 10, offset: 0 }}>
           <p>
-            Fill up the data below to generate a template for the book and cover design, email instructions, and more useful info.<br/>
-            Once complete, submit the data and we will email you back with a template, instructions on how to create your book and how much you will pay to print and ship 
-            orders directly to yourself or to your customers.
+          Fill up the data below to generate a guide instructions, estimated cost in production  and distribution of your book and more useful info.
           </p>
           <p>
             Please note:<br/>
-            Sales tax is not displayed. If applicable, sales taxes will be applied at the time an order is placed on your account. Heavy traffic in requests may cause occasional
-            delays so please allow up to 2 hours before resubmitting a request.
+            Sales tax is not displayed. If applicable, sales taxes will be applied at the time an order is placed on your account.  Heavy traffic in requests may cause occasional delays so please allow up to 2 hours before resubmitting a request.
           </p>
         </Col>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Trim Size</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Trim Size</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
             <Form.Control as="select" defaultValue=" ">
@@ -63,70 +63,79 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
             </Form.Control>
           </Form.Group>
         </Col>
-      </Row>
+      </Row>      
       <Row>
-        <Col md={{ span: 3, offset: 3 }}>
-          <Form.Label className={styles.label}>
-            Interior Color and Paper
-          </Form.Label>
-        </Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Interior Color</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
-          <Form.Group as={Row}>
-            <Col sm={10}>
-              <Form.Check
-                type="radio"
-                label="Black and White"
-                name="colorAndPaperRadio"
-                id="colorAndPaperRadio1"
-              />
-              <Form.Check
-                type="radio"
-                label="Color"
-                name="colorAndPaperRadio"
-                id="colorAndPaperRadio2"
-              />
-            </Col>
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+            <Form.Control as="select" defaultValue=" ">
+              <option> </option>
+              <option>Black and White</option>
+              <option>Color</option>              
+            </Form.Control>
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Binding Type</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Paper Type</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
-          <Form.Group as={Row}>
-            <Col sm={10}>
-              <Form.Check
-                type="radio"
-                label="Paperback"
-                name="paperBackRadio"
-                id="paperBackRadio1"
-              />
-            </Col>
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+            <Form.Control as="select" defaultValue=" ">
+              <option> </option>
+              <optgroup label="If Black and White">
+              <option>White</option>
+              <option>Creme</option>
+              <option>Eggshell</option>              
+              </optgroup>
+              <optgroup label="If Color">
+              <option>Standard Color 50 lb</option>
+              <option>Standard Color 70 lb</option>
+              <option>Premium Color 50 lb</option>              
+              </optgroup>
+            </Form.Control>
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Laminate Type</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Binding Type</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
-          <Form.Group as={Row}>
-            <Col sm={10}>
-              <Form.Check
-                type="radio"
-                label="Gloss"
-                name="laminateTypeRadio"
-                id="laminateTypeRadio1"
-              />
-              <Form.Check
-                type="radio"
-                label="Matte"
-                name="laminateTypeRadio"
-                id="laminateTypeRadio2"
-              />
-            </Col>
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+            <Form.Control as="select" defaultValue=" ">
+              <option> </option>
+              <option>Paperback</option>
+              <option>Hardback</option>             
+            </Form.Control>
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Page Count</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Laminate</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}>
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+            <Form.Control as="select" defaultValue=" ">
+              <option> </option>
+              <option>Gloss</option>
+              <option>Matte</option>
+              <option>Texture</option>              
+            </Form.Control>
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Page Count</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}>
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+            <Form.Control as="select" defaultValue=" ">
+              <option> </option>
+              <option>22</option>
+              <option>28</option>
+              <option>200</option>              
+            </Form.Control>
+          </Form.Group>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Quantity</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
           <Form.Group as={Row}>
             <Form.Control type="text" />
@@ -134,15 +143,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Quantity</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
-          <Form.Group as={Row}>
-            <Form.Control type="text" />
-          </Form.Group>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Ship To Country</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Ship To</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
             <Form.Control as="select" defaultValue=" ">
@@ -405,23 +406,16 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Ship To Province</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Ship To Province</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
           <Form.Group as={Row}>
             <Form.Control type="text" />
           </Form.Group>
         </Col>
       </Row>
+     
       <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Ship To Postal Code</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
-          <Form.Group as={Row}>
-            <Form.Control type="text" />
-          </Form.Group>
-        </Col>
-      </Row>
-      <Row>
-        <Col md={{ span: 3, offset: 3 }}><Form.Label className={styles.label}>Printing Location</Form.Label></Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Printing Location</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
             <Form.Control as="select" defaultValue=" ">
@@ -435,51 +429,70 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 3, offset: 3 }}>
-          <Form.Label className={styles.label}>
-            Ebook
-          </Form.Label>
-        </Col>
+        <Col md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>E-Book</Form.Label></Col>
         <Col md={{ span: 3, offset: 0 }}>
-          <Form.Group as={Row}>
-            <Col sm={10}>
-              <Form.Check
-                type="radio"
-                label="Yes"
-                name="isEbook"
-                id="isEbook1"
-              />
-              <Form.Check
-                type="radio"
-                label="No"
-                name="isEbook"
-                id="isEbook2"
-              />
-            </Col>
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+            <Form.Control as="select" defaultValue=" ">
+              <option> </option>
+              <option>Yes</option>
+              <option>No</option>
+
+            </Form.Control>
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 10, offset: 2 }}>
-          <p>
-            Select Additional Services to let professionals help and create your book.<br/> This options are recommended to enhance and select the services you only wanted.<br/>
-            Check also in packages to get a full book services.
+        <Col md={{ span: 10, offset: 0 }}>
+          <p className={styles.pricinglink}>
+          Select Additional Services to let professionals help and create your book. This options are recommended to enhance and select the services you only wanted. Check also in <Link href="/packages">packages</Link> to get a full book services.
           </p>
         </Col>
       </Row>
-      <Row>
-        <Col md={{ span: 10, offset: 3 }}>
-          <Form.Label className={styles.label}>
-            Additional Services
+      <Row>     
+        <Col  md={{ span: 3, offset: 0 }} className={styles.additionals}>
+        <Form.Label className={styles.label}>
+          Editing
           </Form.Label>
-        </Col>
-        <Col md={{ span: 3, offset: 3 }} className={styles.additionals}>
           <Form.Group as={Row}>
             <Col sm={10}>
               <Form.Check
                 type="checkbox"
-                label="ISBN"
+                label="Editorial Assessment"
               />
+              <Form.Check
+                type="checkbox"
+                label="Line Editing"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Copyediting"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Proofreading"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Indexing"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Data Entry"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Text and Layout Format"
+              />          
+            </Col>
+          </Form.Group>
+        </Col>
+       
+        <Col  md={{ span: 3, offset: 0 }} className={styles.additionals}>
+        <Form.Label className={styles.label}>
+           Design
+          </Form.Label>
+          <Form.Group as={Row}>
+            <Col sm={10}>
               <Form.Check
                 type="checkbox"
                 label="Illustrations"
@@ -490,53 +503,25 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               />
               <Form.Check
                 type="checkbox"
+                label="Book Interior Design"
+              />
+              <Form.Check
+                type="checkbox"
                 label="Hardback Upgrade"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Interior Graphic Design"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Copyediting"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Indexing"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Cover and Interior Proofs"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Formatting and Layout"
-              />
+              />   
             </Col>
           </Form.Group>
         </Col>
-        <Col md={{ span: 3, offset: 0 }} className={styles.additionals}>
+       
+        <Col   md={{ span: 3, offset:0 }} className={styles.additionals}>
+        <Form.Label className={styles.label}>
+            Distribution
+          </Form.Label>
           <Form.Group as={Row}>
             <Col sm={10}>
               <Form.Check
                 type="checkbox"
-                label="Data Entry"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Copyright Registrations"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Proofreading"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Royalty Program"
-              />
-              <Form.Check
-                type="checkbox"
-                label="Book Return Program"
+                label="Print Book Distribution"
               />
               <Form.Check
                 type="checkbox"
@@ -544,7 +529,25 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               />
               <Form.Check
                 type="checkbox"
-                label="Webdesign"
+                label="Copyright Registration "
+              />
+              <Form.Check
+                type="checkbox"
+                label="ISBN"
+              />              
+            </Col>
+          </Form.Group>
+        </Col>
+       
+        <Col   md={{ span: 3, offset: 0 }} className={styles.additionals}>
+        <Form.Label className={styles.label}>
+            Marketing
+          </Form.Label>
+          <Form.Group as={Row}>
+            <Col sm={10}>
+              <Form.Check
+                type="checkbox"
+                label="Author Website"
               />
               <Form.Check
                 type="checkbox"
@@ -556,14 +559,24 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               />
               <Form.Check
                 type="checkbox"
-                label="Book Events Program"
+                label="Press Release Campaign"
               />
+              <Form.Check
+                type="checkbox"
+                label="Author Events"
+              />
+              <Form.Check
+                type="checkbox"
+                label="Print Advertisement"
+              />              
+             
             </Col>
           </Form.Group>
         </Col>
+       
       </Row>
       <Row>
-        <Col md={{ span: 3, offset: 3 }}>
+        <Col md={3}>
           <Button type="submit">Submit</Button>
         </Col>
       </Row>

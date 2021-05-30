@@ -76,7 +76,6 @@ const NavMenu = ({ ...props }: NavProps) => {
       </Container>
       <TheModal 
         title="Create an Account"
-        size="sm"
         show={modalShowCreate}
         onHide={() => setModalShowCreate(false)}
       >
@@ -86,7 +85,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Contact Name</Form.Label>
-                  <Form.Control className={styles.inputnav} type="text" name="contact-name"/>
+                  <Form.Control type="text" name="contact-name"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -94,7 +93,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control className={styles.inputnav} type="email" name="email"/>
+                  <Form.Control type="email" name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -102,7 +101,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control className={styles.inputnav} type="password" name="password"/>
+                  <Form.Control type="password" name="password"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -110,16 +109,18 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Validate Password</Form.Label>
-                  <Form.Control className={styles.inputnav} type="password" name="validate"/>                 
+                  <Form.Control type="password" name="validate"/>
                 </Col>
-                </Form.Group>
+              </Form.Group>
             </Col>
             <Col>
               <Form.Group as={Row}>
-                <Col  className={styles.forgotpasslink} md={12}>                  
-                  <Button onClick={props.onHide} className={styles.createButton}>Create Account</Button>
+                <Col className={styles.forgotpasslink1} md={12}>   
+                <br/>                                
+                  <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button>
                 </Col>
-                </Form.Group>
+               
+              </Form.Group>
             </Col>
           </Row>
         </Container>
@@ -168,7 +169,8 @@ const NavMenu = ({ ...props }: NavProps) => {
             <Col md={{ span: 12, offset: 0 }}>
               
                 <Col className={styles.forgotpasslink} md={12}>                                   
-                  <br/><br/><br/><br/><br/>
+                  <br/><br/>
+                  <hr></hr>
                 </Col>
                
              
@@ -182,7 +184,8 @@ const NavMenu = ({ ...props }: NavProps) => {
             </Col>
             <Col>
               <Form.Group as={Row}>
-                <Col className={styles.forgotpasslink} md={12}>                                   
+                <Col className={styles.forgotpasslink} md={12}>   
+                <br/>                                
                   <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button>
                 </Col>
                

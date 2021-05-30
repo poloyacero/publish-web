@@ -126,9 +126,9 @@ export default function PrintBook() {
             </Row>
           </Container>
         </Container>
-        <Item width={6} img="/img/Layer 34.png" title="Paperback Books">
+        <Item width={6} img="/img/paperback.png" title="Paperback Books">
           <p>
-            Also known as Softcover books, bound in a flexible paper cover.
+            Also known as Softcover books,<br/> bound in a flexible paper cover.
           </p>
           <p>
             4 x 6" (154 x 102mm) <br/>
@@ -143,7 +143,7 @@ export default function PrintBook() {
             8.5 x 11" (280 x 216mm) <br/>
           </p>
         </Item>
-        <Item width={6} img="/img/Layer 34.png" title="Hardcover Books">
+        <Item width={6} img="/img/hardcover.png" title="Hardcover Books">
           <p>
             Available in case laminate, cloth, or dust jacket.
           </p>
@@ -157,9 +157,9 @@ export default function PrintBook() {
             8.5 x 11" (280 x 216mm) Case Lam<br/>
           </p>
         </Item>
-        <Item width={6} img="/img/Layer 34.png" title="Standard Color Books">
+        <Item width={6} img="/img/standardcolor.png" title="Standard Color Books">
           <p>
-            An economical option for publishers who do not require the high-quality of Premium Color books.
+            An economical option for publishers <br/>who do not require the high-quality <br/>of Premium Color books.
           </p>
           <p>
             4 x 6" (102 x 154mm)<br/>
@@ -174,7 +174,7 @@ export default function PrintBook() {
             8.5 x 11" (280 x 216mm)<br/>
           </p>
         </Item>
-        <Item width={6} img="/img/Layer 34.png" title="Premium Color Books">
+        <Item width={6} img="/img/premiumcolor.png" title="Premium Color Books">
           <p>
             Perfect for images, illustrations and photo books.
           </p>
