@@ -168,10 +168,12 @@
   font-weight:600; 
 
 }
+.iservices .serviceslinkcol { 
+ padding-top:30px;
 
+ }
 .iservices .serviceslink a {
  cursor: pointer;  
-padding-top:30px;
 text-decoration: none;
 color: #7b6b5b;
 }
