@@ -1,9 +1,16 @@
 .modalHeader {
     background: rgb(240, 227, 213);
     color: #7b6b5b;
+    padding-left: 30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size: 102px;
 }
 
-.createButton {
-    background-color: #7b6b5b;
-    border-color: #7b6b5b;
+.modalTitle {
+    
+    font-size:20px;
 }
+
+
+

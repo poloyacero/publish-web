@@ -65,7 +65,7 @@
 .logo {
   width: 150px;
   display: inline-block;
-  margin-left:109px ;  
+  margin-left:92px ;  
   padding-bottom: 18px;
 }
 
@@ -111,3 +111,64 @@
   background: none !important;
   color: #16181b !important;
 }
+
+.inputnav {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  border-color: #ad9984; 
+  height: 27px;
+  width:235px;   
+  font-size: 12px;
+  justify-content: center;   
+}
+
+.label{
+  color: #7b6b5b;
+  font-size: 12px;  
+  width: 200px;
+}
+
+.forgotpasslink a{
+  color: #7b6b5b;
+  font-size: 12px; 
+  text-decoration: none; 
+  justify-items: center;
+  padding:0px;
+}
+.forgotpasslink{
+  color: #7b6b5b;
+  font-size: 12px;  
+  text-align: center;
+  padding:0px;
+}
+.haveaccount{
+  color: #7b6b5b;
+  font-size: 13px;  
+  text-align: center;
+  padding:0px;
+}
+.createButton {
+  background-color: #7b6b5b;
+  border-color: #7b6b5b;
+  text-align: center;
+  width: 125px;
+  font-size: 12px;
+}
+
+.createButton:hover {
+  background-color: #8f7c69;
+  border-color: #7b6b5b; 
+}
+
+.signinButton {
+  background-color: #7b6b5b;
+  border-color: #7b6b5b;
+  text-align: center;
+  width: 235px;
+}
+
+.signinButton:hover,.signinButton:visited,.signinButton:active{
+  background-color: #8f7c69;
+  border-color: #7b6b5b; 
+}
+

@@ -192,6 +192,26 @@ color: #7b6b5b;
  height: auto;
 }
 
+.sendButton {
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  text-align: center;
+  background: #7b6b5b;
+  border-color: #e7d2bc;
+  color: #ffffff;
+}
+
+.sendButton:hover {
+  width: 150px;
+  height: 45px;
+  font-size: 18px;
+  text-align: center;
+  background: #927f6b;
+  border-color: #e7d2bc;
+  color: #ffffff;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
@@ -257,3 +277,4 @@ color: #7b6b5b;
 .home {
   border-bottom: 0px #7b6b5b solid;
 }
+

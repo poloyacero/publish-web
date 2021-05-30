@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Row, Col, Image, NavDropdown, Form } from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col, Image, NavDropdown, Form ,Button} from 'react-bootstrap';
 import Link from 'next/link';
 
 import styles from './NavMenu.module.css';
@@ -8,10 +8,12 @@ import EnquiryModal from './EnquiryModal';
 
 interface NavProps {
   className?: string;
+  onHide?:any;  
 }
 
 const NavMenu = ({ ...props }: NavProps) => {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShowCreate, setModalShowCreate] = React.useState(false);
+  const [modalShowSignin, setModalShowSignin] = React.useState(false);
 
   return (
     <Container fluid style={{background: '#f0e3d5'}}>
@@ -21,7 +23,7 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={3} className={styles.logoWrapper}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
-              <Image src="/logo2.png" className={styles.logo}/>
+              <Image src="/logo.png" className={styles.logo}/>
               {/*<h1>The Publishing</h1>*/}
               </Navbar.Brand>
             </Link>
@@ -61,7 +63,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </svg>
               </Nav.Link>
             </Link>
-            <Nav.Link className={styles.utilityMenus} onClick={() => setModalShow(true)}>
+            <Nav.Link className={styles.utilityMenus} onClick={() => setModalShowSignin(true)}>
               <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                 <path fillRule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -74,8 +76,9 @@ const NavMenu = ({ ...props }: NavProps) => {
       </Container>
       <TheModal 
         title="Create an Account"
-        show={modalShow}
-        onHide={() => setModalShow(false)}
+        size="sm"
+        show={modalShowCreate}
+        onHide={() => setModalShowCreate(false)}
       >
         <Container>
           <Row>
@@ -83,7 +86,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Contact Name</Form.Label>
-                  <Form.Control type="text" name="contact-name"/>
+                  <Form.Control className={styles.inputnav} type="text" name="contact-name"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -91,7 +94,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control type="email" name="email"/>
+                  <Form.Control className={styles.inputnav} type="email" name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -99,7 +102,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control type="password" name="password"/>
+                  <Form.Control className={styles.inputnav} type="password" name="password"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -107,8 +110,82 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Validate Password</Form.Label>
-                  <Form.Control type="password" name="validate"/>
+                  <Form.Control className={styles.inputnav} type="password" name="validate"/>                 
                 </Col>
+                </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group as={Row}>
+                <Col  className={styles.forgotpasslink} md={12}>                  
+                  <Button onClick={props.onHide} className={styles.createButton}>Create Account</Button>
+                </Col>
+                </Form.Group>
+            </Col>
+          </Row>
+        </Container>
+      </TheModal>
+      <TheModal 
+        title="Sign In"
+        size="sm"
+        show={modalShowSignin}
+        onHide={() => setModalShowSignin(false)}
+      >      
+        <Container>
+          <Row className="justify-content-md-center">
+            <Col>
+              <Form.Group as={Row}>
+                <Col md={12}>
+                  <Form.Label className={styles.label}>Email</Form.Label>
+                  <Form.Control className={styles.inputnav} type="email" name="email"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group as={Row}>
+                <Col md={12}>
+                  <Form.Label className={styles.label}>Password</Form.Label>
+                  <Form.Control className={styles.inputnav} type="password" name="password"/>                  
+                </Col>
+               
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group as={Row}>
+                <Col md={12}>                                   
+                  <Button onClick={props.onHide} className={styles.signinButton}>Log In</Button>
+                </Col>
+               
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              
+                <Col className={styles.forgotpasslink} md={12}>                                   
+                  <Link href="/">Forgot Password?</Link>
+                </Col>
+               
+             
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              
+                <Col className={styles.forgotpasslink} md={12}>                                   
+                  <br/><br/><br/><br/><br/>
+                </Col>
+               
+             
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              
+                <Col className={styles.haveaccount} md={12}>                                   
+                  Do you have an account?
+                </Col>               
+             
+            </Col>
+            <Col>
+              <Form.Group as={Row}>
+                <Col className={styles.forgotpasslink} md={12}>                                   
+                  <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button>
+                </Col>
+               
               </Form.Group>
             </Col>
           </Row>
