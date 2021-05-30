@@ -21,7 +21,7 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={3} className={styles.logoWrapper}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
-              <Image src="/logo.png" className={styles.logo}/>
+              <Image src="/logo2.png" className={styles.logo}/>
               {/*<h1>The Publishing</h1>*/}
               </Navbar.Brand>
             </Link>
