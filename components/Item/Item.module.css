@@ -12,10 +12,10 @@
   line-height: 20px;
 }
 
-.item img {
-  display: block;
+.item img { 
   margin: auto;
   margin-bottom: 15px;
+justify-items: left;
 }
 
 .item p {
