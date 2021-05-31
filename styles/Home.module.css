@@ -212,6 +212,11 @@ color: #7b6b5b;
   color: #ffffff;
 }
 
+.bannerCenter{
+  margin-top: 0px !important;
+  text-align: center;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

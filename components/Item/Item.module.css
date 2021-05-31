@@ -1,10 +1,12 @@
 .item {
   color: #7b6b5b;
   margin-bottom: 40px;
+  justify-items:  center;
 }
 
 .itemPad {
   padding: 15px;
+ padding-left:120px;
 }
 
 .item h3 {
@@ -15,7 +17,7 @@
 .item img { 
   margin: auto;
   margin-bottom: 15px;
-justify-items: left;
+  text-align: center;
 }
 
 .item p {

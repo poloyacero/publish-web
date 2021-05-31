@@ -126,7 +126,8 @@ export default function PrintBook() {
             </Row>
           </Container>
         </Container>
-        <Row><Col md={6}>
+        <Row className="justify-content-md-center">
+          <Col md={6}>
         <Item width={10} img="/img/paperback.png" title="Paperback Books">
           <p>
             Also known as Softcover books,<br/> bound in a flexible paper cover.

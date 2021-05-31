@@ -9,7 +9,7 @@ interface PageFootingProps {
 
 const PageFooting = ({ children, ...props }: PageFootingProps) => {
   return (
-    <Container fluid style={{background: '#f0e3d5'}}>
+    <Container fluid style={{background: '#f5ede4'}}>
       <Container className="container">
         <Row className={styles.pageFooting}>
           <h2>{props.title}</h2>
