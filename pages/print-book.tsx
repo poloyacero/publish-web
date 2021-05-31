@@ -128,7 +128,7 @@ export default function PrintBook() {
         </Container>
         <Row className="justify-content-md-center">
           <Col md={6}>
-        <Item width={10} img="/img/paperback.png" title="Paperback Books">
+        <Item width={12} img="/img/paperback.png" title="Paperback Books">
           <p>
             Also known as Softcover books,<br/> bound in a flexible paper cover.
           </p>
@@ -147,7 +147,7 @@ export default function PrintBook() {
         </Item>
         </Col>
         <Col md={6}>
-        <Item width={10} img="/img/hardcover.png" title="Hardcover Books">
+        <Item width={12} img="/img/hardcover.png" title="Hardcover Books">
           <p>
             Available in case laminate, cloth, or dust jacket.
           </p>
@@ -163,7 +163,7 @@ export default function PrintBook() {
         </Item>
         </Col>
         <Col md={6}>
-        <Item width={10} img="/img/standardcolor.png" title="Standard Color Books">
+        <Item width={12} img="/img/standardcolor.png" title="Standard Color Books">
           <p>
             An economical option for publishers <br/>who do not require the high-quality <br/>of Premium Color books.
           </p>
@@ -182,7 +182,7 @@ export default function PrintBook() {
         </Item>
         </Col>
         <Col md={6}>
-        <Item width={10} img="/img/premiumcolor.png" title="Premium Color Books">
+        <Item width={12} img="/img/premiumcolor.png" title="Premium Color Books">
           <p>
             Perfect for images, illustrations and photo books.
           </p>
