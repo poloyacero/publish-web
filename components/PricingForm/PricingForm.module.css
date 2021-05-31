@@ -5,7 +5,10 @@
 }
 
 .label {
-  font-weight: 500;
+  font-weight: 500;  
+}
+.labelleft {  
+  text-align: right; 
 }
 
 .additionals {
@@ -35,4 +38,18 @@
     .pricinglink:active:visited{
       text-decoration: none;
       color: #7b6b5b;
+      }
+     
+      .pricingbutton {
+        background-color: #7b6b5b;
+        border-color: #7b6b5b;
+        text-align: center;
+        width: 200px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
+      
+      .pricingbutton{
+        background-color: #8f7c69;
+        border-color: #7b6b5b; 
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
       }

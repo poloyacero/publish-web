@@ -116,7 +116,7 @@
   outline: 0;
   border-width: 1 1 1.5px;
   border-color: #ad9984; 
-  height: 27px;
+  height: 35px;
   width:235px;   
   font-size: 12px;
   justify-content: center;   
@@ -125,8 +125,8 @@
   outline: 0;
   border-width: 1 1 1.5px;
   border-color: #ad9984; 
-  height: 27px;
-  width:323px;   
+  height: 35px;
+  width:250px;   
   font-size: 12px;
   justify-content: center;   
 }
@@ -171,7 +171,7 @@
   font-size: 12px;
 }
 
-.createButton:hover {
+.createButton:hover{
   background-color: #8f7c69;
   border-color: #7b6b5b; 
 }
@@ -181,10 +181,12 @@
   border-color: #7b6b5b;
   text-align: center;
   width: 235px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.signinButton:hover,.signinButton:visited,.signinButton:active{
+.signinButton:hover{
   background-color: #8f7c69;
   border-color: #7b6b5b; 
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 

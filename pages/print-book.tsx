@@ -126,7 +126,8 @@ export default function PrintBook() {
             </Row>
           </Container>
         </Container>
-        <Item width={6} img="/img/paperback.png" title="Paperback Books">
+        <Row><Col md={6}>
+        <Item width={10} img="/img/paperback.png" title="Paperback Books">
           <p>
             Also known as Softcover books,<br/> bound in a flexible paper cover.
           </p>
@@ -143,7 +144,9 @@ export default function PrintBook() {
             8.5 x 11" (280 x 216mm) <br/>
           </p>
         </Item>
-        <Item width={6} img="/img/hardcover.png" title="Hardcover Books">
+        </Col>
+        <Col md={6}>
+        <Item width={10} img="/img/hardcover.png" title="Hardcover Books">
           <p>
             Available in case laminate, cloth, or dust jacket.
           </p>
@@ -157,7 +160,9 @@ export default function PrintBook() {
             8.5 x 11" (280 x 216mm) Case Lam<br/>
           </p>
         </Item>
-        <Item width={6} img="/img/standardcolor.png" title="Standard Color Books">
+        </Col>
+        <Col md={6}>
+        <Item width={10} img="/img/standardcolor.png" title="Standard Color Books">
           <p>
             An economical option for publishers <br/>who do not require the high-quality <br/>of Premium Color books.
           </p>
@@ -174,7 +179,9 @@ export default function PrintBook() {
             8.5 x 11" (280 x 216mm)<br/>
           </p>
         </Item>
-        <Item width={6} img="/img/premiumcolor.png" title="Premium Color Books">
+        </Col>
+        <Col md={6}>
+        <Item width={10} img="/img/premiumcolor.png" title="Premium Color Books">
           <p>
             Perfect for images, illustrations and photo books.
           </p>
@@ -191,8 +198,9 @@ export default function PrintBook() {
             11 x 8.5" (216 x 280mm)<br/>
           </p>
         </Item>
+        </Col></Row>
       </PageLayout>
-      <PageFooting title="Your Ebook Could Be Sold in Amazon, Apple, Kobo, Barnes & Noble, and More">
+      <PageFooting title="Ready and See Your Book in Print!">
         <Link href="/pricing" passHref><Button className={styles.getStartedButton}>Get Started</Button></Link>
       </PageFooting>
       <Footer />

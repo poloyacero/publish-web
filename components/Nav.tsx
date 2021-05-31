@@ -85,7 +85,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Contact Name</Form.Label>
-                  <Form.Control type="text" name="contact-name"/>
+                  <Form.Control className={styles.inputnav1} type="text" name="contact-name"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -93,7 +93,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control type="email" name="email"/>
+                  <Form.Control className={styles.inputnav1} type="email" name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -101,7 +101,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control type="password" name="password"/>
+                  <Form.Control className={styles.inputnav1} type="password" name="password"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -109,7 +109,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Validate Password</Form.Label>
-                  <Form.Control type="password" name="validate"/>
+                  <Form.Control className={styles.inputnav1} type="password" name="validate"/>
                 </Col>
               </Form.Group>
             </Col>
