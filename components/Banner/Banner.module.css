@@ -7,6 +7,7 @@
 
 .banner h1 {
   font-size: 50px;
+  text-align: center;
 }
 
 .bannerCenter {
@@ -21,6 +22,7 @@
 
 .bannerCenter p {
   margin-top: 0px !important;
+  text-align: center;
 }
 
 .bannerLeft {
