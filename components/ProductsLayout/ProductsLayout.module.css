@@ -35,3 +35,23 @@
 .products img {
   width: 100%;
 }
+
+.sendButton {
+  width: 250px;
+  height: 45px;
+  font-size: 18px;
+  text-align: center;
+  background: #7b6b5b;
+  border-color: #e7d2bc;
+  color: #ffffff;
+}
+
+.sendButton:hover {
+  width: 250px;
+  height: 45px;
+  font-size: 18px;
+  text-align: center;
+  background: #927f6b;
+  border-color: #e7d2bc;
+  color: #ffffff;
+}

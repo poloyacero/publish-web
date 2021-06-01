@@ -65,7 +65,7 @@
   margin: auto;
 }
 .link2 {
-  background-color: #e7d2bc;
+  background-color: #faf6f2;
   border: none;
   color: #7b6b5b;
   text-align: center;
@@ -74,5 +74,5 @@
   margin: auto;
 }
 .link:hover, .link2:hover {
-  color: #fff;
+  color: #7b6b5b;
 }

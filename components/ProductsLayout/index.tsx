@@ -1,5 +1,6 @@
 import React from 'react';
-import { Col, Container, Image, Row } from 'react-bootstrap';
+import Link from 'next/link';
+import { Col, Container, Image, Row ,Button} from 'react-bootstrap';
 
 import styles from './ProductsLayout.module.css';
 
@@ -52,7 +53,11 @@ const ProductsLayout = ({ ...props }: PageLayoutProps) => {
             <span>Advertising</span>
             <p>The industry term for traditional paperback binding, perfect bound is the most cost-efficient and popular way to bind on-demand products. Suitable for most projects.</p>
           </Col>
+          <Col className="d-flex justify-content-center" md={{span:12,offset:0}}><Link href="/services" passHref><Button className={styles.sendButton}>Learn more</Button></Link></Col>
         </Row>
+     
+        
+      
       </Container>
     </Container>
   );

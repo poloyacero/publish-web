@@ -5,7 +5,7 @@ import PageLayout from '../components/PageLayout';
 import Footer from '../components/Footer';
 import NavMenu from '../components/Nav';
 import Package from '../components/Package';
-
+import { Col, Row} from 'react-bootstrap';
 import styles from '../styles/Home.module.css'
 
 export default function PackagesPage() {
@@ -16,7 +16,11 @@ export default function PackagesPage() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <Banner title="Packages" img="/img/8.png" variant="center" bg="#faf6f2">
+             
+      <Banner title="" img="/img/8.png" variant="center" bg="#faf6f2"> 
+     
+                <h1 className="text-center">Packages</h1>
+                       
         <p className={styles.bannerCenter}>All-inclusive Self-Publishing Packages At A Great Deal!</p>
       </Banner>
       <PageLayout>
