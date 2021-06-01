@@ -130,6 +130,9 @@
   margin-top: 50px;
   padding:10px;
 }
+.illustrationpadding{
+  padding-left:65px;  
+}
 
 .illustrationbutton:hover {
   background-color: #7b6b5b;

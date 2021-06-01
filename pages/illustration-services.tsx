@@ -34,7 +34,7 @@ export default function IllustrationServices() {
               <Form.Group className={styles.formGroup} controlId="formBasicEmail">
            
            <Row className="row-fluid">  
-              <Col md={3}>
+              <Col className={styles.illustrationpadding} md={3}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="Cartoon" name="selectstyles"  id="styles1"/>
                 <Form.Check type="radio" label="Realistic" name="selectstyles" id="styles2"/>
@@ -44,7 +44,7 @@ export default function IllustrationServices() {
               </Form.Group>
               
                 </Col>
-                <Col md={3}>
+                <Col className={styles.illustrationpadding} md={3}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="Line Art" name="selectstyles" id="styles5"/>
                 <Form.Check type="radio" label="Victor" name="selectstyles" id="styles6"/>
@@ -54,7 +54,7 @@ export default function IllustrationServices() {
               </Form.Group>
               
                 </Col>
-                <Col md={3}>
+                <Col className={styles.illustrationpadding} md={3}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="3D Render" name="selectstyles" id="styles9"/>
                 <Form.Check type="radio" label="Low Poly"name="selectstyles"  id="styles10"/>
@@ -63,7 +63,7 @@ export default function IllustrationServices() {
                 <Form.Check type="radio" label="Watercolor" name="selectstyles" id="styles14"/>
               </Form.Group>
                 </Col>       
-              <Col md={"auto"}>
+              <Col className={styles.illustrationpadding} md={"auto"}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="Abstract" name="selectstyles" id="styles17"/>
                 <Form.Check type="radio" label="Mixed Media" name="selectstyles" id="styles18"/>
@@ -71,7 +71,7 @@ export default function IllustrationServices() {
                 <Form.Check type="radio" label="Graffiti" name="selectstyles" id="styles20"/>
                 <Form.Check type="radio" label="Painting" name="selectstyles" id="styles13"/>
               </Form.Group>              
-                </Col>sdASDASD
+                </Col>
             </Row>
             </Form.Group>
             </Form>
