@@ -122,13 +122,13 @@ font-size: 15px;
       outline: 0;
       border-width: 0 0 1.5px;
       border-color: #e7d2bc;
-      background: #fce4cc;
+      background: #f7f6f5;
       }
     .input:focus {
       outline: 0;
       border-width: 0 0 1.5px;
       border-color: #e7d2bc;
-      background: #fce4cc;
+      background: #fdfdfc;
       padding-top:15px;
       }
 

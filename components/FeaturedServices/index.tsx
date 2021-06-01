@@ -18,10 +18,9 @@ const FeaturedServices = ({ ...props }: FeaturedServicesProps) => {
             <span>A wide variety of publishing alternatives that offer a simpler or more flexible approach depending on your needs.</span>
           </Col>
           <Col md={3}>
-            <Link href="/pricing" passHref><Nav.Link><Image style={{ marginBottom: '7px' }} src="/img/print.png" /></Nav.Link></Link>
+            <Link href="/pricing" passHref><Nav.Link><Image  src="/img/print.png" /></Nav.Link></Link>
             <p>Print</p>
-            <span>Gives your thought a chance to look better. Printing precisely what you need for less.
-</span>
+            <span>Gives your thought a chance to look better. Printing precisely what you need for less.</span>
           </Col>
           <Col md={3}>
             <Link href="/distribution" passHref><Nav.Link><Image src="/img/airplane.png" /></Nav.Link></Link>
