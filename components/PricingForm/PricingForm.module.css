@@ -28,11 +28,12 @@
   text-decoration: none;
   color: #7b6b5b;
   font-size: 15px;
+  font-weight: 600;
   }
   
   .pricinglink a:hover{
     text-decoration: none;
-    color: #251f19;
+    color: #2c231b;
     }
   
     .pricinglink:active:visited{
@@ -52,4 +53,11 @@
         background-color: #8f7c69;
         border-color: #7b6b5b; 
         -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
+      .noteformat{
+        font-size: 10px;
+      }
+
+      .input{
+        width: 350px;
       }

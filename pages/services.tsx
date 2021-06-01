@@ -29,7 +29,7 @@ export default function Services() {
               </Row>             
             <Row><Col><br/></Col> <Col md={2}><br/></Col></Row>
               <Row className="justify-content-md-left"><Col md={2}><br/></Col>
-              <Col md={'auto'}><p><b>In today’s publishing marketplace,<br/> Self-published authors are leading the pack.<br/> Embark on an incredible journey with us<br/> and get maximum results.</b></p>
+              <Col md={'auto'}><p className={styles.iservicesp}>In today’s publishing marketplace,<br/> Self-published authors are leading the pack.<br/> Embark on an incredible journey with us<br/> and get maximum results.</p>
             </Col>
             </Row>
               <Row className="justify-content-md-left">

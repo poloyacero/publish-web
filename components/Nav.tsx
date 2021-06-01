@@ -28,7 +28,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={{ span: 6, offset: 1 }}>
+          <Col md={{ span: 6, offset: 0 }}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto">

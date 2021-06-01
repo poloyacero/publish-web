@@ -7,26 +7,32 @@ import styles from './PricingForm.module.css';
 
 interface PricingFormProps {}
 
-const PricingForm = ({ ...props }: PricingFormProps) => {
+const PricingForm = ({ ...props }: PricingFormProps) => { 
+  const [interiorColor,setInteriorColor]=React.useState("");
+  const handleChange=(e) =>{
+    setInteriorColor(e.target.value);
+    console.log(interiorColor);
+  }
+  
   return (
     <Container fluid>
       <div className={styles.pricingForm + " container"}>
       <h1 className={styles.pricingh1}> Let’s Get Started</h1>
      
       <Row>
-        <Col md={{ span: 10, offset: 0 }}>
+        <Col md={{ span: 12, offset: 0 }}>
           <p>
           Fill up the data below to generate a guide instructions, estimated cost in production  and distribution of your book and more useful info.
           </p>
-          <p>
+          <p className={styles.noteformat}>
             Please note:<br/>
             Sales tax is not displayed. If applicable, sales taxes will be applied at the time an order is placed on your account.  Heavy traffic in requests may cause occasional delays so please allow up to 2 hours before resubmitting a request.
           </p>
         </Col>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Trim Size</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Trim Size</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input} as="select" defaultValue=" ">
               <option value=""></option>
               <option value="4.000&quot; x 6.000&quot; (152mm x 102 mm)">4.000" x 6.000" (152mm x 102 mm)</option>
               <option value="4.000&quot; x 7.000&quot; (178mm x 102 mm)">4.000" x 7.000" (178mm x 102 mm)</option>
@@ -65,10 +71,10 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>      
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Interior Color</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Interior Color</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input} as="select" value={interiorColor} onChange={ handleChange }>
               <option> </option>
               <option>Black and White</option>
               <option>Color</option>              
@@ -77,10 +83,10 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Paper Type</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Paper Type</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue=" ">
               <option> </option>
               <optgroup label="If Black and White">
               <option>White</option>
@@ -97,10 +103,10 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Binding Type</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Binding Type</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue=" ">
               <option> </option>
               <option>Paperback</option>
               <option>Hardback</option>             
@@ -109,10 +115,10 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Laminate</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Laminate</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue=" ">
               <option> </option>
               <option>Gloss</option>
               <option>Matte</option>
@@ -122,10 +128,10 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Page Count</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Page Count</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue=" ">
               <option> </option>
               <option>22</option>
               <option>28</option>
@@ -135,18 +141,18 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Quantity</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Quantity</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row}>
-            <Form.Control type="text" />
+            <Form.Control className={styles.input}  type="text" />
           </Form.Group>
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Ship To</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Ship To</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input} as="select" defaultValue=" ">
               <option value=""></option>
               <option value="USA">United States</option>
               <option value="GBR">United Kingdom</option>
@@ -406,19 +412,19 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Ship To Province</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Ship To Province</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row}>
-            <Form.Control type="text" />
+            <Form.Control className={styles.input}  type="text" />
           </Form.Group>
         </Col>
       </Row>
      
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>Printing Location</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Printing Location</Form.Label></Col>
+        <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue=" ">
               <option> </option>
               <option>LS US - US Dollar</option>
               <option>LS UK - Euros</option>
@@ -429,10 +435,10 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col className={styles.labelleft} md={{ span: 3, offset: 0 }}><Form.Label className={styles.label}>E-Book</Form.Label></Col>
-        <Col md={{ span: 3, offset: 0 }}>
+        <Col className={styles.labelleft} md={{ span:4, offset: 0 }}><Form.Label className={styles.label}>E-Book</Form.Label></Col>
+        <Col md={{ span:4 , offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue=" ">
               <option> </option>
               <option>Yes</option>
               <option>No</option>

@@ -106,8 +106,8 @@ const Footer = ({ ...props }: FooterProps) => {
                <Row><Col><br/><br/></Col></Row>
               <Row className="justify-content-md-center">
                 <Col>
-                <Row className={styles.center}><Col>
-               <Image src="/logo.png" width="125%" height="30px" />
+                <Row className={styles.center}><Col className={styles.footerlink}>
+                <Link href="/"><a><Image src="/logo.png" width="125%" height="30px" /></a></Link>
               <div className={styles.copyright}>
               <p>Copyright © {(new Date().getFullYear())} ThePublishing All Rights Reserved </p>
             </div> 
