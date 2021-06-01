@@ -200,7 +200,8 @@ export default function Services() {
 
               </Col>
             </Row>
-            <Row><Col><br/></Col></Row>
+            <Row><Col><br/><br/></Col></Row>
+            <Row><Col><br/><br/></Col></Row>
             <Row><Col md={2}></Col><Col md={8}><h1 id="distribution">7 Distribution</h1></Col></Row>
             <Row>
               <Col md={2}><Image src="/img/bookglobe.png" height="auto" width="150px"/></Col>
