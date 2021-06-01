@@ -71,7 +71,7 @@ export default function IllustrationServices() {
                 <Form.Check type="radio" label="Graffiti" name="selectstyles" id="styles20"/>
                 <Form.Check type="radio" label="Painting" name="selectstyles" id="styles13"/>
               </Form.Group>              
-                </Col>
+                </Col>sdASDASD
             </Row>
             </Form.Group>
             </Form>
