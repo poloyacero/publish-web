@@ -21,6 +21,7 @@
   right: 15%;
   top: 15%;
   width: 36%;
+
 }
 
 .carouselLink:hover {
@@ -38,4 +39,37 @@
   border-radius: 8px;
   z-index: 10;
   font-size: 20px;
+}
+.haveaccount{
+  color: #7b6b5b;
+  font-size: 13px;  
+  text-align: center;
+  padding:0px;
+}
+.createButton {
+  background-color: #7b6b5b;
+  border-color: #7b6b5b;
+  text-align: center;
+  width: 125px;
+  font-size: 12px;
+}
+
+.createButton:hover{
+  background-color: #8f7c69;
+  border-color: #7b6b5b; 
+}
+.inputnav1 {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  border-color: #ad9984; 
+  height: 35px;
+  width:250px;   
+  font-size: 12px;
+  justify-content: center;   
+}
+
+.label{
+  color: #7b6b5b;
+  font-size: 12px;  
+  width: 200px;
 }
