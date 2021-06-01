@@ -133,7 +133,7 @@ export default function Services() {
               €250-2000 / design</span></p>
 
               <p>Our seasoned illustrators can cut across the board with their expertise on various genres this from young adult, fiction, to cartoons and fantasy. Text and illustrations work should tell a great story. Drawing in the reader, our brand of visual art brings the story to life. We listen to the author’s vision as well as we commit to delivering expertise that best tells your story. 
-              See illustration samples</p>
+              <br/><br/><Link href="/illustration-services"><span  className={styles.serviceslink}><a>See illustration samples</a></span></Link></p>
               
               </Col>
             </Row>

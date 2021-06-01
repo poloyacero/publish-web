@@ -118,7 +118,7 @@
 }
 
 .imgpadding{
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .illustrationbutton {
@@ -133,6 +133,10 @@
 
 .illustrationbutton:hover {
   background-color: #7b6b5b;
+}
+.product{
+background-color: #faf6f2;
+
 }
 
 .myl {
