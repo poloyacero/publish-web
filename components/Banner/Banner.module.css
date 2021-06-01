@@ -3,11 +3,12 @@
   margin-bottom: 45px;
   color: #7b6b5b;
   padding: 0px 100px;
+  width: 100%;
 }
 
 .banner h1 {
   font-size: 50px;
-  text-align: center;
+  text-align: left;
 }
 
 .bannerCenter {

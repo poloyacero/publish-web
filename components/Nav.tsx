@@ -17,7 +17,7 @@ const NavMenu = ({ ...props }: NavProps) => {
 
   return (
     <Container fluid style={{background: '#f0e3d5'}}>
-      <Container className={"container " + props.className} style={{width: '1030px'}}>
+      <Container className={"container " + props.className} style={{width: '1100px'}}>
         <Row>
           <Navbar className={styles.navbar} expand="lg">
           <Col md={3} className={styles.logoWrapper}>
@@ -28,7 +28,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={{ span: 5, offset: 1 }}>
+          <Col md={{ span: 6, offset: 1 }}>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto">

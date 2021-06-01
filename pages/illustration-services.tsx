@@ -33,49 +33,43 @@ export default function IllustrationServices() {
               <Form>
               <Form.Group className={styles.formGroup} controlId="formBasicEmail">
            
-           <Row  className={styles.products}>  
-              <Col className={styles.product} md={{ span: 2, offset: 1 }}>
+           <Row className="row-fluid">  
+              <Col md={3}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="Cartoon" name="selectstyles"  id="styles1"/>
                 <Form.Check type="radio" label="Realistic" name="selectstyles" id="styles2"/>
                 <Form.Check type="radio" label="Comic" name="selectstyles" id="styles3"/>
                 <Form.Check type="radio" label="Caricature" name="selectstyles" id="styles4"/>
+                <Form.Check type="radio" label="Sketch" name="selectstyles" id="styles16"/>
               </Form.Group>
               
                 </Col>
-                <Col className={styles.product} md={2}>
+                <Col md={3}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="Line Art" name="selectstyles" id="styles5"/>
                 <Form.Check type="radio" label="Victor" name="selectstyles" id="styles6"/>
                 <Form.Check type="radio" label="Isometric" name="selectstyles" id="styles7"/>
                 <Form.Check type="radio" label="Fantasy" name="selectstyles" id="styles8"/>
+                <Form.Check type="radio" label="Charcoal" name="selectstyles" id="styles15"/>
               </Form.Group>
               
                 </Col>
-                <Col className={styles.product} md={2}>
+                <Col md={3}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="3D Render" name="selectstyles" id="styles9"/>
                 <Form.Check type="radio" label="Low Poly"name="selectstyles"  id="styles10"/>
                 <Form.Check type="radio" label="Pop Art" name="selectstyles" id="styles11"/>
                 <Form.Check type="radio" label="Vintage" name="selectstyles" id="styles12"/>
-              </Form.Group>
-              
-                </Col>
-                <Col className={styles.product} md={2}>
-              <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
-                <Form.Check type="radio" label="Painting" name="selectstyles" id="styles13"/>
                 <Form.Check type="radio" label="Watercolor" name="selectstyles" id="styles14"/>
-                <Form.Check type="radio" label="Charcoal" name="selectstyles" id="styles15"/>
-                <Form.Check type="radio" label="Sketch" name="selectstyles" id="styles16"/>
               </Form.Group>
-              
-                </Col>
-                <Col className={styles.product} md={2}>
+                </Col>       
+              <Col md={"auto"}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="Abstract" name="selectstyles" id="styles17"/>
                 <Form.Check type="radio" label="Mixed Media" name="selectstyles" id="styles18"/>
                 <Form.Check type="radio" label="Collage" name="selectstyles" id="styles19"/>
-                <Form.Check type="radio" label="Grafiti" name="selectstyles" id="styles20"/>
+                <Form.Check type="radio" label="Graffiti" name="selectstyles" id="styles20"/>
+                <Form.Check type="radio" label="Painting" name="selectstyles" id="styles13"/>
               </Form.Group>              
                 </Col>
             </Row>
@@ -87,11 +81,11 @@ export default function IllustrationServices() {
                 <h3>Standard Packages</h3>
               </Row>
               <Row className={styles.ctext}>
-        
-          <Col className={styles.product} md={3}>
-           
-         <h3 className="text-center">Level 1</h3>
+        <Col md={3}>
+          <Col className={styles.product} md={12}>
+                    
             <Row className={styles.myl}>
+              <Col md={{span:12,offset:2}}><h3 className="text-left">Level 1</h3></Col>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€250</Col>
@@ -111,7 +105,7 @@ export default function IllustrationServices() {
               
             </Row>
             <Row><Col><br/></Col></Row>
-            <Image src="/img/services/leveling1.png" width="250px" height="auto" />
+            <Image src="/img/services/leveling1.png" width="220px" height="auto" />
             <Row><Col><br/></Col></Row>
             <p>Level 1 is the simplest coloring style. 
                 It has solid flat colors. Because of its 
@@ -127,11 +121,12 @@ export default function IllustrationServices() {
                 Color</p>
             
           </Col>
-          
-          <Col className={styles.product} md={3}>
-           
-         <h3 className="text-center">Level 2</h3>
+          </Col>
+          <Col md={3}>
+          <Col className={styles.product} md={12}>         
+         
             <Row className={styles.myl}>
+              <Col md={{span:12,offset:2}}><h3 className="text-left">Level 2</h3></Col>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€350</Col>
@@ -151,7 +146,7 @@ export default function IllustrationServices() {
               
             </Row>
             <Row><Col><br/></Col></Row>
-            <Image src="/img/services/leveling2.png" width="250px" height="auto" />
+            <Image src="/img/services/leveling2.png" width="220px" height="auto" />
             <Row><Col><br/></Col></Row>
             <p>Level 2 color is a coloring style 
                 that gives your illustration shadows and 
@@ -166,11 +161,12 @@ export default function IllustrationServices() {
                 Color</p>
             
           </Col>
-         
-          <Col className={styles.product} md={3}>
-           
-            <h3 className="text-center">Level 3</h3>
+          </Col>
+          <Col md={3}>
+          <Col className={styles.product} md={12}>           
+            
             <Row className={styles.myl}>
+            <Col md={{span:12,offset:2}}><h3 className="text-left">Level 3</h3></Col>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€450</Col>
@@ -190,7 +186,7 @@ export default function IllustrationServices() {
               
             </Row>
             <Row><Col><br/></Col></Row>
-            <Image src="/img/services/leveling3.png" width="250px" height="auto" />
+            <Image src="/img/services/leveling3.png" width="220px" height="auto" />
             <Row><Col><br/></Col></Row>
             <p>Level 3 has a 3D-ish effect, an ideal
                 coloring style for a realistic illustrations. 
@@ -206,10 +202,12 @@ export default function IllustrationServices() {
                 Color</p>
             
           </Col>
-          <Col className={styles.product} md={3}>
-           
-            <h3 className="text-center">Level 4</h3>
+          </Col>
+          <Col md={3}>
+          <Col className={styles.product} md={12}>          
+            
             <Row className={styles.myl}>
+            <Col md={{span:12,offset:2}}><h3 className="text-left">Level 4</h3></Col>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€1000</Col>
@@ -229,7 +227,7 @@ export default function IllustrationServices() {
               
             </Row>
             <Row><Col><br/></Col></Row>
-            <Image src="/img/services/Layer83.png" width="250px" height="auto" />
+            <Image src="/img/services/Layer83.png" width="220px" height="auto" />
             <Row><Col><br/></Col></Row>
             <p>Level 4 is a 3D render and is the most 
                 complex of all art style due to its 
@@ -244,26 +242,27 @@ export default function IllustrationServices() {
                 Color</p>
             
           </Col>
+          </Col>
           </Row>
           <Row><Col><br/></Col></Row>
-          <Row><Col><br/></Col></Row>
+          <Row><Col><br/><br/></Col></Row>
           < Row className={styles.heading}>
                 <h3>The Publishing Artist</h3>
               </Row>
-              <Row className={(styles.products,styles.ctext)}>  
-                <Col className={styles.product} md={{ span: 2, offset: 1 }}>
+              <Row className={styles.ctext}>  
+                <Col md={{ span: 2, offset: 1 }}>
                 <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Cleoward</Nav.Link></Link>
                 </Col>
-                <Col className={styles.product} md={2}>
+                <Col md={2}>
                 <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Charlo</Nav.Link></Link>
                 </Col>
-                <Col className={styles.product} md={2}>             
+                <Col md={2}>             
                 <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Mark</Nav.Link></Link>
                 </Col>
-                <Col className={styles.product} md={2}>
+                <Col md={2}>
                 <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Joel</Nav.Link></Link>
                 </Col>
-                <Col className={styles.product} md={2}>
+                <Col md={2}>
                 <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Floyd</Nav.Link></Link>
                 </Col>
             </Row>     
@@ -328,7 +327,7 @@ export default function IllustrationServices() {
                 <Image src="/img/services/Layer91.png" width="250px" height="auto" />
                 </Col>
                 </Row>
-                <Col className={styles.product}> 
+                <Col> 
                 <Link href="/pricing" passHref><Button className={styles.illustrationbutton}>Get Started</Button></Link></Col>
                 </Col>
                 </Row>               
