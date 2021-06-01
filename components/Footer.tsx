@@ -16,7 +16,7 @@ const Footer = ({ ...props }: FooterProps) => {
           <Col md={'auto'} className={styles.left}>
             <h1 className={styles.footerh1}>Let's Create a Book</h1>
             <Form className={styles.form}>
-              <Form.Group className={styles.formGroup} controlId="formBasicEmail">
+              <Form.Group className={styles.formGroup}>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   First Name
                 </Form.Text> */}
@@ -41,8 +41,8 @@ const Footer = ({ ...props }: FooterProps) => {
                  Subject
                 </Form.Text> */}
                 {/* <Form.Control type="text" className={styles.input} placeholder="Subject" /> */}
-                <Form.Control className={styles.inputselect} as="select">
-                  <option disabled selected>Subject</option>
+                <Form.Control className={styles.inputselect} as="select" defaultValue="Subject">
+                  <option disabled>Subject</option>
                   <optgroup label="General Inquiries">                  
                   <option>Services</option>
                   <option>Book Printing</option>                  

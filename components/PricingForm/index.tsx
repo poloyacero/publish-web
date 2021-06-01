@@ -5,11 +5,15 @@ import Link from "next/link"
 
 import styles from './PricingForm.module.css';
 
-interface PricingFormProps {}
+interface PricingFormProps {
+e?:string;
+
+}
+
 
 const PricingForm = ({ ...props }: PricingFormProps) => { 
   const [interiorColor,setInteriorColor]=React.useState("");
-  const handleChange=(e) =>{
+  const handleChange=(e:any) =>{
     setInteriorColor(e.target.value);
     console.log(interiorColor);
   }
@@ -74,8 +78,8 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Interior Color</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input} as="select" value={interiorColor} onChange={ handleChange }>
-              <option> </option>
+            <Form.Control className={styles.input} as="select" defaultValue={interiorColor} onChange={ handleChange }>
+              <option></option>
               <option>Black and White</option>
               <option>Color</option>              
             </Form.Control>
@@ -87,17 +91,21 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
             <Form.Control className={styles.input}  as="select" defaultValue=" ">
-              <option> </option>
-              <optgroup label="If Black and White">
+              <option> </option>              
+                { interiorColor==="Black and White"?(
+                  <>
               <option>White</option>
               <option>Creme</option>
-              <option>Eggshell</option>              
-              </optgroup>
-              <optgroup label="If Color">
+              <option>Eggshell</option> 
+              </> 
+                ):(
+                  <>
               <option>Standard Color 50 lb</option>
               <option>Standard Color 70 lb</option>
-              <option>Premium Color 50 lb</option>              
-              </optgroup>
+              <option>Premium Color 50 lb</option> 
+                  </>
+                )}                    
+                  
             </Form.Control>
           </Form.Group>
         </Col>
