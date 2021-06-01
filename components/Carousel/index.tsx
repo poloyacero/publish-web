@@ -1,14 +1,17 @@
 import Link from 'next/link';
 import React from 'react';
-import { Carousel, Col, Container, Image, Nav, Row, Form } from 'react-bootstrap';
+import { Carousel, Col, Container, Image, Nav, Row, Form ,Button} from 'react-bootstrap';
 import EnquiryModal from '../EnquiryModal';
-
+import TheModal from '../TheModal';
 import styles from './Carousel.module.css' 
 
-interface CarouselProps {}
+interface CarouselProps {
+  onHide?:any;
+}
 
 const CarouselSlider = ({ ...props }: CarouselProps) => {
   const [enquiryModalShow, setEnquiryModalShow] = React.useState(false);
+  const [modalShowCreate, setModalShowCreate] = React.useState(false);
 
   return (
     <Container fluid style={{ background: '#f0e3d5' }}>
@@ -24,7 +27,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
               <h3>Publish</h3>
               <p>Create and publish your<br/> own book in your way.</p>
             </Carousel.Caption>
-            <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setEnquiryModalShow(true)}>Get Started</Nav.Link></Link>
+            <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} style={{ width: '40%' }} src="/img/Slider.png" />
           </Carousel.Item>
           <Carousel.Item interval={1000}>
@@ -35,9 +38,9 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             />
             <Carousel.Caption className={styles.carouselCaption}>
               <h3>Print</h3>
-              <p>Print a book, magazine, novel,<br/> advertising material or any kind of book<br/> you can imagine.</p>
+              <p>Your thought. Our ink.<br/>Printing made easier.</p>
             </Carousel.Caption>
-            <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setEnquiryModalShow(true)}>Get Started</Nav.Link></Link>
+            <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/splash.png" />
           </Carousel.Item>
           <Carousel.Item>
@@ -50,12 +53,63 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
               <h3>Sell</h3>
               <p>Sell your book on your own website<br/> and around the world.</p>
             </Carousel.Caption>
-            <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setEnquiryModalShow(true)}>Get Started</Nav.Link></Link>
+            <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/stock.png" />
           </Carousel.Item>
         </Carousel>
       </Container>
-      <EnquiryModal 
+      <TheModal 
+        title="Create an Account"
+        show={modalShowCreate}
+        onHide={() => setModalShowCreate(false)}
+      >
+        <Container>
+          <Row>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Contact Name</Form.Label>
+                  <Form.Control className={styles.inputnav1} type="text" name="contact-name"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Email</Form.Label>
+                  <Form.Control className={styles.inputnav1} type="email" name="email"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Password</Form.Label>
+                  <Form.Control className={styles.inputnav1} type="password" name="password"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col md={{ span: 12, offset: 0 }}>
+              <Form.Group as={Row}>
+                <Col md={6}>
+                  <Form.Label className={styles.label}>Validate Password</Form.Label>
+                  <Form.Control className={styles.inputnav1} type="password" name="validate"/>
+                </Col>
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group as={Row}>
+                <Col className={styles.forgotpasslink1} md={12}>   
+                <br/>                                
+                  <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button>
+                </Col>
+               
+              </Form.Group>
+            </Col>
+          </Row>
+        </Container>
+      </TheModal>
+      {/* <EnquiryModal 
         title="Fill out the form to get the guides"
         show={enquiryModalShow}
         onHide={() => setEnquiryModalShow(false)}
@@ -88,7 +142,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             </Col>
           </Row>
         </Container>
-      </EnquiryModal>
+      </EnquiryModal> */}
     </Container>
   );
 }

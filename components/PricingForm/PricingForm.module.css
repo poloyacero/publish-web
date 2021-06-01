@@ -5,7 +5,8 @@
 }
 
 .label {
-  font-weight: 500;  
+  font-weight: 500; 
+  line-height:80%; 
 }
 .labelleft {  
   text-align: right; 
@@ -60,4 +61,76 @@
 
       .input{
         width: 350px;
+        padding-left: 20px;
       }
+
+      .inputnav1 {
+        outline: 0;
+        border-width: 1 1 1.5px;
+        border-color: #ad9984; 
+        height: 35px;
+        width:250px;   
+        font-size: 12px;
+        justify-content: center;   
+      }
+      
+      .label{
+        color: #7b6b5b;
+        font-size: 12px;  
+        width: 200px;
+      }
+      
+      .forgotpasslink a{
+        color: #7b6b5b;
+        font-size: 12px; 
+        text-decoration: none; 
+        justify-items: center;
+        padding:0px;
+      }
+      .forgotpasslink{
+        color: #7b6b5b;
+        font-size: 12px;  
+        text-align: center;
+        padding:0px;
+      }
+      
+      .forgotpasslink1{
+        color: #7b6b5b;
+        font-size: 12px;  
+        text-align: right;
+        padding:0px;
+      }
+      .haveaccount{
+        color: #7b6b5b;
+        font-size: 13px;  
+        text-align: center;
+        padding:0px;
+      }
+      .createButton {
+        background-color: #7b6b5b;
+        border-color: #7b6b5b;
+        text-align: center;
+        width: 125px;
+        font-size: 12px;
+      }
+      
+      .createButton:hover{
+        background-color: #8f7c69;
+        border-color: #7b6b5b; 
+      }
+      
+      .signinButton {
+        background-color: #7b6b5b;
+        border-color: #7b6b5b;
+        text-align: center;
+        width: 235px;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
+      
+      .signinButton:hover{
+        background-color: #8f7c69;
+        border-color: #7b6b5b; 
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+      }
+      
+      

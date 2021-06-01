@@ -20,7 +20,7 @@ const FeaturedServices = ({ ...props }: FeaturedServicesProps) => {
           <Col md={3}>
             <Link href="/pricing" passHref><Nav.Link><Image style={{ marginBottom: '7px' }} src="/img/print.png" /></Nav.Link></Link>
             <p>Print</p>
-            <span>Easy, fast and <br/>cost-effective printing.	
+            <span>Gives your thought a chance to look better. Printing precisely what you need for less.
 </span>
           </Col>
           <Col md={3}>
@@ -29,7 +29,7 @@ const FeaturedServices = ({ ...props }: FeaturedServicesProps) => {
             <span>Availability of your book<br/> online, retail stores and<br/> around the world.</span>
           </Col>
           <Col md={3}>
-            <Link href="/market" passHref><Nav.Link><Image src="/img/sell.png" /></Nav.Link></Link>
+            <Link href="/services" passHref><Nav.Link><Image src="/img/sell.png" /></Nav.Link></Link>
             <p>Marketing</p>
             <span>Save time and potentially money,<br/> by benefiting from our years of<br/> expert marketing experience.</span>
           </Col>

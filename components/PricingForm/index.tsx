@@ -1,17 +1,19 @@
 import React from 'react';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
-import PageLayout from '../PageLayout';
-import Link from "next/link"
 
+import Link from "next/link"
+import TheModal from '../TheModal';
 import styles from './PricingForm.module.css';
 
 interface PricingFormProps {
 e?:string;
-
+onHide?:any
 }
 
 
 const PricingForm = ({ ...props }: PricingFormProps) => { 
+  const [modalShowCreate, setModalShowCreate] = React.useState(false);
+  const [modalShowSignin, setModalShowSignin] = React.useState(false);
   const [interiorColor,setInteriorColor]=React.useState("");
   const handleChange=(e:any) =>{
     setInteriorColor(e.target.value);
@@ -24,13 +26,13 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
       <h1 className={styles.pricingh1}> Let’s Get Started</h1>
      
       <Row>
-        <Col md={{ span: 12, offset: 0 }}>
+        <Col md={{ span: 12, offset: 2 }}>
           <p>
-          Fill up the data below to generate a guide instructions, estimated cost in production  and distribution of your book and more useful info.
+          Fill up the data below to generate a guide instructions, estimated cost in production<br/>and distribution of your book and more useful info.
           </p>
           <p className={styles.noteformat}>
             Please note:<br/>
-            Sales tax is not displayed. If applicable, sales taxes will be applied at the time an order is placed on your account.  Heavy traffic in requests may cause occasional delays so please allow up to 2 hours before resubmitting a request.
+            Sales tax is not displayed. If applicable, sales taxes will be applied at the time an order is placed on your account. <br/> Heavy traffic in requests may cause occasional delays so please allow up to 2 hours before resubmitting a request.
           </p>
         </Col>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Trim Size</Form.Label></Col>
@@ -591,11 +593,138 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
       </Row>
       <Row>
         <Col md={3}>
-          <Button className={styles.pricingbutton} type="submit">Submit</Button>
+          <Button className={styles.pricingbutton} type="submit" onClick={() => setModalShowSignin(true)}>Submit</Button>
         </Col>
       </Row>
       </div>
+      <TheModal 
+title="Create an Account"
+show={modalShowCreate}
+onHide={() => setModalShowCreate(false)}
+>
+<Container>
+  <Row>
+    <Col md={{ span: 12, offset: 0 }}>
+      <Form.Group as={Row}>
+        <Col md={6}>
+          <Form.Label className={styles.label}>Contact Name</Form.Label>
+          <Form.Control className={styles.inputnav1} type="text" name="contact-name"/>
+        </Col>
+      </Form.Group>
+    </Col>
+    <Col md={{ span: 12, offset: 0 }}>
+      <Form.Group as={Row}>
+        <Col md={6}>
+          <Form.Label className={styles.label}>Email</Form.Label>
+          <Form.Control className={styles.inputnav1} type="email" name="email"/>
+        </Col>
+      </Form.Group>
+    </Col>
+    <Col md={{ span: 12, offset: 0 }}>
+      <Form.Group as={Row}>
+        <Col md={6}>
+          <Form.Label className={styles.label}>Password</Form.Label>
+          <Form.Control className={styles.inputnav1} type="password" name="password"/>
+        </Col>
+      </Form.Group>
+    </Col>
+    <Col md={{ span: 12, offset: 0 }}>
+      <Form.Group as={Row}>
+        <Col md={6}>
+          <Form.Label className={styles.label}>Validate Password</Form.Label>
+          <Form.Control className={styles.inputnav1} type="password" name="validate"/>
+        </Col>
+      </Form.Group>
+    </Col>
+    <Col>
+      <Form.Group as={Row}>
+        <Col className={styles.forgotpasslink1} md={12}>   
+        <br/>                                
+          <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button>
+        </Col>
+       
+      </Form.Group>
+    </Col>
+  </Row>
+</Container>
+</TheModal>
+<TheModal 
+title="Get in touch"
+size="sm"
+show={modalShowSignin}
+onHide={() => setModalShowSignin(false)}
+>      
+<Container>
+  <Row className="justify-content-md-center">
+    <Col>
+      <Form.Group as={Row}>
+        <Col md={12}>
+          <Form.Label className={styles.label}>First name</Form.Label>
+          <Form.Control className={styles.inputnav} type="text" name="firstname"/>
+        </Col>
+      </Form.Group>
+    </Col>
+    <Col>
+      <Form.Group as={Row}>
+        <Col md={12}>
+          <Form.Label className={styles.label}>Last name</Form.Label>
+          <Form.Control className={styles.inputnav} type="text" name="lastname"/>                  
+        </Col>
+       
+      </Form.Group>
+    </Col>
+    <Col>
+      <Form.Group as={Row}>
+        <Col md={12}>
+          <Form.Label className={styles.label}>Email</Form.Label>
+          <Form.Control className={styles.inputnav} type="email" name="email"/>                  
+        </Col>
+       
+      </Form.Group>
+    </Col>
+    <Col>
+      <Form.Group as={Row}>
+        <Col md={12}>                                   
+          <Button onClick={props.onHide} className={styles.signinButton}>Send</Button>
+        </Col>
+       
+      </Form.Group>
+    </Col>
+    <Col md={{ span: 12, offset: 0 }}>    
+      
+     
+    </Col>
+    <Col md={{ span: 12, offset: 0 }}>
+      
+        <Col className={styles.forgotpasslink} md={12}>                                   
+         
+          <hr></hr>
+        </Col>
+       
+     
+    </Col>
+    <Col md={{ span: 12, offset: 0 }}>
+      
+        <Col className={styles.haveaccount} md={12}>                                   
+          Do you have an account?
+        </Col>               
+     
+    </Col>
+    <Col>
+      <Form.Group as={Row}>
+        <Col className={styles.forgotpasslink} md={12}>   
+        <br/>                                
+          <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button>
+        </Col>
+       
+      </Form.Group>
+    </Col>
+  </Row>
+</Container>
+</TheModal>
     </Container>
+
+
   );
 }
 
