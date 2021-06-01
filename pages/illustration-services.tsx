@@ -86,7 +86,7 @@ export default function IllustrationServices() {
             <Row className={styles.heading}>
                 <h3>Standard Packages</h3>
               </Row>
-              <Row className={(styles.products,styles.ctext)}>
+              <Row className={styles.ctext}>
         
           <Col className={styles.product} md={3}>
            
@@ -119,7 +119,7 @@ export default function IllustrationServices() {
                 time which usually takes 3-4 working 
                 days depending on the number 
                 of illustrations.
-                <br/>
+                <br/><br/>
                 Inclusions:<br/>
                 1 Figure<br/>
                 Background/ Scene<br/>
@@ -127,6 +127,7 @@ export default function IllustrationServices() {
                 Color</p>
             
           </Col>
+          
           <Col className={styles.product} md={3}>
            
          <h3 className="text-center">Level 2</h3>
@@ -157,7 +158,7 @@ export default function IllustrationServices() {
                 highlights. A working period of 1 week 
                 is given to this coloring style depending 
                 on the number of illustrations.
-                <br/>
+                <br/><br/>
                 Inclusions:<br/>
                 2 Figures<br/>
                 Background/ Scene<br/>
@@ -165,6 +166,7 @@ export default function IllustrationServices() {
                 Color</p>
             
           </Col>
+         
           <Col className={styles.product} md={3}>
            
             <h3 className="text-center">Level 3</h3>
@@ -196,7 +198,7 @@ export default function IllustrationServices() {
                 day to finish a single illustration 
                 depending on the details and number 
                 of characters in an illustration.
-                <br/>
+                <br/><br/>
                 Inclusions:<br/>
                 3 Figures<br/>
                 Background/ Scene<br/>
@@ -234,7 +236,7 @@ export default function IllustrationServices() {
                 intricacy and depth. A working period of 
                 9 days is given to this type of colorization 
                 depending on the number of illustrations.
-                <br/>
+                <br/><br/>
                 Inclusions:<br/>
                 4 Figures<br/>
                 Background/ Scene<br/>
@@ -264,35 +266,47 @@ export default function IllustrationServices() {
                 <Col className={styles.product} md={2}>
                 <Link href="/packages" passHref><Nav.Link className={styles2.link2}>Floyd</Nav.Link></Link>
                 </Col>
-            </Row>
-              <Row className={styles.products}>
-                <Col  className={styles.imgpadding}  md={4}>
-                <Image src="/img/services/Layer79.png" width="250px" height="auto"/>
-                </Col>
-                <Col  className={styles.imgpadding}   md={4}>
-                <Image src="/img/services/Layer77.png" width="250px" height="auto" />
-                </Col>
-                <Col  className={styles.imgpadding}   md={4}>
-                <Image src="/img/services/Layer87.png" width="250px" height="auto" />
-                </Col>
-                <Col  className={styles.imgpadding}   md={4}>
+            </Row>     
+
+            </Container>           
+          </Container>    
+          <Container fluid>
+            <Row className="justify-content-md-center">
+              <Col md={9}>
+                <Row>
+                    <Col className={styles.imgpadding} md={4}>
+                    <span ><Image src="/img/services/Layer79.png" width="250px" height="auto"/></span>
+                    </Col>
+                    <Col  className={styles.imgpadding} md={4}>
+                    <Image src="/img/services/Layer77.png" width="250px" height="auto" />
+                    </Col>
+                    <Col  className={styles.imgpadding}md={4}>
+                    <Image src="/img/services/Layer87.png" width="250px" height="auto" />
+                    </Col>
+                </Row>               
+                <Row>
+                <Col  className={styles.imgpadding} md={4}>
                 <Image src="/img/services/Layer94.png" width="250px" height="auto" />
                 </Col>
-                <Col  className={styles.imgpadding}   md={4}>
+                <Col  className={styles.imgpadding}  md={4}>
                 <Image src="/img/services/Layer71.png" width="250px" height="auto" />
                 </Col>
-                <Col  className={styles.imgpadding}   md={4}>
+                <Col  className={styles.imgpadding}  md={4}>
                 <Image src="/img/services/Layer78.png" width="250px" height="auto" />
                 </Col>
-                <Col  className={styles.imgpadding}   md={4}>
+                </Row>
+                <Row>
+                <Col  className={styles.imgpadding} md={4}>
                 <Image src="/img/services/Layer86.png" width="250px" height="auto" />
                 </Col>
-                <Col  className={styles.imgpadding}   md={4}>
+                <Col  className={styles.imgpadding} md={4}>
                 <Image src="/img/services/pandas80.png" width="250px" height="auto" />
                 </Col>
-                <Col  className={styles.imgpadding}   md={4}>
+                <Col  className={styles.imgpadding} md={4}>
                 <Image src="/img/services/Layer92.png" width="250px" height="auto" />
                 </Col>
+                </Row>
+                <Row>
                 <Col   className={styles.imgpadding} md={4}>
                 <Image src="/img/services/Layer83.png" width="250px" height="auto" />
                 </Col>
@@ -302,6 +316,8 @@ export default function IllustrationServices() {
                 <Col  className={styles.imgpadding}   md={4}>
                 <Image src="/img/services/Layer89.png" width="250px" height="auto" />
                 </Col>
+                </Row>
+                <Row>
                 <Col  className={styles.imgpadding}   md={4}>
                 <Image src="/img/services/Layer85.png" width="250px" height="auto" />
                 </Col>
@@ -311,18 +327,12 @@ export default function IllustrationServices() {
                 <Col  className={styles.imgpadding}   md={4}>
                 <Image src="/img/services/Layer91.png" width="250px" height="auto" />
                 </Col>
+                </Row>
                 <Col className={styles.product}> 
                 <Link href="/pricing" passHref><Button className={styles.illustrationbutton}>Get Started</Button></Link></Col>
-                </Row>
-
-               
-               
-            </Container>           
-          </Container>    
-          <Container fluid>
-                 <Row className={styles.heading}>
-                  
-                 </Row>
+                </Col>
+                </Row>               
+              
                 
                  </Container>
         </PageLayout>
