@@ -458,9 +458,9 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         </Col>
       </Row>
       <Row>
-        <Col md={{ span: 10, offset: 0 }}>
+        <Col md={{ span: 12, offset: 2 }}>
           <p className={styles.pricinglink}>
-          Select Additional Services to let professionals help and create your book. This options are recommended to enhance and select the services you only wanted. Check also in <Link href="/packages">packages</Link> to get a full book services.
+          Select Additional Services to let professionals help and create your book.<br/> This options are recommended to enhance and select the services you only wanted.<br/> Check also in <Link href="/packages">packages</Link> to get a full book services.
           </p>
         </Col>
       </Row>
