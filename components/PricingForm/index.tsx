@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState,useEffect } from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 
 import Link from "next/link"
@@ -14,12 +15,264 @@ onHide?:any
 const PricingForm = ({ ...props }: PricingFormProps) => { 
   const [modalShowCreate, setModalShowCreate] = React.useState(false);
   const [modalShowSignin, setModalShowSignin] = React.useState(false);
-  const [interiorColor,setInteriorColor]=React.useState("");
-  const handleChange=(e:any) =>{
-    setInteriorColor(e.target.value);
-    console.log(interiorColor);
+
+const [firstname, setFirstname] = useState('')
+const [email, setEmail] = useState('')
+const [lastname, setLastname] = useState('')
+const [submitted, setSubmitted] = useState(false)
+
+const [trimsize, setTrimsize] = useState('')
+const [interiorcolor,setInteriorcolor]=React.useState("");
+const [papertype, setPapertype] = useState('')
+const [bindingtype, setBindingtype] = useState('')
+const [laminate, setLaminate] = useState('')
+const [pagecount, setPagecount] = useState('')
+const [quantity, setQuantity] = useState('')
+const [shipto, setShipto] = useState('')
+const [shiptoprovince, setShiptoprovince] = useState('')
+const [printinglocation, setPrintinglocation] = useState('')
+const [ebook, setEbook] = useState('')
+
+const [editorial, setEditorial] = useState(false);
+const [editorialvalue, setEditorialvalue] = useState('');
+const [lineediting, setLineediting] = useState(false);
+const [lineeditingvalue, setLineeditingvalue] = useState('');
+const [copyediting, setCopyediting] = useState(false);
+const [copyeditingvalue, setCopyeditingvalue] = useState('');
+const [proof, setProof] = useState(false);
+const [prooflvalue, setProoflvalue] = useState('');
+const [indexing, setIndexing] = useState(false);
+const [indexingvalue, setIndexingvalue] = useState('');
+const [dataentry, setDataentry] = useState(false);
+const [dataentryvalue, setDataentryvalue] = useState('');
+const [textformat, setTextformat] = useState(false);
+const [textformatvalue, setTextformatvalue] = useState('');
+const [illustrations, setIllustrations] = useState(false);
+const [illustrationsvalue, setIllustrationsvalue] = useState('');
+const [coverdesign, setCoverdesign] = useState(false);
+const [coverdesignvalue, setCoverdesignvalue] = useState('');
+const [interiordesign, setInteriordesign] = useState(false);
+const [interiordesignvalue, setInteriordesignvalue] = useState('');
+const [hardback, setHardback] = useState(false);
+const [hardbackvalue, setHardbackvalue] = useState('');
+const [printbook, setPrintbook] = useState(false);
+const [printbookvalue, setPrintbookvalue] = useState('');
+const [ebookdist, setEbookdist] = useState(false);
+const [ebookdistvalue, setEbookdistvalue] = useState('');
+const [copyright, setCopyright] = useState(false);
+const [copyrightvalue, setCopyrightvalue] = useState('');
+const [isbn, setIsbn] = useState(false);
+const [isbnvalue, setIsbnvalue] = useState('');
+const [website, setWebsite] = useState(false);
+const [websitevalue, setWebsitevalue] = useState('');
+const [audiobook, setAudiobook] = useState(false);
+const [audiobookvalue, setAudiobookvalue] = useState('');
+const [videobook, setVideobook] = useState(false);
+const [videobookvalue, setVideobookvalue] = useState('');
+const [pressrelease, setPressrelease] = useState(false);
+const [pressreleasevalue, setPressreleasevalue] = useState('');
+const [authorevents, setAuthorevents] = useState(false);
+const [authoreventsvalue, setAuthoreventsvalue] = useState('');
+const [printads, setPrintads] = useState(false);
+const [printadsvalue, setPrintadsvalue] = useState('');
+useEffect(() => {
+  if(editorial===true){
+    setEditorialvalue("Editorial Assessment");
+  }if(lineediting===true){
+    setLineeditingvalue("Line Editing")
+  }if(copyediting===true){
+    setCopyeditingvalue("Copyediting")
   }
+  if(proof===true){
+    setProoflvalue("Proofreading")
+  }
+  if(indexing===true){
+    setIndexingvalue("Indexing")
+  }
+  if(dataentry===true){
+    setDataentryvalue("Data Entry")
+  }
+  if(textformat===true){
+    setTextformatvalue("Text and Layout Format")
+  }
+  if(illustrations===true){
+    setIllustrationsvalue("Illustrations")
+  }
+  else if(coverdesign===true){
+    setCoverdesignvalue("Book Cover Design")
+  }
+  if(interiordesign===true){
+    setInteriordesignvalue("Book Interior Design")
+  }
+  else if(hardback===true){
+    setHardbackvalue("Hardback Upgrade")
+  }
+  if(printbook===true){
+    setPrintbookvalue("Print Book Distribution")
+  }
+  if(ebookdist===true){
+    setEbookdistvalue("Ebook Distribution")
+  }
+  if(copyright===true){
+    setCopyrightvalue("Copyright Registration")
+  }
+  if(isbn===true){
+    setIsbnvalue("ISBN")
+  }
+  if(website===true){
+    setWebsitevalue("Author Website")
+  }
+  if(audiobook===true){
+    setAudiobookvalue("Audio Book")
+  }
+  if(videobook===true){
+    setVideobookvalue("Video Book")
+  }
+  else if(pressrelease===true){
+    setPressreleasevalue("Press Release Campaign")
+  }
+  if(authorevents===true){
+    setAuthoreventsvalue("Author Events")
+  }
+  if(printads===true){
+    setPrintadsvalue("Print Advertisement")
+  }
+  console.log("editorial checked?:",editorial)
+  console.log("editorial value:",editorialvalue)
+  console.log("line editing checked?:",lineediting)
+  console.log("line edting value:",lineeditingvalue)
+});
+
+
   
+  const handleChange=(e:any) =>{
+    setInteriorcolor(e.target.value);
+    console.log(interiorcolor);
+  }
+  const handleSubmit = (e:any) => { 
+    e.preventDefault()
+    console.log('Sending')
+    if(editorial===true){
+      setEditorialvalue("Editorial Assessment");
+    }if(lineediting===true){
+      setLineeditingvalue("Line Editing")
+    }if(copyediting===true){
+      setCopyeditingvalue("Copyediting")
+    }
+    if(proof===true){
+      setProoflvalue("Proofreading")
+    }
+    if(indexing===true){
+      setIndexingvalue("Indexing")
+    }
+    if(dataentry===true){
+      setDataentryvalue("Data Entry")
+    }
+    if(textformat===true){
+      setTextformatvalue("Text and Layout Format")
+    }
+    if(illustrations===true){
+      setIllustrationsvalue("Illustrations")
+    }
+    else if(coverdesign===true){
+      setCoverdesignvalue("Book Cover Design")
+    }
+    if(interiordesign===true){
+      setInteriordesignvalue("Book Interior Design")
+    }
+    else if(hardback===true){
+      setHardbackvalue("Hardback Upgrade")
+    }
+    if(printbook===true){
+      setPrintbookvalue("Print Book Distribution")
+    }
+    if(ebookdist===true){
+      setEbookdistvalue("Ebook Distribution")
+    }
+    if(copyright===true){
+      setCopyrightvalue("Copyright Registration")
+    }
+    if(isbn===true){
+      setIsbnvalue("ISBN")
+    }
+    if(website===true){
+      setWebsitevalue("Author Website")
+    }
+    if(audiobook===true){
+      setAudiobookvalue("Audio Book")
+    }
+    if(videobook===true){
+      setVideobookvalue("Video Book")
+    }
+    else if(pressrelease===true){
+      setPressreleasevalue("Press Release Campaign")
+    }
+    if(authorevents===true){
+      setAuthoreventsvalue("Author Events")
+    }
+    if(printads===true){
+      setPrintadsvalue("Print Advertisement")
+    }
+
+
+  
+  let data = {
+      firstname,
+      lastname,
+      email,      
+      trimsize,
+      interiorcolor,
+      papertype,
+      bindingtype,
+      laminate,
+      pagecount,
+      quantity,
+      shipto,
+      shiptoprovince,
+      printinglocation,
+      ebook,
+      editorialvalue,
+      lineeditingvalue,
+      copyeditingvalue,
+      prooflvalue,
+      indexingvalue,
+      dataentryvalue,
+      textformatvalue,
+      illustrationsvalue,
+      coverdesignvalue,
+      interiordesignvalue,
+      hardbackvalue,
+      printbookvalue,
+      ebookdistvalue,
+      copyrightvalue,
+      isbnvalue,
+      websitevalue,
+      audiobookvalue,     
+      videobookvalue,
+      pressreleasevalue,
+      authoreventsvalue,
+      printadsvalue
+
+    }
+  fetch('/api/sendMail', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      console.log(data)
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setFirstname('')
+        setEmail('')
+        setLastname('')
+      }
+    })
+  }
   return (
     <Container fluid>
       <div className={styles.pricingForm + " container"}>
@@ -38,7 +291,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Trim Size</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input} as="select" defaultValue=" ">
+            <Form.Control className={styles.input} as="select" defaultValue={trimsize} onChange={(e)=>{setTrimsize(e.target.value)}}>
               <option value=""></option>
               <option value="4.000&quot; x 6.000&quot; (152mm x 102 mm)">4.000" x 6.000" (152mm x 102 mm)</option>
               <option value="4.000&quot; x 7.000&quot; (178mm x 102 mm)">4.000" x 7.000" (178mm x 102 mm)</option>
@@ -80,7 +333,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Interior Color</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input} as="select" defaultValue={interiorColor} onChange={ handleChange }>
+            <Form.Control className={styles.input} as="select" defaultValue={interiorcolor} onChange={ handleChange }>
               <option></option>
               <option>Black and White</option>
               <option>Color</option>              
@@ -92,9 +345,9 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Paper Type</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input}  as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue={papertype} onChange={(e)=>{setPapertype(e.target.value)}}>
               <option> </option>              
-                { interiorColor==="Black and White"?(
+                { interiorcolor==="Black and White"?(
                   <>
               <option>White</option>
               <option>Creme</option>
@@ -116,7 +369,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Binding Type</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input}  as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue={bindingtype} onChange={(e)=>{setBindingtype(e.target.value)}}>
               <option> </option>
               <option>Paperback</option>
               <option>Hardback</option>             
@@ -128,7 +381,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Laminate</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input}  as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue={laminate} onChange={(e)=>{setLaminate(e.target.value)}}>
               <option> </option>
               <option>Gloss</option>
               <option>Matte</option>
@@ -141,7 +394,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Page Count</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input}  as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue={pagecount} onChange={(e)=>{setPagecount(e.target.value)}}>
               <option> </option>
               <option>22</option>
               <option>28</option>
@@ -154,7 +407,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Quantity</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row}>
-            <Form.Control className={styles.input}  type="text" />
+            <Form.Control className={styles.input}  type="text" defaultValue={quantity} onChange={(e)=>{setQuantity(e.target.value)}}/>
           </Form.Group>
         </Col>
       </Row>
@@ -162,7 +415,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Ship To</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input} as="select" defaultValue=" ">
+            <Form.Control className={styles.input} as="select" defaultValue={shipto} onChange={(e)=>{setShipto(e.target.value)}}>
               <option value=""></option>
               <option value="USA">United States</option>
               <option value="GBR">United Kingdom</option>
@@ -425,7 +678,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Ship To Province</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row}>
-            <Form.Control className={styles.input}  type="text" />
+            <Form.Control className={styles.input}  type="text" defaultValue={shiptoprovince} onChange={(e)=>{setShiptoprovince(e.target.value)}}/>
           </Form.Group>
         </Col>
       </Row>
@@ -434,7 +687,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Printing Location</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input}  as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue={printinglocation} onChange={(e)=>{setPrintinglocation(e.target.value)}}>
               <option> </option>
               <option>LS US - US Dollar</option>
               <option>LS UK - Euros</option>
@@ -448,7 +701,7 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
         <Col className={styles.labelleft} md={{ span:4, offset: 0 }}><Form.Label className={styles.label}>E-Book</Form.Label></Col>
         <Col md={{ span:4 , offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
-            <Form.Control className={styles.input}  as="select" defaultValue=" ">
+            <Form.Control className={styles.input}  as="select" defaultValue={ebook} onChange={(e)=>{setEbook(e.target.value)}}>
               <option> </option>
               <option>Yes</option>
               <option>No</option>
@@ -473,11 +726,17 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
             <Col sm={10}>
               <Form.Check
                 type="checkbox"
-                label="Editorial Assessment"
+                label="Editorial Assessment" 
+                name="additonalservices1"
+                checked={editorial}                
+                onChange={(e)=>{setEditorial(e.target.checked)}}                
               />
               <Form.Check
                 type="checkbox"
                 label="Line Editing"
+                name="additonalservices2"               
+                checked={lineediting}                
+                onChange={(e)=>{setLineediting(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
@@ -486,18 +745,30 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               <Form.Check
                 type="checkbox"
                 label="Proofreading"
+                name="additonalservices3"               
+                checked={copyediting}                
+                onChange={(e)=>{setCopyediting(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Indexing"
+                name="additonalservices4"               
+                checked={indexing}                
+                onChange={(e)=>{setIndexing(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Data Entry"
+                name="additonalservices5"               
+                checked={dataentry}                
+                onChange={(e)=>{setDataentry(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Text and Layout Format"
+                name="additonalservices6"               
+                checked={textformat}                
+                onChange={(e)=>{setTextformat(e.target.checked)}} 
               />          
             </Col>
           </Form.Group>
@@ -512,18 +783,30 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               <Form.Check
                 type="checkbox"
                 label="Illustrations"
+                name="additonalservices7"               
+                checked={illustrations}                
+                onChange={(e)=>{setIllustrations(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Book Cover Design"
+                name="additonalservices8"               
+                checked={coverdesign}                
+                onChange={(e)=>{setCoverdesign(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Book Interior Design"
+                name="additonalservices9"               
+                checked={interiordesign}                
+                onChange={(e)=>{setInteriordesign(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Hardback Upgrade"
+                name="additonalservices10"               
+                checked={hardback}                
+                onChange={(e)=>{setHardback(e.target.checked)}} 
               />   
             </Col>
           </Form.Group>
@@ -538,18 +821,30 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               <Form.Check
                 type="checkbox"
                 label="Print Book Distribution"
+                name="additonalservices11"               
+                checked={printbook}                
+                onChange={(e)=>{setPrintbook(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Ebook Distribution"
+                name="additonalservices12"               
+                checked={ebookdist}                
+                onChange={(e)=>{setEbookdist(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
-                label="Copyright Registration "
+                label="Copyright Registration"
+                name="additonalservices13"               
+                checked={copyright}                
+                onChange={(e)=>{setCopyright(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="ISBN"
+                name="additonalservices14"               
+                checked={isbn}                
+                onChange={(e)=>{setIsbn(e.target.checked)}} 
               />              
             </Col>
           </Form.Group>
@@ -564,26 +859,44 @@ const PricingForm = ({ ...props }: PricingFormProps) => {
               <Form.Check
                 type="checkbox"
                 label="Author Website"
+                name="additonalservices15"               
+                checked={website}                
+                onChange={(e)=>{setWebsite(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Audio Book"
+                name="additonalservices16"               
+                checked={audiobook}                
+                onChange={(e)=>{setAudiobook(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Video Book"
+                name="additonalservices17"               
+                checked={videobook}                
+                onChange={(e)=>{setVideobook(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Press Release Campaign"
+                name="additonalservices18"               
+                checked={pressrelease}                
+                onChange={(e)=>{setPressrelease(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Author Events"
+                name="additonalservices19"               
+                checked={authorevents}                
+                onChange={(e)=>{setAuthorevents(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Print Advertisement"
+                name="additonalservices20"               
+                checked={printads}                
+                onChange={(e)=>{setPrintads(e.target.checked)}} 
               />              
              
             </Col>
@@ -660,7 +973,7 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>First name</Form.Label>
-          <Form.Control className={styles.inputnav} type="text" name="firstname"/>
+          <Form.Control className={styles.inputnav} onChange={(e)=>{setFirstname(e.target.value)}} type="text" name="name"/>
         </Col>
       </Form.Group>
     </Col>
@@ -668,7 +981,7 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>Last name</Form.Label>
-          <Form.Control className={styles.inputnav} type="text" name="lastname"/>                  
+          <Form.Control className={styles.inputnav} onChange={(e)=>{setLastname(e.target.value)}} type="text" name="message"/>                  
         </Col>
        
       </Form.Group>
@@ -677,7 +990,7 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>Email</Form.Label>
-          <Form.Control className={styles.inputnav} type="email" name="email"/>                  
+          <Form.Control className={styles.inputnav} onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email"/>                  
         </Col>
        
       </Form.Group>
@@ -685,7 +998,7 @@ onHide={() => setModalShowSignin(false)}
     <Col>
       <Form.Group as={Row}>
         <Col md={12}>                                   
-          <Button onClick={props.onHide} className={styles.signinButton}>Send</Button>
+          <Button onClick={props.onHide} className={styles.signinButton} onMouseDown={(e)=>{handleSubmit(e)}}>Send</Button>
         </Col>
        
       </Form.Group>
