@@ -13,8 +13,8 @@ onHide?:any
 
 
 const PricingForm = ({ ...props }: PricingFormProps) => { 
-  const [modalShowCreate, setModalShowCreate] = React.useState(false);
-  const [modalShowSignin, setModalShowSignin] = React.useState(false);
+const [modalShowCreate, setModalShowCreate] = React.useState(false);
+const [modalShowSignin, setModalShowSignin] = React.useState(false);
 
 const [firstname, setFirstname] = useState('')
 const [email, setEmail] = useState('')
@@ -75,74 +75,6 @@ const [authorevents, setAuthorevents] = useState(false);
 const [authoreventsvalue, setAuthoreventsvalue] = useState('');
 const [printads, setPrintads] = useState(false);
 const [printadsvalue, setPrintadsvalue] = useState('');
-useEffect(() => {
-  if(editorial===true){
-    setEditorialvalue("Editorial Assessment");
-  }if(lineediting===true){
-    setLineeditingvalue("Line Editing")
-  }if(copyediting===true){
-    setCopyeditingvalue("Copyediting")
-  }
-  if(proof===true){
-    setProoflvalue("Proofreading")
-  }
-  if(indexing===true){
-    setIndexingvalue("Indexing")
-  }
-  if(dataentry===true){
-    setDataentryvalue("Data Entry")
-  }
-  if(textformat===true){
-    setTextformatvalue("Text and Layout Format")
-  }
-  if(illustrations===true){
-    setIllustrationsvalue("Illustrations")
-  }
-  else if(coverdesign===true){
-    setCoverdesignvalue("Book Cover Design")
-  }
-  if(interiordesign===true){
-    setInteriordesignvalue("Book Interior Design")
-  }
-  else if(hardback===true){
-    setHardbackvalue("Hardback Upgrade")
-  }
-  if(printbook===true){
-    setPrintbookvalue("Print Book Distribution")
-  }
-  if(ebookdist===true){
-    setEbookdistvalue("Ebook Distribution")
-  }
-  if(copyright===true){
-    setCopyrightvalue("Copyright Registration")
-  }
-  if(isbn===true){
-    setIsbnvalue("ISBN")
-  }
-  if(website===true){
-    setWebsitevalue("Author Website")
-  }
-  if(audiobook===true){
-    setAudiobookvalue("Audio Book")
-  }
-  if(videobook===true){
-    setVideobookvalue("Video Book")
-  }
-  else if(pressrelease===true){
-    setPressreleasevalue("Press Release Campaign")
-  }
-  if(authorevents===true){
-    setAuthoreventsvalue("Author Events")
-  }
-  if(printads===true){
-    setPrintadsvalue("Print Advertisement")
-  }
-  console.log("editorial checked?:",editorial)
-  console.log("editorial value:",editorialvalue)
-  console.log("line editing checked?:",lineediting)
-  console.log("line edting value:",lineeditingvalue)
-});
-
 
   
   const handleChange=(e:any) =>{
@@ -271,6 +203,7 @@ useEffect(() => {
         setEmail('')
         setLastname('')
       }
+      setModalShowSignin(false)
     })
   }
   return (
