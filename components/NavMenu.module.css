@@ -190,3 +190,50 @@
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
+@media screen and (max-width: 1030px) {
+ 
+  .logo {
+    width: 150px;
+    display: flex;
+    margin-left:10px ;  
+    padding-bottom: 18px;
+  }
+  .navbar {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 55px;
+    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+  }
+  .container{
+    width: 50%;
+  }
+  .utilitycontainer{
+    display: flex;
+    flex-direction: row;
+    font-size:12px ;
+    padding:0px;
+  }
+  .logoWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .utilityMenus {
+    display:flex;
+    flex-direction: row;
+    color: #7b6b5b;
+    padding-right: 0px;
+    padding-left: 1px;
+
+  }
+  
+  .utilityMenu {
+    text-align: right;
+    padding-right: 0px;
+    text-align: left;
+    padding-bottom: 12px;
+  }
+}
