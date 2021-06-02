@@ -196,7 +196,7 @@ export default function Services() {
               40 % <br/>
               30 % <br/>
               </p>
-              <p>With Amazon.com, you can set the discount at 30% instead of 55%. So, for a book that costs $3 to print and is priced at $20, if the seller takes 30% ($6) then you as the author would be left with the other 70% ($14), minus the $3 cost of printing. Your profit would be $11 per sale.</p>
+              <p>With Amazon.com, you can set the discount at 30% instead of 55%. So, for a book that costs €3 to print and is priced at €20, if the seller takes 30% (€6) then you as the author would be left with the other 70% (€14), minus the €3 cost of printing. Your profit would be €11 per sale.</p>
 
               </Col>
             </Row>
@@ -266,7 +266,7 @@ export default function Services() {
               <p className={styles.servicesparag}>Sale Sheets<br/><span className={styles.servicesspan}> 
               €200</span></p>
 
-              <p>This one-page paper contains high-level, relevant information about your book. zA sale sheet is basically, your high-level metadata such as the title, subtitle, publisher, publication date, etc.</p> 
+              <p>This one-page paper contains high-level, relevant information about your book. A sale sheet is basically, your high-level metadata such as the title, subtitle, publisher, publication date, etc.</p> 
 
               <p className={styles.servicesparag}>Advanced Reader Copies<br/><span className={styles.servicesspan}> 
               €600</span></p>
