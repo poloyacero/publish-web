@@ -46,7 +46,7 @@ export default function Services() {
                <Link href="#marketing"><a><li>Marketing</li></a></Link> 
               </ol>
               </Col>              
-              <Col md={6}><div className={styles.imgpadding}><Image src="/img/Slider.png" height="auto" width="350px"/></div> 
+              <Col md={6}><div className={styles.imgpadding}><Image src="/img/Slider.png" height="auto" width="360px"/></div> 
               
      </Col>
               </Row>           
@@ -133,7 +133,7 @@ export default function Services() {
               €250-2000 / design</span></p>
 
               <p>Our seasoned illustrators can cut across the board with their expertise on various genres this from young adult, fiction, to cartoons and fantasy. Text and illustrations work should tell a great story. Drawing in the reader, our brand of visual art brings the story to life. We listen to the author’s vision as well as we commit to delivering expertise that best tells your story. 
-              <br/><br/><Link href="/illustration-services"><span  className={styles.serviceslink}><a>See illustration samples</a></span></Link></p>
+              <br/><br/><Link href="/illustration-services"><span  className={styles.serviceslink}><a>See <b>illustration samples</b></a></span></Link></p>
               
               </Col>
             </Row>
@@ -174,7 +174,7 @@ export default function Services() {
               <p>We partner with printers located within Scandinavia, and around the world. 
               We have options for printing anywhere from a single copy to thousands at low cost. For some print-on-demand costs, and the associated royalties contact us.</p>
 
-              <p>See also <b>Printbook</b></p>
+              <p>See also <Link href="/print-book"><span  className={styles.serviceslink}><a><b>Printbook</b></a></span></Link></p>
               </Col>
             </Row>
             <Row><Col><br/><br/></Col></Row>
@@ -210,11 +210,11 @@ export default function Services() {
 
               <p>Distribution used to be a major challenge for self-published authors. As authors would spend weeks, months, even years writing their book, they would have no way to get it into bookstores and libraries.</p>
 
-              <p>By just publishing with us, you can receive the same book distribution channels available to major traditional publishers. The Publishing makes titles available to 39,000 retailers, libraries, schools, and e-commerce companies including Amazon, Barnes & Noble, Indigo, Foyles, Apple, and more.</p>
+              <p>By just publishing with us, you can receive the same book distribution channels available to major traditional publishers. The Publishing makes titles available to 39,000 retailers, libraries, schools, and <br/>e-commerce companies including Amazon, Barnes & Noble, Indigo, Foyles, Apple, and more.</p>
 
               <p>We do everything for you. We process the printing and fulfilling orders, collecting payment, and shipping the books to customers or booksellers who act as middlemen. We make your book available to the public. This can include publishing your book in paperback, hardcover, and/or as an eBook, and making the book available to retail channels where people typically go to buy books.</p>
               
-              <p>Our print-on-demand systems allow the print edition of your book to be listed for sale with major online retailers like Amazon.com, Chapters.com, and BarnesAndNoble.com. </p>
+              <p>Our print-on-demand systems allow the print edition of your book to be listed for sale with major online retailers like Amazon.com, Chapters.com, and BarnesandNoble.com. </p>
               
               <p>Currently, a handful of eBook formats dominate the marketplace. For eBooks, there are no major barriers to having your book published alongside bestselling authors.</p>
 

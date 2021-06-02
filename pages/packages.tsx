@@ -9,7 +9,7 @@ import { Col, Row} from 'react-bootstrap';
 import styles from '../styles/Home.module.css'
 
 export default function PackagesPage() {
-  const package1 = ['Starter<br/>€ 900<br/><br/>Edit and Design <br/>Paperback Format <br/>E-Book Format <br/>Standard Text and Layout Formatting <br/>1 Round Layout Revisions <br/>Post-publication features: <br/>3 Paperback Copies <br/>2 ISBN <br/>Print Book Registration <br/>Amazon Look Inside <br/>Google Books Preview <br/>Barnes and Noble Read Instantly <br/>Worldwide Online Book Distribution <br/>Online Book Sales Account<br/>Royalties <br/>Marketing services: <br/>20 Bookmarks <br/>20 Business Cards <br/>50 Postcards'];
+  
   return (
     <div className={styles.container}>
       <Head>
