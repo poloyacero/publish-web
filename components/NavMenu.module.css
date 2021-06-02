@@ -211,10 +211,7 @@
     width: 50%;
   }
   .utilitycontainer{
-    display: flex;
-    flex-direction: row;
-    font-size:12px ;
-    padding:0px;
+    display: none;
   }
   .logoWrapper {
     display: flex;
@@ -232,8 +229,15 @@
   
   .utilityMenu {
     text-align: right;
-    padding-right: 0px;
+    padding-right: 20px;
     text-align: left;
     padding-bottom: 12px;
+  }
+  .navmenu {
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-right: 10px;
+    font-weight: bold;
+    width: 100%;
   }
 }
