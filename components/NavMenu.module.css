@@ -214,12 +214,13 @@
     flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
   }
   .container{
     width: 50%;
   }
   .utilitycontainer{
-    display: none;
+    display: none;   
   }
   .logoWrapper {
     display: flex;
@@ -230,8 +231,8 @@
     display:flex;
     flex-direction: row;
     color: #7b6b5b;
-    padding-right: 0px;
-    padding-left: 1px;
+    padding-right:10px;
+    padding-left: 11px;
 
   }
   
@@ -247,5 +248,8 @@
     margin-right: 10px;
     font-weight: bold;
     width: 100%;
+  }
+  .togglecontainer{
+    padding-left: 60px;
   }
 }

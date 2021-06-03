@@ -20,7 +20,7 @@ const NavMenu = ({ ...props }: NavProps) => {
       <Container className={"container " + props.className} >
         <Row>
           <Navbar className={styles.navbar} expand="lg">
-          <Col md={3} className={styles.logoWrapper}>
+          <Col md={{span:3, order: 'first'}} className={styles.logoWrapper}>
             <Link href="/" passHref>
               <Navbar.Brand className={styles.brand}>
               <Image src="/logo.png" className={styles.logo}/>
@@ -28,7 +28,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Navbar.Brand>
             </Link>
           </Col>
-          <Col md={{ span: 6, offset: 1 }}>
+          <Col className={styles.togglecontainer} md={{ span: 6, offset: 1}} >
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mx-auto">
@@ -47,7 +47,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </Nav>
               </Navbar.Collapse>
           </Col>
-          <Col md={{ span: 2, offset: 0 }} className={styles.utilityMenu}>
+          <Col md={{ span: 2, offset: 0, order: 'last'}} className={styles.utilityMenu}>
              <Col className={styles.utilitycontainer}>
                <Col>
             <Link href="/" passHref>
