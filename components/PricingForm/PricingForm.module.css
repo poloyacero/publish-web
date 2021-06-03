@@ -12,9 +12,6 @@
   text-align: right; 
 }
 
-.additionals {
-  font-size: 14px;
-}
 
 .pricingh1 {
   width: 100%;
@@ -133,4 +130,19 @@
         -webkit-tap-highlight-color: rgba(0,0,0,0);
       }
       
-      
+      .checkboxcontainer{
+        width: 90%;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        padding-left: 180px;
+      }
+      .additionals {
+        font-size: 10px;
+        }
+        .checkboxbutton{
+          justify-content:left;
+          display: flex;
+          flex-direction: row;
+     
+        }
