@@ -35,3 +35,18 @@
 .mgBottom {
   margin-bottom: 25px !important;
 }
+
+@media screen and (max-width: 1030px) {
+  .item img { 
+    margin: 0;
+    margin-bottom: 15px;
+    width: 200px;
+   
+  }
+  .itemPad {
+    padding: 15px;
+   padding-left:0px;
+   text-align: center;
+  }
+
+}

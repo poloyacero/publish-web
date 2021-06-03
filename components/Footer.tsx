@@ -77,9 +77,9 @@ const Footer = ({ ...props }: FooterProps) => {
                   </optgroup>
 
                 </Form.Control>
-                <Row><Col style={{padding:0}}><br/></Col></Row>
-                <Row style={{flexWrap:'nowrap'}}><Col sm={1}><Form.Check type="checkbox" name="selectstyles"  id="styles1"/></Col>
-                <Col sm={12} style={{padding:"5px"}} className={styles.checkboxlabel}>I agree to the Privacy Policy and Terms and Condition</Col><Col></Col></Row>
+                <Row><Col><br/></Col></Row>
+                <Row><Col className={styles.checkboxlabel}><Form.Check type="checkbox"label="I agree to the Privacy Policy and Terms and Condition" name="selectstyles"  id="styles1"/></Col>
+               </Row>
                    <br/>             
                 <Button className={styles.sendmail}>SEND MAIL</Button>
               </Form.Group>

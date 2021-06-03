@@ -4,9 +4,8 @@ import PageLayout from '../components/PageLayout';
 import Footer from '../components/Footer';
 import NavMenu from '../components/Nav';
 import Link from 'next/link';
-import styles2 from '../components/NavMenu.module.css';
 import styles from '../styles/Home.module.css';
-import { Col, Container, Row ,Form,Image,Nav,Button} from 'react-bootstrap';
+import { Col, Container, Row ,Image,Nav,Button} from 'react-bootstrap';
 
 
 
@@ -46,7 +45,7 @@ export default function Services() {
                <Link href="#marketing"><a><li>Marketing</li></a></Link> 
               </ol>
               </Col>              
-              <Col md={6}><div className={styles.imgpadding}><Image src="/img/Slider.png" height="auto" width="360px"/></div> 
+              <Col md={6}><div className={styles.imgpadding}><Image src="/img/Slider.png" /></div> 
               
      </Col>
               </Row>           
