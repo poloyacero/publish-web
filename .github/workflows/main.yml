@@ -5,7 +5,7 @@ on:
 
 env:
   ssh_key_path: ~/.ssh/thepublishing.pem
-  app_path: /home/ubuntu/publishing-app/
+  app_path: /var/www/
 
 jobs:
   build:
@@ -24,10 +24,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - script: |
-          export NVM_DIR="$HOME/.nvm"	
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
       - run: npm install
       - run: npm build
 
