@@ -4,7 +4,7 @@ on:
   push:
 
 env:
-  ssh_key_path: ~/.ssh/thepublishin.pem
+  ssh_key_path: ~/.ssh/thepublishing.pem
   app_path: /home/ubuntu/publishing-app/
 
 jobs:
@@ -48,6 +48,10 @@ jobs:
           ./ \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ env.app_path }}
       - name: Build and Start Next.js
+        script: |
+          export NVM_DIR="$HOME/.nvm"	
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm	
+          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion (node is in path now)
         run: |
           ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
