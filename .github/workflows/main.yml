@@ -50,8 +50,8 @@ jobs:
       - name: Build and Start Next.js
         script: |
           export NVM_DIR="$HOME/.nvm"	
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm	
-          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion (node is in path now)
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
         run: |
           ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
