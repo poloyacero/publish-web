@@ -57,4 +57,4 @@ jobs:
           && sudo npm install --unsafe-perm=true --allow-root \
           && sudo npm install pm2 -g --unsafe-perm=true --allow-root \
           && sudo npm run build --unsafe-perm=true --allow-root \
-          && pm2 startOrReload app.json --env production'
+          && sudo pm2 startOrReload app.json --env production'
