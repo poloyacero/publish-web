@@ -53,7 +53,7 @@ jobs:
           ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
           'cd ${{ env.app_path }} \
-          && sudo chmod -R -f 777 ${{ env.app_path }} \
+          && sudo chmod -R -f 777 /home/ubuntu/publishing-app \
           && sudo npm install \
           && sudo npm install pm2 -g\
           && sudo npm run build \
