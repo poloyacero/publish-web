@@ -43,8 +43,8 @@ jobs:
           ssh-add ${{ env.ssh_key_path }}
       - name: Deploy with "rsync" command
         run: |
-          rsync -rvz --progress --exclude ".git/" \
-          -e "ssh -i ${{ env.ssh_key_path }} -O UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+          rsync -avL --progress --exclude ".git/" \
+          -e "ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
           ./ \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ env.app_path }}
       - name: Build and Start Next.js
