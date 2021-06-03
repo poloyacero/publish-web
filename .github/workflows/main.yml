@@ -24,6 +24,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+        script: |
+          export NVM_DIR="$HOME/.nvm"	
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
       - run: npm install
       - run: npm build
 
@@ -47,10 +51,6 @@ jobs:
           -e "ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
           ./ \
           ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ env.app_path }}
-        script: |
-          export NVM_DIR="$HOME/.nvm"	
-          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
       - name: Build and Start Next.js
         run: |
           ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
