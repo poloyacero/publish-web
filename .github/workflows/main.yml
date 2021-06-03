@@ -1,36 +1,58 @@
-name: CICD
+name: Deploy to Publising
+
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-  workflow_dispatch:
+
+env:
+  ssh_key_path: ~/.ssh/thepublishin.pem
+  app_path: /home/ubuntu/publishing-app/
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.npm
+            **/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Install NPM dependencies
-        run: npm install
-      - name: Build NPM
-        run: npm run build
+      - run: npm install
+      - run: npm build
+
   deploy:
-    name: Checkout
+    if: github.ref == 'refs/heads/main'
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
+      - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Deploy to EC2 instance
-        uses: easingthemes/ssh-deploy@v2.1.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          SOURCE: "./"
-          REMOTE_HOST: "ec2-18-188-159-150.us-east-2.compute.amazonaws.com"
-          REMOTE_USER: "ubuntu"
-          TARGET: "/home/ubuntu/publishing-app/"
+      - name: Generate SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.EC2_SSH_KEY }}" > ${{ env.ssh_key_path }}
+          chmod 400 ${{ env.ssh_key_path }}
+          eval "$(ssh-agent -s)"
+          ssh-add ${{ env.ssh_key_path }}
+      - name: Deploy with "rsync" command
+        run: |
+          rsync -avL --progress --exclude ".git/" \
+          -e "ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no" \
+          ./ \
+          ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ env.app_path }}
       - name: Build and Start Next.js
-        run: npm run start
+        run: |
+          ssh -i ${{ env.ssh_key_path }} -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
+          ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} \
+          'cd ${{ env.app_path }} \
+          && sudo npm install \
+          && sudo npm install pm2 -g\
+          && sudo npm run build \
+          && pm2 startOrReload app.json --env production'
