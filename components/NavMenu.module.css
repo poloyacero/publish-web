@@ -52,9 +52,17 @@
   display: inline-block;
   color: #7b6b5b;
   padding-right: 0px;
-  padding-left: 20;
+  padding-left: 0px;
+  margin-right: 20px;
+  
 }
-
+.utilitycontainer{
+  display:flex;
+  flex-direction: row;
+  margin: 0%;  
+  width: 50%;
+  margin-right: 10px;
+}
 .utilityMenu {
   text-align: right;
   padding-right: 0px;
