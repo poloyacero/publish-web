@@ -12,4 +12,4 @@ export NVM_DIR="$HOME/.nvm"
 npm install
 npm run build
 npm start&
-SIGINT
+echo "Deploy successfully"
