@@ -47,7 +47,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </Nav>
               </Navbar.Collapse>
           </Col>
-          <Col md={{ span: 3, offset: 0 }} className={styles.utilityMenu}>
+          <Col md={{ span: 2, offset: 0 }} className={styles.utilityMenu}>
              <Col className={styles.utilitycontainer}>
                <Col>
             <Link href="/" passHref>

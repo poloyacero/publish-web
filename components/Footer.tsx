@@ -109,7 +109,7 @@ const Footer = ({ ...props }: FooterProps) => {
                 <Row className={styles.center}><Col className={styles.footerlink}>
                 <Link href="/"><a><Image src="/logo.png" width="125%" height="30px" /></a></Link>
               <div className={styles.copyright}>
-              <p>Copyright © {(new Date().getFullYear())} ThePublishing All Rights Reserved </p>
+              <p>CVR 42434655 Copyright © All Rights Reserved ThePublshing ApS Bengtasvej 2900 Hellerup Denmark</p>
             </div> 
             </Col></Row>  
             </Col></Row>  
