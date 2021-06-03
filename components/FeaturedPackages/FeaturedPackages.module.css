@@ -76,3 +76,14 @@
 .link:hover, .link2:hover {
   color: #7b6b5b;
 }
+
+@media screen and (max-width: 1030px) {
+  .featuredPrice {
+    text-align: center;
+  }
+  .featuredPrice span {
+    font-size: 48px;
+    margin-top: 20px;
+    display: block;
+  }
+}
