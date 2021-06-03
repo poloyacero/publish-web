@@ -650,13 +650,14 @@ const [printadsvalue, setPrintadsvalue] = useState('');
           </p>
         </Col>
       </Row>
-      <Row>     
+      <Row className={styles.checkboxcontainer}>     
         <Col  md={{ span: 3, offset: 0 }} className={styles.additionals}>
+          <Col>
         <Form.Label className={styles.label}>
           Editing
           </Form.Label>
           <Form.Group as={Row}>
-            <Col sm={10}>
+            <Col>
               <Form.Check
                 type="checkbox"
                 label="Editorial Assessment" 
@@ -706,13 +707,13 @@ const [printadsvalue, setPrintadsvalue] = useState('');
             </Col>
           </Form.Group>
         </Col>
-       
+        </Col>
         <Col  md={{ span: 3, offset: 0 }} className={styles.additionals}>
         <Form.Label className={styles.label}>
            Design
           </Form.Label>
           <Form.Group as={Row}>
-            <Col sm={10}>
+            <Col>
               <Form.Check
                 type="checkbox"
                 label="Illustrations"
@@ -750,7 +751,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
             Distribution
           </Form.Label>
           <Form.Group as={Row}>
-            <Col sm={10}>
+            <Col>
               <Form.Check
                 type="checkbox"
                 label="Print Book Distribution"
@@ -788,7 +789,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
             Marketing
           </Form.Label>
           <Form.Group as={Row}>
-            <Col sm={10}>
+            <Col >
               <Form.Check
                 type="checkbox"
                 label="Author Website"
@@ -837,8 +838,8 @@ const [printadsvalue, setPrintadsvalue] = useState('');
         </Col>
        
       </Row>
-      <Row>
-        <Col md={3}>
+      <Row className={styles.checkboxbutton}>
+        <Col md={{span:4,offset:2}}>
           <Button className={styles.pricingbutton} type="submit" onClick={() => setModalShowSignin(true)}>Submit</Button>
         </Col>
       </Row>
