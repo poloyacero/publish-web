@@ -15,7 +15,7 @@ export default function (req, res) {
     // Port 25 is still widely used as a **relay** port from one server to another.
     // Port for SSL: 465
     // Port for TLS/STARTTLS: 587
-    port: 465,
+    port: 587,
     //  if true the connection will use TLS when connecting to server. If false (the 
     // default) then TLS is used if server supports the STARTTLS extension. In most 
     // cases set this value to true if you are connecting to port 465. For port 587 or 
