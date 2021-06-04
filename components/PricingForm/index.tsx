@@ -81,9 +81,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
     setInteriorcolor(e.target.value);
     console.log(interiorcolor);
   }
-  const handleSubmit = (e:any) => { 
-    e.preventDefault()
-    console.log('Sending')
+  useEffect(() => {
     if(editorial===true){
       setEditorialvalue("Editorial Assessment");
     }if(lineediting===true){
@@ -146,8 +144,12 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       setPrintadsvalue("Print Advertisement")
     }
 
-
   
+  });
+  const handleSubmit = (e:any) => { 
+    e.preventDefault()
+    console.log('Sending')
+    
   let data = {
       firstname,
       lastname,
@@ -675,13 +677,16 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Copyediting"
+                name="additonalservices3"               
+                checked={copyediting}                
+                onChange={(e)=>{setCopyediting(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"
                 label="Proofreading"
                 name="additonalservices3"               
-                checked={copyediting}                
-                onChange={(e)=>{setCopyediting(e.target.checked)}} 
+                checked={proof}                
+                onChange={(e)=>{setProof(e.target.checked)}} 
               />
               <Form.Check
                 type="checkbox"

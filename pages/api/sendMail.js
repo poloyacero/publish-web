@@ -9,13 +9,13 @@ export default function (req, res) {
    
     const transporter = nodemailer.createTransport({
     
-    host: "thepublishing.com",
+    service: "Gmail",
     // SMTP is unlike most network protocols, which only have a single port number. 
     // SMTP has at least 3. They are port numbers 25, 587, and 465.
     // Port 25 is still widely used as a **relay** port from one server to another.
     // Port for SSL: 465
     // Port for TLS/STARTTLS: 587
-    port: 587,
+    port:465,
     //  if true the connection will use TLS when connecting to server. If false (the 
     // default) then TLS is used if server supports the STARTTLS extension. In most 
     // cases set this value to true if you are connecting to port 465. For port 587 or 
@@ -27,14 +27,9 @@ export default function (req, res) {
            },
       
     });
-    console.log(req.body.message)
+    
     const mailData = {
-        // from: req.body.email,
-        // replyTo:req.body.email,
-        // to: 'Gabriel',
-        // subject: `Message From ${req.body.name}`,
-        // text: req.body.message + " | Sent from: " + req.body.email,
-        // html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+       
         to: req.body.email, // String or array of strings ['You <you@example.com>', 'another@example.com']
         from: req.body.email, // String
         subject: 'Inquiry from Publishing',
