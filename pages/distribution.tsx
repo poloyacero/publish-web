@@ -21,7 +21,7 @@ export default function Distribution() {
       </Banner>
       <Container fluid>
         <Container className="container">
-          <Row style={{ color: '#7b6b5b', marginLeft: '110px', marginTop: '30px' }}>
+          <Row className={stepStyles.distrow}>
             <h2>Your Book Online, In Stores, and Around the World</h2>
           </Row>
         </Container>
