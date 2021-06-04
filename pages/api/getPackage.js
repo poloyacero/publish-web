@@ -9,7 +9,7 @@ export default function (req, res) {
    
     const transporter = nodemailer.createTransport({
     
-    host: "smtp.gmail.com",
+    host: "thepublishing.com",
     // SMTP is unlike most network protocols, which only have a single port number. 
     // SMTP has at least 3. They are port numbers 25, 587, and 465.
     // Port 25 is still widely used as a **relay** port from one server to another.
