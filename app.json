@@ -1,6 +1,6 @@
 {
     "name" : "app",
-    "script" : "./node_modules/next/dist/bin/next",
+    "script" : "npm run start",
     "env" : {
       "NODE_ENV" : "development"
     },
