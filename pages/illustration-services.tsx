@@ -81,33 +81,38 @@ export default function IllustrationServices() {
                 <h3>Standard Packages</h3>
               </Row>
               <Row className={styles.ctext}>
-        <Col md={3}>
+        <Col md={3} className={styles.product+("justify-md-center")}>
           <Col className={styles.product} md={12}>
                     
             <Row className={styles.myl}>
-              <Col md={{span:12,offset:2}}><h3 className="text-left">Level 1</h3></Col>
+              <Col md={{span:12,offset:1}}><h3 className="text-left">Level 1</h3></Col>
+              <Row className={styles.myl2}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€250</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>5</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€1000</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>10</Col>
-              <Col md={6}>Illustrations</Col>
+              <Col md={6}>llustrations</Col>
               <Col md={4}>€1800</Col>
-
+               </Row>
+               <Row className={styles.myl2}>
               <Col md={2}>20</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€3000</Col>
+              </Row>
               
               
             </Row>
-            <Row><Col><br/></Col></Row>
+            <Row className={styles.myl2}><Col><br/></Col></Row>
             <Image src="/img/services/leveling1.png" width="220px" height="auto" />
-            <Row><Col><br/></Col></Row>
-            <p>Level 1 is the simplest coloring style. 
+            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <p className={styles.mylpsize}>Level 1 is the simplest coloring style. 
                 It has solid flat colors. Because of its 
                 simplicity it has the shortest working 
                 time which usually takes 3-4 working 
@@ -127,28 +132,33 @@ export default function IllustrationServices() {
          
             <Row className={styles.myl}>
               <Col md={{span:12,offset:2}}><h3 className="text-left">Level 2</h3></Col>
+              <Row className={styles.myl2}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€350</Col>
-
+            </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>5</Col>
-              <Col md={6}>Illustrations</Col>
+              <Col md={6}>llustrations</Col>
               <Col md={4}>€1500</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>10</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€2800</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>20</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€4000</Col>
-              
+              </Row>
+            
               
             </Row>
-            <Row><Col><br/></Col></Row>
+            <Row className={styles.myl2}><Col><br/></Col></Row>
             <Image src="/img/services/leveling2.png" width="220px" height="auto" />
-            <Row><Col><br/></Col></Row>
-            <p>Level 2 color is a coloring style 
+            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <p className={styles.mylpsize}>Level 2 color is a coloring style 
                 that gives your illustration shadows and 
                 highlights. A working period of 1 week 
                 is given to this coloring style depending 
@@ -167,28 +177,32 @@ export default function IllustrationServices() {
             
             <Row className={styles.myl}>
             <Col md={{span:12,offset:2}}><h3 className="text-left">Level 3</h3></Col>
+            <Row className={styles.myl2}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€450</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>5</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€2000</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>10</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€3800</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>20</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€7000</Col>
-              
+              </Row>
               
             </Row>
-            <Row><Col><br/></Col></Row>
+            <Row className={styles.myl2}><Col><br/></Col></Row>
             <Image src="/img/services/leveling3.png" width="220px" height="auto" />
-            <Row><Col><br/></Col></Row>
-            <p>Level 3 has a 3D-ish effect, an ideal
+            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <p className={styles.mylpsize}>Level 3 has a 3D-ish effect, an ideal
                 coloring style for a realistic illustrations. 
                 This coloring style consumes almost a 
                 day to finish a single illustration 
@@ -208,28 +222,32 @@ export default function IllustrationServices() {
             
             <Row className={styles.myl}>
             <Col md={{span:12,offset:2}}><h3 className="text-left">Level 4</h3></Col>
+            <Row className={styles.myl2}>
               <Col md={2}>1</Col>
               <Col md={6}>Illustration</Col>
               <Col md={4}>€1000</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>5</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€4500</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>10</Col>
-              <Col md={6}>Illustrations</Col>
+              <Col md={6}>llustrations</Col>
               <Col md={4}>€8000</Col>
-
+              </Row>
+              <Row className={styles.myl2}>
               <Col md={2}>20</Col>
               <Col md={6}>Illustrations</Col>
               <Col md={4}>€14000</Col>
-              
+              </Row>
               
             </Row>
-            <Row><Col><br/></Col></Row>
+            <Row className={styles.myl2}><Col><br/></Col></Row>
             <Image src="/img/services/Layer83.png" width="220px" height="auto" />
-            <Row><Col><br/></Col></Row>
-            <p>Level 4 is a 3D render and is the most 
+            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <p className={styles.mylpsize}>Level 4 is a 3D render and is the most 
                 complex of all art style due to its 
                 intricacy and depth. A working period of 
                 9 days is given to this type of colorization 

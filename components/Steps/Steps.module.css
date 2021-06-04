@@ -33,3 +33,18 @@
   margin-right: 0px !important;
   font-weight: bold !important;
 }
+
+.distrow{
+   color: #7b6b5b;
+   margin-left:110px;
+   margin-top: 30px;
+}
+
+@media screen and (max-width: 1030px) {
+
+  .distrow{
+    color: #7b6b5b;
+    margin-left:20px;
+    margin-top: 30px;
+ }
+}
