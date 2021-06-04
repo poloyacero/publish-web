@@ -419,7 +419,7 @@ color: #7b6b5b;
     padding:10px;
   }
   .illustrationpadding{
-    padding-left:65px;  
+    padding-left:70px;  
   }
   
   .illustrationbutton:hover {
@@ -427,15 +427,17 @@ color: #7b6b5b;
   }
   .myl h3{
     font-size:22px ;
+    text-align: center;
   }
   .myl {
-    padding-left:0px;
-    padding-right:0px;  
+    padding-left:10px;
+    padding-right:0px; 
+    padding-top:10px;
     display:flex;
-    flex-direction: column;
-    width: 220px; 
+    flex-direction: column; 
     margin-left: 0px;  
-    margin-right: 10px; 
+    margin-right: 22px; 
+  
    }
   .myl2{
   display:flex;
@@ -444,7 +446,7 @@ color: #7b6b5b;
     padding-right:0px;
     flex-wrap: nowrap;
     margin-left: 0px;  
-    margin-right: 0px; 
+    margin-right: 20px; 
     font-size: 12px;
    }
    .mylpsize{
@@ -454,6 +456,7 @@ color: #7b6b5b;
    .product{
     background-color: #faf6f2;
     width: 290px;
-    padding-left: 35px;
+    padding-left:0px;  
+  
     }
 }
