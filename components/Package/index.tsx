@@ -41,7 +41,7 @@ interface PackageProps {
   }
   const handleSubmit = (e:any) => { 
     e.preventDefault()
-    console.log('Sending') 
+    console.log('Sending new 6-9:00') 
 
     console.log('Package',packagevalue) 
 

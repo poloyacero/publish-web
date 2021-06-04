@@ -46,6 +46,7 @@ export default function (req, res) {
       if (err) {
         console.log(err);
         res.send("error" + JSON.stringify(err));
+        console.log("mail not sent");
       } else {
         console.log("mail send");
         res.send("success");
