@@ -11,10 +11,13 @@ body {
 }
 
 a {
-  color: inherit;
+  color: seashell;
   text-decoration: none;
 }
-
+a:hover {
+  color: seashell;
+  text-decoration: none;
+}
 * {
   box-sizing: border-box;
 }

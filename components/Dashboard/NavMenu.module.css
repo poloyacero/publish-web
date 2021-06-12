@@ -170,10 +170,13 @@
   border: none;
   color: #7b6b5b;
   padding: 20px;
+  text-decoration: none;
 }
 
 .button:hover {
   background-color: #7b6b5b;
+  text-decoration: none;
+  color: #f8f7f7;
 }
 
 .submitbutton {

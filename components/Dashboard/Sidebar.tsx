@@ -1,7 +1,6 @@
 import React from 'react';
 import { Row, Col, Button} from 'react-bootstrap';
 import Link from 'next/link';
-import {AiOutlineMenu} from 'react-icons/ai'
 import styles from './NavMenu.module.css';
 
 
@@ -17,8 +16,8 @@ const Sidebar = ({ ...props }: NavProps) => {
     <Col md={4} className={styles.sidebarcol} >
     <Col className={styles.buttoncontainer}>
 <Row className={styles.buttonwrapper}>
-<Col><Link href="/dashboard/create"><Button className={styles.button}><a>Create</a></Button></Link></Col>
-<Col><Button className={styles.button}>Package</Button></Col>
+<Col><Link href="/dashboard/create" passHref><Button className={styles.button}>Create</Button></Link></Col>
+<Col><Link href="/dashboard/create" passHref><Button className={styles.button}>Package</Button></Link></Col>
 <Col><Button className={styles.button}>Services</Button></Col>
 </Row> 
 </Col>
