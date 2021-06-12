@@ -1,9 +1,9 @@
 import React from 'react';
-import { Navbar, Nav, Container, Row, Col, Image, NavDropdown, Form ,Button} from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col, NavDropdown} from 'react-bootstrap';
 import Link from 'next/link';
 import {AiOutlineMenu} from 'react-icons/ai'
 import styles from './NavMenu.module.css';
-import TheModal from '../TheModal';
+
 
 
 interface NavProps {
@@ -11,9 +11,7 @@ interface NavProps {
   onHide?:any;  
 }
 
-const NavMenu = ({ ...props }: NavProps) => {
-  const [modalShowCreate, setModalShowCreate] = React.useState(false);
-  const [modalShowSignin, setModalShowSignin] = React.useState(false);
+const NavMenu = ({ ...props }: NavProps) => { 
 
   return (
     <Container fluid style={{background: '#8f7c69'}}>

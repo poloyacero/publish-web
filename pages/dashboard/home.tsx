@@ -2,9 +2,10 @@ import React from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Nav'
 import NavMenu from '../../components/Nav'
+import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/NavMenu.module.css';
-import { Col, Container, Row ,Image,Button} from 'react-bootstrap';
+import styles2 from '../../components/Dashboard/NavMenu.module.css'
+import { Col, Container, Row ,Image} from 'react-bootstrap'
 import Footer from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -21,15 +22,7 @@ export default function home() {
         <Container fluid>
           <Container>
             <Row className={styles2.dashcontainer} >
-                <Col className={styles2.sidebarcol} >
-                    <Col className={styles2.buttoncontainer}>
-                <Row className={styles2.buttonwrapper}>
-                <Col><Button className={styles2.button}>Create</Button></Col>
-                <Col><Button className={styles2.button}>Package</Button></Col>
-                <Col><Button className={styles2.button}>Services</Button></Col>
-                </Row> 
-                </Col>
-                </Col> 
+               <Sidebar/>
                 <Col>
              <Col className={styles2.homecontainer}>
              <h2 className={styles.ctext}>Welcome to the Publishing!</h2>
