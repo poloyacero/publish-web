@@ -45,48 +45,47 @@
   font-size: 35px;
 }
 
-
 .inputnav1 {
   outline: 0;
   border-width: 1 1 1.5px;
-  border-color: #ad9984; 
+  border-color: #ad9984;
   height: 35px;
-  width:250px;   
+  width: 250px;
   font-size: 12px;
-  justify-content: center;   
+  justify-content: center;
 }
 
-.label{
+.label {
   color: #7b6b5b;
-  font-size: 12px;  
+  font-size: 12px;
   width: 200px;
 }
 
-.forgotpasslink a{
+.forgotpasslink a {
   color: #7b6b5b;
-  font-size: 12px; 
-  text-decoration: none; 
+  font-size: 12px;
+  text-decoration: none;
   justify-items: center;
-  padding:0px;
+  padding: 0px;
 }
-.forgotpasslink{
+.forgotpasslink {
   color: #7b6b5b;
-  font-size: 12px;  
+  font-size: 12px;
   text-align: center;
-  padding:0px;
+  padding: 0px;
 }
 
-.forgotpasslink1{
+.forgotpasslink1 {
   color: #7b6b5b;
-  font-size: 12px;  
+  font-size: 12px;
   text-align: right;
-  padding:0px;
+  padding: 0px;
 }
-.haveaccount{
+.haveaccount {
   color: #7b6b5b;
-  font-size: 13px;  
+  font-size: 13px;
   text-align: center;
-  padding:0px;
+  padding: 0px;
 }
 .createButton {
   background-color: #7b6b5b;
@@ -96,9 +95,9 @@
   font-size: 12px;
 }
 
-.createButton:hover{
+.createButton:hover {
   background-color: #8f7c69;
-  border-color: #7b6b5b; 
+  border-color: #7b6b5b;
 }
 
 .signinButton {
@@ -106,11 +105,11 @@
   border-color: #7b6b5b;
   text-align: center;
   width: 235px;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.signinButton:hover{
+.signinButton:hover {
   background-color: #8f7c69;
-  border-color: #7b6b5b; 
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  border-color: #7b6b5b;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
