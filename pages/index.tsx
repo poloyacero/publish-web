@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import NavMenu from '../components/Nav'
 import styles from '../styles/Home.module.css'
-import '../global.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from '../components/Footer';
 import CarouselSlider from '../components/Carousel';
