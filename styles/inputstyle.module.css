@@ -1,0 +1,66 @@
+.input {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  border-color: #7b6b5b;
+  background: #f0e3d5;
+  padding-top: 10px;
+  padding-left: 0;
+  height: 27px;
+  width: 260px;
+  border-radius: 0;
+  font-size: 12px;
+}
+.inputselect {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  border-color: #7b6b5b;
+  background: #f0e3d5;
+  margin: 0%;
+  padding: 0;
+  height: 38px;
+  width: 380px;
+  border-radius: 0;
+  color: #7b6b5b;
+  font-size: 12px;
+}
+.inputselect:focus {
+  outline: 0;
+  border-width: 0 0 1.5px;
+  border-color: #e7d2bc;
+  background: #f7f6f5;
+}
+.input:focus {
+  outline: 0;
+  border-width: 0 0 1.5px;
+  border-color: #e7d2bc;
+  background: #fdfdfc;
+  padding-top: 15px;
+}
+
+.checkboxlabel {
+  font-size: 9px;
+  padding-top: 18px;
+  padding-left: 15px;
+  color: #7b6b5b;
+  width: 500px;
+  column-span: 3;
+}
+
+.input::placeholder {
+  color: #7b6b5b;
+  opacity: 1; /* Firefox */
+}
+.checkboxelement {
+  display: flex;
+  flex-direction: row;
+}
+
+.createinput {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  height: 35px;
+  width: 260px;
+  border-radius: 1;
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
