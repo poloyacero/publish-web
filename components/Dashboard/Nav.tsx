@@ -20,9 +20,10 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Navbar className={styles.navbar} expand="lg">
           
           <Col className={styles.togglecontainer} md={{ span: 6, offset: 1}} >
-         
-                <Nav id={styles.dropdownNextLevel}>
-                <NavDropdown title={<AiOutlineMenu/>} id={styles.menus} className={styles.navmenu}>
+             <Navbar.Toggle aria-controls="basic-navbar-nav" />
+               <Navbar.Collapse id="basic-navbar-nav">                
+                 <Nav id={styles.dropdownNextLevel}>             
+                    <NavDropdown title={<AiOutlineMenu/>} id={styles.menus} className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Account Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Credit/Debit Cards</NavDropdown.Item>
@@ -32,14 +33,14 @@ const NavMenu = ({ ...props }: NavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Contract</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Messages</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
-
-                  </NavDropdown>                 
-                  
+                    </NavDropdown>    
+                                 
                   <Link href="/packages" passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
                   <Link href="/services" passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Titles</Nav.Link></Link>
                   <Link href="/products" passHref><Nav.Link id={styles.menus}className={styles.navmenu}>Reports</Nav.Link></Link>
                   <Link href="/products" passHref><Nav.Link id={styles.menus}className={styles.navmenu}>Orders</Nav.Link></Link>
-                </Nav>
+                  </Nav>
+                </Navbar.Collapse>   
         
           </Col>
           
