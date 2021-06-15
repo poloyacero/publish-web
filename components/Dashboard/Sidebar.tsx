@@ -5,12 +5,12 @@ import styles from './NavMenu.module.css';
 
 
 
-interface NavProps {
+interface SidebarProps {
   className?: string;
   onHide?:any;  
 }
 
-const Sidebar = ({ ...props }: NavProps) => { 
+const Sidebar = ({ ...props }: SidebarProps) => { 
 
   return (
     <Col md={4} className={styles.sidebarcol} >

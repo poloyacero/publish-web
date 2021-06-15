@@ -17,7 +17,7 @@ export default function homedashboard() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      {/* <NavMenuDashboard className={styles.home}/>  */}
+      <NavMenuDashboard className={styles.home}/> 
    
         <Container fluid>
           <Container>

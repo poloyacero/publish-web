@@ -6,12 +6,12 @@ import styles from './NavMenu.module.css';
 
 
 
-interface NavProps {
+interface DNavProps {
   className?: string;
   onHide?:any;  
 }
 
-const DashboardNavMenu = ({ ...props }: NavProps) => { 
+const DashboardNavMenu = ({ ...props }: DNavProps) => { 
 
   return (
     <Container fluid style={{background: '#8f7c69'}}>
@@ -23,7 +23,7 @@ const DashboardNavMenu = ({ ...props }: NavProps) => {
              <Navbar.Toggle aria-controls="basic-navbar-nav" />
                <Navbar.Collapse id="basic-navbar-nav">                
                  <Nav id={styles.dropdownNextLevel}>             
-                    <NavDropdown title={<AiOutlineMenu/>} id="collasible-nav-dropdown" className={styles.navmenu}>
+                    <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Credit/Debit Cards</NavDropdown.Item>
@@ -34,10 +34,10 @@ const DashboardNavMenu = ({ ...props }: NavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
                     </NavDropdown>    
                                  
-                  <Link href="/dashboard/homedashboard" passHref><Nav.Link className={styles.navmenu}>Home</Nav.Link></Link>
-                  <Link href="/dashboard/services" passHref><Nav.Link className={styles.navmenu}>Titles</Nav.Link></Link>
-                  <Link href="/dashboard/reports" passHref><Nav.Link className={styles.navmenu}>Reports</Nav.Link></Link>
-                  <Link href="/dashboard/orders" passHref><Nav.Link className={styles.navmenu}>Orders</Nav.Link></Link>
+                  <Link href="/dashboard/homedashboard"passHref><Nav.Link  id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
+                  <Link href="/dashboard/services" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
+                  <Link href="/dashboard/reports" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
+                  <Link href="/dashboard/orders" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>
                   </Nav>
                 </Navbar.Collapse>   
         
