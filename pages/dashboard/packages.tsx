@@ -5,17 +5,16 @@ import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenu.module.css'
-import Forms from '../../components/Dashboard/forms'
-import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import Footer from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Link from "next/link"
 
-export default function home() {
+export default function dashpackage() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Home</title>
+        <title>Dash Package</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
@@ -25,17 +24,15 @@ export default function home() {
           <Container>
             <Row className={styles2.dashcontainer} >
                <Sidebar/>
-                <Col md={6}>
-             <Col className={styles2.createcontainer}>
-             <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
-                  <option disabled>Select Creation</option>                                
-                  <option>Print Book and Ebook € 350</option>
-                  <option>Print Book Only € 300</option>                  
-                  <option>Ebook Only € 250</option>  
-             </Form.Control>
-            <Forms/>
-             </Col> 
-             </Col>
+             <Col md={6}>
+              <Col className={styles2.createcontainer}>
+              <Link href="/dashboard/starterpkg">Starter</Link>
+              <Link href="/dashboard/deluxepkg">Deluxe</Link>
+              <Link href="/dashboard/propkg">Pro</Link>
+              <Link href="/dashboard/elitepkg">Elite</Link>
+             </Col>      
+              </Col>
+  
             </Row>
           </Container>   
        

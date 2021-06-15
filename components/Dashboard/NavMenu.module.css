@@ -194,6 +194,37 @@
   border-color: saddlebrown;
   border-width: 2px;
 }
+
+.savebutton {
+  border-radius: 1 !important;
+  display: block;
+  width: 100px;
+  height: 48px;
+  background-color: #7b6b5b;
+  border: none;
+  color: #fafafa;
+  padding: 10px;
+}
+.cancelbutton {
+  border-radius: 1 !important;
+  border-color: #7b6b5b;
+  display: block;
+  width: 100px;
+  height: 48px;
+  background-color: #fdfbfa;
+  color: #7b6b5b;
+  padding: 10px;
+}
+.savebutton:hover {
+  background-color: #a1886c;
+  border-color: saddlebrown;
+  border-width: 2px;
+}
+.cancelbutton:hover {
+  background-color: #a1886c;
+  border-color: saddlebrown;
+  border-width: 2px;
+}
 .homecontainer {
   padding-top: 50px;
   padding-right: 220px;
@@ -209,14 +240,38 @@
   height: 50px;
   padding-top: 14px;
 }
+.homeHeaderlabel2 {
+  background-color: #f0e3d5;
+  width: 100%;
+  height: 50px;
+  padding-top: 9px;
+  padding-left: 10px;
+}
 
 .createcontainer {
+  display: flex;
+  flex-direction: column;
   padding-top: 50px;
-  padding-right: 120px;
-  margin-right: 10px;
-  margin-left: auto;
+  margin-right: 0px;
+  margin-left: 0px;
   text-align: left;
   color: #7b6b5b;
+}
+.accountinfocontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-right: 0px;
+  margin-left: 120px;
+  text-align: left;
+  color: #7b6b5b;
+  width: 800px;
+}
+.pkgdetails {
+  font-size: 12px;
+}
+.accountnotes {
+  font-size: 10px;
 }
 
 @media screen and (max-width: 1030px) {
