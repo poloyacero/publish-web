@@ -11,7 +11,7 @@ interface NavProps {
   onHide?:any;  
 }
 
-const NavMenu = ({ ...props }: NavProps) => { 
+const DashboardNavMenu = ({ ...props }: NavProps) => { 
 
   return (
     <Container fluid style={{background: '#8f7c69'}}>
@@ -51,4 +51,4 @@ const NavMenu = ({ ...props }: NavProps) => {
   );
 };
 
-export default NavMenu;
+export default DashboardNavMenu;
