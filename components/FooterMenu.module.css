@@ -40,8 +40,8 @@
   position: relative;
 }
 
-.privacy_policy a{
-  font-size: 13px
+.privacy_policy a {
+  font-size: 13px;
 }
 
 .copyright {
@@ -54,7 +54,7 @@
   font-size: 38px;
   text-align: center;
   color: #7b6b5b;
-  padding:20px;
+  padding: 20px;
   font-weight: 600;
 }
 
@@ -78,115 +78,112 @@
   color: #ffffff;
 }
 
-.footerlink a{
-text-decoration: none;
-color: #7b6b5b;
-font-size: 15px;
+.footerlink a {
+  text-decoration: none;
+  color: #7b6b5b;
+  font-size: 15px;
 }
 
-.footerlink a:hover{
+.footerlink a:hover {
   text-decoration: none;
   color: #251f19;
+}
+
+.footerlink:active:visited {
+  text-decoration: none;
+  color: #7b6b5b;
+}
+
+.input {
+  outline: 0;
+  border-width: 0 0 1.5px;
+  border-color: #7b6b5b;
+  background: #f0e3d5;
+  padding-top: 10px;
+  padding-left: 0;
+  height: 27px;
+  width: 260px;
+  -webkit-border-radius: 0;
+  font-size: 12px;
+}
+.inputselect {
+  outline: 0;
+  border-width: 0 0 1.5px;
+  border-color: #7b6b5b;
+  background: #f0e3d5;
+  padding-left: 0;
+  height: 33px;
+  width: 260px;
+  -webkit-border-radius: 0;
+  color: #7b6b5b;
+  font-size: 12px;
+}
+.inputselect:focus {
+  outline: 0;
+  border-width: 0 0 1.5px;
+  border-color: #e7d2bc;
+  background: #f7f6f5;
+}
+.input:focus {
+  outline: 0;
+  border-width: 0 0 1.5px;
+  border-color: #e7d2bc;
+  background: #fdfdfc;
+  padding-top: 15px;
+}
+
+.checkboxlabel {
+  font-size: 9px;
+  padding-top: 18px;
+  padding-left: 15px;
+  color: #7b6b5b;
+  width: 500px;
+  column-span: 3;
+}
+
+.input::placeholder {
+  color: #7b6b5b;
+  opacity: 1; /* Firefox */
+}
+.checkboxelement {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1030px) {
+  .input {
+    outline: 0;
+    border-width: 0 0 1.5px;
+    border-color: #7b6b5b;
+    background: #f0e3d5;
+    padding-top: 10px;
+    padding-left: 0;
+    height: 27px;
+    width: 100%;
+    -webkit-border-radius: 0;
+    font-size: 12px;
   }
 
-  .footerlink:active:visited{
-    text-decoration: none;
+  .inputselect {
+    outline: 0;
+    border-width: 0 0 1.5px;
+    border-color: #7b6b5b;
+    background: #f0e3d5;
+    padding-left: 0;
+    height: 33px;
+    width: 100%;
+    -webkit-border-radius: 0;
     color: #7b6b5b;
-    }
-
-    .input {
-      outline: 0;
-      border-width: 0 0 1.5px;
-      border-color: #7b6b5b;
-      background: #f0e3d5;
-      padding-top:10px;
-      padding-left:0;
-      height: 27px;
-      width:260px; 
-      -webkit-border-radius: 0; 
-      font-size: 12px;   
-    }
-    .inputselect {
-      outline: 0;
-      border-width: 0 0 1.5px;
-      border-color: #7b6b5b;
-      background: #f0e3d5;
-      padding-left:0;
-      height: 33px;
-      width:260px; 
-      -webkit-border-radius: 0;
-      color: #7b6b5b; 
-      font-size: 12px;    
-    }
-    .inputselect:focus {
-      outline: 0;
-      border-width: 0 0 1.5px;
-      border-color: #e7d2bc;
-      background: #f7f6f5;
-      }
-    .input:focus {
-      outline: 0;
-      border-width: 0 0 1.5px;
-      border-color: #e7d2bc;
-      background: #fdfdfc;
-      padding-top:15px;
-      }
-
-    .checkboxlabel {
-      font-size: 9px;
-      padding-top:18px;
-      padding-left:15px;     
-      color: #7b6b5b;
-      width: 500px;
-      column-span: 3;
-    }
- 
-
-    .input::placeholder {
-      color: #7b6b5b;
-      opacity: 1; /* Firefox */
-    }
-    .checkboxelement{
-      display: flex;
-      flex-direction: row;
-
-    }
-    @media screen and (max-width: 1030px) {
-      .input {
-        outline: 0;
-        border-width: 0 0 1.5px;
-        border-color: #7b6b5b;
-        background: #f0e3d5;
-        padding-top:10px;
-        padding-left:0;
-        height: 27px;
-        width:100%; 
-        -webkit-border-radius: 0; 
-        font-size: 12px;   
-      }
-
-      .inputselect {
-        outline: 0;
-        border-width: 0 0 1.5px;
-        border-color: #7b6b5b;
-        background: #f0e3d5;
-        padding-left:0;
-        height: 33px;
-        width:100%; 
-        -webkit-border-radius: 0;
-        color: #7b6b5b; 
-        font-size: 12px;    
-      }
-      .checkboxlabel {               
-        padding-top:5px;
-        color: #7b6b5b;
-        font-size: 7px;
-        padding-left: 15px;
-      }
-      .footerMenus {
-        display: flex;
-        color: #7b6b5b;
-        width: 100%;
-      }
-    
-    }
+    font-size: 12px;
+  }
+  .checkboxlabel {
+    padding-top: 5px;
+    color: #7b6b5b;
+    font-size: 7px;
+    padding-left: 15px;
+  }
+  .footerMenus {
+    display: flex;
+    color: #7b6b5b;
+    width: 100%;
+  }
+}

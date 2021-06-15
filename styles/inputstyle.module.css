@@ -36,7 +36,17 @@
   background: #fdfdfc;
   padding-top: 15px;
 }
-
+.inputselect2 {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  margin: 0%;
+  padding: 0;
+  height: 38px;
+  width: 360px;
+  border-radius: 0;
+  color: #7b6b5b;
+  font-size: 12px;
+}
 .checkboxlabel {
   font-size: 9px;
   padding-top: 18px;
@@ -63,4 +73,12 @@
   border-radius: 1;
   font-size: 12px;
   margin-bottom: 1rem;
+}
+.accountinput {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  height: 35px;
+  width: 360px;
+  border-radius: 1;
+  font-size: 12px;
 }

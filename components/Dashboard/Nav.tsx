@@ -24,8 +24,8 @@ const NavMenu = ({ ...props }: NavProps) => {
                <Navbar.Collapse id="basic-navbar-nav">                
                  <Nav id={styles.dropdownNextLevel}>             
                     <NavDropdown title={<AiOutlineMenu/>} id="collasible-nav-dropdown" className={styles.navmenu}>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Name</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Account Information</NavDropdown.Item>
+                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
+                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Credit/Debit Cards</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Pay Open Invoices</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Tax Information</NavDropdown.Item>
