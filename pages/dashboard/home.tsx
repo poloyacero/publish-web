@@ -9,7 +9,7 @@ import { Col, Container, Row ,Image} from 'react-bootstrap'
 import Footer from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function home() {
+export default function homedashboard() {
     return (
         <div className={styles.container}>
       <Head>
