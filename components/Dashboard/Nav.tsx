@@ -34,10 +34,10 @@ const DashboardNavMenu = ({ ...props }: NavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
                     </NavDropdown>    
                                  
-                  <Link href="/dashboard/home" passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
-                  <Link href="/dashboard/services" passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Titles</Nav.Link></Link>
-                  <Link href="/dashboard/reports" passHref><Nav.Link id={styles.menus}className={styles.navmenu}>Reports</Nav.Link></Link>
-                  <Link href="/dashboard/orders" passHref><Nav.Link id={styles.menus}className={styles.navmenu}>Orders</Nav.Link></Link>
+                  <Link href="/dashboard/homedashboard" passHref><Nav.Link className={styles.navmenu}>Home</Nav.Link></Link>
+                  <Link href="/dashboard/services" passHref><Nav.Link className={styles.navmenu}>Titles</Nav.Link></Link>
+                  <Link href="/dashboard/reports" passHref><Nav.Link className={styles.navmenu}>Reports</Nav.Link></Link>
+                  <Link href="/dashboard/orders" passHref><Nav.Link className={styles.navmenu}>Orders</Nav.Link></Link>
                   </Nav>
                 </Navbar.Collapse>   
         
