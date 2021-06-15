@@ -5,12 +5,12 @@ import styles from './NavMenu.module.css';
 import styleIn from '../../styles/inputstyle.module.css'
 
 
-interface NavProps {
+interface FormProps {
   className?: string;
   onHide?:any;  
 }
 
-const forms = ({ ...props }: NavProps) => { 
+const forms = ({ ...props }: FormProps) => { 
 
   return (
     <>
