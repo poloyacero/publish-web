@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Button} from 'react-bootstrap';
 import Link from 'next/link';
-import styles from './NavMenu.module.css';
+import styles from './NavMenuDashboard.module.css';
 
 
 
