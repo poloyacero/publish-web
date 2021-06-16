@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container, Row, Col, NavDropdown} from 'react-bootstrap';
 import Link from 'next/link';
 import {AiOutlineMenu} from 'react-icons/ai'
-import styles from './NavMenu.module.css';
+import styles from './NavMenuDashboard.module.css';
 
 
 
