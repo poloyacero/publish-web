@@ -17,9 +17,9 @@ const Navdashboard = ({ ...props }: DNavProps) => {
     <Container fluid style={{background: '#8f7c69'}}>
       <Container className={"container " + props.className} >
         <Row>
-          <Navbar className={styles.navbar} expand="lg">
+        
               <Col>                      
-                 <Nav className="mx-auto">             
+                           
                     {/* <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
@@ -35,10 +35,9 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                   <Link href="/dashboard/services" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
                   <Link href="/dashboard/reports" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
                   <Link href="/dashboard/orders" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>
-                  </Nav>
+                
              </Col>       
-          
-        </Navbar>
+  
         </Row>
       </Container>
      
