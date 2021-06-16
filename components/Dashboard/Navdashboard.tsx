@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Row, Col, NavDropdown} from 'react-bootstrap';
+import { Navbar, Nav, Container, Row, Col, NavDropdown,DropdownButton,Dropdown} from 'react-bootstrap';
 import Link from 'next/link';
 import {AiOutlineMenu} from 'react-icons/ai'
 import styles from './NavMenuDashboard.module.css';
@@ -18,10 +18,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
       <Container className={"container " + props.className} >
         <Row>
           <Navbar className={styles.navbar} expand="lg">
-          
-          <Col className={styles.togglecontainer} md={{ span: 6, offset: 1}} >
-             <Navbar.Toggle aria-controls="basic-navbar-nav" />
-               <Navbar.Collapse id="collasible-nav-dropdown">                
+              <Col>                      
                  <Nav className="mx-auto">             
                     <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
@@ -39,9 +36,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                   <Link href="/dashboard/reports" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
                   <Link href="/dashboard/orders" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>
                   </Nav>
-                </Navbar.Collapse>   
-        
-          </Col>
+             </Col>       
           
         </Navbar>
         </Row>
