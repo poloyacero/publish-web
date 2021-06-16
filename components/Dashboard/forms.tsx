@@ -1,6 +1,5 @@
 import React from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
-import Link from 'next/link';
 import styles from './NavMenu.module.css';
 import styleIn from '../../styles/inputstyle.module.css'
 
@@ -10,7 +9,7 @@ interface FormProps {
   onHide?:any;  
 }
 
-const forms = ({ ...props }: FormProps) => { 
+const Dforms = ({ ...props }: FormProps) => { 
 
   return (
     <>
@@ -364,4 +363,4 @@ const forms = ({ ...props }: FormProps) => {
   );
 };
 
-export default forms;
+export default Dforms;
