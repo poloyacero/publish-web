@@ -27,12 +27,12 @@ export default function createbook() {
                <Sidebar/>
                 <Col md={6}>
              <Col className={styles2.createcontainer}>
-             <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
+             {/* <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
                   <option disabled>Select Creation</option>                                
                   <option>Print Book and Ebook € 350</option>
                   <option>Print Book Only € 300</option>                  
                   <option>Ebook Only € 250</option>  
-             </Form.Control>
+             </Form.Control> */}
             {/* <DForms/> */}
              </Col> 
              </Col>
