@@ -20,7 +20,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
           <Navbar className={styles.navbar} expand="lg">
               <Col>                      
                  <Nav className="mx-auto">             
-                    <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
+                    {/* <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Credit/Debit Cards</NavDropdown.Item>
@@ -29,7 +29,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Documents</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Email</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
-                    </NavDropdown>    
+                    </NavDropdown>     */}
                                  
                   <Link href="/dashboard/homedashboard"passHref><Nav.Link  id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
                   <Link href="/dashboard/services" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
