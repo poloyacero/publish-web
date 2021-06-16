@@ -21,7 +21,7 @@ const DashboardNavMenu = ({ ...props }: DNavProps) => {
           
           <Col className={styles.togglecontainer} md={{ span: 6, offset: 1}} >
              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-               <Navbar.Collapse id="basic-navbar-nav">                
+               <Navbar.Collapse id="menu2">                
                  <Nav id={styles.dropdownNextLevel}>             
                     <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
