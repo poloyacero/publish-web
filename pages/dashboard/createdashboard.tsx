@@ -6,7 +6,7 @@ import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenu.module.css'
 // import DForms from '../../components/Dashboard/forms'
-import styleIn from '../../styles/inputstyle.module.css'
+// import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form} from 'react-bootstrap'
 import Footer from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,8 +19,8 @@ export default function createbook() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard className={styles.home}/> 
-   
+      <NavMenuDashboard /> 
+      {/* <NavMenuDashboard className={styles.home}/>  */}
         <Container fluid>
           <Container>
             <Row >
