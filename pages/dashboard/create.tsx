@@ -23,10 +23,10 @@ export default function createbook() {
    
         <Container fluid>
           <Container>
-            <Row className={styles2.dashcontainer} >
+            <Row >
                <Sidebar/>
                 <Col md={6}>
-             <Col className={styles2.createcontainer}>
+             <Col >
              {/* <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
                   <option disabled>Select Creation</option>                                
                   <option>Print Book and Ebook € 350</option>
