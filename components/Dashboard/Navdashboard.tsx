@@ -21,25 +21,23 @@ const DashboardNavMenu = ({ ...props }: DNavProps) => {
           
           <Col className={styles.togglecontainer} md={{ span: 6, offset: 1}} >
              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-               <Navbar.Collapse id="collasible-nav-dropdown">                
-                 <Nav className="mx-auto">             
-                    <NavDropdown title={<AiOutlineMenu/>}  id="collasible-nav-dropdown"  className={styles.navmenu}>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Credit/Debit Cards</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Pay Open Invoices</NavDropdown.Item>      
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Compensation</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Documents</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Email</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
-                    </NavDropdown>    
-                                 
-                  <Link href="/dashboard/homedashboard"passHref><Nav.Link  id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
-                  <Link href="/dashboard/services" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
-                  <Link href="/dashboard/reports" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
-                  <Link href="/dashboard/orders" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>
-                  </Nav>
-                </Navbar.Collapse>   
+             <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mx-auto">
+                <NavDropdown title="Create" id="collasible-nav-dropdown" className={styles.navmenu}>
+                  <NavDropdown.Item id={styles.dropdownNextLevel} href="/print-book">Print Book</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/ebook">Ebook</NavDropdown.Item>
+                  </NavDropdown>                 
+                  
+                  <Link href="/packages" passHref><Nav.Link className={styles.navmenu}>Packages</Nav.Link></Link>
+                  {/* <NavDropdown title="Services" id="collasible-nav-dropdown" className={styles.navmenu}>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/marketing">Marketing</NavDropdown.Item>
+                    <NavDropdown.Item className={styles.dropdownItem} href="/add-on">Add-on</NavDropdown.Item>
+                  </NavDropdown> */}
+                  <Link href="/services" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
+                  <Link href="/products" passHref><Nav.Link className={styles.navmenu}>Products</Nav.Link></Link>
+                </Nav>
+              </Navbar.Collapse>
         
           </Col>
           
