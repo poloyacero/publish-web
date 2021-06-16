@@ -1,6 +1,5 @@
 import React from 'react'
 import Head from 'next/head'
-import NavMenuDashboard from '../../components/Dashboard/Nav'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
@@ -12,9 +11,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function createdashboard() {
     return (
         <div>
-            <h1>Create</h1>
-            <NavMenu />
-            <NavMenuDashboard className={styles.home}/> 
+            
+            <NavMenu /> 
+            <h1>Create</h1>            
             <Sidebar/>
         </div>
     )
