@@ -5,7 +5,7 @@ import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenu.module.css'
-import DForms from '../../components/Dashboard/forms'
+// import DForms from '../../components/Dashboard/forms'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form} from 'react-bootstrap'
 import Footer from "../../components/Footer";
@@ -33,7 +33,7 @@ export default function createbook() {
                   <option>Print Book Only € 300</option>                  
                   <option>Ebook Only € 250</option>  
              </Form.Control>
-            <DForms/>
+            {/* <DForms/> */}
              </Col> 
              </Col>
             </Row>
