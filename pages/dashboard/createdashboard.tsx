@@ -14,7 +14,7 @@ export default function createdashboard() {
         <div>
             
             <NavMenu />
-            <NavMenu />
+            <NavMenuDashboard className={styles.home}/> 
             <h1>Create</h1>
             <Sidebar/>
         </div>
