@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
@@ -30,7 +31,14 @@ export default function homedashboard() {
 
              <p>How we can help you?<br/>
              <span style={{fontSize:'20px'}}>+45 2090 1011</span></p>
-             </Col> 
+             </Col>
+            
+                   <Link  href="/dashboard/accountinfo">Account Information</Link ><br/>
+                   <Link  href="/dashboard/billinginfo">Credit/Debit Cards</Link ><br/>
+                   <Link  href="/dashboard/payopeninvoices">Pay Open Invoices</Link ><br/>      
+                   <Link  href="/dashboard/compensationinfo">Compensation</Link ><br/>
+                   <Link  href="/dashboard/documentsinfo">Documents</Link ><br/>
+                   <Link  href="/dashboard/emaildashboard">Email</Link ><br/>
              </Col>
             </Row>
           </Container>   
