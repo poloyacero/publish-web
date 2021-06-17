@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
+
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
@@ -17,7 +17,7 @@ export default function homedashboard() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard className={styles.home}/>  
+      
    
         <Container fluid>
           <Container>
