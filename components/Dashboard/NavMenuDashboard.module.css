@@ -273,6 +273,10 @@
 .accountnotes {
   font-size: 10px;
 }
+.accountnotes2 {
+  font-size: 10px;
+  padding-top: 10px;
+}
 
 @media screen and (max-width: 1030px) {
   .logo {
