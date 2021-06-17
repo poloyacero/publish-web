@@ -265,7 +265,7 @@
   margin-left: 120px;
   text-align: left;
   color: #7b6b5b;
-  width: 800px;
+  width: 1000px;
 }
 .sidebarcol {
   padding-left: 100px;
@@ -274,13 +274,15 @@
   border-style: solid;
   border-color: #7b6b5b;
   border-width: thin;
-  font-size: 12px;
+  font-size: 10px;
+  padding-top: 5px;
 }
 .documentsviewpdf {
+  padding-top: 5px;
   border-style: solid;
   border-color: #a1886c;
   border-width: thin;
-  font-size: 12px;
+  font-size: 10px;
   color: azure;
   background-color: #7b6b5b;
 }
