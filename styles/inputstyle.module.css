@@ -82,3 +82,19 @@
   border-radius: 1;
   font-size: 12px;
 }
+.billinginput {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  height: 35px;
+  width: 240px;
+  border-radius: 1;
+  font-size: 12px;
+}
+.billingcvn {
+  outline: 0;
+  border-width: 1 1 1.5px;
+  height: 35px;
+  width: 100px;
+  border-radius: 1;
+  font-size: 12px;
+}
