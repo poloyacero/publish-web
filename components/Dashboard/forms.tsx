@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
-import styles from './NavMenu.module.css';
+import styles from './NavMenuDashboard.module.css';
 import styleIn from '../../styles/inputstyle.module.css'
 
 
