@@ -4,7 +4,7 @@
 
 .navbar {
   width: 100%;
-  padding-left: 0px;
+  padding-left: 100px;
   padding-right: 0px;
   padding-top: 10px;
   color: #f0e3d5;
@@ -266,6 +266,31 @@
   text-align: left;
   color: #7b6b5b;
   width: 800px;
+}
+.sidebarcol {
+  padding-left: 100px;
+}
+.documentscolborder {
+  border-style: solid;
+  border-color: #7b6b5b;
+  border-width: thin;
+  font-size: 12px;
+}
+.documentsviewpdf {
+  border-style: solid;
+  border-color: #a1886c;
+  border-width: thin;
+  font-size: 12px;
+  color: azure;
+  background-color: #7b6b5b;
+}
+.documentsheader {
+  border-style: solid;
+  border-color: #7b6b5b;
+  border-width: thin;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f0e3d5;
 }
 .pkgdetails {
   font-size: 12px;
