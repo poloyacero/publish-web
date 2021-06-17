@@ -2,19 +2,17 @@ import React from 'react';
 import { Row, Col, Button} from 'react-bootstrap';
 import Link from 'next/link';
 import styles from './NavMenuDashboard.module.css';
-import NavMenuDashboard from './Navdashboard'
+
 
 
 interface SidebarProps {
-  className?: string;
-  onHide?:any;  
+  className?: string;  
 }
 
 const Sidebar = ({ ...props }: SidebarProps) => { 
 
   return (
-    <>
-    <NavMenuDashboard className={styles.home}/> 
+      
     <Col md={4} className={styles.sidebarcol} >
     <Col className={styles.buttoncontainer}>
 <Row className={styles.buttonwrapper}>
@@ -24,7 +22,7 @@ const Sidebar = ({ ...props }: SidebarProps) => {
 </Row> 
 </Col>
 </Col> 
-</>
+
   );
 };
 

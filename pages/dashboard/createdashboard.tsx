@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import NavMenu from '../../components/Nav'
+import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
@@ -18,7 +19,7 @@ export default function createbook() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />  
-      
+      <NavMenuDashboard className={styles.home}/> 
         <Container fluid>
           <Container>
             <Row >
@@ -41,5 +42,5 @@ export default function createbook() {
      
       <Footer />    
         </div>
-    )
+    );
 }
