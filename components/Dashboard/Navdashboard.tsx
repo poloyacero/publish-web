@@ -18,7 +18,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
         <Row>
         
               <Col>                      
-              {/* <Navbar className={styles.navbar} expand="lg">
+              <Navbar className={styles.navbar} expand="lg">
                     <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
@@ -30,17 +30,11 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
                     </NavDropdown>    
                                  
-                  <Link href="/dashboard/homedashboard"passHref><span id={styles.menus} className={styles.navmenu}>Home</span></Link>
-                  <Link href="/dashboard/services" passHref><span id={styles.menus}  className={styles.navmenu}>Titles</span></Link>
-                  <Link href="/dashboard/reports" passHref><span id={styles.menus}  className={styles.navmenu}>Reports</span></Link>
-                  <Link href="/dashboard/orders" passHref><span id={styles.menus}  className={styles.navmenu}>Orders</span></Link>
-            </Navbar>     */}
-                  <Row className={styles.navbar}>
-                <Col> <Link href="/dashboard/homedashboard"passHref><span id={styles.menus} className={styles.navmenu}>Home</span></Link></Col>
-                <Col><Link href="/dashboard/services" passHref><span id={styles.menus}  className={styles.navmenu}>Titles</span></Link></Col>
-                <Col><Link href="/dashboard/reports" passHref><span id={styles.menus}  className={styles.navmenu}>Reports</span></Link></Col>
-                <Col><Link href="/dashboard/orders" passHref><span id={styles.menus}  className={styles.navmenu}>Orders</span></Link></Col>
-                  </Row>
+                  <Link href="/dashboard/homedashboard"passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
+                  <Link href="/dashboard/services" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
+                  <Link href="/dashboard/reports" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
+                  <Link href="/dashboard/orders" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>
+            </Navbar>    
              </Col>       
   
         </Row>
