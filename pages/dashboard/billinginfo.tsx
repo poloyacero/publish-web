@@ -26,7 +26,7 @@ export default function billinginfo() {
              
                 <Col>  
                <br></br>
-               <h3 className={styles2.homeHeaderlabel2}>Legal Information</h3>
+               <h3 className={styles2.homeHeaderlabel2}>Billing Information</h3>
                <br></br>
                <Row className="form-group text-right">               
                <Col>
@@ -312,16 +312,20 @@ export default function billinginfo() {
            <br></br><br></br>
            <Form.Group>
              <Row className="align-items-center">
-            <Col className="form-group" md={3}> Card Type</Col>
+            <Col className="form-group" md={3}>Payment Type</Col>
             <Col className="form-group text-left" md={1}>
             <Form.Check
               type="radio"
               label=""
               name="cardselect"
-              id="visa"
+              id="dkk"
             /></Col>
-            <Col md={8} className="text-left"><Image src="/img/visa.png" width="80px" height="auto" /></Col>
+            <Col md={8} className="text-left"><br/>ThePublishing ApS<br/>  
+                                              DKK 7780 – 6481469<br/>
+                                              Denmark
+            </Col>
             </Row>
+            
             <Row className="align-items-center">
             <Col className="form-group" md={3}> </Col>
             <Col className="form-group text-left" md={1}>
@@ -329,9 +333,13 @@ export default function billinginfo() {
               type="radio"
               label=""
               name="cardselect"
-              id="mastercard"
-            /> </Col> <Col md={8} className="text-left"><Image src="/img/mastercard.png" width="80px" height="auto" /></Col>
+              id="europe"
+            /> </Col> <Col md={8} className="text-left"><br/>ThePublishing ApS<br/>   
+                                                        EUR 7780 – 6481477<br/>  
+                                                        Europe
+                      </Col>
             </Row>
+            <br/>
             <Row className="align-items-center">
             <Col className="form-group" md={3}> </Col>
             <Col className="form-group text-left" md={1}>
@@ -342,27 +350,7 @@ export default function billinginfo() {
               id="paypal"
             /> </Col> <Col md={8} className="text-left"> <Image src="/img/paypal.png" width="80px" height="auto" /></Col>
             </Row>        
-            <br/>
-            <Row className="align-items-center">
-            <Col className="form-group" md={3}>Card Number</Col>
-            <Col className="form-group text-left" md={4}>
-            <Form.Control className={styleIn.billinginput} type="text" defaultValue=" "/> </Col> <Col md={8} className="text-left"> </Col>
-            </Row>    
-            <Row className="align-items-center">
-            <Col className="form-group" md={3}>Expiration Month</Col>
-            <Col className="form-group text-left" md={4}>
-            <Form.Control className={styleIn.billinginput} type="date" defaultValue=" "/> </Col> <Col md={8} className="text-left"></Col>
-            </Row>    
-            <Row className="align-items-center">
-            <Col className="form-group" md={3}>Expiration Year</Col>
-            <Col className="form-group text-left" md={4}>
-            <Form.Control  className={styleIn.billinginput} type="text" defaultValue=" "/> </Col> <Col md={8} className="text-left"></Col>
-            </Row>    
-            <Row className="align-items-center">
-            <Col className="form-group" md={3}>CVN</Col>
-            <Col className="form-group text-left" md={2}>
-            <Form.Control className={styleIn.billingcvn} type="text" defaultValue=" "/> </Col> <Col md={7} className="text-left"><p className={styles2.accountnotes}> Three or four digit behind or front of the card</p></Col>
-            </Row>    
+            <br/>           
       </Form.Group>
                               <br/> <br/> <br/> 
 
