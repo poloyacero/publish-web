@@ -6,7 +6,7 @@ import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
-import Footer from "../../components/Footer";
+import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Link from "next/link"
 
@@ -14,7 +14,7 @@ export default function dashpackage() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Dash Package</title>
+        <title>Dashboard Packages</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
@@ -22,14 +22,22 @@ export default function dashpackage() {
    
         <Container fluid>
           <Container>
-            <Row className={styles2.dashcontainer} >
+            <Row className={styles2.dashcontainer+" "+ styles.serviceslink} >
                <Sidebar/>
              <Col md={6}>
               <Col className={styles2.createcontainer}>
-              <Link href="/dashboard/starterpkg">Starter</Link>
-              <Link href="/dashboard/deluxepkg">Deluxe</Link>
-              <Link href="/dashboard/propkg">Pro</Link>
-              <Link href="/dashboard/elitepkg">Elite</Link>
+              <Link href="/dashboard/starterpkg">
+              <h4 className={styles2.homeHeaderlabel}><a>Starter</a></h4>               
+               </Link>
+              <Link href="/dashboard/deluxepkg">
+              <h4 className={styles2.homeHeaderlabel}><a>Deluxe</a></h4>               
+               </Link>
+              <Link href="/dashboard/propkg">
+              <h4 className={styles2.homeHeaderlabel}><a>Pro</a></h4>
+               </Link>
+              <Link href="/dashboard/elitepkg">
+              <h4 className={styles2.homeHeaderlabel}><a>Elite</a></h4>                
+               </Link>
              </Col>      
               </Col>
   
@@ -38,7 +46,7 @@ export default function dashpackage() {
        
         </Container>
      
-      <Footer />    
+      <FooterDashboard />    
         </div>
     )
 }

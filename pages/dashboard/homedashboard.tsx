@@ -7,7 +7,7 @@ import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import { Col, Container, Row ,Image} from 'react-bootstrap'
-import Footer from "../../components/Footer";
+import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function homedashboard() {
@@ -45,7 +45,7 @@ export default function homedashboard() {
        
         </Container>
      
-      <Footer />    
+      <FooterDashboard />    
         </div>
     );
 }

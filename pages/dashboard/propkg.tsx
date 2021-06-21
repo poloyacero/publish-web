@@ -8,7 +8,7 @@ import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import Forms from '../../components/Dashboard/forms'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
-import Footer from "../../components/Footer";
+import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function propkg() {
@@ -39,6 +39,7 @@ export default function propkg() {
                     Hardcover Format<br/>
                     E-Book Format<br/>
                     Data Entry<br/>
+                    Copy Editing<br/>
                     Custom Text & Layout Formatting<br/>
                     2 Rounds Layout Revisions<br/>
                     Design Consultation<br/>
@@ -80,7 +81,7 @@ export default function propkg() {
        
         </Container>
      
-      <Footer />    
+      <FooterDashboard />    
         </div>
     )
 }

@@ -82,6 +82,7 @@ export default function PackagesPage() {
               Hardcover Format<br/>
               E-Book Format<br/>
               Data Entry<br/>
+              Copy Editing<br/>
               Custom Text & Layout Formatting<br/>
               2 Rounds Layout Revisions<br/>
               Design Consultation<br/>

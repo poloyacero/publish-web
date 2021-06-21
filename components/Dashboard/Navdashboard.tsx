@@ -31,9 +31,9 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                     </NavDropdown>    
                                  
                   <Link href="/dashboard/homedashboard"passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
-                  <Link href="/dashboard/services" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
-                  <Link href="/dashboard/reports" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
-                  <Link href="/dashboard/orders" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>
+                  <Link href="/dashboard/servicesdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
+                  <Link href="/dashboard/reportdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
+                  <Link href="/dashboard/ordersdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>
             </Navbar>    
              </Col>       
   

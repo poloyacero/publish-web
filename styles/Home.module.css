@@ -113,11 +113,11 @@
   height: 1em;
 }
 
-.ctext{
+.ctext {
   color: #7b6b5b;
 }
 
-.imgpadding{
+.imgpadding {
   padding-top: 40px;
 }
 
@@ -128,93 +128,96 @@
   background-color: #7b6b5b;
   border: none;
   margin-top: 50px;
-  padding:10px;
+  padding: 10px;
 }
-.illustrationpadding{
-  padding-left:65px;  
+.illustrationpadding {
+  padding-left: 65px;
 }
 
 .illustrationbutton:hover {
   background-color: #7b6b5b;
 }
-.product{
-background-color: #faf6f2;
-width: 250px;
+.product {
+  background-color: #faf6f2;
+  width: 250px;
 }
 
 .myl {
- padding-left:10px;
- padding-right:5px;
- font-size: 14px;
- margin-right: 20px;
- margin-left: 0px;
+  padding-left: 10px;
+  padding-right: 5px;
+  font-size: 14px;
+  margin-right: 20px;
+  margin-left: 0px;
 }
 
-.myl2 col{
-  display:flex;
+.myl2 col {
+  display: flex;
   flex-direction: row;
-  padding-left:0px;
-  padding-right:0px;  
- }
- .mylnopadding{
-  padding:0px;
- }
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.mylnopadding {
+  padding: 0px;
+}
 
-.iservices{
+.iservices {
   font-size: 13px;
   color: #7b6b5b;
 }
-.iservices ol{
+.iservices ol {
   padding-left: 3mm;
 }
 .iservices .servicesspan {
-  font-size: 13px; 
-  font-weight:normal; 
-
+  font-size: 13px;
+  font-weight: normal;
 }
 .iservices .servicesparag {
   font-size: 20px;
-  font-weight:600; 
-  line-height:80%;
+  font-weight: 600;
+  line-height: 80%;
 }
 .iservices .servicestitle {
-  font-size: 50px;  
-  line-height:80%;
+  font-size: 50px;
+  line-height: 80%;
 }
-.iservicesp {  
+.iservicesp {
   font-size: 20px;
 }
 
 .iservices .servicestitlespan {
-  font-size: 40px;  
+  font-size: 40px;
 }
-.iservices .serviceslinkcol { 
- padding-top:70px;
-font-size: 16px;
-padding-left: 20px;
- }
+.iservices .serviceslinkcol {
+  padding-top: 70px;
+  font-size: 16px;
+  padding-left: 20px;
+}
 .iservices .serviceslink a {
- cursor: pointer;  
-text-decoration: none;
-color: #7b6b5b;
+  cursor: pointer;
+  text-decoration: none;
+  color: #7b6b5b;
+}
+.serviceslink a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #7b6b5b;
 }
 .iservices .serviceslink a:hover {
- color: rgb(53, 47, 40);
- }
+  color: rgb(53, 47, 40);
+}
 
 .iservices .imgpadding {
   padding-left: 120px;
-  padding-top:10px;
-
+  padding-top: 10px;
 }
-.iservices .imgpadding img {   
+.iservices .imgpadding img {
   width: 350px;
 }
 .iservices .servicesbg {
- background:linear-gradient(to bottom, #7b6b5b 100%,white 100%) ;
- padding:20px;
- width: 100%;
- height: auto;
+  background: linear-gradient(to bottom, #7b6b5b 100%, white 100%);
+  padding: 20px;
+  width: 100%;
+  height: auto;
 }
 
 .sendButton {
@@ -237,7 +240,7 @@ color: #7b6b5b;
   color: #ffffff;
 }
 
-.bannerCenter{
+.bannerCenter {
   margin-top: 0px !important;
   text-align: center;
 }
@@ -257,8 +260,6 @@ color: #7b6b5b;
   border-color: #7b6b5b;
 }
 
-
-
 .heading {
   display: block;
   text-align: center;
@@ -271,7 +272,7 @@ color: #7b6b5b;
   font-size: 50px;
 }
 
-.orderedlist li{
+.orderedlist li {
   font-size: 15px;
   padding-bottom: 15px;
 }
@@ -292,7 +293,7 @@ color: #7b6b5b;
   background-color: #7b6b5b;
   border-color: #7b6b5b;
   margin: auto;
-  width: 30%;  
+  width: 30%;
   font-size: 35px;
   margin-top: 20px;
 }
@@ -318,7 +319,7 @@ color: #7b6b5b;
   border-bottom: 0px #7b6b5b solid;
 }
 
-@media screen and (max-width: 1030px){
+@media screen and (max-width: 1030px) {
   .grid {
     width: 100%;
     flex-direction: column;
@@ -333,82 +334,76 @@ color: #7b6b5b;
     font-size: 30px;
     margin-top: 20px;
   }
-  
+
   .getStartedButton:hover {
     background-color: #7b6b5b;
     border-color: #7b6b5b;
   }
 
-  
-   
-   .iservices{
-     font-size: 13px;
-     color: #7b6b5b;
-   }
-   .iservices ol{
-     padding-left: 3mm;
-   }
-   .iservices .servicesspan {
-     font-size: 13px; 
-     font-weight:normal; 
-   
-   }
-   .iservices .servicesparag {
-     font-size: 15px;
-     font-weight:600; 
-     line-height:80%;
-   }
-   .iservices .servicestitle {
-     font-size: 40px;  
-     line-height:80%;
-   }
-   .iservices .servicestitlespan {
-    font-size: 30px;  
+  .iservices {
+    font-size: 13px;
+    color: #7b6b5b;
   }
-   .iservicesp {  
-     font-size: 20px;
-   }
-   
-  
-   .iservices .serviceslinkcol { 
-  padding-top:25px;
-   font-size: 20px;
-   padding-left: 20px;
-    }
-   .iservices .serviceslink a {
-   cursor: pointer;  
-   text-decoration: none;
-   color: #7b6b5b;
-   }
-   .iservices .serviceslink a:hover {
+  .iservices ol {
+    padding-left: 3mm;
+  }
+  .iservices .servicesspan {
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .iservices .servicesparag {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 80%;
+  }
+  .iservices .servicestitle {
+    font-size: 40px;
+    line-height: 80%;
+  }
+  .iservices .servicestitlespan {
+    font-size: 30px;
+  }
+  .iservicesp {
+    font-size: 20px;
+  }
+
+  .iservices .serviceslinkcol {
+    padding-top: 25px;
+    font-size: 20px;
+    padding-left: 20px;
+  }
+  .iservices .serviceslink a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #7b6b5b;
+  }
+  .iservices .serviceslink a:hover {
     color: rgb(53, 47, 40);
-    }
-   
-   .iservices .imgpadding {
-     padding-left: 0px;
-     padding-top:10px;
-     width: 200px;   
-   }
-   .iservices .imgpadding img {   
+  }
+
+  .iservices .imgpadding {
+    padding-left: 0px;
+    padding-top: 10px;
+    width: 200px;
+  }
+  .iservices .imgpadding img {
     width: 250px;
-  
   }
-  .iservices img {   
-    padding:10px;
-  
+  .iservices img {
+    padding: 10px;
   }
-   .iservices .servicesbg {
-    background:linear-gradient(to bottom, #7b6b5b 100%,white 100%) ;
-    padding:20px;
+  .iservices .servicesbg {
+    background: linear-gradient(to bottom, #7b6b5b 100%, white 100%);
+    padding: 20px;
     width: 100%;
     height: auto;
-   }
-
-   .imgpadding{
-    padding-top: 40px;
-    padding-left:45px ;
   }
-  
+
+  .imgpadding {
+    padding-top: 40px;
+    padding-left: 45px;
+  }
+
   .illustrationbutton {
     margin: auto;
     display: block;
@@ -416,47 +411,45 @@ color: #7b6b5b;
     background-color: #7b6b5b;
     border: none;
     margin-top: 50px;
-    padding:10px;
+    padding: 10px;
   }
-  .illustrationpadding{
-    padding-left:70px;  
+  .illustrationpadding {
+    padding-left: 70px;
   }
-  
+
   .illustrationbutton:hover {
     background-color: #7b6b5b;
   }
-  .myl h3{
-    font-size:22px ;
+  .myl h3 {
+    font-size: 22px;
     text-align: center;
   }
   .myl {
-    padding-left:10px;
-    padding-right:0px; 
-    padding-top:10px;
-    display:flex;
-    flex-direction: column; 
-    margin-left: 0px;  
-    margin-right: 22px; 
-  
-   }
-  .myl2{
-  display:flex;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-right: 22px;
+  }
+  .myl2 {
+    display: flex;
     flex-wrap: nowrap;
-    padding-left:0px;
-    padding-right:0px;
+    padding-left: 0px;
+    padding-right: 0px;
     flex-wrap: nowrap;
-    margin-left: 0px;  
-    margin-right: 20px; 
+    margin-left: 0px;
+    margin-right: 20px;
     font-size: 12px;
-   }
-   .mylpsize{
+  }
+  .mylpsize {
     font-size: 12px;
-   }
-  
-   .product{
+  }
+
+  .product {
     background-color: #faf6f2;
     width: 290px;
-    padding-left:0px;  
-  
-    }
+    padding-left: 0px;
+  }
 }

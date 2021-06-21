@@ -8,7 +8,7 @@ import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import DForms from '../../components/Dashboard/forms'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form} from 'react-bootstrap'
-import Footer from "../../components/Footer";
+import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function createbook() {
@@ -40,7 +40,7 @@ export default function createbook() {
        
         </Container>
      
-      <Footer />    
+      <FooterDashboard />    
         </div>
     );
 }
