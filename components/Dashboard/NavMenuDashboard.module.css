@@ -293,6 +293,8 @@
   font-size: 14px;
   font-weight: bold;
   background-color: #f0e3d5;
+  padding-top: 5px;
+  padding-bottom: 0px;
 }
 .pkgdetails {
   font-size: 12px;

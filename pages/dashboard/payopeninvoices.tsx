@@ -6,7 +6,7 @@ import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
-import Footer from "../../components/Footer";
+import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function payopeninvoices() {
@@ -121,7 +121,7 @@ export default function payopeninvoices() {
        
         </Container>
      
-      <Footer />    
+      <FooterDashboard />    
         </div>
     )
 }
