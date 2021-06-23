@@ -6,6 +6,7 @@ import styles from './NavMenuDashboard.module.css';
 
 
 
+
 interface DNavProps {
   className?: string; 
 }
@@ -17,7 +18,8 @@ const Navdashboard = ({ ...props }: DNavProps) => {
       <Container className="container">
         <Row>
         {/* <AiOutlineMenu/> */}
-              <Col>                      
+              <Col> 
+                         
               <Navbar className={styles.navbar} expand="lg">
                     <NavDropdown title={"="}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
@@ -30,7 +32,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
                     </NavDropdown>    
                                  
-                  <Link href="/homedashboard"passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
+                  <Link href="/dashboard/homedashboard"passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
                   <Link href="/dashboard/titlesdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
                   <Link href="/dashboard/reportdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>
                   <Link href="/dashboard/ordersdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Orders</Nav.Link></Link>

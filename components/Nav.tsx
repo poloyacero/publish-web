@@ -50,7 +50,7 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={{ span: 2, offset: 0, order: 'last'}} className={styles.utilityMenu}>
              <Col className={styles.utilitycontainer}>
                <Col>
-            <Link href="/homedashboard" passHref>
+            <Link href="/dashboard/homedashboard" passHref>
               <Nav.Link className={styles.utilityMenus}>
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
@@ -125,7 +125,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col className={styles.forgotpasslink1} md={12}>   
                 <br/>                                
-                  <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button>
+                  <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Link href="/dashboard/homedashboard">Create Account </Link></Button>
                 </Col>
                
               </Form.Group>
@@ -194,7 +194,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col className={styles.createlink} md={12}>   
                 <br/>                                
-                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Link href="/homedashboard"> Create Account</Link></Button>
+                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Link href="/#"> Create Account</Link></Button>
                 </Col>
                
               </Form.Group>
