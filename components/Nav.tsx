@@ -194,7 +194,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col className={styles.createlink} md={12}>   
                 <br/>                                
-                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Link href="/dashboard/home"> Create Account</Link></Button>
+                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Link href="/homedashboard"> Create Account</Link></Button>
                 </Col>
                
               </Form.Group>

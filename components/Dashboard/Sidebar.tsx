@@ -18,7 +18,7 @@ const Sidebar = ({ ...props }: SidebarProps) => {
 <Row className={styles.buttonwrapper}>
 <Col><Link href="/dashboard/createdashboard" passHref><Button className={styles.button}>Create</Button></Link></Col>
 <Col><Link href="/dashboard/packagesdashboard" passHref><Button className={styles.button}>Package</Button></Link></Col>
-<Col><Button className={styles.button}>Services</Button></Col>
+<Col><Link href="/dashboard/servicesdashboard" passHref><Button className={styles.button}>Services</Button></Link></Col>
 </Row> 
 </Col>
 </Col> 
