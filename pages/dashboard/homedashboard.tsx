@@ -4,8 +4,8 @@ import Link from 'next/link'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../styles/Home.module.css'
-import styles2 from '../components/Dashboard/NavMenuDashboard.module.css'
+import styles from '../../styles/Home.module.css'
+import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import { Col, Container, Row ,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
