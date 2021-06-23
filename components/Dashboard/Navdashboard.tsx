@@ -16,10 +16,10 @@ const Navdashboard = ({ ...props }: DNavProps) => {
     <Container fluid style={{background: '#8f7c69'}}>
       <Container className="container">
         <Row>
-        
+        {/* <AiOutlineMenu/> */}
               <Col>                      
               <Navbar className={styles.navbar} expand="lg">
-                    <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
+                    <NavDropdown title={"="}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/billinginfo">Credit/Debit Cards</NavDropdown.Item>
