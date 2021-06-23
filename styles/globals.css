@@ -13,6 +13,7 @@ body {
 a {
   color: seashell;
   text-decoration: none;
+  cursor: pointer;
 }
 
 * {
