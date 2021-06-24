@@ -1,15 +1,14 @@
 import React from 'react'
 import Head from 'next/head'
-import NavMenu from '../../../components/Nav'
-import NavMenuDashboard from '../../../components/Dashboard/Navdashboard'
-import Sidebar from '../../../components/Dashboard/Sidebar'
-import styles from '../../../styles/Home.module.css'
-import styles2 from '../../../components/Dashboard/NavMenuDashboard.module.css'
-import DForms from '../../../components/Dashboard/forms'
-import styleIn from '../../../styles/inputstyle.module.css'
+import NavMenu from '../../components/Nav'
+import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
+import Sidebar from '../../components/Dashboard/Sidebar'
+import styles from '../../styles/Home.module.css'
+import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
+import DForms from '../../components/Dashboard/forms'
+import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form} from 'react-bootstrap'
-import FooterDashboard from "../../../components/FooterDashboard";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import FooterDashboard from "../../components/FooterDashboard";
 
 export default function createbook() {
     return (
