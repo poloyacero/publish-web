@@ -5,7 +5,6 @@ import Link from 'next/link';
 import styles from './NavMenu.module.css';
 import TheModal from './TheModal';
 
-
 interface NavProps {
   className?: string;
   onHide?:any;  
