@@ -659,13 +659,13 @@ const [printadsvalue, setPrintadsvalue] = useState('');
           Editing
           </Form.Label>
           <Form.Group as={Row}>
-            <Col>
+            <Col className="checkbox-inline">
               <Form.Check
                 type="checkbox"
                 label="Editorial Assessment" 
                 name="additonalservices1"
                 checked={editorial}                
-                onChange={(e)=>{setEditorial(e.target.checked)}}                
+                onChange={(e)=>{setEditorial(e.target.checked)}}                                                             
               />
               <Form.Check
                 type="checkbox"
