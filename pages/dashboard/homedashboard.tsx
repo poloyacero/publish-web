@@ -8,7 +8,7 @@ import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import { Col, Container, Row ,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default function homedashboard() {
     return (

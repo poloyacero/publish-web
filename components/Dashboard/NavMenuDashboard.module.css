@@ -33,9 +33,6 @@
   margin-right: 50px;
   content: none;
 }
-.navmenu .dropdown-toggle::after {
-  content: none;
-}
 
 #menus {
   color: #ffffff;
