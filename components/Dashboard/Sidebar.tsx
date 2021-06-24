@@ -21,7 +21,7 @@ const Sidebar = ({ ...props }: SidebarProps) => {
 <Col><Link href="/dashboard/servicesdashboard" passHref><Button className={styles.button}>Services</Button></Link></Col>
 </Row> 
 </Col>
-</Col> 
+</Col>
 
   );
 };
