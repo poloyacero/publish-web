@@ -20,17 +20,17 @@ export default function emaildashboard() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row className={styles2.emailinfocontainer} >
+            <Row>
              
                 <Col>
-                <h3 className={styles2.emailHeaderlabel}>Email 7</h3>
+                <h3>Email 8</h3>
                 <br></br>
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15}/> </Col>
                  </Row>
                  <br/> <br/> <br/> 
               <Row className="form-group text-left">
-            <Col md={2}><Button className={styles2.savebuttonx}>Send</Button></Col>
+            <Col md={2}><Button>Send</Button></Col>
             </Row>
               <br/> <br/> <br/>
              </Col>
