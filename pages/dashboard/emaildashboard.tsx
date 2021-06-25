@@ -4,7 +4,6 @@ import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
-import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 
@@ -24,14 +23,14 @@ export default function emaildashboard() {
             <Row className={styles2.emailinfocontainer} >
              
                 <Col>
-                <h3 className={styles2.emailHeaderlabel}>Email</h3>
+                <h3 className={styles2.emailHeaderlabel}>Email 7</h3>
                 <br></br>
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15}/> </Col>
                  </Row>
                  <br/> <br/> <br/> 
               <Row className="form-group text-left">
-            <Col md={2}><Button className={styles2.savebutton}>Send</Button></Col>
+            <Col md={2}><Button className={styles2.savebuttonx}>Send</Button></Col>
             </Row>
               <br/> <br/> <br/>
              </Col>
