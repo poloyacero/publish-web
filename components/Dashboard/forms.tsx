@@ -55,8 +55,8 @@ const Dforms = ({ ...props }: FormProps) => {
     <Form.Group>
     
     <div className="input-group mb-3">
-  <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-  <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Manuscript</label>
+  <input type="file" className="form-control" id="inputGroupFile02"/>
+  <label className="input-group-text" htmlFor="inputGroupFile02">Upload Manuscript</label>
    </div>
   
   </Form.Group>
@@ -65,14 +65,14 @@ const Dforms = ({ ...props }: FormProps) => {
     <Col><br/><br/></Col>
     <p className={styles.formlabel}>Ebook submission</p>
     <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Interior</label>
+      <input type="file" className="form-control" id="inputGroupFile02"/>
+      <label className="input-group-text" htmlFor="inputGroupFile02">Upload Ebook Interior</label>
    </div>
   </Form.Group>
   <Form.Group>    
     <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
+      <input type="file" className="form-control" id="inputGroupFile02"/>
+      <label className="input-group-text" htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
    </div>
   </Form.Group>
   <Form.Group>    
@@ -163,8 +163,8 @@ const Dforms = ({ ...props }: FormProps) => {
         </Form.Group>
         <Form.Group>    
     <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload File</label>
+      <input type="file" className="form-control" id="inputGroupFile02"/>
+      <label className="input-group-text" htmlFor="inputGroupFile02">Upload File</label>
    </div>
   </Form.Group>
   <Form.Group as={Row}>
