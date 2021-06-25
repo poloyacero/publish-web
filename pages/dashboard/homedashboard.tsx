@@ -17,8 +17,8 @@ export default function homedashboard() {
         <title>Home Dashboard</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
-      {/* <NavMenu /> */}
-      <NavMenuDashboard />  
+      <NavMenu />
+      {/* <NavMenuDashboard />   */}
    
         <Container fluid>
           <Container>
