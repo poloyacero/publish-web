@@ -5,8 +5,7 @@ import styleIn from '../../styles/inputstyle.module.css'
 
 
 interface FormProps {
-  className?: string;
-  onHide?:any;  
+  className?: string;   
 }
 
 const Dforms = ({ ...props }: FormProps) => { 

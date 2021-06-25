@@ -21,7 +21,7 @@ export default function ordersdashboard() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row className={styles2.accountinfocontainer} >
+            <Row className={styles2.ordersinfocontainer} >
              
                 <Col>
                 <Row className="text-left">

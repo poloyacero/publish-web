@@ -21,7 +21,7 @@ export default function payopeninvoices() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row className={styles2.accountinfocontainer} >
+            <Row className={styles2.payopeninfocontainer} >
              
                 <Col>
                 <Row className="text-left">
