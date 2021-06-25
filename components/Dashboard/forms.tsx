@@ -15,7 +15,7 @@ const Dforms = ({ ...props }: FormProps) => {
     <Form.Group as={Row}>
               <Col sm={10}>
                 <br/>
-                <h3 className={styles.homeHeaderlabel}>EDITING</h3>
+                <h3 className={styles.formHeaderlabel}>EDITING</h3>
                 <br/>
               </Col>
          <Col sm={10}>
