@@ -50,22 +50,15 @@
 .utilityMenus {
   display: inline-block;
   color: #7b6b5b;
-  padding-right: 0px;
-  padding-left: 0px;
-  margin-right: 20px;
 }
 .utilitycontainer {
   display: flex;
   flex-direction: row;
-  margin: 0%;
-  width: 50%;
-  margin-right: 10px;
 }
 .utilityMenu {
-  text-align: right;
-  padding-right: 0px;
-  text-align: left;
+  text-align: center;
   padding-bottom: 12px;
+  padding-left: 1px;
 }
 
 .logo {
@@ -225,11 +218,9 @@
     padding-bottom: 18px;
   }
   .navbar {
-    width: 100%;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 35px;
-    flex-wrap: nowrap;
     display: flex;
     flex-direction: row;
     overflow: hidden;
@@ -238,25 +229,30 @@
     width: 50%;
   }
   .utilitycontainer {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    margin: auto;
+    justify-content: center;
   }
   .logoWrapper {
     display: flex;
-    flex-direction: column;
+    width: 200px;
+    margin: auto;
   }
 
   .utilityMenus {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     color: #7b6b5b;
     padding-right: 10px;
-    padding-left: 11px;
+    padding-left: 5px;
+    margin-left: 0px;
   }
 
   .utilityMenu {
-    text-align: right;
     padding-right: 20px;
-    text-align: left;
+    text-align: center;
     padding-bottom: 12px;
   }
   .navmenu {
@@ -264,16 +260,18 @@
     font-size: 13px;
     margin-right: 10px;
     font-weight: bold;
-    width: 20%;
+    width: 200px;
   }
   .navmenu div {
     background: #7b6b5b !important;
   }
   .togglecontainer {
-    padding-left: 60px;
+    padding-left: 10px;
+    width: 120px;
+    justify-content: center;
   }
   #dropdownNextLevel {
     color: #fff !important;
-    padding-left: 8px !important;
+    padding-left: 5px !important;
   }
 }

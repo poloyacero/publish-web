@@ -124,3 +124,24 @@
 .vshidden {
   visibility: inherit;
 }
+.textalignleft {
+  text-align: left;
+}
+.textalignright {
+  text-align: right;
+}
+@media screen and (max-width: 1030px) {
+  .textalignright {
+    text-align: left;
+  }
+  .inputselect2 {
+    outline: 0;
+    margin: 0%;
+    padding: 0;
+    height: 38px;
+    width: 250px;
+    border-radius: 0;
+    color: #7b6b5b;
+    font-size: 12px;
+  }
+}
