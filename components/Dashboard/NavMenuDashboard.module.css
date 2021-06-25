@@ -1,0 +1,41 @@
+.buttoncontainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 250px;
+  height: 100%;
+  width: 230px;
+  background-color: #faf6f2;
+}
+.buttonwrapper {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 260px;
+  background-color: #faf6f2;
+  align-items: center;
+}
+.button {
+  border-radius: 0 !important;
+  margin: auto;
+  display: block;
+  width: 130px;
+  height: 60px;
+  background-color: #f0e3d5;
+  border: none;
+  color: #7b6b5b;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #7b6b5b;
+  text-decoration: none;
+  color: #f8f7f7;
+}
+.sidebarcol {
+  padding-left: 100px;
+}
