@@ -26,9 +26,9 @@ export default function servicesdashboard() {
             <Row className={styles2.dashcontainer+" "+ styles.ctext} >
                <Sidebar/>
              <Col md={6}>
-               
+               <h1>services12</h1>
                <Row>
-               <Col className={styles2.createcontainer}>             
+               <Col className={styles2.servicescontainer}>             
                 <h4 className={styles2.homeHeaderlabel}>Editing</h4>                        
                </Col>      
                </Row>
