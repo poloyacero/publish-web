@@ -16,9 +16,9 @@ const Sidebar = ({ ...props }: SidebarProps) => {
     <Col md={4} className={styles.sidebarcol} >
     <Col className={styles.buttoncontainer}>
 <Row className={styles.buttonwrapper}>
-<Col><Button className={styles.button}><Link href="/dashboard/createdashboard" passHref>Create</Link></Button></Col>
-<Col><Button className={styles.button}><Link href="/dashboard/packagesdashboard" passHref>Package</Link></Button></Col>
-<Col><Button className={styles.button}><Link href="/dashboard/servicesdashboard" passHref>Services</Link></Button></Col>
+<Col><Button className={styles.buttons}><Link href="/dashboard/createdashboard" passHref>Create</Link></Button></Col>
+<Col><Button className={styles.buttons}><Link href="/dashboard/packagesdashboard" passHref>Package</Link></Button></Col>
+<Col><Button className={styles.buttons}><Link href="/dashboard/servicesdashboard" passHref>Services</Link></Button></Col>
 </Row> 
 </Col>
 </Col>
