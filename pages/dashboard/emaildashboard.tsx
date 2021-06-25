@@ -15,8 +15,8 @@ export default function emaildashboard() {
         <title>Email</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
-      {/* <NavMenu /> */}
-      <NavMenuDashboard /> 
+      <NavMenu />
+      {/* <NavMenuDashboard />  */}
    
         <Container fluid>
           <Container  className={styles.ctext}>
