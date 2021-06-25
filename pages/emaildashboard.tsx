@@ -24,14 +24,14 @@ export default function emaildashboard() {
             <Row>
              
                 <Col>
-                <h3>Email</h3>
+                <h3>Email 3</h3>
                 <br></br>
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15}/> </Col>
                  </Row>
                  <br/> <br/> <br/> 
               <Row className="form-group text-left">
-            <Col md={2}><Button className={styles2.savebutton}>Send</Button></Col>
+            <Col md={2}><Button>Send</Button></Col>
             </Row>
               <br/> <br/> <br/>
              </Col>
