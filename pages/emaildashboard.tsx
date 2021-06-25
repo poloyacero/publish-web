@@ -13,7 +13,7 @@ export default function emaildashboard() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Email</title>
+        <title>Email4</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
@@ -21,7 +21,7 @@ export default function emaildashboard() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row className={styles2.accountinfocontainer} >
+            <Row>
              
                 <Col>
                 <h3 className={styles2.homeHeaderlabel2}>Email</h3>
