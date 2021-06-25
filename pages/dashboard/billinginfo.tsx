@@ -22,7 +22,7 @@ export default function billinginfo() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row className={styles2.accountinfocontainer} >
+            <Row className={styles2.billinginfocontainer} >
              
                 <Col>  
                <br></br>

@@ -19,7 +19,7 @@ export default function deluxepkg() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard className={styles.home}/> 
+      <NavMenuDashboard/> 
    
         <Container fluid>
           <Container>

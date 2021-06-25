@@ -21,7 +21,7 @@ export default function compensationinfo() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row className={styles2.accountinfocontainer} >
+            <Row className={styles2.compensationinfocontainer} >
              
                 <Col>
                 <h3 className={styles2.homeHeaderlabel2}>Compensation Information</h3>
