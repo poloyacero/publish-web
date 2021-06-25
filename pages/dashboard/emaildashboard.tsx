@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
-import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
-// import NavMenu from '../../components/Nav'
+// import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
+import NavMenu from '../../components/Nav'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
@@ -16,8 +16,8 @@ export default function emaildashboard() {
         <title>Email</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
-      {/* <NavMenu /> */}
-      <NavMenuDashboard className={styles.home}/> 
+      <NavMenu />
+      {/* <NavMenuDashboard className={styles.home}/>  */}
    
         <Container fluid>
           <Container  className={styles.ctext}>
