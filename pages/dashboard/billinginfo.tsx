@@ -18,15 +18,15 @@ export default function billinginfo() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard className={styles.home}/> 
+      <NavMenuDashboard/> 
    
         <Container fluid>
-          <Container  className={styles.ctext}>
-            <Row className={styles2.billinginfocontainer} >
+          <Container>
+            <Row>
              
                 <Col>  
                <br></br>
-               <h3 className={styles2.homeHeaderlabel2}>Billing Information</h3>
+               <h3>Billing Information</h3>
                <br></br>
                <Row className="form-group text-right">               
                <Col>
