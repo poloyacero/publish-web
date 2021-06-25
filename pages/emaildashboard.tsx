@@ -21,10 +21,10 @@ export default function emaildashboard() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row className={styles2.accountinfocontainer} >
+            <Row>
              
                 <Col>
-                <h3>Email 5</h3>
+                <h3>Email 6</h3>
                 <br></br>
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15}/> </Col>
