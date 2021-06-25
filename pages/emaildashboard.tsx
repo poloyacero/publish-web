@@ -13,7 +13,7 @@ export default function emaildashboard() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Email4</title>
+        <title>Email</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
@@ -21,10 +21,10 @@ export default function emaildashboard() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row>
+            <Row className={styles2.accountinfocontainer} >
              
                 <Col>
-                <h3 className={styles2.homeHeaderlabel2}>Email</h3>
+                <h3>Email 5</h3>
                 <br></br>
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15}/> </Col>
