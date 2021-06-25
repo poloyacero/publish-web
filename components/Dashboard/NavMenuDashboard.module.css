@@ -18,7 +18,7 @@
   background-color: #faf6f2;
   align-items: center;
 }
-.button {
+.buttons {
   border-radius: 0 !important;
   margin: auto;
   display: block;
@@ -31,7 +31,7 @@
   text-decoration: none;
 }
 
-.button:hover {
+.buttons:hover {
   background-color: #7b6b5b;
   text-decoration: none;
   color: #f8f7f7;
