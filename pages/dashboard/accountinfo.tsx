@@ -11,29 +11,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function accountinfo() {
     return (
-        <div className={styles.container}>
+        <div>
       <Head>
         <title>Account Information</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard className={styles.home}/> 
+      <NavMenuDashboard /> 
    
         <Container fluid>
-          <Container  className={styles.ctext}>
-            <Row className={styles2.accountinfocontainer} >
+          <Container>
+            <Row>
              
                 <Col>
-                <h3 className={styles2.homeHeaderlabel2}>Account Information</h3>
+                <h3>Account Information</h3>
                 <br></br>
                 <Row className="form-group text-right">
-              <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+              <Col md={3}>Login ID</Col><Col md={9}><Form.Control type="text" defaultValue=" "/> </Col>
                </Row>
                <Row className="form-group text-right">
                  <Col md={3}>Acount Number</Col><Col md={9}></Col>
                </Row>
                <Row className="form-group text-right">
-               <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+               <Col md={3}>Business</Col><Col md={9}> <Form.Control  as="select" defaultValue=" ">
               <option> </option>                                
               <option>Sole Proprietor</option>
               <option>Company</option>                  
@@ -45,7 +45,7 @@ export default function accountinfo() {
               </Col>
                </Row>
                <br></br>
-               <h3 className={styles2.homeHeaderlabel2}>Legal Information</h3>
+               <h3>Legal Information</h3>
                <br></br>
                <Row className="form-group text-right">               
                <Col>
@@ -315,15 +315,15 @@ export default function accountinfo() {
               <option value="ZWE">Zimbabwe</option>
             </Form.Control> 
             </Col>
-            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col md={3}></Col><Col className="form-group" md={9}><p className={styles2.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/>
+            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
+            <Col md={3}></Col><Col className="form-group" md={9}><p>The phone number entered above will be shared with the shipping company selected. <br/>
                               The Publishing shall not be liable for undeliverable shipments where a valid phone number is not provided.</p></Col>
                               <br/> <br/> <br/> 
                               <Row className="form-group text-right">
-            <Col md={5}><Button className={styles2.savebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.cancelbutton}>Cancel</Button></Col><Col md={6}></Col>
+            <Col md={5}><Button>Save</Button></Col> <Col md={5}><Button>Cancel</Button></Col><Col md={6}></Col>
             </Row>
               <br/> <br/> <br/>
                </Form.Group>
