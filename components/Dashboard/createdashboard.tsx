@@ -14,7 +14,7 @@ export default function createbook() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Create Dashboard</title>
+        <title>Create</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />  
