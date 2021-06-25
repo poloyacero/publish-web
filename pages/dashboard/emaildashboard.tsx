@@ -15,7 +15,7 @@ export default function emaildashboard() {
         <title>Email</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
-      <NavMenu />
+      {/* <NavMenu /> */}
       <NavMenuDashboard /> 
    
         <Container fluid>
@@ -23,7 +23,7 @@ export default function emaildashboard() {
             <Row>
              
                 <Col>
-                <h3>Email 8</h3>
+                <h3>Email 9</h3>
                 <br></br>
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15}/> </Col>
