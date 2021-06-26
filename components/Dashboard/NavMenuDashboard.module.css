@@ -94,6 +94,16 @@
   color: #7b6b5b;
   width: 1000px;
 }
+.billingcontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-right: 0px;
+  margin-left: 120px;
+  text-align: left;
+  color: #7b6b5b;
+  width: 1000px;
+}
 .documentscolborder {
   border-style: solid;
   border-color: #dbc2a7;
@@ -150,6 +160,17 @@
   background-color: #a1886c;
   border-color: saddlebrown;
   border-width: 2px;
+}
+
+.billingsavebutton {
+  border-radius: 1 !important;
+  display: block;
+  width: 100px;
+  height: 48px;
+  background-color: #7b6b5b;
+  border: none;
+  color: #fafafa;
+  padding: 10px;
 }
 
 .accountnotes {

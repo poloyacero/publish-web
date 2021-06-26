@@ -5,52 +5,34 @@ import NavMenu from '../../components/Nav'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
-import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
+import { Col, Container, Row ,Form,Button,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function accountinfo() {
+export default function billinginfo() {
+
     return (
-        <div>
+        <div className={styles.container}>
       <Head>
-        <title>Account Information</title>
+        <title>Billing Information</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard /> 
+      <NavMenuDashboard/> 
    
         <Container fluid>
           <Container>
             <Row>
              
-                <Col  className={styles2.accountcontainer}>
-                <h3 className={styles2.homeHeaderlabel2}>Account Information</h3>
-                <br></br>
-                <Row className="form-group text-right">
-              <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput}  type="text" defaultValue=" "/> </Col>
-               </Row>
-               <Row className="form-group text-right">
-                 <Col md={3}>Acount Number</Col><Col md={9}></Col>
-               </Row>
-               <Row className="form-group text-right">
-               <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.accountinput}   as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Sole Proprietor</option>
-              <option>Company</option>                  
-              <option>Government</option>
-              <option>Univeristy</option>                  
-              <option>Non-Profit</option> 
-              <option>Other</option>  
-              </Form.Control> 
-              </Col>
-               </Row>
+                <Col className={styles2.billingcontainer}>  
                <br></br>
-               <h3 className={styles2.homeHeaderlabel2}>Legal Information</h3>
+               <h3 className={styles2.homeHeaderlabel2}>Billing Information</h3>
                <br></br>
                <Row className="form-group text-right">               
                <Col>
                <Form.Group as={Row}>
-               <Col className="form-group" md={3}>Full Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>First Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>Last Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
                
                <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
                
@@ -319,14 +301,64 @@ export default function accountinfo() {
             <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
             <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
             <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col md={3}></Col><Col className="form-group" md={9}><p className={styles2.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/> 
-                              The Publishing shall not be liable for undeliverable shipments where a valid phone number is not provided.</p></Col>
+           
+            </Form.Group>
+            <br></br>
+              <Row  className="text-left">
+           
+               <h3 className={styles2.homeHeaderlabel2}>Payment Details</h3>
+              
+           </Row>
+           <br></br><br></br>
+           <Form.Group>
+             <Row className="align-items-center">
+            <Col className="form-group" md={3}>Payment Type</Col>
+            <Col className="form-group text-left" md={1}>
+            <Form.Check
+              type="radio"
+              label=""
+              name="cardselect"
+              id="dkk"
+            /></Col>
+            <Col md={8} className="text-left"><br/>ThePublishing ApS<br/>  
+                                              DKK 7780 – 6481469<br/>
+                                              Denmark
+            </Col>
+            </Row>
+            
+            <Row className="align-items-center">
+            <Col className="form-group" md={3}> </Col>
+            <Col className="form-group text-left" md={1}>
+            <Form.Check
+              type="radio"
+              label=""
+              name="cardselect"
+              id="europe"
+            /> </Col> <Col md={8} className="text-left"><br/>ThePublishing ApS<br/>   
+                                                        EUR 7780 – 6481477<br/>  
+                                                        Europe
+                      </Col>
+            </Row>
+            <br/>
+            <Row className="align-items-center">
+            <Col className="form-group" md={3}> </Col>
+            <Col className="form-group text-left" md={1}>
+            <Form.Check
+              type="radio"
+              label=""
+              name="cardselect"
+              id="paypal"
+            /> </Col> <Col md={8} className="text-left"> <Image src="/img/paypal.png" width="80px" height="auto" /></Col>
+            </Row>        
+            <br/>           
+      </Form.Group>
                               <br/> <br/> <br/> 
+
               <Row className="form-group text-right">
-            <Col md={2}><Button className={styles2.accountsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.accountcancelbutton}>Cancel</Button></Col><Col md={6}></Col>
+            <Col md={2}><Button className={styles2.billingsavebutton}>Submit</Button></Col> <Col md={2}></Col><Col md={8}></Col>
             </Row>
               <br/> <br/> <br/>
-               </Form.Group>
+              
                </Col>
                </Row>
              </Col>
