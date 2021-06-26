@@ -22,7 +22,7 @@ export default function createbook() {
         <Container fluid>
           <Container>
             <Row >
-               <Sidebar/>
+               {/* <Sidebar/> */}
                 <Col md={6} className={styles2.createcontainer}>
              <Col >
            
