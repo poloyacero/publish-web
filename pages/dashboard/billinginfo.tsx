@@ -26,7 +26,7 @@ export default function billinginfo() {
              
                 <Col>  
                <br></br>
-               <h3 className={styles2.homeheaderlabel2}>Billing Information</h3>
+               <h3 className={styles2.dropheaderlabel2}>Billing Information</h3>
                <br></br>
                <Row className="form-group text-right">               
                <Col>
@@ -306,7 +306,7 @@ export default function billinginfo() {
             <br></br>
               <Row  className="text-left">
            
-               <h3 className={styles2.homeheaderlabel2}>Payment Details</h3>
+               <h3 className={styles2.dropheaderlabel2}>Payment Details</h3>
               
            </Row>
            <br></br><br></br>
