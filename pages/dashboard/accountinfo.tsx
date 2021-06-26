@@ -23,7 +23,7 @@ export default function accountinfo() {
           <Container>
             <Row>
              
-                <Col>
+                <Col  className={styles2.accountcontainer}>
                 <h3>Account Information</h3>
                 <br></br>
                 <Row className="form-group text-right">
