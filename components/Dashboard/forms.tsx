@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
-import styles from './NavMenuDashboard.module.css';
+import styles from './forms.module.css';
 import styleIn from '../../styles/inputstyle.module.css'
 
 
@@ -15,7 +15,7 @@ const Dforms = ({ ...props }: FormProps) => {
     <Form.Group as={Row}>
               <Col sm={10}>
                 <br/>
-                <h3 className={styles.homeheaderlabel}>EDITING</h3>
+                <h3 className={styles.formheaderlabel}>EDITING</h3>
                 <br/>
               </Col>
          <Col sm={10}>
@@ -142,7 +142,7 @@ const Dforms = ({ ...props }: FormProps) => {
             </Col>
           </Form.Group>
           <br></br><br></br>
-          <h3 className={styles.homeheaderlabel}>DESIGN</h3>
+          <h3 className={styles.formheaderlabel}>DESIGN</h3>
           <Form.Group>    
        <Col sm={10}>
          <br></br>
@@ -276,7 +276,7 @@ const Dforms = ({ ...props }: FormProps) => {
            
           </Form.Group>
           <br></br><br></br>
-          <h3 className={styles.homeheaderlabel}>DISTRIBUTION</h3>
+          <h3 className={styles.formheaderlabel}>DISTRIBUTION</h3>
           <br/>
           <p className={styles.formlabel}>13 Digit ISBN</p>
           <Form.Group>
@@ -313,7 +313,7 @@ const Dforms = ({ ...props }: FormProps) => {
               />  
               
               <br></br><br></br>
-          <h3 className={styles.homeheaderlabel}>MARKETING</h3>
+          <h3 className={styles.formheaderlabel}>MARKETING</h3>
           <br></br>     
 
       <p className={styles.formlabel}>Get Marketing Services</p>
