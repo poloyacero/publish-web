@@ -25,7 +25,7 @@ export default function starterpkg() {
             <Row>
                <Sidebar/>
                 <Col md={6}>
-             <Col className={styles2.createcontainer}>
+             <Col className={styles2.xcontainer}>
                         
                 <h3 className={styles2.homeheaderlabel2}>Starter Package  € 900</h3>
                 <br/>
