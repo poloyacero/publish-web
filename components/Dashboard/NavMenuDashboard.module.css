@@ -108,26 +108,6 @@
   color: #fafafa;
   padding: 10px;
 }
-.accountcancelbutton {
-  border-radius: 1 !important;
-  border-color: #7b6b5b;
-  display: block;
-  width: 100px;
-  height: 48px;
-  background-color: #fdfbfa;
-  color: #7b6b5b;
-  padding: 10px;
-}
-.accountsavebutton:hover {
-  background-color: #a1886c;
-  border-color: saddlebrown;
-  border-width: 2px;
-}
-.accountcancelbutton:hover {
-  background-color: #a1886c;
-  border-color: saddlebrown;
-  border-width: 2px;
-}
 
 .billingsavebutton {
   border-radius: 1 !important;
