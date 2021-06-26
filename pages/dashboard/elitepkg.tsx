@@ -28,7 +28,7 @@ export default function elitepkg() {
                 <Col md={6}>
              <Col className={styles2.packagesdashcontainer}>
                         
-                <h3 className={styles2.homeheaderlabel2}>Elite Package € 16000</h3>
+                <h3 className={styles2.srvcsheaderlabel}>Elite Package € 16000</h3>
                 <br/>
          
             <Row>

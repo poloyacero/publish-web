@@ -27,7 +27,7 @@ export default function propkg() {
                 <Col md={6}>
              <Col className={styles2.packagesdashcontainer}>
                         
-                <h3 className={styles2.homeheaderlabel2}>Pro Package  € 4000</h3>
+                <h3 className={styles2.srvcsheaderlabel}>Pro Package  € 4000</h3>
                 <br/>
          
             <Row>
