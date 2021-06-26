@@ -109,6 +109,12 @@
   padding: 10px;
 }
 
+.accountsavebutton:hover {
+  background-color: #a1886c;
+  border-color: saddlebrown;
+  border-width: 2px;
+}
+
 .billingsavebutton {
   border-radius: 1 !important;
   display: block;
