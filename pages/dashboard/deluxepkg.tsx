@@ -6,15 +6,15 @@ import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/dashboard.module.css'
 import Forms from '../../components/Dashboard/forms'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 
 
-export default function starterpkg() {
+export default function deluxepkg() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Starter Package</title>
+        <title>Deluxe Package</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
@@ -27,7 +27,7 @@ export default function starterpkg() {
                 <Col md={6}>
              <Col className={styles2.createcontainer}>
                         
-                <h3 className={styles2.homeheaderlabel2}>Starter Package  € 900</h3>
+                <h3 className={styles2.homeheaderlabel2}>Deluxe Package  € 1500</h3>
                 <br/>
          
             <Row>
@@ -41,7 +41,7 @@ export default function starterpkg() {
                     </Col>
                     <Col md={4}>
                     <b>Post-publication features:</b><br/>
-                    3 Paperback Copies<br/>
+                    5 Paperback Copies<br/>
                     2 ISBN<br/>
                     Print Book Registration<br/>
                     Amazon Look Inside<br/>
@@ -55,7 +55,10 @@ export default function starterpkg() {
                     <b>Marketing services:</b><br/>
                     20 Bookmarks<br/>
                     20 Business Cards<br/>
-                    50 Postcards<br/>
+                    50 30 Bookmarks<br/>
+                    30 Business Cards<br/>
+                    30 Postcards<br/>
+                    3Posters<br/>
                     </Col>
                     </Row>
                     </Col>
