@@ -356,7 +356,7 @@ const Dforms = ({ ...props }: FormProps) => {
 
               <Form.Group>
                 <br/> <br/> <br/> 
-              <Button>Submit Request</Button>
+              <Button className={styles.submitbuttondashboard}>Submit Request</Button>
               <br/> <br/> <br/>
               </Form.Group>
               </>
