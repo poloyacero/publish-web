@@ -27,13 +27,13 @@ export default function accountinfo() {
                 <h3>Account Information</h3>
                 <br></br>
                 <Row className="form-group text-right">
-              <Col md={3}>Login ID</Col><Col md={9}><Form.Control type="text" defaultValue=" "/> </Col>
+              <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput}  type="text" defaultValue=" "/> </Col>
                </Row>
                <Row className="form-group text-right">
                  <Col md={3}>Acount Number</Col><Col md={9}></Col>
                </Row>
                <Row className="form-group text-right">
-               <Col md={3}>Business</Col><Col md={9}> <Form.Control  as="select" defaultValue=" ">
+               <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.accountinput}   as="select" defaultValue=" ">
               <option> </option>                                
               <option>Sole Proprietor</option>
               <option>Company</option>                  
@@ -315,15 +315,15 @@ export default function accountinfo() {
               <option value="ZWE">Zimbabwe</option>
             </Form.Control> 
             </Col>
-            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control  type="text" defaultValue=" "/> </Col>
-            <Col md={3}></Col><Col className="form-group" md={9}><p>The phone number entered above will be shared with the shipping company selected. <br/>
+            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+            <Col md={3}></Col><Col className="form-group" md={9}><p className={styles2.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/> 
                               The Publishing shall not be liable for undeliverable shipments where a valid phone number is not provided.</p></Col>
                               <br/> <br/> <br/> 
-                              <Row className="form-group text-right">
-            <Col md={5}><Button className={styles2.accountsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.accountcancelbutton}>Cancel</Button></Col><Col md={6}></Col>
+              <Row className="form-group text-right">
+            <Col md={2}><Button className={styles2.accountsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.accountcancelbutton}>Cancel</Button></Col><Col md={6}></Col>
             </Row>
               <br/> <br/> <br/>
                </Form.Group>
