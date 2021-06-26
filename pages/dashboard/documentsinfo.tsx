@@ -3,7 +3,7 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
+import styles2 from '../../components/Dashboard/dashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";

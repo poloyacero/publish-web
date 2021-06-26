@@ -2,8 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
-import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
+import styles from '../../components/Dashboard/dashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
@@ -21,10 +20,10 @@ export default function accountinfo() {
    
         <Container fluid>
           <Container>
-            <Row  className={styles2.dropdownmenucontainer}>
+            <Row  className={styles.dropdownmenucontainer}>
              
                 <Col>
-                <h3 className={styles2.homeheaderlabel2}>Account Information</h3>
+                <h3 className={styles.homeheaderlabel2}>Account Information</h3>
                 <br></br>
                 <Row className="form-group text-right">
               <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput}  type="text" defaultValue=" "/> </Col>
@@ -45,7 +44,7 @@ export default function accountinfo() {
               </Col>
                </Row>
                <br></br>
-               <h3 className={styles2.homeheaderlabel2}>Legal Information</h3>
+               <h3 className={styles.homeheaderlabel2}>Legal Information</h3>
                <br></br>
                <Row className="form-group text-right">               
                <Col>
@@ -319,11 +318,11 @@ export default function accountinfo() {
             <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
             <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
             <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col md={3}></Col><Col className="form-group" md={9}><p className={styles2.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/> 
+            <Col md={3}></Col><Col className="form-group" md={9}><p className={styles.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/> 
                               The Publishing shall not be liable for undeliverable shipments where a valid phone number is not provided.</p></Col>
                               <br/> <br/> <br/> 
               <Row className="form-group text-right">
-            <Col md={2}><Button className={styles2.accountsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.accountsavebutton}>Cancel</Button></Col><Col md={6}></Col>
+            <Col md={2}><Button className={styles.dashsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles.dashsavebutton}>Cancel</Button></Col><Col md={6}></Col>
             </Row>
               <br/> <br/> <br/>
                </Form.Group>
