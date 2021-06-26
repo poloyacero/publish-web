@@ -13,7 +13,7 @@ export default function homedashboard() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Home Dashboard 1</title>
+        <title>Home Dashboard</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
@@ -25,7 +25,7 @@ export default function homedashboard() {
                <Sidebar/>
                 <Col>
              <Col className={styles2.homecontainer}>
-             <h2 className={styles.ctext}>Welcome to the Publishing!</h2>
+             <h2 className={styles.ctext}>Welcome to the Publishing! !</h2>
              <p><Image src="/img/homepic.png" width="438px" height="auto" /></p>
 
              <p>How we can help you?<br/>
