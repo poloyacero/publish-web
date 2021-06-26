@@ -21,9 +21,9 @@ export default function compensationinfo() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row>
+            <Row className={styles2.dropdownmenucontainer}>
              
-                <Col className={styles2.dropdownmenucontainer}>
+                <Col>
                 <h3 className={styles2.homeheaderlabel2}>Compensation Information</h3>
                 <br></br>             
                

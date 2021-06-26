@@ -21,9 +21,9 @@ export default function payopeninvoices() {
    
         <Container fluid>
           <Container  className={styles.ctext}>
-            <Row>
+            <Row className={styles2.dropdownmenucontainer} >
              
-                <Col className={styles2.dropdownmenucontainer} >
+                <Col>
                 <Row className="text-left">
                 <h4 className={styles2.homeheaderlabel2}>Pay Open Invoices</h4>
                 </Row>

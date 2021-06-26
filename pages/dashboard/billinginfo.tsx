@@ -22,9 +22,9 @@ export default function billinginfo() {
    
         <Container fluid>
           <Container>
-            <Row>
+            <Row className={styles2.dropdownmenucontainer}>
              
-                <Col className={styles2.dropdownmenucontainer}>  
+                <Col>  
                <br></br>
                <h3 className={styles2.homeheaderlabel2}>Billing Information</h3>
                <br></br>
