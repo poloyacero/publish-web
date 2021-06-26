@@ -151,3 +151,8 @@
   border-color: saddlebrown;
   border-width: 2px;
 }
+
+.accountnotes {
+  font-size: 10px;
+  text-align: left;
+}
