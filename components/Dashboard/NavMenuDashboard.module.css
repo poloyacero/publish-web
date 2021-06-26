@@ -75,6 +75,7 @@
   height: 50px;
   padding-top: 9px;
   padding-left: 10px;
+  color: #7b6b5b;
 }
 
 .createcontainer {
@@ -90,6 +91,8 @@
 .dropdownmenucontainer {
   display: flex;
   flex-direction: column;
+  padding-top: 50px;
+  margin-left: 120px;
 }
 
 .documentscolborder {
