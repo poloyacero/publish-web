@@ -25,7 +25,7 @@ export default function createbook() {
                <Sidebar/>
                 <Col md={6} className={styles2.createcontainer}>
              <Col >
-             <h2>form with styles</h2>
+           
              <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
                   <option disabled>Select Creation</option>                                
                   <option>Print Book and Ebook € 350</option>
