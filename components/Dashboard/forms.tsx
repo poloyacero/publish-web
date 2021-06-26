@@ -55,8 +55,8 @@ const Dforms = ({ ...props }: FormProps) => {
     <Form.Group>
     
     <div className="input-group mb-3">
-  <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-  <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Manuscript</label>
+  <input type="file" id="inputGroupFile02"/>
+  <label htmlFor="inputGroupFile02">Upload Manuscript</label>
    </div>
   
   </Form.Group>
@@ -65,14 +65,14 @@ const Dforms = ({ ...props }: FormProps) => {
     <Col><br/><br/></Col>
     <p>Ebook submission</p>
     <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Interior</label>
+      <input type="file"  id="inputGroupFile02"/>
+      <label  htmlFor="inputGroupFile02">Upload Ebook Interior</label>
    </div>
   </Form.Group>
   <Form.Group>    
     <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
+      <input type="file" id="inputGroupFile02"/>
+      <label htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
    </div>
   </Form.Group>
   <Form.Group>    
@@ -163,8 +163,8 @@ const Dforms = ({ ...props }: FormProps) => {
         </Form.Group>
         <Form.Group>    
     <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload File</label>
+      <input type="file" id="inputGroupFile02"/>
+      <label htmlFor="inputGroupFile02">Upload File</label>
    </div>
   </Form.Group>
   <Form.Group as={Row}>
@@ -190,7 +190,7 @@ const Dforms = ({ ...props }: FormProps) => {
                
               />  
                <br></br><br></br>
-          <Row className={"form-group "+styleIn.textalignright}>    
+          <Row>    
           <Col md={4}>Trim Size</Col>
           <Col md={8}>
           <Form.Control as="select" defaultValue=" ">
@@ -202,7 +202,7 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
           
-          <Row className={"form-group "+styleIn.textalignright}>  
+          <Row>  
           <Col md={4}>Interior Color</Col> 
           <Col md={8}>
           <Form.Control as="select" defaultValue=" ">
@@ -214,7 +214,7 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row className={"form-group "+styleIn.textalignright}>  
+          <Row>  
           <Col md={4}>Paper Type</Col>
           <Col md={8}>
           <Form.Control as="select" defaultValue=" ">
@@ -226,7 +226,7 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row className={"form-group "+styleIn.textalignright}>  
+          <Row>  
           <Col md={4}>Binding Type</Col>
           <Col md={8}>
           <Form.Control  as="select" defaultValue=" ">
@@ -238,7 +238,7 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row className={"form-group "+styleIn.textalignright}>  
+          <Row>  
           <Col md={4}>Laminate</Col>
           <Col md={8}>
           <Form.Control  as="select" defaultValue=" ">
@@ -250,7 +250,7 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row className={"form-group "+styleIn.textalignright}>  
+          <Row>  
           <Col md={4}>Page Count</Col>
           <Col md={8}>
           <Form.Control  as="select" defaultValue=" ">
@@ -261,7 +261,7 @@ const Dforms = ({ ...props }: FormProps) => {
           </Form.Control>
           </Col>
           </Row>         
-          <Row className={"form-group "+styleIn.textalignright}>  
+          <Row>  
           <Col md={4}>Quantity</Col>
           <Col md={8}>
           <Form.Control  as="select" defaultValue=" ">
