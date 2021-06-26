@@ -97,7 +97,6 @@
   width: 1000px;
 }
 
-/* --working--- */
 .accountsavebutton {
   border-radius: 1 !important;
   display: block;
@@ -107,12 +106,6 @@
   border: none;
   color: #fafafa;
   padding: 10px;
-}
-
-.accountsavebutton:hover {
-  background-color: #a1886c;
-  border-color: saddlebrown;
-  border-width: 2px;
 }
 
 .billingsavebutton {
@@ -125,3 +118,5 @@
   color: #fafafa;
   padding: 10px;
 }
+
+/* --working--- */
