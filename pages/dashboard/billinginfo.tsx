@@ -3,7 +3,7 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
+import styles2 from '../../components/Dashboard/dashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
@@ -355,7 +355,7 @@ export default function billinginfo() {
                               <br/> <br/> <br/> 
 
               <Row className="form-group text-right">
-            <Col md={2}><Button className={styles2.billingsavebutton}>Submit</Button></Col> <Col md={2}></Col><Col md={8}></Col>
+            <Col md={2}><Button className={styles2.dashsavebutton}>Submit</Button></Col> <Col md={2}></Col><Col md={8}></Col>
             </Row>
               <br/> <br/> <br/>
               

@@ -3,7 +3,7 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
+import styles2 from '../../components/Dashboard/dashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
@@ -306,7 +306,7 @@ export default function compensationinfo() {
                               <br/> <br/> <br/> 
               
               <Row className="form-group text-right">
-            <Col md={2}><Button className={styles2.accountsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.accountsavebutton}>Cancel</Button></Col><Col md={6}></Col>
+            <Col md={2}><Button className={styles2.dashsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.dashsavebutton}>Cancel</Button></Col><Col md={6}></Col>
             </Row>
               <br/> <br/> <br/>
                </Form.Group>
