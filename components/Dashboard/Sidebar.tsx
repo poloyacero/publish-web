@@ -1,18 +1,11 @@
 import React from 'react';
 import { Row, Col, Button} from 'react-bootstrap';
 import Link from 'next/link';
-import styles from './NavMenuDashboard.module.css';
+import styles from './Sidebar.module.css';
 
-
-
-interface SidebarProps {
-  className?: string;  
-}
-
-const Sidebar = ({ ...props }: SidebarProps) => { 
-
+export default function Sidebar() {
   return (
-      
+   
 <Col md={4} className={styles.sidebarcol} >
 <Col className={styles.buttoncontainer}>
 <Row className={styles.buttonwrapper}>
@@ -22,8 +15,6 @@ const Sidebar = ({ ...props }: SidebarProps) => {
 </Row> 
 </Col>
 </Col>
+    )
+}
 
-  );
-};
-
-export default Sidebar;
