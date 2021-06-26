@@ -25,19 +25,19 @@ export default function dashpackage() {
             <Row>
                <Sidebar/>
              <Col md={6}>
-               <h2>.</h2>
+               <h2>*</h2>
               <Col className={styles2.createcontainer+" "+styles.serviceslink}>
               
-              <h4 className={styles2.homeHeaderlabel}><Link href="/dashboard/starterpkg" passHref>Starter</Link></h4>               
+              <h4 className={styles2.homeheaderlabel}><Link href="/dashboard/starterpkg" passHref>Starter</Link></h4>               
              
              
-              <h4 className={styles2.homeHeaderlabel}> <Link href="/dashboard/deluxepkg" passHref>Deluxe</Link></h4>               
+              <h4 className={styles2.homeheaderlabel}> <Link href="/dashboard/deluxepkg" passHref>Deluxe</Link></h4>               
           
               
-              <h4 className={styles2.homeHeaderlabel}><Link href="/dashboard/propkg" passHref>Pro</Link></h4>
+              <h4 className={styles2.homeheaderlabel}><Link href="/dashboard/propkg" passHref>Pro</Link></h4>
               
               
-              <h4 className={styles2.homeHeaderlabel}><Link href="/dashboard/elitepkg" passHref>Elite</Link></h4>                
+              <h4 className={styles2.homeheaderlabel}><Link href="/dashboard/elitepkg" passHref>Elite</Link></h4>                
              
              </Col>      
               </Col>
