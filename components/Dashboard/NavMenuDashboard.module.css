@@ -87,6 +87,17 @@
   color: #7b6b5b;
 }
 
+.dropdownmenucontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-right: 0px;
+  margin-left: 120px;
+  text-align: left;
+  color: #7b6b5b;
+  width: 100%;
+}
+
 .documentscolborder {
   border-style: solid;
   border-color: #dbc2a7;
