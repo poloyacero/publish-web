@@ -18,14 +18,14 @@ export default function createbook() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />  
-      <NavMenuDashboard/> 
+      <NavMenuDashboard className={styles.home}/> 
         <Container fluid>
           <Container>
             <Row >
                <Sidebar/>
-                <Col md={6} >
+                <Col md={6} className={styles2.createcontainer}>
              <Col >
-             <Form.Control as="select" defaultValue="Select Creation">
+             <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
                   <option disabled>Select Creation</option>                                
                   <option>Print Book and Ebook € 350</option>
                   <option>Print Book Only € 300</option>                  
