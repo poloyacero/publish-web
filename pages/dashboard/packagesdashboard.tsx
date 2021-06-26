@@ -26,7 +26,7 @@ export default function dashpackage() {
                <Sidebar/>
              <Col md={6}>
              
-              <Col className={styles2.createcontainer+" "+styles.serviceslink}>
+              <Col className={styles2.xcontainer+" "+styles.serviceslink}>
               
               <h4 className={styles2.homeheaderlabel}><Link href="/dashboard/starterpkg" passHref>Starter</Link></h4>               
              

@@ -26,7 +26,7 @@ export default function elitepkg() {
             <Row>
                <Sidebar/>
                 <Col md={6}>
-             <Col className={styles2.createcontainer}>
+             <Col className={styles2.xcontainer}>
                         
                 <h3 className={styles2.homeheaderlabel2}>Elite Package € 16000</h3>
                 <br/>

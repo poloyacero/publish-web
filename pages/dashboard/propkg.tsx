@@ -25,7 +25,7 @@ export default function propkg() {
             <Row>
                <Sidebar/>
                 <Col md={6}>
-             <Col className={styles2.createcontainer}>
+             <Col className={styles2.xcontainer}>
                         
                 <h3 className={styles2.homeheaderlabel2}>Pro Package  € 4000</h3>
                 <br/>

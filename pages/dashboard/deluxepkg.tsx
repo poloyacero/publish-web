@@ -25,7 +25,7 @@ export default function deluxepkg() {
             <Row>
                <Sidebar/>
                 <Col md={6}>
-             <Col className={styles2.createcontainer}>
+             <Col className={styles2.xcontainer}>
                         
                 <h3 className={styles2.homeheaderlabel2}>Deluxe Package  € 1500</h3>
                 <br/>

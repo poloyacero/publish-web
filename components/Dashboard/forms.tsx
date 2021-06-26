@@ -1,15 +1,10 @@
+
 import React from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
 import styles from './forms.module.css';
 import styleIn from '../../styles/inputstyle.module.css'
 
-
-interface FormProps {
-  className?: string;   
-}
-
-const Dforms = ({ ...props }: FormProps) => { 
-
+export default function forms() {
   return (
     <>
     <Form.Group as={Row}>
@@ -360,7 +355,9 @@ const Dforms = ({ ...props }: FormProps) => {
               <br/> <br/> <br/>
               </Form.Group>
               </>
-  );
-};
+  )
+}
 
-export default Dforms;
+
+
+
