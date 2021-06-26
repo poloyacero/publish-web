@@ -75,7 +75,25 @@
   padding-top: 9px;
   padding-left: 10px;
 }
-
+.createcontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-right: 0px;
+  margin-left: 0px;
+  text-align: left;
+  color: #7b6b5b;
+}
+.accountinfocontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-right: 0px;
+  margin-left: 120px;
+  text-align: left;
+  color: #7b6b5b;
+  width: 1000px;
+}
 .documentscolborder {
   border-style: solid;
   border-color: #dbc2a7;
