@@ -24,7 +24,7 @@ export default function emaildashboard() {
             <Row>
              
                 <Col className={styles2.dropdownmenucontainer}>
-                <h3 className={styles2.homeHeaderlabel2}>Email</h3>
+                <h3 className={styles2.homeheaderlabel2}>Email</h3>
                 <br></br>
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15}/> </Col>
