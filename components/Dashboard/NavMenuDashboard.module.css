@@ -8,6 +8,7 @@
 
 #menus {
   color: #ffffff;
+  font-size: 18px;
 }
 
 .homecontainer {
@@ -50,6 +51,7 @@
   flex-direction: column;
   padding-top: 50px;
   padding-left: 120px;
+  color: #7b6b5b;
 }
 
 .documentscolborder {
@@ -99,4 +101,23 @@
   color: #fafafa;
   padding: 10px;
 }
-/* --working--- */
+
+.submitbuttondashboard {
+  border-radius: 1 !important;
+  display: block;
+  width: 230px;
+  height: 40px;
+  background-color: #7b6b5b;
+  border: none;
+  color: #fafafa;
+  padding: 10px;
+}
+.submitbuttondashboard :hover {
+  background-color: #a1886c;
+  border-color: saddlebrown;
+  border-width: 2px;
+}
+.accountnotes {
+  font-size: 10px;
+  text-align: left;
+}
