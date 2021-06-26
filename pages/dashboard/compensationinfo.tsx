@@ -23,7 +23,7 @@ export default function compensationinfo() {
           <Container  className={styles.ctext}>
             <Row>
              
-                <Col className={styles2.compensationcontainer}>
+                <Col className={styles2.dropdownmenucontainer}>
                 <h3 className={styles2.homeHeaderlabel2}>Compensation Information</h3>
                 <br></br>             
                

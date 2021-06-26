@@ -84,17 +84,7 @@
   text-align: left;
   color: #7b6b5b;
 }
-.accountcontainer {
-  display: flex;
-  flex-direction: column;
-  padding-top: 50px;
-  margin-right: 0px;
-  margin-left: 120px;
-  text-align: left;
-  color: #7b6b5b;
-  width: 1000px;
-}
-.billingcontainer {
+.dropdownmenucontainer {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
@@ -105,16 +95,6 @@
   width: 1000px;
 }
 
-.compensationcontainer {
-  display: flex;
-  flex-direction: column;
-  padding-top: 50px;
-  margin-right: 0px;
-  margin-left: 120px;
-  text-align: left;
-  color: #7b6b5b;
-  width: 1000px;
-}
 .documentscolborder {
   border-style: solid;
   border-color: #dbc2a7;

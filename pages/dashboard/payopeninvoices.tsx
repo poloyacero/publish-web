@@ -23,7 +23,7 @@ export default function payopeninvoices() {
           <Container  className={styles.ctext}>
             <Row>
              
-                <Col className={styles2.billingcontainer} >
+                <Col className={styles2.dropdownmenucontainer} >
                 <Row className="text-left">
                 <h4 className={styles2.homeHeaderlabel2}>Pay Open Invoices</h4>
                 </Row>

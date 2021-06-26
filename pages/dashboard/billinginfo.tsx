@@ -24,7 +24,7 @@ export default function billinginfo() {
           <Container>
             <Row>
              
-                <Col className={styles2.billingcontainer}>  
+                <Col className={styles2.dropdownmenucontainer}>  
                <br></br>
                <h3 className={styles2.homeHeaderlabel2}>Billing Information</h3>
                <br></br>
