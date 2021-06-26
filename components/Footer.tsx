@@ -41,7 +41,7 @@ const Footer = ({ ...props }: FooterProps) => {
                  Subject
                 </Form.Text> */}
                 {/* <Form.Control type="text" className={styles.input} placeholder="Subject" /> */}
-                <Form.Control className={styles.inputselect} as="select" defaultValue="Subject">
+                <Form.Control className={styles.footerinputselect} as="select" defaultValue="Subject">
                   <option disabled>Subject</option>
                   <optgroup label="General Inquiries">                  
                   <option>Services</option>
