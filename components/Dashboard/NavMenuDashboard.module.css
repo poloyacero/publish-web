@@ -48,3 +48,32 @@
   color: #f8f7f7;
   background-color: #7b6b5b;
 }
+/* --working--- */
+
+.sidebarcol {
+  padding-left: 100px;
+}
+
+.homecontainer {
+  padding-top: 50px;
+  padding-right: 220px;
+  margin-right: 10px;
+  margin-left: auto;
+  text-align: center;
+  color: #7b6b5b;
+}
+
+.homeHeaderlabel {
+  background-color: #faf6f2;
+  width: 736px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 17px;
+}
+.homeheaderlabel2 {
+  background-color: #f0e3d5;
+  width: 736px;
+  height: 50px;
+  padding-top: 9px;
+  padding-left: 10px;
+}
