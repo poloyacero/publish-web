@@ -280,9 +280,9 @@ const Dforms = ({ ...props }: FormProps) => {
           <br/>
           <p className={styles.formlabel}>13 Digit ISBN</p>
           <Form.Group>
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/> 
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
+          <Form.Control  type="text" defaultValue=" "/> 
+          <Form.Control  type="text" defaultValue=" "/>
+          <Form.Control  type="text" defaultValue=" "/>
           </Form.Group>
 
           <br></br><br></br>
