@@ -118,5 +118,30 @@
   color: #fafafa;
   padding: 10px;
 }
-
+.documentscolborder {
+  border-style: solid;
+  border-color: #dbc2a7;
+  border-width: 1px;
+  font-size: 10px;
+  padding-top: 5px;
+}
+.documentsviewpdf {
+  padding: 5px;
+  border-color: #dbc2a7;
+  border-width: thin;
+  font-size: 10px;
+  color: azure;
+  background-color: #7b6b5b;
+  background-blend-mode: lighten;
+}
+.documentsheader {
+  border-style: solid;
+  border-color: #dbc2a7;
+  border-width: thin;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f0e3d5;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
 /* --working--- */
