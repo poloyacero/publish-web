@@ -78,4 +78,25 @@
   padding-top: 5px;
   padding-bottom: 0px;
 }
+.accountsavebutton {
+  border-radius: 1 !important;
+  display: block;
+  width: 100px;
+  height: 48px;
+  background-color: #7b6b5b;
+  border: none;
+  color: #fafafa;
+  padding: 10px;
+}
+
+.billingsavebutton {
+  border-radius: 1 !important;
+  display: block;
+  width: 100px;
+  height: 48px;
+  background-color: #7b6b5b;
+  border: none;
+  color: #fafafa;
+  padding: 10px;
+}
 /* --working--- */
