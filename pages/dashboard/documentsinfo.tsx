@@ -25,7 +25,7 @@ export default function documentsinfo() {
              
                 <Col>
                 <Row className="text-left">
-                <h4 className={styles2.homeheaderlabel2}>Documents</h4>
+                <h4 className={styles2.dropheaderlabel2}>Documents</h4>
                 </Row>
                 <br></br>
                 <Row className="text-center">

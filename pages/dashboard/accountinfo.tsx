@@ -23,7 +23,7 @@ export default function accountinfo() {
             <Row  className={styles.dropdownmenucontainer}>
              
                 <Col>
-                <h3 className={styles.homeheaderlabel2}>Account Information</h3>
+                <h3 className={styles.dropheaderlabel2}>Account Information</h3>
                 <br></br>
                 <Row className="form-group text-right">
               <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput}  type="text" defaultValue=" "/> </Col>
@@ -44,7 +44,7 @@ export default function accountinfo() {
               </Col>
                </Row>
                <br></br>
-               <h3 className={styles.homeheaderlabel2}>Legal Information</h3>
+               <h3 className={styles.dropheaderlabel2}>Legal Information</h3>
                <br></br>
                <Row className="form-group text-right">               
                <Col>
