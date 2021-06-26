@@ -109,6 +109,17 @@
   padding: 10px;
 }
 
+.accountcancelbutton {
+  border-radius: 1 !important;
+  border-color: #7b6b5b;
+  display: block;
+  width: 100px;
+  height: 48px;
+  background-color: #fdfbfa;
+  color: #7b6b5b;
+  padding: 10px;
+}
+
 .billingsavebutton {
   border-radius: 1 !important;
   display: block;
