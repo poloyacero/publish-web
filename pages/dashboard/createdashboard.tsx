@@ -23,8 +23,9 @@ export default function createbook() {
           <Container>
             <Row >
                <Sidebar/>
-                <Col md={6} className={styles2.createcontainer}>
-             <Col >
+                <Col md={6}>
+                  <Row  className={styles2.createcontainer}>
+             <Col>
            
              <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
                   <option disabled>Select Creation</option>                                
@@ -34,6 +35,7 @@ export default function createbook() {
              </Form.Control>
             <DForms/>
              </Col> 
+             </Row>
              </Col>
             </Row>
           </Container>   
