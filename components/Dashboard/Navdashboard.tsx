@@ -20,7 +20,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
         {/* <AiOutlineMenu/> */}
               <Col> 
                          
-              <Navbar className={styles.navbar} expand="lg">
+              <Navbar className={styles.navbardash} expand="lg">
                     <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
