@@ -22,7 +22,7 @@ export default function homedashboard() {
         <Container fluid>
           <Container>
             <Row className={styles2.dashcontainer} >
-               {/* <Sidebar/> */}
+               <Sidebar/>
                 <Col>
              <Col className={styles2.homecontainer}>
              <h2 className={styles.ctext}>Welcome to the Publishing!</h2>
