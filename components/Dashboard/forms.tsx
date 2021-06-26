@@ -205,7 +205,7 @@ const Dforms = ({ ...props }: FormProps) => {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Interior Color</Col> 
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+          <Form.Control as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -217,7 +217,7 @@ const Dforms = ({ ...props }: FormProps) => {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Paper Type</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+          <Form.Control as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -229,7 +229,7 @@ const Dforms = ({ ...props }: FormProps) => {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Binding Type</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+          <Form.Control  as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -241,7 +241,7 @@ const Dforms = ({ ...props }: FormProps) => {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Laminate</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+          <Form.Control  as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -253,7 +253,7 @@ const Dforms = ({ ...props }: FormProps) => {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Page Count</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+          <Form.Control  as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -264,7 +264,7 @@ const Dforms = ({ ...props }: FormProps) => {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Quantity</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+          <Form.Control  as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
