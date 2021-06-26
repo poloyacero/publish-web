@@ -27,7 +27,7 @@ export default function starterpkg() {
                 <Col md={6}>
              <Col className={styles2.packagesdashcontainer}>
                         
-                <h3 className={styles2.homeheaderlabel2}>Starter Package  € 900</h3>
+                <h3 className={styles2.srvcsheaderlabel}>Starter Package  € 900</h3>
                 <br/>
          
             <Row>

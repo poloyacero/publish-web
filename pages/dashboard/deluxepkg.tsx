@@ -27,7 +27,7 @@ export default function deluxepkg() {
                 <Col md={6}>
              <Col className={styles2.packagesdashcontainer}>
                         
-                <h3 className={styles2.homeheaderlabel2}>Deluxe Package  € 1500</h3>
+                <h3 className={styles2.srvcsheaderlabel}>Deluxe Package  € 1500</h3>
                 <br/>
          
             <Row>
