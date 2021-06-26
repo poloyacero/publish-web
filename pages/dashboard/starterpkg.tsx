@@ -28,11 +28,11 @@ export default function starterpkg() {
                 <Col md={6}>
              <Col className={styles2.createcontainer}>
                         
-                <h3 className={styles2.homeHeaderlabel2}>Starter Package  € 900</h3>
+                <h3 className={styles2.homeheaderlabel2}>Starter Package  € 900</h3>
                 <br/>
          
             <Row>
-               <Col className={styles2.pkgdetails}>
+               <Col>
                  <Row>
               <Col md={5}><b>Edit and Design</b><br/>
                     Paperback Format<br/>

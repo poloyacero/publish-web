@@ -13,7 +13,7 @@ export default function homedashboard() {
     return (
         <div className={styles.container}>
       <Head>
-        <title>Home Dashboard</title>
+        <title>Home Dashboard 1</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
