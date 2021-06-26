@@ -94,7 +94,7 @@
   color: #7b6b5b;
 }
 
-.input {
+.footerinput {
   outline: 0;
   border-width: 0 0 1.5px;
   border-color: #7b6b5b;
@@ -106,7 +106,7 @@
   -webkit-border-radius: 0;
   font-size: 12px;
 }
-.inputselect {
+.footerinputselect {
   outline: 0;
   border-width: 0 0 1.5px;
   border-color: #7b6b5b;
@@ -118,13 +118,13 @@
   color: #7b6b5b;
   font-size: 12px;
 }
-.inputselect:focus {
+.footerinputselect:focus {
   outline: 0;
   border-width: 0 0 1.5px;
   border-color: #e7d2bc;
   background: #f7f6f5;
 }
-.input:focus {
+.footerinput:focus {
   outline: 0;
   border-width: 0 0 1.5px;
   border-color: #e7d2bc;
@@ -150,7 +150,7 @@
   flex-direction: row;
 }
 @media screen and (max-width: 1030px) {
-  .input {
+  .footerinput {
     outline: 0;
     border-width: 0 0 1.5px;
     border-color: #7b6b5b;
@@ -163,7 +163,7 @@
     font-size: 12px;
   }
 
-  .inputselect {
+  .footerinputselect {
     outline: 0;
     border-width: 0 0 1.5px;
     border-color: #7b6b5b;

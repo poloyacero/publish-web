@@ -20,27 +20,27 @@ const Footer = ({ ...props }: FooterProps) => {
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   First Name
                 </Form.Text> */}
-                <Form.Control type="text" className={styles.input} placeholder="First Name" />
+                <Form.Control type="text" className={styles.footerinput} placeholder="First Name" />
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Last Name
                 </Form.Text> */}
-                <Form.Control type="text" className={styles.input} placeholder="Last Name"/>
+                <Form.Control type="text" className={styles.footerinput} placeholder="Last Name"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Email
                 </Form.Text> */}
-                <Form.Control type="email" className={styles.input} placeholder="Email"/>
+                <Form.Control type="email" className={styles.footerinput} placeholder="Email"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Phone
                 </Form.Text> */}
-                <Form.Control type="tel" className={styles.input} placeholder="Phone"/>
+                <Form.Control type="tel" className={styles.footerinput} placeholder="Phone"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                  Subject
                 </Form.Text> */}
-                {/* <Form.Control type="text" className={styles.input} placeholder="Subject" /> */}
+                {/* <Form.Control type="text" className={styles.footerinput} placeholder="Subject" /> */}
                 <Form.Control className={styles.footerinputselect} as="select" defaultValue="Subject">
                   <option disabled>Subject</option>
                   <optgroup label="General Inquiries">                  
