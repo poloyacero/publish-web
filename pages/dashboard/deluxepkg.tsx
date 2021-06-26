@@ -6,7 +6,6 @@ import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/NavMenuDashboard.module.css'
 import Forms from '../../components/Dashboard/forms'
-import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,7 +25,7 @@ export default function deluxepkg() {
             <Row>
                <Sidebar/>
                 <Col md={6}>
-             <Col className={styles2.createcontainer}>
+             <Col className={styles2.packagesdashcontainer}>
                         
                 <h3 className={styles2.homeheaderlabel2}>Deluxe Package  € 1500</h3>
                 <br/>

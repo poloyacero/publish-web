@@ -86,6 +86,19 @@
   text-align: left;
   color: #7b6b5b;
 }
+
+.packagesdashcontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  margin-right: 0px;
+  margin-left: 0px;
+  text-align: left;
+  color: #7b6b5b;
+}
+.pkgdetails {
+  font-size: 12px;
+}
 .dropdownmenucontainer {
   display: flex;
   flex-direction: column;
