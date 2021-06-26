@@ -306,7 +306,7 @@ export default function compensationinfo() {
                               <br/> <br/> <br/> 
               
               <Row className="form-group text-right">
-            <Col md={2}><Button className={styles2.accountsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.accountcancelbutton}>Cancel</Button></Col><Col md={6}></Col>
+            <Col md={2}><Button className={styles2.accountsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.accountsavebutton}>Cancel</Button></Col><Col md={6}></Col>
             </Row>
               <br/> <br/> <br/>
                </Form.Group>
