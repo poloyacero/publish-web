@@ -121,3 +121,10 @@
   font-size: 10px;
   text-align: left;
 }
+.pkgdetails {
+  font-size: 12px;
+}
+
+.formlabel {
+  font-weight: bold;
+}
