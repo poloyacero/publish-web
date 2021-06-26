@@ -15,11 +15,11 @@ const Dforms = ({ ...props }: FormProps) => {
     <Form.Group as={Row}>
               <Col sm={10}>
                 <br/>
-                <h3>EDITING</h3>
+                <h3 className={styles.formHeaderlabel}>EDITING</h3>
                 <br/>
               </Col>
          <Col sm={10}>
-      <p>Is your manuscript ready?</p>
+      <p className={styles.formlabel}>Is your manuscript ready?</p>
         <Form.Check
           type="radio"
           label="Yes"
@@ -36,7 +36,7 @@ const Dforms = ({ ...props }: FormProps) => {
       </Col>
       <Col sm={10}>
          <br></br>
-      <p>Is your manuscript professionally edited?</p>
+      <p className={styles.formlabel}>Is your manuscript professionally edited?</p>
         <Form.Check
           type="radio"
           label="Yes"
@@ -55,30 +55,30 @@ const Dforms = ({ ...props }: FormProps) => {
     <Form.Group>
     
     <div className="input-group mb-3">
-  <input type="file" id="inputGroupFile02"/>
-  <label htmlFor="inputGroupFile02">Upload Manuscript</label>
+  <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
+  <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Manuscript</label>
    </div>
   
   </Form.Group>
 
   <Form.Group>
     <Col><br/><br/></Col>
-    <p>Ebook submission</p>
+    <p className={styles.formlabel}>Ebook submission</p>
     <div className="input-group mb-3">
-      <input type="file"  id="inputGroupFile02"/>
-      <label  htmlFor="inputGroupFile02">Upload Ebook Interior</label>
+      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
+      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Interior</label>
    </div>
   </Form.Group>
   <Form.Group>    
     <div className="input-group mb-3">
-      <input type="file" id="inputGroupFile02"/>
-      <label htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
+      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
+      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
    </div>
   </Form.Group>
   <Form.Group>    
        <Col sm={10}>
          <br></br>
-      <p>Epub Conversion</p>
+      <p className={styles.formlabel}>Epub Conversion</p>
         <Form.Check
           type="radio"
           label="Yes"
@@ -96,7 +96,7 @@ const Dforms = ({ ...props }: FormProps) => {
         <Form.Group as={Row}>
             <Col sm={10}>
             <br></br><br></br>
-      <p>Get Editing Services</p>
+      <p className={styles.formlabel}>Get Editing Services</p>
               <Form.Check
                 type="checkbox"
                 label="Editorial Assessment" 
@@ -142,11 +142,11 @@ const Dforms = ({ ...props }: FormProps) => {
             </Col>
           </Form.Group>
           <br></br><br></br>
-          <h3>DESIGN</h3>
+          <h3 className={styles.homeHeaderlabel}>DESIGN</h3>
           <Form.Group>    
        <Col sm={10}>
          <br></br>
-      <p>Do you have a Book Design?</p>
+      <p className={styles.formlabel}>Do you have a Book Design?</p>
         <Form.Check
           type="radio"
           label="Yes"
@@ -163,14 +163,14 @@ const Dforms = ({ ...props }: FormProps) => {
         </Form.Group>
         <Form.Group>    
     <div className="input-group mb-3">
-      <input type="file" id="inputGroupFile02"/>
-      <label htmlFor="inputGroupFile02">Upload File</label>
+      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
+      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload File</label>
    </div>
   </Form.Group>
   <Form.Group as={Row}>
             <Col sm={10}>
             <br></br><br></br>
-      <p>Get a Book Designer</p>
+      <p className={styles.formlabel}>Get a Book Designer</p>
               <Form.Check
                 type="checkbox"
                 label="Illustrations" 
@@ -190,10 +190,10 @@ const Dforms = ({ ...props }: FormProps) => {
                
               />  
                <br></br><br></br>
-          <Row>    
+          <Row className={"form-group "+styleIn.textalignright}>    
           <Col md={4}>Trim Size</Col>
           <Col md={8}>
-          <Form.Control as="select" defaultValue=" ">
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -202,10 +202,10 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
           
-          <Row>  
+          <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Interior Color</Col> 
           <Col md={8}>
-          <Form.Control as="select" defaultValue=" ">
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -214,10 +214,10 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row>  
+          <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Paper Type</Col>
           <Col md={8}>
-          <Form.Control as="select" defaultValue=" ">
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -226,10 +226,10 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row>  
+          <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Binding Type</Col>
           <Col md={8}>
-          <Form.Control  as="select" defaultValue=" ">
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -238,10 +238,10 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row>  
+          <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Laminate</Col>
           <Col md={8}>
-          <Form.Control  as="select" defaultValue=" ">
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -250,10 +250,10 @@ const Dforms = ({ ...props }: FormProps) => {
           </Col>
           </Row>
 
-          <Row>  
+          <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Page Count</Col>
           <Col md={8}>
-          <Form.Control  as="select" defaultValue=" ">
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -261,10 +261,10 @@ const Dforms = ({ ...props }: FormProps) => {
           </Form.Control>
           </Col>
           </Row>         
-          <Row>  
+          <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={4}>Quantity</Col>
           <Col md={8}>
-          <Form.Control  as="select" defaultValue=" ">
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
               <option>Print Book and Ebook € 350</option>
               <option>Print Book Only € 300</option>                  
@@ -276,17 +276,17 @@ const Dforms = ({ ...props }: FormProps) => {
            
           </Form.Group>
           <br></br><br></br>
-          <h3>DISTRIBUTION</h3>
+          <h3 className={styles.homeHeaderlabel}>DISTRIBUTION</h3>
           <br/>
-          <p>13 Digit ISBN</p>
+          <p className={styles.formlabel}>13 Digit ISBN</p>
           <Form.Group>
-          <Form.Control  type="text" defaultValue=" "/> 
-          <Form.Control  type="text" defaultValue=" "/>
-          <Form.Control  type="text" defaultValue=" "/>
+          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/> 
+          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
+          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
           </Form.Group>
 
           <br></br><br></br>
-      <p>Get Distribution Services</p>
+      <p className={styles.formlabel}>Get Distribution Services</p>
               <Form.Check
                 type="checkbox"
                 label="ISBN" 
@@ -313,10 +313,10 @@ const Dforms = ({ ...props }: FormProps) => {
               />  
               
               <br></br><br></br>
-          <h3>MARKETING</h3>
+          <h3 className={styles.homeHeaderlabel}>MARKETING</h3>
           <br></br>     
 
-      <p>Get Marketing Services</p>
+      <p className={styles.formlabel}>Get Marketing Services</p>
               <Form.Check
                 type="checkbox"
                 label="Author Website" 
@@ -356,7 +356,7 @@ const Dforms = ({ ...props }: FormProps) => {
 
               <Form.Group>
                 <br/> <br/> <br/> 
-              <Button>Submit Request</Button>
+              <Button className={styles.submitbutton}>Submit Request</Button>
               <br/> <br/> <br/>
               </Form.Group>
               </>
