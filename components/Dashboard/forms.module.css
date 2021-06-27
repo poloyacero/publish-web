@@ -1,5 +1,9 @@
 .formlabel {
   font-weight: bold;
+  padding-left: 20px;
+}
+.formindent {
+  padding-left: 20px;
 }
 .submitbuttondashboard {
   border-radius: 1 !important;
