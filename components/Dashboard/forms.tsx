@@ -8,30 +8,35 @@ export default function forms() {
   return (
     <>
     <Form.Group as={Row}>
-              <Col sm={10}>
-                <br/>
-                <h3 className={styles.formheaderlabel}>EDITING</h3>
-                <br/>
-              </Col>
-         <Col sm={10}>
-      <p className={styles.formlabel}>Is your manuscript ready?</p>
-        <Form.Check
-          type="radio"
-          label="Yes"
-          name="manuscriptready"
-          id="manuyes"
-        />
-        <Form.Check
-          type="radio"
-          label="No"
-          name="manuscriptready"
-          id="manuno"
-        />
-       
-      </Col>
+          <Col sm={10}>
+            <br/>
+            <h3 className={styles.formheaderlabel}>EDITING</h3>
+            <br/>
+          </Col>
+         
+         <Col sm={10}>     
+          <p className={styles.formlabel}>Is your manuscript ready?</p>
+           <Col className={styles.formindent}>
+            <Form.Check
+              type="radio"
+              label="Yes"
+              name="manuscriptready"
+              id="manuyes"
+            />
+            <Form.Check
+              type="radio"
+              label="No"
+              name="manuscriptready"
+              id="manuno"
+            />
+            </Col>       
+          </Col>
+      
+      
       <Col sm={10}>
          <br></br>
-      <p className={styles.formlabel}>Is your manuscript professionally edited?</p>
+        <p className={styles.formlabel}>Is your manuscript professionally edited?</p>
+        <Col className={styles.formindent}>
         <Form.Check
           type="radio"
           label="Yes"
@@ -43,37 +48,43 @@ export default function forms() {
           label="No"
           name="profmanu"
           id="profmanuno"
-        />
-       
-      </Col>
-    </Form.Group>
-    <Form.Group>
+        />  
+          <Form.Group>
+            <br/>
+            <div className="input-group mb-3">
+          <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
+          <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Manuscript</label>
+          </div>  
+          </Form.Group>
+        </Col>     
+       </Col>
+     </Form.Group>
     
-    <div className="input-group mb-3">
-  <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-  <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Manuscript</label>
-   </div>
-  
-  </Form.Group>
+    
 
-  <Form.Group>
-    <Col><br/><br/></Col>
+  <Form.Group as={Row}>
+    
+    <Col sm={10}>
+      <br/>
     <p className={styles.formlabel}>Ebook submission</p>
+    <Col className={styles.formindent}>
     <div className="input-group mb-3">
       <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
       <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Interior</label>
-   </div>
-  </Form.Group>
-  <Form.Group>    
-    <div className="input-group mb-3">
+   </div> 
+      <div className="input-group mb-3">
       <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
       <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
    </div>
+   </Col>
+    </Col>
   </Form.Group>
-  <Form.Group>    
+   
+  <Form.Group as={Row}>    
        <Col sm={10}>
          <br></br>
       <p className={styles.formlabel}>Epub Conversion</p>
+      <Col className={styles.formindent}>
         <Form.Check
           type="radio"
           label="Yes"
@@ -86,12 +97,14 @@ export default function forms() {
           name="epubconversion"
           id="epubno"
         />
-        </Col>
+      </Col>
+      </Col>
         </Form.Group>
         <Form.Group as={Row}>
             <Col sm={10}>
-            <br></br><br></br>
+            <br></br>
       <p className={styles.formlabel}>Get Editing Services</p>
+      <Col className={styles.formindent}>
               <Form.Check
                 type="checkbox"
                 label="Editorial Assessment" 
@@ -133,15 +146,17 @@ export default function forms() {
                 label="Text and Layout Format"
                 name="additonalservices6"               
                 
-              />          
+              />  
+              </Col>        
             </Col>
           </Form.Group>
           <br></br><br></br>
           <h3 className={styles.formheaderlabel}>DESIGN</h3>
-          <Form.Group>    
+      <Form.Group as={Row}>    
        <Col sm={10}>
          <br></br>
       <p className={styles.formlabel}>Do you have a Book Design?</p>
+      <Col className={styles.formindent}>
         <Form.Check
           type="radio"
           label="Yes"
@@ -154,18 +169,22 @@ export default function forms() {
           name="bookdesign"
           id="bookdesignno"
         />
-        </Col>
+           <br/>
+          <Form.Group>    
+        <div className="input-group mb-3">
+          <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
+          <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload File</label>
+        </div>
+         </Form.Group>
+          </Col>
+         </Col>
         </Form.Group>
-        <Form.Group>    
-    <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload File</label>
-   </div>
-  </Form.Group>
-  <Form.Group as={Row}>
+       
+     <Form.Group as={Row}>
             <Col sm={10}>
-            <br></br><br></br>
+            <br></br>
       <p className={styles.formlabel}>Get a Book Designer</p>
+      <Col className={styles.formindent}>
               <Form.Check
                 type="checkbox"
                 label="Illustrations" 
@@ -183,7 +202,8 @@ export default function forms() {
                 label="Book Interior Design"
                 name="bookdesigner"               
                
-              />  
+              /> 
+              </Col> 
                <br></br><br></br>
           <Row className={"form-group "+styleIn.textalignright}>    
           <Col md={4}>Trim Size</Col>
@@ -274,14 +294,16 @@ export default function forms() {
           <h3 className={styles.formheaderlabel}>DISTRIBUTION</h3>
           <br/>
           <p className={styles.formlabel}>13 Digit ISBN</p>
+          <Col className={styles.formindent}>
           <Form.Group>
           <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/> 
           <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
           <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
           </Form.Group>
-
+          </Col>
           <br></br><br></br>
       <p className={styles.formlabel}>Get Distribution Services</p>
+      <Col className={styles.formindent}>
               <Form.Check
                 type="checkbox"
                 label="ISBN" 
@@ -306,12 +328,13 @@ export default function forms() {
                 name="distribution4"               
                
               />  
-              
+              </Col>
               <br></br><br></br>
           <h3 className={styles.formheaderlabel}>MARKETING</h3>
           <br></br>     
 
       <p className={styles.formlabel}>Get Marketing Services</p>
+      <Col className={styles.formindent}>
               <Form.Check
                 type="checkbox"
                 label="Author Website" 
@@ -348,7 +371,7 @@ export default function forms() {
                 name="marketing6"               
                
               />  
-
+              </Col>    
               <Form.Group>
                 <br/> <br/> <br/> 
               <Button className={styles.submitbuttondashboard}>Submit Request</Button>
