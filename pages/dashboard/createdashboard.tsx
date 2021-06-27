@@ -26,14 +26,15 @@ export default function createbook() {
                 <Col md={6}>
                   <Row  className={styles2.createcontainer}>
              <Col>
-           
-             <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
-                  <option disabled>Select Creation</option>                                
-                  <option>Print Book and Ebook € 350</option>
-                  <option>Print Book Only € 300</option>                  
-                  <option>Ebook Only € 250</option>  
-             </Form.Control>
-            <DForms/>
+                 <Col className={styles2.indentselectbox}>
+                    <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
+                          <option disabled>Select Creation</option>                                
+                          <option>Print Book and Ebook € 350</option>
+                          <option>Print Book Only € 300</option>                  
+                          <option>Ebook Only € 250</option>  
+                    </Form.Control>
+                 </Col>
+             <DForms/>
              </Col> 
              </Row>
              </Col>
