@@ -6,6 +6,14 @@
   color: #7b6b5b;
 }
 
+.dropdownreportcontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 30px;
+  color: #7b6b5b;
+}
+
 .documentscolborder {
   border-style: solid;
   border-color: #dbc2a7;
@@ -83,6 +91,13 @@
   padding-top: 10px;
   padding-left: 17px;
 }
+.dropheaderlabelreport {
+  background-color: #faf6f2;
+  width: 736px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 17px;
+}
 .dropheaderlabel2 {
   background-color: #f0e3d5;
   width: 100%;
@@ -90,4 +105,7 @@
   padding-top: 9px;
   padding-left: 10px;
   color: #7b6b5b;
+}
+.indentcheckbox {
+  padding-left: 35px;
 }
