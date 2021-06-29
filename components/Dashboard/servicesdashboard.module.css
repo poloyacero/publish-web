@@ -1,0 +1,37 @@
+.servicescontainer {
+  padding-top: 50px;
+  padding-right: 220px;
+  margin-right: 10px;
+  margin-left: auto;
+  text-align: center;
+  color: #7b6b5b;
+}
+
+.servicesheaderlabel {
+  background-color: #faf6f2;
+  width: 736px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 17px;
+  text-align: left;
+}
+.servicesheaderlabel2 {
+  background-color: #f0e3d5;
+  width: 650px;
+  height: 50px;
+  padding-top: 9px;
+  padding-left: 10px;
+  color: #7b6b5b;
+}
+
+.indentcheckbox {
+  padding-left: 35px;
+  color: #7b6b5b;
+}
+.indentselectbox {
+  padding-left: 20px;
+  color: #7b6b5b;
+}
+.indentbutton {
+  padding-left: 30px;
+}

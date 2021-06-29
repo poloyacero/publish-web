@@ -3,8 +3,7 @@ import Head from 'next/head'
 import NavMenu from '../../components/Nav'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/dashboard.module.css'
+import styles from '../../components/Dashboard/createdashboard.module.css'
 import DForms from '../../components/Dashboard/forms'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form} from 'react-bootstrap'
@@ -18,15 +17,15 @@ export default function createbook() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />  
-      <NavMenuDashboard className={styles.home}/> 
+      <NavMenuDashboard /> 
         <Container fluid>
           <Container>
             <Row >
                <Sidebar/>
                 <Col md={6}>
-                  <Row  className={styles2.createcontainer}>
+                  <Row  className={styles.createcontainer}>
              <Col>
-                 <Col className={styles2.indentselectbox}>
+                 <Col className={styles.indentselectbox}>
                     <Form.Control className={styleIn.inputselect} as="select" defaultValue="Select Creation">
                           <option disabled>Select Creation</option>                                
                           <option>Print Book and Ebook € 350</option>

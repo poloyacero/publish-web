@@ -1,8 +1,8 @@
 .buttoncontainer {
   display: flex;
   flex-direction: row;
-  margin-left: auto;
-  margin-right: 250px;
+  margin-left: 1px;
+  margin-right: 150px;
   height: 100%;
   width: 230px;
   background-color: #faf6f2;
@@ -32,6 +32,11 @@
 }
 
 .buttons:hover {
+  text-decoration: none;
+  color: #f8f7f7;
+  background-color: #7b6b5b;
+}
+.buttons:active {
   text-decoration: none;
   color: #f8f7f7;
   background-color: #7b6b5b;

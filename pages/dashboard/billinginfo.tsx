@@ -313,7 +313,7 @@ export default function billinginfo() {
            <Form.Group>
              <Row className="align-items-center">
             <Col className="form-group" md={3}>Payment Type</Col>
-            <Col className="form-group text-left" md={1}>
+            <Col className="form-group text-right" md={1}>
             <Form.Check
               type="radio"
               label=""
@@ -328,7 +328,7 @@ export default function billinginfo() {
             
             <Row className="align-items-center">
             <Col className="form-group" md={3}> </Col>
-            <Col className="form-group text-left" md={1}>
+            <Col className="form-group text-right" md={1}>
             <Form.Check
               type="radio"
               label=""
@@ -342,7 +342,7 @@ export default function billinginfo() {
             <br/>
             <Row className="align-items-center">
             <Col className="form-group" md={3}> </Col>
-            <Col className="form-group text-left" md={1}>
+            <Col className="form-group text-right" md={1}>
             <Form.Check
               type="radio"
               label=""
@@ -350,14 +350,19 @@ export default function billinginfo() {
               id="paypal"
             /> </Col> <Col md={8} className="text-left"> <Image src="/img/paypal.png" width="80px" height="auto" /></Col>
             </Row>        
+            <br/>  
+            <br/>
+            <br/>
+            <Row className="align-items-right">
+            <Col className="form-group" md={3}><Col className={styles2.savebuttonindent}><Button className={styles2.dashsavebutton}>Submit</Button></Col> </Col>
+            <Col className="form-group text-left" md={1}>
+            </Col> <Col md={8} className="right"> </Col>
+            </Row>        
             <br/>           
       </Form.Group>
                               <br/> <br/> <br/> 
 
-              <Row className="form-group text-right">
-            <Col md={2}><Button className={styles2.dashsavebutton}>Submit</Button></Col> <Col md={2}></Col><Col md={8}></Col>
-            </Row>
-              <br/> <br/> <br/>
+             
               
                </Col>
                </Row>
