@@ -40,3 +40,32 @@
 .indentselectbox {
   padding-left: 20px;
 }
+
+@media screen and (max-width: 1030px) {
+  .homecontainer {
+    padding-top: 50px;
+    padding-right: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    color: #7b6b5b;
+    overflow: hidden;
+  }
+  .homecontainer img {
+    width: 200px;
+  }
+  .homecontainer h2 {
+    font-size: 25px;
+  }
+  .homeheaderlabel2 {
+    background-color: #f0e3d5;
+    width: 100%;
+    height: 50px;
+    padding-top: 12px;
+    padding-left: 1px;
+    font-size: 23px;
+    color: #7b6b5b;
+    text-align: center;
+    font-weight: bold;
+  }
+}
