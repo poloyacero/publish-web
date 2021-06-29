@@ -21,11 +21,11 @@ const Navdashboard = ({ ...props }: DNavProps) => {
               <Col> 
                          
               <Navbar className={styles.navbardash} expand="lg">
-                 <Col md={2} className={styles.navbardropcontainer}>
+                 <Col md={1} className={styles.navbardropcontainer}>
                     <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Name</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/billinginfo">Credit/Debit Cards</NavDropdown.Item>
+                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/billinginfo">Payment Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/payopeninvoices">Pay Open Invoices</NavDropdown.Item>      
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/compensationinfo">Compensation</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/documentsinfo">Documents</NavDropdown.Item>
@@ -33,7 +33,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/#">Logout</NavDropdown.Item>
                     </NavDropdown>    
                     </Col>
-                   <Col md={8}  className={styles.navbarlinkcontainer}>              
+                   <Col md={10}  className={styles.navbarlinkcontainer}>              
                   <Link href="/dashboard/homedashboard"passHref><Nav.Link id={styles.menus} className={styles.navmenu}>Home</Nav.Link></Link>
                   <Link href="/dashboard/titlesdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Titles</Nav.Link></Link>
                   <Link href="/dashboard/reportdashboard" passHref><Nav.Link id={styles.menus}  className={styles.navmenu}>Reports</Nav.Link></Link>

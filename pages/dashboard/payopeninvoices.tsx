@@ -32,7 +32,7 @@ export default function payopeninvoices() {
                   <Col md={2} className={styles2.documentsheader} >Name</Col>
                   <Col md={2} className={styles2.documentsheader}>Job Number</Col>
                   <Col md={2} className={styles2.documentsheader}>Invoice Detail</Col>
-                  <Col md={1} className={styles2.documentsheader}>Total Amount</Col>
+                  <Col md={1} className={styles2.documentsheader}>Total</Col>
                   <Col md={1} className={styles2.documentsheader}>Due Date</Col>
                   <Col md={1} className={styles2.documentsheader}>Pay</Col>
                   <Col md={1} className={styles2.documentsheader}>Paid Date</Col>
@@ -42,13 +42,13 @@ export default function payopeninvoices() {
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}>Gabriel Balbuena</Col>
                   <Col md={2} className={styles2.documentscolborder}>SJN0000000</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>View</Col>
+                  <Col md={1} className={styles2.documentsviewpdf1} ><Col className={styles2.documentsviewpdf}>View</Col></Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Download</Col>
                   <Col md={1} className={styles2.documentscolborder}>€ 1,200.00</Col>
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Pay</Col>
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
-                  <Col md={1} className={styles2.documentscolborder}>Refund Paid</Col>
+                  <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                   <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                  </Row>
                  <Row className="text-center">
@@ -60,7 +60,7 @@ export default function payopeninvoices() {
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Pay</Col>
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
-                  <Col md={1} className={styles2.documentscolborder}>Refund Paid</Col>
+                  <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                   <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                  </Row>
                  <Row className="text-center">
@@ -72,7 +72,7 @@ export default function payopeninvoices() {
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Pay</Col>
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
-                  <Col md={1} className={styles2.documentscolborder}>Refund Paid</Col>
+                  <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                   <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                  </Row>
                  <Row className="text-center">
@@ -84,7 +84,7 @@ export default function payopeninvoices() {
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Pay</Col>
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
-                  <Col md={1} className={styles2.documentscolborder}>Refund Paid</Col>
+                  <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                   <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                  </Row>
                  <Row className="text-center">
@@ -96,7 +96,7 @@ export default function payopeninvoices() {
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Pay</Col>
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
-                  <Col md={1} className={styles2.documentscolborder}>Refund Paid</Col>
+                  <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                   <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                  </Row>
                   <Row className="text-center">
@@ -108,7 +108,7 @@ export default function payopeninvoices() {
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Pay</Col>
                   <Col md={1} className={styles2.documentscolborder}>Sep-10-2021</Col>
-                  <Col md={1} className={styles2.documentscolborder}>Refund Paid</Col>
+                  <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                   <Col md={1} className={styles2.documentscolborder}>Paid</Col>
                  </Row>
                 

@@ -14,7 +14,7 @@ const Footer = ({ ...props }: FooterProps) => {
       <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
         <Row className="justify-content-md-center">
           <Col md={'auto'} className={styles.left}>
-            <h1 className={styles.footerh1}>Let's Create a Book</h1>
+         <Nav.Link href="/pricing"><h1 className={styles.footerh1}>Let's Create a Book</h1></Nav.Link>
             <Form className={styles.form}>
               <Form.Group className={styles.formGroup}>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>

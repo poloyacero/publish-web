@@ -26,10 +26,10 @@ export default function homedashboard() {
                 <Col>
              <Col className={styles2.homecontainer}>
              <h2 className={styles.ctext}>Welcome to the Publishing!</h2>
-             <p><Image src="/img/homepic.png" width="438px" height="auto" /></p>
+             <p><Image src="/img/homepic.png" width="480px" height="auto" /></p>
 
-             <p>How we can help you?<br/>
-             <span style={{fontSize:'20px'}}>+45 2090 1011</span></p>
+             <p style={{fontSize:'18px'}}>How we can help you?<br/>
+             <span style={{fontSize:'28px'}}>+45 2090 1011</span></p>
              </Col> 
              </Col>
             </Row>

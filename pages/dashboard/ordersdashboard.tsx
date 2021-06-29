@@ -30,19 +30,19 @@ export default function ordersdashboard() {
                 <br></br>
                 <Row className="text-center">
                   <Col md={2} className={styles2.documentsheader} >Title</Col>
-                  <Col md={1} className={styles2.documentsheader}>ISBN</Col>
-                  <Col md={2} className={styles2.documentsheader}>Author Name</Col>
+                  <Col md={2} className={styles2.documentsheader}>ISBN</Col>
+                  <Col md={1} className={styles2.documentsheader}>Author</Col>
                   <Col md={2} className={styles2.documentsheader}>Published</Col>
                   <Col md={1} className={styles2.documentsheader}>Quantity</Col>
                   <Col md={2} className={styles2.documentsheader}>Order</Col>
                   <Col md={1} className={styles2.documentsheader}>Status</Col>
-                  <Col md={1} className={styles2.documentsheader}>Submit Order</Col>
+                  <Col md={1} className={styles2.documentsheader}>Submit</Col>
                
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}>The Super Hero</Col>
-                  <Col md={1} className={styles2.documentscolborder}>978-3-16-148410-0</Col>
-                  <Col md={2} className={styles2.documentscolborder}>George Orion</Col>
+                  <Col md={2} className={styles2.documentscolborder}>978-3-16-148410-0</Col>
+                  <Col md={1} className={styles2.documentscolborder}>George O.</Col>
                   <Col md={2} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentscolborder}>10</Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
@@ -52,8 +52,8 @@ export default function ordersdashboard() {
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
+                  <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
@@ -63,8 +63,8 @@ export default function ordersdashboard() {
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
+                  <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
@@ -74,8 +74,8 @@ export default function ordersdashboard() {
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
+                  <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
