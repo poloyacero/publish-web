@@ -1,0 +1,14 @@
+.createcontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  text-align: left;
+  color: #7b6b5b;
+}
+
+.indentcheckbox {
+  padding-left: 35px;
+}
+.indentselectbox {
+  padding-left: 20px;
+}

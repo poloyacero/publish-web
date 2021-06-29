@@ -3,8 +3,7 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/dashboard.module.css'
+import styles from '../../components/Dashboard/servicesdashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
@@ -19,21 +18,21 @@ export default function servicesdashboard() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard className={styles.home}/> 
+      <NavMenuDashboard/> 
    
         <Container fluid>
           <Container>
-            <Row className={styles.ctext} >
+            <Row>
                <Sidebar/>
              <Col md={6}>
                
                <Row>
-               <Col className={styles2.createcontainer}>             
-                <h4 className={styles2.homeheaderlabel}>Editing</h4>                        
+               <Col className={styles.servicescontainer}>             
+                <h4 className={styles.servicesheaderlabel}>Editing</h4>                        
                </Col>      
                </Row>
                <Row>
-                <Col className={styles2.indentcheckbox}>
+                <Col className={styles.indentcheckbox}>
                 <br/>
                <Form.Check
               type="checkbox"
@@ -87,12 +86,12 @@ export default function servicesdashboard() {
                 </Row>
 
                 <Row>
-               <Col className={styles2.createcontainer}>             
-                <h4 className={styles2.homeheaderlabel}>Design</h4>                        
+               <Col className={styles.servicescontainer}>             
+                <h4 className={styles.servicesheaderlabel}>Design</h4>                        
                </Col>      
                </Row>
                <Row>
-                <Col className={styles2.indentcheckbox}>
+                <Col className={styles.indentcheckbox}>
                 <br/>
                <Form.Check
               type="checkbox"
@@ -122,12 +121,12 @@ export default function servicesdashboard() {
                 </Col> 
                 </Row>
                 <Row>
-               <Col className={styles2.createcontainer}>             
-                <h4 className={styles2.homeheaderlabel}>Distribution</h4>                        
+               <Col className={styles.servicescontainer}>             
+                <h4 className={styles.servicesheaderlabel}>Distribution</h4>                        
                </Col>      
                </Row>
                <Row>
-                <Col className={styles2.indentcheckbox}>
+                <Col className={styles.indentcheckbox}>
                 <br/>
                <Form.Check
               type="checkbox"
@@ -158,12 +157,12 @@ export default function servicesdashboard() {
                 </Row>
 
                 <Row>
-               <Col className={styles2.createcontainer}>             
-                <h4 className={styles2.homeheaderlabel}>Marketing</h4>                        
+               <Col className={styles.servicescontainer}>             
+                <h4 className={styles.servicesheaderlabel}>Marketing</h4>                        
                </Col>      
                </Row>
                <Row>
-                <Col className={styles2.indentcheckbox}>
+                <Col className={styles.indentcheckbox}>
                 <br/>
                <Form.Check
               type="checkbox"
@@ -212,7 +211,7 @@ export default function servicesdashboard() {
                 <br/> <br/> <br/>  <br/> <br/> <br/> 
 
 <Row className="form-group text-right">
-<Col md={4}><Button className={styleIn.commonbutton}>Submit Request</Button></Col> <Col md={3}></Col><Col md={6}></Col>
+<Col md={5} className={styles.indentbutton}><Button className={styleIn.commonbutton}>Submit Request</Button></Col> <Col md={3}></Col><Col md={5}></Col>
 </Row>
 <br/> <br/> <br/>
               </Col>  

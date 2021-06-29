@@ -1,0 +1,44 @@
+.packagescontainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  text-align: left;
+  color: #7b6b5b;
+}
+
+.packagesheaderlabel {
+  background-color: #faf6f2;
+  width: 736px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 17px;
+  text-align: left;
+}
+.packagesheaderlabel2 {
+  background-color: #f0e3d5;
+  width: 650px;
+  height: 50px;
+  padding-top: 9px;
+  padding-left: 10px;
+  color: #7b6b5b;
+}
+
+.pkgdetails {
+  font-size: 11px;
+}
+.pkglink {
+  cursor: pointer;
+  text-decoration: none;
+  color: #7b6b5b;
+}
+.pkglink:link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #7b6b5b;
+}
+
+.pkglink:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #271a0d;
+}

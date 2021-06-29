@@ -4,9 +4,8 @@ import Link from "next/link"
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/dashboard.module.css'
-import { Col, Container, Row} from 'react-bootstrap'
+import styles from '../../components/Dashboard/packagesdashboard.module.css'
+import { Col, Container, Row,Nav} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 
 
@@ -26,18 +25,18 @@ export default function dashpackage() {
                <Sidebar/>
              <Col md={6}>
              
-              <Col className={styles2.homecontainer+" "+styles.serviceslink}>
+              <Col className={styles.packagescontainer}>
               
-              <h4 className={styles2.homeheaderlabel}><Link href="/dashboard/starterpkg" passHref>Starter</Link></h4>               
+              <h4 className={styles.packagesheaderlabel}><Nav.Link className={styles.pkglink} href="/dashboard/starterpkg">Starter</Nav.Link></h4>               
              
              
-              <h4 className={styles2.homeheaderlabel}> <Link href="/dashboard/deluxepkg" passHref>Deluxe</Link></h4>               
+              <h4 className={styles.packagesheaderlabel}> <Nav.Link className={styles.pkglink}  href="/dashboard/deluxepkg">Deluxe</Nav.Link></h4>               
           
               
-              <h4 className={styles2.homeheaderlabel}><Link href="/dashboard/propkg" passHref>Pro</Link></h4>
+              <h4 className={styles.packagesheaderlabel}><Nav.Link className={styles.pkglink}  href="/dashboard/propkg">Pro</Nav.Link></h4>
               
               
-              <h4 className={styles2.homeheaderlabel}><Link href="/dashboard/elitepkg" passHref>Elite</Link></h4>                
+              <h4 className={styles.packagesheaderlabel}><Nav.Link className={styles.pkglink}  href="/dashboard/elitepkg">Elite</Nav.Link></h4>                
              
              </Col>      
               </Col>

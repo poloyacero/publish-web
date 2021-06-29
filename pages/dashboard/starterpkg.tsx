@@ -3,8 +3,7 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../styles/Home.module.css'
-import styles2 from '../../components/Dashboard/dashboard.module.css'
+import styles from '../../components/Dashboard/packagesdashboard.module.css'
 import Forms from '../../components/Dashboard/forms'
 import { Col, Container, Row } from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
@@ -18,25 +17,25 @@ export default function starterpkg() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <NavMenuDashboard className={styles.home}/> 
+      <NavMenuDashboard/> 
    
         <Container fluid>
           <Container>
             <Row>
                <Sidebar/>
-                <Col md={6}>
-             <Col className={styles2.createcontainer}>
+                <Col md={8}>
+             <Col className={styles.packagescontainer}>
                         
-                <h3 className={styles2.homeheaderlabel2}>Starter Package  € 900</h3>
+                <h3 className={styles.packagesheaderlabel2}>Starter Package  € 900</h3>
                 <br/>
          
             <Row>
-               <Col className={styles2.pkgdetails}>
+               <Col className={styles.pkgdetails}>
                  <Row>
-              <Col md={5}><b>Edit and Design</b><br/>
+              <Col md={4}><b>Edit and Design</b><br/>
                     Paperback Format<br/>
                     E-Book Format<br/>
-                    Standard Text and Layout Formatting<br/>
+                    Standard Text & Layout Formatting<br/>
                     1 Round Layout Revisions<br/>
                     </Col>
                     <Col md={4}>
