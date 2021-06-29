@@ -10,3 +10,37 @@
   color: #ffffff;
   font-size: 18px;
 }
+
+.navbarlinkcontainer {
+  display: flex;
+  padding-left: 1px;
+}
+
+.navbardropcontainer {
+  display: flex;
+  padding-left: 1px;
+}
+
+@media screen and (max-width: 1030px) {
+  .navbardash {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    color: #f0e3d5;
+  }
+  #menus {
+    color: #ffffff;
+    font-size: 17px;
+  }
+  .navbarlinkcontainer {
+    padding-left: 1px;
+    flex-wrap: wrap;
+    width: 360px;
+  }
+
+  .navbardropcontainer {
+    padding-left: 1px;
+    width: 360px;
+  }
+}

@@ -40,3 +40,17 @@
 .sidebarcol {
   padding-left: 100px;
 }
+
+@media screen and (max-width: 1030px) {
+  .buttoncontainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-right: 0px;
+    background-color: #faf6f2;
+  }
+  .sidebarcol {
+    padding-right: 60px;
+    padding-left: 10px;
+  }
+}

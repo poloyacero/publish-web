@@ -109,3 +109,13 @@
 .indentcheckbox {
   padding-left: 35px;
 }
+
+@media screen and (max-width: 1030px) {
+  .dropdownmenucontainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-left: 5px;
+    color: #7b6b5b;
+  }
+}

@@ -90,19 +90,20 @@ const Footer = ({ ...props }: FooterProps) => {
         <Row><Col><br/><br/></Col></Row>
       
         <Row className="justify-content-md-center">
-             <Col><Row className={styles.center}>
-                <Col className={styles.footerlink} ><Link href="/about">About</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/contact">Contact</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/privacy-policy">Privacy</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/terms-of-use">Terms</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/services">Services</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/add-on">Add on</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/packages">Packages</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/distribution">Distribution</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/illustration-services">Illustrations</Link></Col>
-                </Row>
-                </Col>
-               </Row>
+             <Col>
+                  <Row className={styles.center}>
+                  <Col className={styles.footerlink} ><Link href="/about">About</Link></Col>
+                  <Col className={styles.footerlink} ><Link href="/contact">Contact</Link></Col>
+                  <Col className={styles.footerlink} ><Link href="/privacy-policy">Privacy</Link></Col>
+                  <Col className={styles.footerlink} ><Link href="/terms-of-use">Terms</Link></Col>
+                  <Col className={styles.footerlink} ><Link href="/services">Services</Link></Col>
+                  <Col className={styles.footerlink} ><Link href="/distribution">Distribution</Link></Col>
+                  <Col className={styles.footerlink} ><Link href="/packages">Packages</Link></Col>
+                  <Col className={styles.footerlink} ><Link href="/add-on">Add on</Link></Col>                  
+                  <Col className={styles.footerlink} ><Link href="/illustration-services">Illustrations</Link></Col>
+                  </Row>
+             </Col>
+        </Row>
                <Row><Col><br/><br/></Col></Row>
               <Row className="justify-content-md-center">
                 <Col>

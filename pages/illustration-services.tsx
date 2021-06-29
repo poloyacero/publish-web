@@ -302,7 +302,7 @@ export default function IllustrationServices() {
               <Col md={9}>
                 <Row>
                     <Col className={styles.imgpadding} md={4}>
-                    <span ><Image src="/img/services/Layer79.png" width="250px" height="auto"/></span>
+                    <span ><Image src="/img/services/Layer79new.png" width="250px" height="auto"/></span>
                     </Col>
                     <Col  className={styles.imgpadding} md={4}>
                     <Image src="/img/services/Layer77.png" width="250px" height="auto" />

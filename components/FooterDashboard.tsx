@@ -26,9 +26,9 @@ const FooterDashboard = ({ ...props }: FooterPropsdash) => {
                 <Col className={styles.footerlink} ><Link href="/privacy-policy">Privacy</Link></Col>
                 <Col className={styles.footerlink} ><Link href="/terms-of-use">Terms</Link></Col>
                 <Col className={styles.footerlink} ><Link href="/services">Services</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/add-on">Add on</Link></Col>
-                <Col className={styles.footerlink} ><Link href="/packages">Packages</Link></Col>
                 <Col className={styles.footerlink} ><Link href="/distribution">Distribution</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/packages">Packages</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/add-on">Add on</Link></Col>                
                 <Col className={styles.footerlink} ><Link href="/illustration-services">Illustrations</Link></Col>
                 </Row>
                 </Col>
