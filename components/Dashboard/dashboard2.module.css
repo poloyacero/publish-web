@@ -18,11 +18,14 @@
   border-style: solid;
   border-color: #dbc2a7;
   border-width: 1px;
-  font-size: 10px;
+  font-size: 9px;
   padding-top: 5px;
 }
 .documentsviewpdf {
-  padding: 5px;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
   border-color: #dbc2a7;
   border-width: thin;
   font-size: 10px;
@@ -30,11 +33,18 @@
   background-color: #7b6b5b;
   background-blend-mode: lighten;
 }
+.documentsviewpdf1 {
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+  background-color: #dbc2a7;
+}
 .documentsheader {
   border-style: solid;
   border-color: #dbc2a7;
   border-width: thin;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   background-color: #f0e3d5;
   padding-top: 5px;
@@ -108,6 +118,9 @@
 }
 .indentcheckbox {
   padding-left: 35px;
+}
+.accountnotes2 {
+  font-size: 12px;
 }
 
 @media screen and (max-width: 1030px) {

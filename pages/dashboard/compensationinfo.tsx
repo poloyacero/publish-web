@@ -301,7 +301,7 @@ export default function compensationinfo() {
             <Col className="form-group" md={3}>Swift Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
             <Col className="form-group" md={3}>IBAN Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
             
-            <Col md={3}></Col><Col className="text-left" md={9}><span className={styles2.accountnotes2}>Request for remitance advice only. </span></Col>
+            <Col md={3}></Col><Col className="text-left" md={9}><span className={styles2.accountnotes2}>Request for remittance advice only. </span></Col>
             <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
                               <br/> <br/> <br/> 
               

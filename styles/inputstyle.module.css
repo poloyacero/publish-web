@@ -34,12 +34,13 @@
   border-color: #e7d2bc;
   background: #fdfdfc;
   padding-top: 15px;
+  color: #7b6b5b;
 }
 .inputselect2 {
   outline: 0;
   border-width: 1 1 1.5px;
   margin: 0%;
-  padding: 0;
+  padding-left: 15px;
   height: 38px;
   width: 360px;
   border-radius: 0;
