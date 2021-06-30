@@ -45,10 +45,10 @@ export default function ordersdashboard() {
                   <Col md={1} className={styles2.documentscolborder}>George O.</Col>
                   <Col md={2} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={1} className={styles2.documentscolborder}>10</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Cancel</Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Add</Col></Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Cancel</Col></Col>
                   <Col md={1} className={styles2.documentscolborder}>Ordered</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Submit Order</Col>                  
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Submit Order</Col></Col>                  
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
@@ -56,10 +56,10 @@ export default function ordersdashboard() {
                   <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Cancel</Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Add</Col></Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Cancel</Col></Col>
                   <Col md={1} className={styles2.documentscolborder}>Cancelled</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Submit Order</Col>                  
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Submit Order</Col></Col>                  
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
@@ -67,10 +67,10 @@ export default function ordersdashboard() {
                   <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Cancel</Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Add</Col></Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Cancel</Col></Col>
                   <Col md={1} className={styles2.documentscolborder}>Pending</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Submit Order</Col>                  
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Submit Order</Col></Col>                  
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
@@ -78,10 +78,10 @@ export default function ordersdashboard() {
                   <Col md={1} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={1} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Add</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Cancel</Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Add</Col></Col>
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Cancel</Col></Col>
                   <Col md={1} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Submit Order</Col>                  
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Submit Order</Col></Col>                  
                  </Row>
                  <br></br><br></br>
                  <Row className="text-left">

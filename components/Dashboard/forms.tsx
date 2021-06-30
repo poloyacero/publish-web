@@ -33,7 +33,7 @@ export default function forms() {
           </Col>
       
       
-      <Col sm={10}>
+      <Col sm={12}>
          <br></br>
         <p className={styles.formlabel}>Is your manuscript professionally edited?</p>
         <Col className={styles.formindent}>
@@ -64,7 +64,7 @@ export default function forms() {
 
   <Form.Group as={Row}>
     
-    <Col sm={10}>
+    <Col sm={12}>
       <br/>
     <p className={styles.formlabel}>Ebook submission</p>
     <Col className={styles.formindent}>
@@ -81,7 +81,7 @@ export default function forms() {
   </Form.Group>
    
   <Form.Group as={Row}>    
-       <Col sm={10}>
+       <Col sm={12}>
          <br></br>
       <p className={styles.formlabel}>Epub Conversion</p>
       <Col className={styles.formindent}>
@@ -153,7 +153,7 @@ export default function forms() {
           <br></br><br></br>
           <h3 className={styles.formheaderlabel}>DESIGN</h3>
       <Form.Group as={Row}>    
-       <Col sm={10}>
+       <Col sm={12}>
          <br></br>
       <p className={styles.formlabel}>Do you have a Book Design?</p>
       <Col className={styles.formindent}>
@@ -371,12 +371,11 @@ export default function forms() {
                 name="marketing6"               
                
               />  
-              </Col>    
-              <Form.Group>
-                <br/> <br/> <br/> 
+               <br/> <br/> <br/> 
               <Button className={styles.submitbuttondashboard}>Submit Request</Button>
               <br/> <br/> <br/>
-              </Form.Group>
+              </Col>    
+              
               </>
   )
 }
