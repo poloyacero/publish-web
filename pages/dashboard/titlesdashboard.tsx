@@ -44,7 +44,7 @@ export default function titlesdashboard() {
                   <Col md={3} className={styles2.documentscolborder}>6x9" (254x203mm)Paperback</Col>
                   <Col md={2} className={styles2.documentscolborder}>Sep-10-2021</Col>
                   <Col md={2} className={styles2.documentscolborder}>Dec-10-2021</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Done</Col>                                                   
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Done</Col></Col>                                                   
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
@@ -52,7 +52,7 @@ export default function titlesdashboard() {
                   <Col md={3} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Active</Col>                                                   
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Active</Col></Col>                                                   
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
@@ -60,7 +60,7 @@ export default function titlesdashboard() {
                   <Col md={3} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}>1</Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Refund</Col>                                                   
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Refund</Col></Col>                                                   
                  </Row>
                  <Row className="text-center">
                   <Col md={2} className={styles2.documentscolborder}></Col>
@@ -68,7 +68,7 @@ export default function titlesdashboard() {
                   <Col md={3} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
                   <Col md={2} className={styles2.documentscolborder}></Col>
-                  <Col md={1} className={styles2.documentsviewpdf}>Hold</Col>                                                   
+                  <Col md={1} className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Hold</Col></Col>                                                   
                  </Row>
                  <br></br><br></br>             
             
