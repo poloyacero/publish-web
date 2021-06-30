@@ -9,6 +9,47 @@ import styles from './FooterMenu.module.css';
 interface FooterProps {}
 
 const Footer = ({ ...props }: FooterProps) => {
+  const [firstname, setFirstname] = React.useState('')
+  const [email, setEmail] = React.useState('')
+  const [lastname, setLastname] = React.useState('')
+  const [phonenumber, setPhonenumber] = React.useState('')
+  const [subjectmsg, setSubjectmsg] = React.useState('')
+  const [submitted, setSubmitted] = React.useState(false)
+  
+  const handleSubmit = (e:any) => { 
+    e.preventDefault()
+    console.log('Sending...') 
+
+    
+
+  let data = {
+      firstname,
+      lastname,
+      email,
+      phonenumber,
+      subjectmsg      
+    }
+  fetch('/api/footerMail', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      console.log(data)
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setFirstname('')
+        setEmail('')
+        setLastname('')
+        setPhonenumber('') 
+        setSubjectmsg('')       }
+     
+    })
+  }
   return (
     <Container fluid style={{background: '#f0e3d5'}}>
       <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
@@ -20,28 +61,28 @@ const Footer = ({ ...props }: FooterProps) => {
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   First Name
                 </Form.Text> */}
-                <Form.Control type="text" className={styles.footerinput} placeholder="First Name" />
+                <Form.Control type="text" className={styles.footerinput} placeholder="First Name" onChange={(e)=>{setFirstname(e.target.value)}} name="name"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Last Name
                 </Form.Text> */}
-                <Form.Control type="text" className={styles.footerinput} placeholder="Last Name"/>
+                <Form.Control type="text" className={styles.footerinput} placeholder="Last Name"onChange={(e)=>{setLastname(e.target.value)}}  name="lastname"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Email
                 </Form.Text> */}
-                <Form.Control type="email" className={styles.footerinput} placeholder="Email"/>
+                <Form.Control type="email" className={styles.footerinput} placeholder="Email" onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Phone
                 </Form.Text> */}
-                <Form.Control type="tel" className={styles.footerinput} placeholder="Phone"/>
+                <Form.Control type="tel" className={styles.footerinput} placeholder="Phone"onChange={(e)=>{setPhonenumber(e.target.value)}} name="phonenumber"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                  Subject
                 </Form.Text> */}
                 {/* <Form.Control type="text" className={styles.footerinput} placeholder="Subject" /> */}
-                <Form.Control className={styles.footerinputselect} as="select" defaultValue="Subject">
+                <Form.Control className={styles.footerinputselect} as="select" defaultValue={subjectmsg} onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
                   <option disabled>Subject</option>
                   <optgroup label="General Inquiries">                  
                   <option>Services</option>
@@ -81,7 +122,7 @@ const Footer = ({ ...props }: FooterProps) => {
                 <Row><Col className={styles.checkboxlabel}><Form.Check type="checkbox"label="I agree to the Privacy Policy and Terms and Condition" name="selectstyles"  id="styles1"/></Col>
                </Row>
                    <br/>             
-                <Button className={styles.sendmail}>SEND MAIL</Button>
+                <Button className={styles.sendmail} onClick={(e)=>{handleSubmit(e)}}>SEND MAIL</Button>
               </Form.Group>
             </Form>
               

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
@@ -10,6 +10,63 @@ import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function emaildashboard() {
+  const [firstname, setFirstname] = React.useState('')
+  const [email, setEmail] = React.useState('')
+  const [lastname, setLastname] = React.useState('')
+  const [phonenumber, setPhonenumber] = React.useState('')
+  const [subjectmsg, setSubjectmsg] = React.useState('')
+  const [message, setMessage] = React.useState('')
+  const [submitted, setSubmitted] = React.useState(false)
+  
+  useEffect(() => {
+   initializedata();
+  }, [])
+
+
+  function initializedata(){
+    setFirstname('Gabriel')
+    setLastname('Balbuena')
+    setEmail('balbuenagf@gmail.com')    
+    setPhonenumber('423452344') 
+    setSubjectmsg('User Chat') 
+    console.log("data initialized")  
+  }
+  const handleSubmit = (e:any) => { 
+    e.preventDefault()
+    console.log('Sending...')    
+    
+
+  let data = {
+      firstname,
+      lastname,
+      email,
+      phonenumber,
+      subjectmsg ,
+      message     
+    }
+  fetch('/api/userMail', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      console.log(data)
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setFirstname('')
+        setEmail('')
+        setLastname('')
+        setPhonenumber('') 
+        setSubjectmsg('')
+        setMessage('')   
+       }
+     
+    })
+  }
     return (
         <div className={styles.container}>
       <Head>
@@ -27,11 +84,11 @@ export default function emaildashboard() {
                 <h3 className={styles2.dropheaderlabel2}>Email</h3>
                 <br></br>
                 <Row className="form-group text-left">
-              <Col ><Form.Control as="textarea" rows={15}/> </Col>
+              <Col ><Form.Control as="textarea" rows={15} onChange={(e)=>{setMessage(e.target.value)}} name="message"/> </Col>
                  </Row>
                  <br/> <br/> <br/> 
               <Row className="form-group text-left">
-            <Col md={2}><Button className={styles2.dashsubmitbutton}>Send</Button></Col>
+            <Col md={2}><Button className={styles2.dashsubmitbutton} onClick={(e)=>{handleSubmit(e)}}>Send</Button></Col>
             </Row>
               <br/> <br/> <br/>
              </Col>
