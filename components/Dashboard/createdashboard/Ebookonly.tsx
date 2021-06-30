@@ -2,9 +2,9 @@
 import React from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
 import styles from './forms.module.css';
-import styleIn from '../../styles/inputstyle.module.css'
+import styleIn from '../../../styles/inputstyle.module.css'
 
-export default function forms() {
+export default function Ebookonly() {
   return (
     <>
     <Form.Group as={Row}>
@@ -71,11 +71,7 @@ export default function forms() {
     <div className="input-group mb-3">
       <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
       <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Interior</label>
-   </div> 
-      <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
-   </div>
+   </div>      
    </Col>
     </Col>
   </Form.Group>
@@ -155,7 +151,7 @@ export default function forms() {
       <Form.Group as={Row}>    
        <Col sm={12}>
          <br></br>
-      <p className={styles.formlabel}>Do you have a Book Design?</p>
+      <p className={styles.formlabel}>Do you have an Ebook Design?</p>
       <Col className={styles.formindent}>
         <Form.Check
           type="radio"
@@ -173,7 +169,7 @@ export default function forms() {
           <Form.Group>    
         <div className="input-group mb-3">
           <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-          <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload File</label>
+          <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Cover</label>
         </div>
          </Form.Group>
           </Col>
@@ -183,7 +179,7 @@ export default function forms() {
      <Form.Group as={Row}>
             <Col sm={10}>
             <br></br>
-      <p className={styles.formlabel}>Get a Book Designer</p>
+      <p className={styles.formlabel}>Get an Ebook Designer</p>
       <Col className={styles.formindent}>
               <Form.Check
                 type="checkbox"
@@ -197,12 +193,7 @@ export default function forms() {
                 name="bookdesigner"               
                
               />
-              <Form.Check
-                type="checkbox"
-                label="Book Interior Design"
-                name="bookdesigner"               
-               
-              /> 
+             
               </Col> 
                <br></br><br></br>
           <Row className={"form-group "+styleIn.textalignright}>    
@@ -296,9 +287,7 @@ export default function forms() {
           <p className={styles.formlabel}>13 Digit ISBN</p>
           <Col className={styles.formindent}>
           <Form.Group>
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/> 
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
+          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>           
           </Form.Group>
           </Col>
           <br></br><br></br>
@@ -322,12 +311,7 @@ export default function forms() {
                 name="distribution3"               
                
               />  
-               <Form.Check
-                type="checkbox"
-                label="Print Book Distribution"
-                name="distribution4"               
-               
-              />  
+              
               </Col>
               <br></br><br></br>
           <h3 className={styles.formheaderlabel}>MARKETING</h3>

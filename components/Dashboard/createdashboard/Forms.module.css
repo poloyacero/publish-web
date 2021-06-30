@@ -1,0 +1,41 @@
+.formlabel {
+  font-weight: bold;
+  padding-left: 20px;
+}
+.formindent {
+  padding-left: 20px;
+}
+.submitbuttondashboard {
+  border-radius: 1 !important;
+  display: block;
+  width: 230px;
+  height: 40px;
+  background-color: #7b6b5b;
+  border: none;
+  color: #fafafa;
+  padding: 10px;
+}
+.submitbuttondashboard :hover {
+  background-color: #a1886c;
+  border-color: saddlebrown;
+  border-width: 2px;
+}
+
+.formheaderlabel {
+  background-color: #faf6f2;
+  width: 650px;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 17px;
+}
+
+@media screen and (max-width: 1030px) {
+  .formheaderlabel {
+    background-color: #faf6f2;
+    width: 350px;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 17px;
+    overflow: hidden;
+  }
+}

@@ -126,15 +126,15 @@ export default function ordersdashboard() {
                   </Row>
                   </Col>
                 </Row>
-                <br/>
-                <Row className="text-left">
-            <Col><Button className={styles2.dashsavebutton}>Edit</Button></Col> 
-            </Row>
-            
+               
              </Col>
-           
+             <br/>
+            <Row className="text-left">
+            <Col className={styles2.dashbuttoncontainer}><Button className={styles2.dasheditbutton}>Edit</Button></Col> 
             </Row>
             <br></br> <br></br>
+            </Row>
+           
           </Container>   
        
         </Container>
