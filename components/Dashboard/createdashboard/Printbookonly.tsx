@@ -2,9 +2,9 @@
 import React from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
 import styles from './forms.module.css';
-import styleIn from '../../styles/inputstyle.module.css'
+import styleIn from '../../../styles/inputstyle.module.css'
 
-export default function forms() {
+export default function Printbookonly() {
   return (
     <>
     <Form.Group as={Row}>
@@ -60,46 +60,7 @@ export default function forms() {
        </Col>
      </Form.Group>
     
-    
-
-  <Form.Group as={Row}>
-    
-    <Col sm={12}>
-      <br/>
-    <p className={styles.formlabel}>Ebook submission</p>
-    <Col className={styles.formindent}>
-    <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Interior</label>
-   </div> 
-      <div className="input-group mb-3">
-      <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-      <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Ebook Cover &nbsp;&nbsp;</label>
-   </div>
-   </Col>
-    </Col>
-  </Form.Group>
-   
-  <Form.Group as={Row}>    
-       <Col sm={12}>
-         <br></br>
-      <p className={styles.formlabel}>Epub Conversion</p>
-      <Col className={styles.formindent}>
-        <Form.Check
-          type="radio"
-          label="Yes"
-          name="epubconversion"
-          id="epubyes"
-        />
-         <Form.Check
-          type="radio"
-          label="No"
-          name="epubconversion"
-          id="epubno"
-        />
-      </Col>
-      </Col>
-        </Form.Group>
+  
         <Form.Group as={Row}>
             <Col sm={10}>
             <br></br>
@@ -297,8 +258,7 @@ export default function forms() {
           <Col className={styles.formindent}>
           <Form.Group>
           <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/> 
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
-          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>
+          <Form.Control className={styleIn.createinput} type="text" defaultValue=" "/>          
           </Form.Group>
           </Col>
           <br></br><br></br>
@@ -310,12 +270,7 @@ export default function forms() {
                 name="distribution1"
                             
               />
-              <Form.Check
-                type="checkbox"
-                label="Ebook Distribution"
-                name="distribution2"               
-               
-              />
+             
               <Form.Check
                 type="checkbox"
                 label="Copyright Registration"
