@@ -3,8 +3,8 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../components/Dashboard/packagesdashboard.module.css'
-import Forms from '../../components/Dashboard/forms'
+import styles from '../../components/Dashboard/packagesdashboard/packagesdashboard.module.css'
+import Forms from '../../components/Dashboard/packagesdashboard/Starterform'
 import { Col, Container, Row } from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 

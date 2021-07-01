@@ -4,7 +4,7 @@ import Link from "next/link"
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../components/Dashboard/packagesdashboard.module.css'
+import styles from '../../components/Dashboard/packagesdashboard/packagesdashboard.module.css'
 import { Col, Container, Row,Nav} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 
