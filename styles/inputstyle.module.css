@@ -157,4 +157,12 @@
     color: #7b6b5b;
     font-size: 12px;
   }
+  .accountinput {
+    outline: 0;
+    border-width: 1 1 1.5px;
+    height: 35px;
+    width: 300px;
+    border-radius: 1;
+    font-size: 12px;
+  }
 }

@@ -5,7 +5,9 @@
   text-align: left;
   color: #7b6b5b;
 }
-
+.indenttext {
+  padding-left: 15px;
+}
 .indentcheckbox {
   padding-left: 35px;
 }

@@ -143,6 +143,15 @@
 .accountnotes2 {
   font-size: 12px;
 }
+.textalignment {
+  text-align: right;
+}
+.dashbuttoncontainer {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 300px;
+}
 
 @media screen and (max-width: 1030px) {
   .dropdownmenucontainer {
@@ -168,5 +177,27 @@
     padding-left: 10px;
     font-size: 20px;
     color: #7b6b5b;
+  }
+  .textalignment {
+    text-align: left;
+  }
+  .dashsavebutton {
+    border-radius: 1 !important;
+    display: block;
+    width: 99px;
+    height: 38px;
+    background-color: #7b6b5b;
+    border: none;
+    color: #fafafa;
+    margin: 0px;
+  }
+  .dashbuttoncontainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 250px;
+  }
+  .savebuttonindent {
+    padding-left: 100px;
   }
 }

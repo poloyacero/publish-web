@@ -1,6 +1,8 @@
 .homecontainer {
+  display: flex;
+  flex-direction: column;
   padding-top: 50px;
-  padding-right: 220px;
+  padding-right: 10px;
   margin-right: 10px;
   margin-left: auto;
   text-align: center;
@@ -8,4 +10,39 @@
 }
 .ctext {
   color: #7b6b5b;
+}
+.howtohelp {
+  font-size: 20px;
+}
+.contactnumber {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1030px) {
+  .homecontainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    margin-right: 10px;
+    margin-left: auto;
+    text-align: center;
+    color: #7b6b5b;
+  }
+  .homecontainer img {
+    width: 280px;
+  }
+  .homecontainer h2 {
+    font-size: 20px;
+  }
+
+  .howtohelp {
+    font-size: 15px;
+    text-align: center;
+  }
+  .contactnumber {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
 }

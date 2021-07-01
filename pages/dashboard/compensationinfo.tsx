@@ -27,7 +27,7 @@ export default function compensationinfo() {
                 <h3 className={styles2.dropheaderlabel2}>Compensation Information</h3>
                 <br></br>             
                
-               <Row className="form-group text-right">               
+               <Row className={"form-group "+styles2.textalignment}>               
                <Col>
                <Form.Group as={Row}>
                <Col className="form-group" md={3}>Payment Type</Col>
@@ -305,9 +305,11 @@ export default function compensationinfo() {
             <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
                               <br/> <br/> <br/> 
               
-              <Row className="form-group text-right">
-            <Col md={"auto"}><Button className={styles2.dashsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles2.dashsavebutton}>Cancel</Button></Col><Col md={6}></Col>
-            </Row>
+                  <Row>
+                <Col  className={styles2.dashbuttoncontainer}>
+                <Col md={'auto'}><Button className={styles2.dashsavebutton}>Save</Button></Col> <Col md={'auto'}><Button className={styles2.dashsavebutton}>Cancel</Button></Col>
+                </Col>
+              </Row>
               <br/> <br/> <br/>
                </Form.Group>
                </Col>

@@ -26,6 +26,9 @@
 .pkgdetails {
   font-size: 11px;
 }
+.pkgdetails2 {
+  padding-top: 20px;
+}
 .pkglink {
   cursor: pointer;
   text-decoration: none;
@@ -41,4 +44,16 @@
   cursor: pointer;
   text-decoration: none;
   color: #271a0d;
+}
+
+@media screen and (max-width: 1030px) {
+  .packagesheaderlabel2 {
+    background-color: #f0e3d5;
+    width: 305px;
+    height: 50px;
+    padding-top: 9px;
+    padding-left: 10px;
+    color: #7b6b5b;
+    font-size: 25px;
+  }
 }
