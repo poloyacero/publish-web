@@ -21,7 +21,8 @@
     "react-bootstrap": "^1.6.1",
     "react-bootstrap-validation": "^0.1.11",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.5",

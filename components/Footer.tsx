@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image'
+import swal from 'sweetalert';
 import React from 'react'
-import { Button, Col, Container, Form, FormControl, InputGroup, Nav, Row } from 'react-bootstrap';
+import {  Button, Col, Container, Form, FormControl, InputGroup, Nav, Row } from 'react-bootstrap';
 
 import styles from './FooterMenu.module.css';
 
@@ -19,8 +20,6 @@ const Footer = ({ ...props }: FooterProps) => {
   const handleSubmit = (e:any) => { 
     e.preventDefault()
     console.log('Sending...') 
-
-    
 
   let data = {
       firstname,
@@ -46,43 +45,48 @@ const Footer = ({ ...props }: FooterProps) => {
         setEmail('')
         setLastname('')
         setPhonenumber('') 
-        setSubjectmsg('')    }
+        setSubjectmsg('')    
+        swal("Mail Sent!", "Thank you!", "success");
+      }
      
     })
+    
   }
+
+
   return (
     <Container fluid style={{background: '#f0e3d5'}}>
       <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
         <Row className="justify-content-md-center">
           <Col md={'auto'} className={styles.left}>
          <Nav.Link href="/pricing"><h1 className={styles.footerh1}>Let's Create a Book</h1></Nav.Link>
-            <Form className={styles.form}>
+            <Form className={styles.form} id="mailform">
               <Form.Group className={styles.formGroup}>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   First Name
                 </Form.Text> */}
-                <Form.Control type="text" className={styles.footerinput} placeholder="First Name" onChange={(e)=>{setFirstname(e.target.value)}} name="name"/>
+                <Form.Control type="text" className={styles.footerinput} placeholder="First Name" value={firstname} onChange={(e)=>{setFirstname(e.target.value)}} name="name"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Last Name
                 </Form.Text> */}
-                <Form.Control type="text" className={styles.footerinput} placeholder="Last Name"onChange={(e)=>{setLastname(e.target.value)}}  name="lastname"/>
+                <Form.Control type="text" className={styles.footerinput} placeholder="Last Name" value={lastname} onChange={(e)=>{setLastname(e.target.value)}}  name="lastname"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Email
                 </Form.Text> */}
-                <Form.Control type="email" className={styles.footerinput} placeholder="Email" onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
+                <Form.Control type="email" className={styles.footerinput} placeholder="Email" value={email}  onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                   Phone
                 </Form.Text> */}
-                <Form.Control type="tel" className={styles.footerinput} placeholder="Phone"onChange={(e)=>{setPhonenumber(e.target.value)}} name="phonenumber"/>
+                <Form.Control type="tel" className={styles.footerinput}  value={phonenumber} placeholder="Phone"onChange={(e)=>{setPhonenumber(e.target.value)}} name="phonenumber"/>
                 <Row><Col style={{padding:0}}><br/></Col></Row>
                 {/* <Form.Text style={{paddingBottom: '5px'}}>
                  Subject
                 </Form.Text> */}
                 {/* <Form.Control type="text" className={styles.footerinput} placeholder="Subject" /> */}
-                <Form.Control className={styles.footerinputselect} as="select" defaultValue={subjectmsg} onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
+                <Form.Control className={styles.footerinputselect} as="select"  value={subjectmsg} defaultValue={subjectmsg} onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
                   <option disabled>Subject</option>
                   <optgroup label="General Inquiries">                  
                   <option>Services</option>

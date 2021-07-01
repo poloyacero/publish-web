@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Col,Container,Row,Form } from 'react-bootstrap';
 import TheModal from '../TheModal';
 import styles from './Package.module.css';
+import swal from 'sweetalert'
 
 interface PackageProps {
   title: string;
@@ -67,6 +68,8 @@ interface PackageProps {
         setFirstname('')
         setEmail('')
         setLastname('')
+        setPackagevalue('')
+        swal("Sent!", "Thank You!", "success");
       }
       setModalShowSignin(false);
     })
@@ -155,7 +158,7 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>First name</Form.Label>
-          <Form.Control className={styles.inputnav} onChange={(e)=>{setFirstname(e.target.value)}} type="text" name="name"/>
+          <Form.Control className={styles.inputnav} value={firstname}  onChange={(e)=>{setFirstname(e.target.value)}} type="text" name="name"/>
         </Col>
       </Form.Group>
     </Col>
@@ -163,7 +166,7 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>Last name</Form.Label>
-          <Form.Control className={styles.inputnav} onChange={(e)=>{setLastname(e.target.value)}} type="text" name="message"/>                  
+          <Form.Control className={styles.inputnav} value={lastname}  onChange={(e)=>{setLastname(e.target.value)}} type="text" name="message"/>                  
         </Col>
        
       </Form.Group>
@@ -172,7 +175,7 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>Email</Form.Label>
-          <Form.Control className={styles.inputnav} onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email"/>                  
+          <Form.Control className={styles.inputnav} value={email}  onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email"/>                  
         </Col>
        
       </Form.Group>
