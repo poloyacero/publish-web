@@ -32,16 +32,16 @@ export default function documentsinfo() {
                   <Col className={styles2.documentsheader} md={5}>Received Documents</Col><Col md={3} className={styles2.documentsheader}>Date</Col><Col md={4} className={styles2.documentsheader}>Action</Col>
                  </Row>
                  <Row className="text-center">
-                  <Col md={5} className={styles2.documentscolborder}>The Publishing Contract</Col><Col md={3}  className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf}>View</Col><Col className={styles2.documentsviewpdf}>Download Pdf</Col>
+                  <Col md={5} className={styles2.documentscolborder}>The Publishing Contract</Col><Col md={3}  className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>View</Col></Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Download Pdf</Col></Col>
                  </Row>
                  <Row className="text-center">
-                  <Col md={5} className={styles2.documentscolborder}></Col><Col md={3}  className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf}>View</Col><Col className={styles2.documentsviewpdf}>Download Pdf</Col>
+                  <Col md={5} className={styles2.documentscolborder}></Col><Col md={3}  className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>View</Col></Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Download Pdf</Col></Col>
                  </Row>
                  <Row className="text-center">
-                  <Col md={5} className={styles2.documentscolborder}></Col><Col md={3}  className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf}>View</Col><Col className={styles2.documentsviewpdf}>Download Pdf</Col>
+                  <Col md={5} className={styles2.documentscolborder}></Col><Col md={3}  className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>View</Col></Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Download Pdf</Col></Col>
                  </Row>
                  <Row className="text-center">
-                  <Col md={5} className={styles2.documentscolborder}></Col><Col md={3}   className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf}>View</Col><Col className={styles2.documentsviewpdf}>Download Pdf</Col>
+                  <Col md={5} className={styles2.documentscolborder}></Col><Col md={3}   className={styles2.documentscolborder}>jun-17-2021</Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>View</Col></Col><Col className={styles2.documentsviewpdf1}><Col className={styles2.documentsviewpdf}>Download Pdf</Col></Col>
                  </Row>
                
              </Col>

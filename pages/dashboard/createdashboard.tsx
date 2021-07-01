@@ -34,28 +34,34 @@ export default function createbook() {
              <Col>
                  <Col className={styles.indentselectbox}>
                     <Form.Control className={styleIn.inputselect} as="select" defaultValue={createtype} onChange={(e)=>{setCreatetype(e.target.value)}}>
-                          <option disabled>Select Creation</option>                                
+                          <option>Select Creation</option>                                
                           <option>Print Book and Ebook € 350</option>
                           <option>Print Book Only € 300</option>                  
                           <option>Ebook Only € 250</option>  
                     </Form.Control>
                     </Col>
                     { createtype==="Print Book and Ebook € 350"?(
-                      <>                 
+                      <> 
+                      <br/>
+                      <h3 className={styles.indenttext}>Print Book and Ebook € 350</h3>                
                       <PrintEbookandEbookdash />
                       </> 
                     ):createtype==="Print Book Only € 300"?(
-                      <>                  
+                      <>  
+                      <br/>
+                      <h3 className={styles.indenttext}>Print Book Only € 300</h3>                
                       <PrintBookOnlydash />
                       </>
                     ):createtype==="Ebook Only € 250"?(
-                      <>                  
+                      <> 
+                      <br/>  
+                      <h3 className={styles.indenttext}>Ebook Only € 250</h3>               
                       <EBookOnlydash/>
                       </>
                     ):(
                       <>
                       <br/>
-                      <h2 className={styles.indentselectbox}>Please Select Creation</h2>                 
+                      <h3 className={styles.indenttext}>Please Select Creation</h3>                
                       </>
                     )}                    
                     

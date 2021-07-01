@@ -17,7 +17,7 @@ export default function accountinfo() {
       </Head>
       <NavMenu />
       <NavMenuDashboard /> 
-   
+    
         <Container fluid>
           <Container>
             <Row  className={styles.dropdownmenucontainer}>
@@ -25,13 +25,13 @@ export default function accountinfo() {
                 <Col>
                 <h3 className={styles.dropheaderlabel2}>Account Information</h3>
                 <br></br>
-                <Row className="form-group text-right">
+                <Row className={"form-group "+styles.textalignment}>
               <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput}  type="text" defaultValue=" "/> </Col>
                </Row>
-               <Row className="form-group text-right">
+               <Row className={"form-group "+styles.textalignment}>
                  <Col md={3}>Acount Number</Col><Col md={9}></Col>
                </Row>
-               <Row className="form-group text-right">
+               <Row className={"form-group "+styles.textalignment}>
                <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.accountinput}   as="select" defaultValue=" ">
               <option> </option>                                
               <option>Sole Proprietor</option>
@@ -46,7 +46,7 @@ export default function accountinfo() {
                <br></br>
                <h3 className={styles.dropheaderlabel2}>Legal Information</h3>
                <br></br>
-               <Row className="form-group text-right">               
+               <Row className={"form-group "+styles.textalignment}>               
                <Col>
                <Form.Group as={Row}>
                <Col className="form-group" md={3}>Full Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
@@ -321,9 +321,11 @@ export default function accountinfo() {
             <Col md={3}></Col><Col className="form-group" md={9}><p className={styles.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/> 
                               The Publishing shall not be liable for undeliverable shipments where a valid phone number is not provided.</p></Col>
                               <br/> <br/> <br/> 
-              <Row className="form-group text-right">
-            <Col md={'auto'}><Button className={styles.dashsavebutton}>Save</Button></Col> <Col md={5}><Button className={styles.dashsavebutton}>Cancel</Button></Col><Col md={6}></Col>
-            </Row>
+              <Row>
+                <Col  className={styles.dashbuttoncontainer}>
+                <Col md={'auto'}><Button className={styles.dashsavebutton}>Save</Button></Col> <Col md={'auto'}><Button className={styles.dashsavebutton}>Cancel</Button></Col>
+                </Col>
+              </Row>
               <br/> <br/> <br/>
                </Form.Group>
                </Col>

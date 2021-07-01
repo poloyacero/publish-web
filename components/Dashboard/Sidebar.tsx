@@ -12,7 +12,7 @@ export default function Sidebar() {
 <Col><Link href="/dashboard/createdashboard" passHref><Button className={styles.buttons}>Create</Button></Link></Col>
 <Col><Link href="/dashboard/packagesdashboard" passHref><Button className={styles.buttons}>Package</Button></Link></Col>
 <Col><Link href="/dashboard/servicesdashboard" passHref><Button className={styles.buttons}>Services</Button></Link></Col>
-</Row> 
+</Row>
 </Col>
 </Col>
     )

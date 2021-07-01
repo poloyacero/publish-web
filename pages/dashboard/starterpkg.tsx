@@ -32,13 +32,13 @@ export default function starterpkg() {
             <Row>
                <Col className={styles.pkgdetails}>
                  <Row>
-              <Col md={4}><b>Edit and Design</b><br/>
+              <Col md={4} className={styles.pkgdetails2}><b>Edit and Design</b><br/>
                     Paperback Format<br/>
                     E-Book Format<br/>
                     Standard Text & Layout Formatting<br/>
                     1 Round Layout Revisions<br/>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className={styles.pkgdetails2}>
                     <b>Post-publication features:</b><br/>
                     3 Paperback Copies<br/>
                     2 ISBN<br/>
@@ -50,7 +50,7 @@ export default function starterpkg() {
                     Online Book Sales Account<br/>
                     Royalties<br/>
                     </Col>
-                    <Col md={3}>
+                    <Col md={3} className={styles.pkgdetails2}>
                     <b>Marketing services:</b><br/>
                     20 Bookmarks<br/>
                     20 Business Cards<br/>

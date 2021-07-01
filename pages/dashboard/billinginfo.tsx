@@ -28,7 +28,7 @@ export default function billinginfo() {
                <br></br>
                <h3 className={styles2.dropheaderlabel2}>Billing Information</h3>
                <br></br>
-               <Row className="form-group text-right">               
+               <Row className={"form-group "+styles2.textalignment}>               
                <Col>
                <Form.Group as={Row}>
                <Col className="form-group" md={3}>First Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
@@ -304,16 +304,14 @@ export default function billinginfo() {
            
             </Form.Group>
             <br></br>
-              <Row  className="text-left">
            
                <h3 className={styles2.dropheaderlabel2}>Payment Details</h3>
               
-           </Row>
            <br></br><br></br>
            <Form.Group>
              <Row className="align-items-center">
-            <Col className="form-group" md={3}>Payment Type</Col>
-            <Col className="form-group text-right" md={1}>
+            <Col className={"form-group "+styles2.textalignment} md={3}>Payment Type</Col>
+            <Col className={"form-group "+styles2.textalignment} md={1}>
             <Form.Check
               type="radio"
               label=""
@@ -326,9 +324,9 @@ export default function billinginfo() {
             </Col>
             </Row>
             
-            <Row className="align-items-center">
+            <Row className={styles.textalignment}>
             <Col className="form-group" md={3}> </Col>
-            <Col className="form-group text-right" md={1}>
+            <Col className={"form-group "+styles.textalignment} md={1}>
             <Form.Check
               type="radio"
               label=""
@@ -342,7 +340,7 @@ export default function billinginfo() {
             <br/>
             <Row className="align-items-center">
             <Col className="form-group" md={3}> </Col>
-            <Col className="form-group text-right" md={1}>
+            <Col className={"form-group "+styles2.textalignment} md={1}>
             <Form.Check
               type="radio"
               label=""

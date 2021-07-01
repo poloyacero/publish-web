@@ -46,7 +46,7 @@ const Footer = ({ ...props }: FooterProps) => {
         setEmail('')
         setLastname('')
         setPhonenumber('') 
-        setSubjectmsg('')       }
+        setSubjectmsg('')    }
      
     })
   }
