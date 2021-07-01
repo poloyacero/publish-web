@@ -3,8 +3,8 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../components/Dashboard/packagesdashboard.module.css'
-import Forms from '../../components/Dashboard/forms'
+import styles from '../../components/Dashboard/packagesdashboard/packagesdashboard.module.css'
+import Forms from '../../components/Dashboard/packagesdashboard/Eliteform'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
@@ -33,7 +33,7 @@ export default function elitepkg() {
             <Row>
                <Col className={styles.pkgdetails}>
                  <Row>
-              <Col md={4}><b>Edit and Design</b><br/>
+              <Col md={4} className={styles.pkgdetails2}><b>Edit and Design</b><br/>
                       Paperback Format<br/>
                       Hardcover Format<br/>
                       E-Book Format<br/>
@@ -45,7 +45,7 @@ export default function elitepkg() {
                       Design Consultation<br/>
                       Advance Cover Design<br/>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className={styles.pkgdetails2}>
                     <b>Post-publication features:</b><br/>
                       50 Paperback Copies<br/>
                       10 Hardback Copies<br/>
@@ -63,7 +63,7 @@ export default function elitepkg() {
                       100% Royalty Program 3 years<br/>
                       Book Return Program 12 Months<br/>
                     </Col>
-                    <Col md={3}>
+                    <Col md={3} className={styles.pkgdetails2}>
                     <b>Marketing services:</b><br/>
                       200 Bookmarks<br/>
                       200 Business Cards<br/>

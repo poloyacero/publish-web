@@ -3,8 +3,8 @@ import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import styles from '../../components/Dashboard/packagesdashboard.module.css'
-import Forms from '../../components/Dashboard/forms'
+import styles from '../../components/Dashboard/packagesdashboard/packagesdashboard.module.css'
+import Forms from '../../components/Dashboard/packagesdashboard/Proform'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 
@@ -32,7 +32,7 @@ export default function propkg() {
             <Row>
                <Col className={styles.pkgdetails}>
                  <Row>
-              <Col md={4}><b>Edit and Design</b><br/>
+              <Col md={4} className={styles.pkgdetails2}><b>Edit and Design</b><br/>
                     Paperback Format<br/>
                     Hardcover Format<br/>
                     E-Book Format<br/>
@@ -43,7 +43,7 @@ export default function propkg() {
                     Design Consultation<br/>
                     Basic Cover Design<br/>
                     </Col>
-                    <Col md={4}>
+                    <Col md={4} className={styles.pkgdetails2}>
                     <b>Post-publication features:</b><br/>
                       15 Paperback Copies<br/>
                       3 Hardback Copies<br/>
@@ -59,7 +59,7 @@ export default function propkg() {
                       Royalties<br/>
                       Book Return Program 12 Months<br/>
                     </Col>
-                    <Col md={3}>
+                    <Col md={3} className={styles.pkgdetails2}>
                     <b>Marketing services:</b><br/>
                       50 Bookmarks<br/>
                       50 Business Cards<br/>
