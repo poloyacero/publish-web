@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
-import styles from './forms.module.css';
+import styles from './Forms.module.css';
 import styleIn from '../../../styles/inputstyle.module.css'
 
 export default function Ebookonly() {
