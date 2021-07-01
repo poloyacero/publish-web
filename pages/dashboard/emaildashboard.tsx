@@ -8,7 +8,7 @@ import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import swal from 'sweetalert'
 export default function emaildashboard() {
   const [firstname, setFirstname] = React.useState('')
   const [email, setEmail] = React.useState('')
@@ -63,6 +63,7 @@ export default function emaildashboard() {
         setPhonenumber('') 
         setSubjectmsg('')
         setMessage('')   
+        swal("Good job!", "You clicked the button!", "success");
        }
      
     })
