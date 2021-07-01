@@ -86,7 +86,7 @@ export default function emaildashboard() {
                 <Row className="form-group text-left">
               <Col ><Form.Control as="textarea" rows={15} onChange={(e)=>{setMessage(e.target.value)}} name="message"/> </Col>
                  </Row>
-                 <br/> <br/> <br/> 
+                 <br/> <br/> 
               <Row className="form-group text-left">
             <Col md={2}><Button className={styles2.dashsubmitbutton} onClick={(e)=>{handleSubmit(e)}}>Send</Button></Col>
             </Row>
