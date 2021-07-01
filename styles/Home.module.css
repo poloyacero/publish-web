@@ -117,47 +117,9 @@
   color: #7b6b5b;
 }
 
-.imgpadding {
-  padding-top: 40px;
-}
-
-.illustrationbutton {
-  margin: auto;
-  display: block;
-  width: 25%;
-  background-color: #7b6b5b;
-  border: none;
-  margin-top: 50px;
-  padding: 10px;
-}
-.illustrationpadding {
-  padding-left: 65px;
-}
-
-.illustrationbutton:hover {
-  background-color: #7b6b5b;
-}
 .product {
   background-color: #faf6f2;
   width: 250px;
-}
-
-.myl {
-  padding-left: 10px;
-  padding-right: 5px;
-  font-size: 14px;
-  margin-right: 20px;
-  margin-left: 0px;
-}
-
-.myl2 col {
-  display: flex;
-  flex-direction: row;
-  padding-left: 0px;
-  padding-right: 0px;
-}
-.mylnopadding {
-  padding: 0px;
 }
 
 .iservices {
@@ -402,54 +364,6 @@
     padding: 20px;
     width: 100%;
     height: auto;
-  }
-
-  .imgpadding {
-    padding-top: 40px;
-    padding-left: 45px;
-  }
-
-  .illustrationbutton {
-    margin: auto;
-    display: block;
-    width: 200px;
-    background-color: #7b6b5b;
-    border: none;
-    margin-top: 50px;
-    padding: 10px;
-  }
-  .illustrationpadding {
-    padding-left: 70px;
-  }
-
-  .illustrationbutton:hover {
-    background-color: #7b6b5b;
-  }
-  .myl h3 {
-    font-size: 22px;
-    text-align: center;
-  }
-  .myl {
-    padding-left: 10px;
-    padding-right: 0px;
-    padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    margin-left: 0px;
-    margin-right: 22px;
-  }
-  .myl2 {
-    display: flex;
-    flex-wrap: nowrap;
-    padding-left: 0px;
-    padding-right: 0px;
-    flex-wrap: nowrap;
-    margin-left: 0px;
-    margin-right: 20px;
-    font-size: 12px;
-  }
-  .mylpsize {
-    font-size: 12px;
   }
 
   .product {
