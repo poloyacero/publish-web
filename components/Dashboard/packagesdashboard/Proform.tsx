@@ -131,7 +131,7 @@ export default function Proform() {
               </Col> 
                <br></br><br></br>
           <Row className={"form-group "+styleIn.textalignright}>    
-          <Col md={4}>Trim Size</Col>
+          <Col md={3}>Trim Size</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
@@ -143,7 +143,7 @@ export default function Proform() {
           </Row>
           
           <Row className={"form-group "+styleIn.textalignright}>  
-          <Col md={4}>Interior Color</Col> 
+          <Col md={3}>Interior Color</Col> 
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
@@ -155,7 +155,7 @@ export default function Proform() {
           </Row>
 
           <Row className={"form-group "+styleIn.textalignright}>  
-          <Col md={4}>Paper Type</Col>
+          <Col md={3}>Paper Type</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
@@ -167,7 +167,7 @@ export default function Proform() {
           </Row>
 
           <Row className={"form-group "+styleIn.textalignright}>  
-          <Col md={4}>Binding Type</Col>
+          <Col md={3}>Binding Type</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
@@ -179,7 +179,7 @@ export default function Proform() {
           </Row>
 
           <Row className={"form-group "+styleIn.textalignright}>  
-          <Col md={4}>Laminate</Col>
+          <Col md={3}>Laminate</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
@@ -191,7 +191,7 @@ export default function Proform() {
           </Row>
 
           <Row className={"form-group "+styleIn.textalignright}>  
-          <Col md={4}>Page Count</Col>
+          <Col md={3}>Page Count</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
@@ -202,7 +202,7 @@ export default function Proform() {
           </Col>
           </Row>         
           <Row className={"form-group "+styleIn.textalignright}>  
-          <Col md={4}>Quantity</Col>
+          <Col md={3}>Quantity</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
               <option> </option>                                
