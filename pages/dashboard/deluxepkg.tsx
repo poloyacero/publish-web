@@ -26,7 +26,7 @@ export default function deluxepkg() {
                 <Col md={8}>
              <Col className={styles.packagescontainer}>
                         
-                <h3 className={styles.packagesheaderlabel2}>Deluxe Package  € 1500</h3>
+                <h3 className={styles.packagesheaderlabel2}>Deluxe Package  € 1900</h3>
                 <br/>
          
             <Row>

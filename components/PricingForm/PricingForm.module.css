@@ -70,6 +70,7 @@
   color: #7b6b5b;
   font-size: 12px;
   font-weight: bold;
+  padding-left: 4px;
   width: 200px;
 }
 
@@ -145,4 +146,56 @@
 .checkboxes {
   margin-top: 0mm;
   justify-content: center;
+}
+
+.instructionformat {
+  font-size: 10px;
+}
+.checkboxline label {
+  padding-top: 3px !important;
+}
+
+@media screen and (max-width: 1030px) {
+  .pricingh1 {
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+    color: #7b6b5b;
+    padding: 20px;
+    font-weight: 600;
+  }
+  .pricinglink {
+    text-decoration: none;
+    color: #7b6b5b;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .instructionformat {
+    font-size: 12px;
+  }
+
+  .labelleft {
+    text-align: left;
+  }
+
+  .checkboxcontainer {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .colformat {
+    margin-left: 1px;
+  }
+
+  .input {
+    width: 300px;
+    padding-left: 10px;
+  }
+
+  .indentcol {
+    padding-left: 20px;
+  }
 }
