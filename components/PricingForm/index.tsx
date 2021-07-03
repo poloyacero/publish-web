@@ -216,7 +216,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
      
       <Row>
         <Col md={{ span: 12, offset: 2 }}>
-          <p>
+          <p className={styles.instructionformat}>
           Fill up the data below to generate a guide instructions, estimated cost in production<br/>and distribution of your book and more useful info.
           </p>
           <p className={styles.noteformat}>
@@ -226,7 +226,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
         </Col>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Trim Size</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input} as="select" defaultValue={trimsize} onChange={(e)=>{setTrimsize(e.target.value)}}>
               <option value=""></option>
               <option value="4.000&quot; x 6.000&quot; (152mm x 102 mm)">4.000" x 6.000" (152mm x 102 mm)</option>
@@ -268,7 +268,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Interior Color</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input} as="select" defaultValue={interiorcolor} onChange={ handleChange }>
               <option></option>
               <option>Black and White</option>
@@ -280,7 +280,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Paper Type</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input}  as="select" defaultValue={papertype} onChange={(e)=>{setPapertype(e.target.value)}}>
               <option> </option>              
                 { interiorcolor==="Black and White"?(
@@ -304,7 +304,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Binding Type</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input}  as="select" defaultValue={bindingtype} onChange={(e)=>{setBindingtype(e.target.value)}}>
               <option> </option>
               <option>Paperback</option>
@@ -316,7 +316,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Laminate</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input}  as="select" defaultValue={laminate} onChange={(e)=>{setLaminate(e.target.value)}}>
               <option> </option>
               <option>Gloss</option>
@@ -329,7 +329,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Page Count</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input}  as="select" defaultValue={pagecount} onChange={(e)=>{setPagecount(e.target.value)}}>
               <option> </option>
               <option>22</option>
@@ -342,7 +342,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Quantity</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row}>
+          <Form.Group as={Row} className={styles.indentcol}>
             <Form.Control className={styles.input}  type="text" defaultValue={quantity} onChange={(e)=>{setQuantity(e.target.value)}}/>
           </Form.Group>
         </Col>
@@ -350,7 +350,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Ship To</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input} as="select" defaultValue={shipto} onChange={(e)=>{setShipto(e.target.value)}}>
               <option value=""></option>
               <option value="USA">United States</option>
@@ -613,7 +613,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Ship To Province</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row}>
+          <Form.Group as={Row} className={styles.indentcol}>
             <Form.Control className={styles.input}  type="text" defaultValue={shiptoprovince} onChange={(e)=>{setShiptoprovince(e.target.value)}}/>
           </Form.Group>
         </Col>
@@ -622,7 +622,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Printing Location</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input}  as="select" defaultValue={printinglocation} onChange={(e)=>{setPrintinglocation(e.target.value)}}>
               <option> </option>
               <option>LS US - US Dollar</option>
@@ -636,7 +636,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row>
         <Col className={styles.labelleft} md={{ span:4, offset: 0 }}><Form.Label className={styles.label}>E-Book</Form.Label></Col>
         <Col md={{ span:4 , offset: 0 }}>
-          <Form.Group as={Row} controlId="exampleForm.ControlSelect1">
+          <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
             <Form.Control className={styles.input}  as="select" defaultValue={ebook} onChange={(e)=>{setEbook(e.target.value)}}>
               <option> </option>
               <option>Yes</option>
@@ -656,24 +656,27 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       <Row className={styles.checkboxcontainer}>     
         <Col  md={{ span: 3, offset: 0 }} className={styles.additionals}>
           <Col>
-        <Form.Label className={styles.label}>
+        
+          <Form.Group as={Row}>
+            <Col>
+            <Form.Label className={styles.label}>
           Editing
           </Form.Label>
-          <Form.Group as={Row}>
-            <Col className="checkbox-inline">
               <Form.Check
                 type="checkbox"
                 label="Editorial Assessment" 
                 name="additonalservices1"
                 checked={editorial}                
-                onChange={(e)=>{setEditorial(e.target.checked)}}                                                             
+                onChange={(e)=>{setEditorial(e.target.checked)}} 
+                className={styles.checkboxline}                                                            
               />
               <Form.Check
                 type="checkbox"
                 label="Line Editing"
                 name="additonalservices2"               
                 checked={lineediting}                
-                onChange={(e)=>{setLineediting(e.target.checked)}} 
+                onChange={(e)=>{setLineediting(e.target.checked)}}
+                className={styles.checkboxline} 
               />
               <Form.Check
                 type="checkbox"
@@ -681,13 +684,15 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices3"               
                 checked={copyediting}                
                 onChange={(e)=>{setCopyediting(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
                 label="Proofreading"
                 name="additonalservices3"               
                 checked={proof}                
-                onChange={(e)=>{setProof(e.target.checked)}} 
+                onChange={(e)=>{setProof(e.target.checked)}}
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
@@ -695,13 +700,15 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices4"               
                 checked={indexing}                
                 onChange={(e)=>{setIndexing(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
                 label="Data Entry"
                 name="additonalservices5"               
                 checked={dataentry}                
-                onChange={(e)=>{setDataentry(e.target.checked)}} 
+                onChange={(e)=>{setDataentry(e.target.checked)}}
+                className={styles.checkboxline} 
               />
               <Form.Check
                 type="checkbox"
@@ -709,23 +716,26 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices6"               
                 checked={textformat}                
                 onChange={(e)=>{setTextformat(e.target.checked)}} 
+                className={styles.checkboxline}
               />          
             </Col>
           </Form.Group>
         </Col>
         </Col>
         <Col  md={{ span: 3, offset: 0 }} className={styles.additionals}>
-        <Form.Label className={styles.label}>
+        
+          <Form.Group as={Row} className={styles.colformat}>
+            <Col>
+            <Form.Label className={styles.label}>
            Design
           </Form.Label>
-          <Form.Group as={Row}>
-            <Col>
               <Form.Check
                 type="checkbox"
                 label="Illustrations"
                 name="additonalservices7"               
                 checked={illustrations}                
                 onChange={(e)=>{setIllustrations(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
@@ -733,6 +743,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices8"               
                 checked={coverdesign}                
                 onChange={(e)=>{setCoverdesign(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
@@ -740,6 +751,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices9"               
                 checked={interiordesign}                
                 onChange={(e)=>{setInteriordesign(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
@@ -747,68 +759,77 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices10"               
                 checked={hardback}                
                 onChange={(e)=>{setHardback(e.target.checked)}} 
+                className={styles.checkboxline}
               />   
             </Col>
           </Form.Group>
         </Col>
        
         <Col   md={{ span: 3, offset:0 }} className={styles.additionals}>
-        <Form.Label className={styles.label}>
+        
+          <Form.Group as={Row} className={styles.colformat}>
+            <Col>
+            <Form.Label className={styles.label}>
             Distribution
           </Form.Label>
-          <Form.Group as={Row}>
-            <Col>
               <Form.Check
                 type="checkbox"
                 label="Print Book Distribution"
                 name="additonalservices11"               
                 checked={printbook}                
                 onChange={(e)=>{setPrintbook(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
                 label="Ebook Distribution"
                 name="additonalservices12"               
                 checked={ebookdist}                
-                onChange={(e)=>{setEbookdist(e.target.checked)}} 
+                onChange={(e)=>{setEbookdist(e.target.checked)}}
+                className={styles.checkboxline} 
               />
               <Form.Check
                 type="checkbox"
                 label="Copyright Registration"
                 name="additonalservices13"               
                 checked={copyright}                
-                onChange={(e)=>{setCopyright(e.target.checked)}} 
+                onChange={(e)=>{setCopyright(e.target.checked)}}
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
                 label="ISBN"
                 name="additonalservices14"               
                 checked={isbn}                
-                onChange={(e)=>{setIsbn(e.target.checked)}} 
+                onChange={(e)=>{setIsbn(e.target.checked)}}
+                className={styles.checkboxline}
               />              
             </Col>
           </Form.Group>
         </Col>
        
         <Col   md={{ span: 3, offset: 0 }} className={styles.additionals}>
-        <Form.Label className={styles.label}>
-            Marketing
-          </Form.Label>
-          <Form.Group as={Row}>
+       
+          <Form.Group as={Row} className={styles.colformat}>
             <Col >
+            <Form.Label className={styles.label}>
+            Marketing
+           </Form.Label>
               <Form.Check
                 type="checkbox"
                 label="Author Website"
                 name="additonalservices15"               
                 checked={website}                
                 onChange={(e)=>{setWebsite(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
                 label="Audio Book"
                 name="additonalservices16"               
                 checked={audiobook}                
-                onChange={(e)=>{setAudiobook(e.target.checked)}} 
+                onChange={(e)=>{setAudiobook(e.target.checked)}}
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
@@ -816,6 +837,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices17"               
                 checked={videobook}                
                 onChange={(e)=>{setVideobook(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
@@ -823,13 +845,15 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices18"               
                 checked={pressrelease}                
                 onChange={(e)=>{setPressrelease(e.target.checked)}} 
+                className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
                 label="Author Events"
                 name="additonalservices19"               
                 checked={authorevents}                
-                onChange={(e)=>{setAuthorevents(e.target.checked)}} 
+                onChange={(e)=>{setAuthorevents(e.target.checked)}}
+                className={styles.checkboxline} 
               />
               <Form.Check
                 type="checkbox"
@@ -837,6 +861,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 name="additonalservices20"               
                 checked={printads}                
                 onChange={(e)=>{setPrintads(e.target.checked)}} 
+                className={styles.checkboxline}
               />              
              
             </Col>

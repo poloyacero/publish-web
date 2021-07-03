@@ -123,7 +123,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col className={styles.forgotpasslink1} md={12}>   
                 <br/>                                
-                  <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Link href="/dashboard/homedashboard">Create Account </Link></Button>
+                <Nav.Link href="/dashboard/homedashboard"><Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button></Nav.Link>
                 </Col>
                
               </Form.Group>
@@ -192,7 +192,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col className={styles.createlink} md={12}>   
                 <br/>                                
-                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Link href="/#"> Create Account</Link></Button>
+                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link href="/#"> Create Account</Nav.Link></Button>
                 </Col>
                
               </Form.Group>

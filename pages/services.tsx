@@ -90,9 +90,19 @@ export default function Services() {
               €0.040 per word</span></p>
 
               <p>Line editing addresses your writing style and language use on the sentence and paragraph level. Addressing structural issues, the same as a critiquing, the purpose of a line edit isn’t to comb your manuscript for errors but rather, a line edit focuses on the approach you employ to communicate your story to the reader.</p>
+              
+              <p className={styles.servicesparag}>Developmental Editing<br/><span className={styles.servicesspan}> 
+              €0.039 per word</span></p>
+
+              <p></p>
+              
+              <p className={styles.servicesparag}>Content Editing<br/><span className={styles.servicesspan}> 
+              €0.032 per word</span></p>
+
+              <p></p>
 
               <p className={styles.servicesparag}>Copyediting<br/><span className={styles.servicesspan}>
-              €0.13 / word </span></p>
+              €0.013 / word </span></p>
 
               <p>Copyediting sees all the mistakes and errors in the manuscript that the author missed. To be reader-friendly, copyediting refers to making your copy easy to read and understand and ensure that your content smoothly flows from the beginning to the end. Your text should be correct, consistent, clear, concise, and comprehensible.</p>
 
@@ -100,6 +110,16 @@ export default function Services() {
               €0.032 / word </span></p>
 
               <p>Proofreading is the final work against errors. It is not just looking for typos and misplaced punctuation in the  text but also searches for layout issues like page numbering, consistency with headings, placement of tables of figures in the text, bad line or page breaks, and more. Proofreaders catch all the mistakes the copyeditor missed.</p>
+              
+              <p className={styles.servicesparag}>Indexing<br/><span className={styles.servicesspan}> 
+              €0.018 per word</span></p>
+
+              <p></p>
+              
+              <p className={styles.servicesparag}>Data Entry<br/><span className={styles.servicesspan}> 
+              €6 per page</span></p>
+
+              <p></p>
               </Col>
             </Row>
             <Row><Col><br/><br/></Col></Row>
@@ -119,17 +139,32 @@ export default function Services() {
               <p>The layout of the book affects its readability. This sense of pride is crucial when it comes time to promote the book. An impressive book design will aid you as an author for that required look and feel.</p>
 
               <p className={styles.servicesparag}>Book Interior Design <br/><span className={styles.servicesspan}> 
-              €500-1500 / design</span></p>
+              €500-1500 per book</span></p>
 
               <p>The art of designing a book’s interior layout, known as book layout design, is also known as “typesetting.” It includes all of the decisions that affect how readers interact with the content of your printed book, such as fonts, spacing, chapter heading styling, margins, and so on. A book layout designer will take care of all of this for you and create a print format that meets the needs of your readers.</p>
 
               <p className={styles.servicesparag}>Book Cover Design  <br/><span className={styles.servicesspan}>
-              €250-1000 / design</span></p>
+              €250-1000 per cover</span></p>
 
               <p>A good cover design should not only look good on the shelf, but it should also clearly communicate the title, indicate the genre, and attract the right audience for the book. A professional cover designer understands what works in the market and has developed their own distinct style to make your book stand out. They’ll collaborate with you to produce a cover that reflects your vision while also incorporating their understanding of genre tropes and publishing patterns to give your book that much-desired mass appeal.</p>
 
+              <p className={styles.servicesparag}>Book Description <br/><span className={styles.servicesspan}> 
+              €200-300 per book</span></p>
+
+              <p>Drawing in a prospective reader with an intriguing book description plus a good book cover can close the deal.</p>
+
+              <p className={styles.servicesparag}>Hardback Upgrage<br/><span className={styles.servicesspan}>
+              €400-500 per cover</span></p>
+
+              <p></p>
+
+              <p className={styles.servicesparag}>Text and Layout Format<br/><span className={styles.servicesspan}>
+              €100-299 per book</span></p>
+
+              <p></p>
+
               <p className={styles.servicesparag}>Illustrations <br/><span className={styles.servicesspan}> 
-              €250-2000 / design</span></p>
+              €250-1000 per illustrations</span></p>
 
               <p>Our seasoned illustrators can cut across the board with their expertise on various genres this from young adult, fiction, to cartoons and fantasy. Text and illustrations work should tell a great story. Drawing in the reader, our brand of visual art brings the story to life. We listen to the author’s vision as well as we commit to delivering expertise that best tells your story. 
               <br/><br/><Link href="/illustration-services"><span  className={styles.serviceslink}><a>See <b>illustration samples</b></a></span></Link></p>
@@ -143,14 +178,9 @@ export default function Services() {
               <Col md={2}><Image src="/img/lens.png" height="auto" width="150px"/></Col>
               <Col md={8}>
               <p>Metadata is the information about your book that includes everything from title, subtitle, and author, to format, publishing date, page count, and trim size. Be it digital content or physical copies, a book metadata shows potential readers how to search your work online. As it tells websites simple facts about your book, like title, price, and author, but it can also find you, new readers.</p> 
-
-              <p className={styles.servicesparag}>Book Description <br/><span className={styles.servicesspan}> 
-              €300 / design</span></p>
-
-              <p>Drawing in a prospective reader with an intriguing book description plus a good book cover can close the deal.</p>
-
+              
               <p className={styles.servicesparag}>ISBN <br/><span className={styles.servicesspan}>
-              €35 / 1</span></p>
+              €35 per kind of book (paperback, hardback and Ebook)</span></p>
 
               <p>Similar to any product number you would find on other products you buy, ISBN stands for International Standard Book Number. It’s an internationally recognized identification number.</p>
 
@@ -158,6 +188,7 @@ export default function Services() {
               €300 / 1</span></p>
 
               <p>Retailers and booksellers will use your BISAC code to determine in which category to place your book on their website, or where to shelve it in their bookstore. BISAC codes essentially identify what your book is about – the primary genre(s), topic(s), and theme(s).</p>
+                            
               </Col>
             </Row>
             <Row><Col><br/><br/></Col></Row>
@@ -218,6 +249,27 @@ export default function Services() {
               <p>Currently, a handful of eBook formats dominate the marketplace. For eBooks, there are no major barriers to having your book published alongside bestselling authors.</p>
 
               <p>Ensuring that your book is available to the broadest possible audience in the format they prefer. The most effective strategy is to make your book available in all of the above formats as well as softcover and hardcover.</p>
+              
+              <p className={styles.servicesparag}>ISBN <br/><span className={styles.servicesspan}>
+              €35 per kind of book (paperback, hardback and Ebook)</span></p>
+
+              <p>Similar to any product number you would find on other products you buy, ISBN stands for International Standard Book Number. It’s an internationally recognized identification number.</p>
+            
+              
+              <p className={styles.servicesparag}>Print Book Distribution<br/><span className={styles.servicesspan}>
+              €200 per title</span></p>
+
+              <p></p>
+
+              <p className={styles.servicesparag}>Ebook Distribution<br/><span className={styles.servicesspan}>
+              €130 per title</span></p>
+
+              <p></p>
+
+              <p className={styles.servicesparag}>Copyright Registration<br/><span className={styles.servicesspan}>
+              €300 per book</span></p>
+
+              <p></p>
               </Col>
             </Row>
             <Row><Col><br/><br/></Col></Row>
@@ -237,41 +289,60 @@ export default function Services() {
               <p>Consider the following tactics to market your book:</p>
 
               <p className={styles.servicesparag}>Author Website<br/><span className={styles.servicesspan}> 
-              €500 Basic , €1500 Advance</span></p>
+              €500-1500 per author (basic/ advance)</span></p>
 
               <p>If you hope to create an engaged audience over time, a website is the first step. It’s important to have your website when you publish a book. By lending credibility to your name as an author, a website is a great place for readers to go to learn more about you, your book, your events, and more.</p> 
 
               <p className={styles.servicesparag}>Social Media<br/><span className={styles.servicesspan}> 
-              €500</span></p>
+              €500-2000 per categories ( facebook, instagram, linked, twitter )</span></p>
 
               <p>Pick two or three Social media platforms that you like —but make sure you ask yourself, where are my readers? : Facebook, Twitter, Instagram, LinkedIn. Choose it, we will post and share it with you.</p>
 
               <p className={styles.servicesparag}>Audio Book<br/><span className={styles.servicesspan}> 
-              €2500 / 10,000 words</span></p>
+              €2500 per book ( 10,000 words )</span></p>
 
               <p>If you can’t capture your audience visually then Audiobook Premium is the perfect alternative! Audiobook, by all means, provides a quality convenience in absorbing your story while your audience are in the middle of doing something. This is also the best format to reach the visually challenged audience who are interested in discovering the world you have created through words. In the event that your potential audience don’t have the ample time to read your work, then find a way to make it to your audience through audio recordings!</p>
 
               <p className={styles.servicesparag}>Video Book<br/><span className={styles.servicesspan}> 
-              €2800 / minute</span></p>
+              €2800 per minute</span></p>
 
               <p>Book Video provide to your needs by showing your viewers a glimpse of your book on screen. It allows you to show a trailer of your book plot based on the option you chose. Take part of the social media noise through creative media.</p>
 
               <p className={styles.servicesparag}>Author Events<br/><span className={styles.servicesspan}> 
-              €1500-5000</span></p>
+              €1500-5000 per event</span></p>
 
               <p>Whether it’s your book launch party or an author reading, events are a great way to connect with readers in your community. Bookstores and libraries are great options, but you should also think outside the box. What other venues might want to feature your book? If you wrote a cookbook, perhaps there’s a local winery or brewery where you can pair some of your tasty food with some local beverages.
               Marketing your book can be fun when you take the time and effort to understand your audience and provide them with a valuable reason to join your tribe and ultimately, purchase your book!</p>
 
               <p className={styles.servicesparag}>Sale Sheets<br/><span className={styles.servicesspan}> 
-              €200</span></p>
+              €500-1500 per book</span></p>
 
               <p>This one-page paper contains high-level, relevant information about your book. A sale sheet is basically, your high-level metadata such as the title, subtitle, publisher, publication date, etc.</p> 
 
               <p className={styles.servicesparag}>Advanced Reader Copies<br/><span className={styles.servicesspan}> 
-              €600</span></p>
+              €500-1500 per book</span></p>
 
               <p>ARCs are used to get endorsements, which can be added to the final cover of your book before printing. ARCs are copies of your book that are printed in advance to generate buzz for your book.</p> 
 
+              <p className={styles.servicesparag}>Press Release Campaign<br/><span className={styles.servicesspan}> 
+              €400-500 per cover</span></p>
+
+              <p></p> 
+
+              <p className={styles.servicesparag}>Print Advertisement<br/><span className={styles.servicesspan}> 
+              €500-2000 per kind and quantity</span></p>
+
+              <p></p> 
+
+              <p className={styles.servicesparag}>Royalty Program<br/><span className={styles.servicesspan}> 
+              €1600-2800 (1-3 yrs)</span></p>
+
+              <p></p>
+
+              <p className={styles.servicesparag}>Book Return Program<br/><span className={styles.servicesspan}> 
+              €700-4000 per package</span></p>
+
+              <p></p>
               </Col>
             </Row>            
             

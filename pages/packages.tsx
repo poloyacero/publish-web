@@ -50,7 +50,7 @@ export default function PackagesPage() {
 
           </p>
         </Package>
-        <Package title="Deluxe" price={1500} width={3} currency="€">
+        <Package title="Deluxe" price={1900} width={3} currency="€">
           <p>
           <b>Edit and Design</b><br/>
             Paperback Format<br/>
