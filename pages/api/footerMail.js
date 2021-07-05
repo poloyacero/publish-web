@@ -26,7 +26,7 @@ export default function (req, res) {
   const mailData = {
     to: "admin@thepublishing.com", // String or array of strings ['You <you@example.com>', 'another@example.com']
     from: req.body.email, // String
-    subject: req.body.subjectmsg,
+    subject: req.body.subjects,
     text: "Hi Im" + req.body.name,
     html: `<div>Inquiry from Footer<br/><br/>
         Hi I'm ${req.body.firstname} ${req.body.lastname}<br/><br/>        

@@ -24,7 +24,7 @@ export default function MarketingPage() {
               </Row>
             </Container>
           </Container> 
-        <Item width={6} mlink="/illustration-services" img="/img/services/52.png" title="Illustrations" subtitle="€250-1000" unit="per illustrations" className={styles.itemImage}>
+        <Item width={6} mlink="/illustration-services" img="/img/services/52new.png" title="Illustrations" subtitle="€250-1000" unit="per illustrations">
             <p>
             Bring your imagination to life. A team of professional book illustrators can provide gorgeous, eye-catching artwork to instantly set your title apart from the crowd!
             </p>
@@ -55,7 +55,7 @@ export default function MarketingPage() {
               Make your book even more accessible by providing your readers easier access to relevant terms and topics through Indexing Services.
             </p>
           </Item>
-          <Item width={6} mlink="/" img="/img/services/51.png" title="Cover & Interior Proofs" subtitle="€200" unit="/ book">
+          <Item width={6} mlink="/" img="/img/services/51.png" title="Cover & Sale Sheets" subtitle="€500-1500" unit="per book">
             <p>
               By sending you the physical copy of cover and interior proofs. Simply ask us via email: there’s need to complete or navigate through a complicated online form.
             </p>

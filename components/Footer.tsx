@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import swal from 'sweetalert';
-import React from 'react'
+import React,{useEffect} from 'react'
 import {  Button, Col, Container, Form, FormControl, InputGroup, Nav, Row } from 'react-bootstrap';
 
 import styles from './FooterMenu.module.css';
@@ -15,8 +15,23 @@ const Footer = ({ ...props }: FooterProps) => {
   const [lastname, setLastname] = React.useState('')
   const [phonenumber, setPhonenumber] = React.useState('')
   const [subjectmsg, setSubjectmsg] = React.useState('')
+  const [subjects, setSubjects] = React.useState('')
   const [submitted, setSubmitted] = React.useState(false)
   
+  const handleSubject = () => { 
+    if(subjects===""){
+      setSubjects(subjects+" "+subjectmsg);
+    }else{
+    setSubjects(subjects+" "+subjectmsg+",");
+  }
+    console.log("subjects:",subjects)
+  }
+   useEffect(() => {
+      
+    handleSubject(); 
+  
+   }, [subjectmsg])
+
   const handleSubmit = (e:any) => { 
     e.preventDefault()
     console.log('Sending...') 
@@ -26,7 +41,7 @@ const Footer = ({ ...props }: FooterProps) => {
       lastname,
       email,
       phonenumber,
-      subjectmsg      
+      subjects      
     }
   fetch('/api/footerMail', {
       method: 'POST',
@@ -86,7 +101,7 @@ const Footer = ({ ...props }: FooterProps) => {
                  Subject
                 </Form.Text> */}
                 {/* <Form.Control type="text" className={styles.footerinput} placeholder="Subject" /> */}
-                <Form.Control className={styles.footerinputselect} as="select"  value={subjectmsg} defaultValue={subjectmsg} onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
+                <Form.Control className={styles.footerinputselect} as="select" defaultValue="Services" onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
                   <option disabled>Subject</option>
                   <optgroup label="General Inquiries">                  
                   <option>Services</option>
@@ -122,7 +137,7 @@ const Footer = ({ ...props }: FooterProps) => {
                   </optgroup>
 
                 </Form.Control>
-                <Row><Col><br/></Col></Row>
+                <Row><Col><br/><p className={styles.copyright}>Subjects:{subjects}</p></Col></Row>
                 <Row><Col className={styles.checkboxlabel}><Form.Check type="checkbox"label="I agree to the Privacy Policy and Terms and Condition" name="selectstyles"  id="styles1"/></Col>
                </Row>
                    <br/>             
