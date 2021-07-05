@@ -28,7 +28,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
               <p>Create and publish your<br/> own book in your way.</p>
             </Carousel.Caption>
             <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
-            <Image className={styles.carouselImage} style={{ width: '40%' }} src="/img/Slider.png" />
+            <Image className={styles.carouselImage} src="/img/Slider.png" />
           </Carousel.Item>
           <Carousel.Item interval={1000}>
             <img
@@ -51,7 +51,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             />
             <Carousel.Caption className={styles.carouselCaption}>
               <h3>Sell</h3>
-              <p>Sell your book on your <br/>own website and around the world.</p>
+              <p>Sell your book on your own <br/>website & around the world.</p>
             </Carousel.Caption>
             <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/stock.png" />

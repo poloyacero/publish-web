@@ -39,7 +39,7 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
             <Col className={styles.featuredPrice + ' ' + styles.featuredPriceRight} md={3}>
               <div>
                 <h3>Deluxe</h3><br/>
-                <span>€1500</span>
+                <span>€1900</span>
               </div>
             </Col>
           </Row>
