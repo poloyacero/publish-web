@@ -2,6 +2,9 @@ name: Deploy to Publising
  
 on:
   push:
+    branches:
+      - '*'
+      - 'master'
 
 env:
   ssh_key_path: ~/.ssh/thepublishing.pem
