@@ -1,20 +1,20 @@
 .item {
   color: #7b6b5b;
   margin-bottom: 40px;
-  justify-items:  center;
+  justify-items: center;
 }
 
 .itemPad {
   padding: 15px;
- padding-left:120px;
+  padding-left: 120px;
 }
 
 .item h3 {
   margin-bottom: 0px;
-  line-height: 20px;
+  line-height: 25px;
 }
 
-.item img { 
+.item img {
   margin: auto;
   margin-bottom: 15px;
   text-align: center;
@@ -37,16 +37,14 @@
 }
 
 @media screen and (max-width: 1030px) {
-  .item img { 
+  .item img {
     margin: 0;
     margin-bottom: 15px;
     width: 200px;
-   
   }
   .itemPad {
     padding: 15px;
-   padding-left:0px;
-   text-align: center;
+    padding-left: 0px;
+    text-align: center;
   }
-
 }

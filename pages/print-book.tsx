@@ -85,7 +85,7 @@ export default function PrintBook() {
             Color laminated cover with perfect-bound binding
           </p>
           <p>
-            <b>Handcover</b><br/>
+            <b>Hardcover</b><br/>
             Available with or without dusk jacket
           </p>
         </Item>

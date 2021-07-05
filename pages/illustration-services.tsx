@@ -81,69 +81,78 @@ export default function IllustrationServices() {
                 <h3>Standard Packages</h3>
               </Row>
               <Row className={styles.ctext}>
-        <Col md={3} className={styles.product+("justify-md-center")}>
-          <Col className={styles.product} md={12}>
-                    
-            <Row className={styles.container1}>
+      <Col md={3} className=" justify-md-center">
+      <Col md={12}>
+       <div className={styles.levelsbg}> 
+          <Row className={styles.container1}>
+         
               <Row>
               <Col  className={styles.thelevel}><h3 className="text-left">Level 1</h3></Col>
               </Row>
-
-            <Row className={styles.container2}>
+              
+              <Row className={styles.container2}>
+             
+                  <Row className={styles.myl2}>
+                  <Col className={styles.myl2}>
+                    <Col>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
+                    <Col>Illustration&nbsp;&nbsp;</Col>
+                    <Col>€250&nbsp;&nbsp;</Col>
+                  </Col>
+                  </Row>
+                  <Row className={styles.myl2}>
+                  <Col className={styles.myl2}>
+                    <Col>5&nbsp;&nbsp;&nbsp;</Col>
+                    <Col>Illustrations</Col>
+                    <Col>€1000</Col>
+                  </Col>
+                  </Row>
+                  <Row className={styles.myl2}>
+                  <Col className={styles.myl2}>
+                    <Col>10&nbsp;</Col>
+                    <Col>Illustrations</Col>
+                    <Col>€1800</Col>
+                  </Col>
+                  </Row>
+                  <Row className={styles.myl2}>
+                  <Col className={styles.myl2}>
+                    <Col>20</Col>
+                    <Col>Illustrations</Col>
+                    <Col>€3000</Col>
+                  </Col>
+                  </Row>                          
+              </Row>
+             
+            </Row>          
+            <br/>
+          
             <Row className={styles.myl2}>
-               <Col className={styles.myl2}>
-              <Col>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustration&nbsp;&nbsp;</Col>
-              <Col>€250&nbsp;&nbsp;</Col>
+              <Col>
+              <Image src="/img/services/leveling1.png" width="210px" height="auto" />
+               <br/><br/>
+              <p className={styles.mylpsize}>Level 1 is the simplest coloring style. 
+                  It has solid flat colors. Because of its 
+                  simplicity it has the shortest working 
+                  time which usually takes 3-4 working 
+                  days depending on the number 
+                  of illustrations.
+                  <br/><br/>
+                  Inclusions:<br/>
+                  1 Figure<br/>
+                  Background/ Scene<br/>
+                  Full Body<br/>
+                  Color</p>
               </Col>
+              
               </Row>
-              <Row className={styles.myl2}>
-               <Col className={styles.myl2}>
-              <Col>5&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€1000</Col>
-              </Col>
-              </Row>
-              <Row className={styles.myl2}>
-               <Col className={styles.myl2}>
-              <Col>10&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€1800</Col>
-              </Col>
-               </Row>
-               <Row className={styles.myl2}>
-               <Col className={styles.myl2}>
-              <Col>20</Col>
-              <Col>Illustrations</Col>
-              <Col>€3000</Col>
-              </Col>
-              </Row>              
-              </Row>
-            </Row>
-            
-            <Row className={styles.myl2}><Col><br/></Col></Row>
-            <Row className={styles.myl2}><Col>
-            <Image src="/img/services/leveling1.png" width="220px" height="auto" />
-            <Row className={styles.myl2}><Col><br/></Col></Row>
-            <p className={styles.mylpsize}>Level 1 is the simplest coloring style. 
-                It has solid flat colors. Because of its 
-                simplicity it has the shortest working 
-                time which usually takes 3-4 working 
-                days depending on the number 
-                of illustrations.
-                <br/><br/>
-                Inclusions:<br/>
-                1 Figure<br/>
-                Background/ Scene<br/>
-                Full Body<br/>
-                Color</p>
-            </Col>
-            </Row>
-          </Col>
-          </Col>
+              </div>             
+         
+        </Col>
+        </Col>
+      
+          
           <Col md={3}>
           <Col className={styles.product} md={12}>         
-         
+          <div className={styles.levelsbg}> 
             <Row className={styles.container1}>
               <Row>
               <Col  className={styles.thelevel}><h3 className="text-left">Level 2</h3></Col>
@@ -152,21 +161,21 @@ export default function IllustrationServices() {
               <Row className={styles.container2}> 
               <Row className={styles.myl2}>
               <Col className={styles.myl2}>
-              <Col>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustration&nbsp;&nbsp;</Col>
+              <Col>1</Col>
+              <Col>Illustration&nbsp;&nbsp;&nbsp;&nbsp;</Col>
               <Col>€350</Col>
               </Col>
             </Row>
               <Row className={styles.myl2}>
               <Col className={styles.myl2}>
-              <Col>5&nbsp;&nbsp;&nbsp;</Col>
+              <Col>5&nbsp;&nbsp;</Col>
               <Col>Illustrations</Col>
               <Col>€1500</Col>
               </Col>
               </Row>
               <Row className={styles.myl2}>
               <Col className={styles.myl2}>
-              <Col>10&nbsp;</Col>
+              <Col>10&nbsp;&nbsp;&nbsp;</Col>
               <Col>Illustrations</Col>
               <Col>€2800</Col>
               </Col>
@@ -181,30 +190,31 @@ export default function IllustrationServices() {
               </Row>
             </Row>
 
-              <Row className={styles.myl2}><Col><br/></Col></Row>
+            <br/>
               <Row className={styles.myl2}>
               <Col>
-              <Image src="/img/services/leveling2.png" width="220px" height="auto" />
-              <Row className={styles.myl2}><Col><br/></Col></Row>
+              <Image src="/img/services/leveling2.png" width="210px" height="auto" />
+              <br/><br/>
               <p className={styles.mylpsize}>Level 2 color is a coloring style 
                 that gives your illustration shadows and 
                 highlights. A working period of 1 week 
                 is given to this coloring style depending 
                 on the number of illustrations.
-                <br/><br/><br/>
+                <br/><br/>
                 Inclusions:<br/>
                 2 Figures<br/>
                 Background/ Scene<br/>
                 Full Body<br/>
                 Color</p>
               </Col>       
-             </Row>            
+             </Row> 
+             </div>            
           </Col>
           </Col>
 
           <Col md={3}>
           <Col className={styles.product} md={12}>           
-            
+          <div className={styles.levelsbg}>   
           <Row className={styles.container1}>
               <Row>
               <Col  className={styles.thelevel}><h3 className="text-left">Level 3</h3></Col>
@@ -240,11 +250,11 @@ export default function IllustrationServices() {
               </Row>
               </Row>
             </Row>
-            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <br/>
             <Row className={styles.myl2}>
                 <Col>
-            <Image src="/img/services/leveling3.png" width="220px" height="auto" />
-            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <Image src="/img/services/leveling3.png" width="210px" height="auto" />
+            <br/><br/>
             <p className={styles.mylpsize}>Level 3 has a 3D-ish effect, an ideal
                 coloring style for a realistic illustrations. 
                 This coloring style consumes almost a 
@@ -259,11 +269,12 @@ export default function IllustrationServices() {
                 Color</p>
             </Col>
             </Row>
+            </div>
           </Col>
           </Col>
           <Col md={3}>
           <Col className={styles.product} md={12}>          
-            
+          <div className={styles.levelsbg}> 
           <Row className={styles.container1}>
               <Row>
               <Col  className={styles.thelevel}><h3 className="text-left">Level 4</h3></Col>
@@ -299,10 +310,10 @@ export default function IllustrationServices() {
               </Row>
               </Row>
             </Row>
-            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <br/>
             <Row className={styles.myl2}><Col>
-            <Image src="/img/services/Layer83.png" width="220px" height="auto" />
-            <Row className={styles.myl2}><Col><br/></Col></Row>
+            <Image src="/img/services/Layer83.png" width="210px" height="auto" />
+            <br/><br/>
             <p className={styles.mylpsize}>Level 4 is a 3D render and is the most 
                 complex of all art style due to its 
                 intricacy and depth. A working period of 
@@ -316,6 +327,7 @@ export default function IllustrationServices() {
                 Color</p>
             </Col>
             </Row>
+            </div>
           </Col>
           </Col>
           </Row>
