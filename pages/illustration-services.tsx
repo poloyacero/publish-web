@@ -47,7 +47,7 @@ export default function IllustrationServices() {
                 <Col className={styles.illustrationpadding} md={3}>
               <Form.Group controlId="formBasicCheckbox" className={styles.ctext}>
                 <Form.Check type="radio" label="Line Art" name="selectstyles" id="styles5"/>
-                <Form.Check type="radio" label="Victor" name="selectstyles" id="styles6"/>
+                <Form.Check type="radio" label="Vector" name="selectstyles" id="styles6"/>
                 <Form.Check type="radio" label="Isometric" name="selectstyles" id="styles7"/>
                 <Form.Check type="radio" label="Fantasy" name="selectstyles" id="styles8"/>
                 <Form.Check type="radio" label="Charcoal" name="selectstyles" id="styles15"/>
@@ -82,7 +82,7 @@ export default function IllustrationServices() {
               </Row>
               <Row className={styles.ctext}>
       <Col md={3} className=" justify-md-center">
-      <Col md={12}>
+      <Col>
        <div className={styles.levelsbg}> 
           <Row className={styles.container1}>
          
@@ -92,33 +92,33 @@ export default function IllustrationServices() {
               
               <Row className={styles.container2}>
              
-                  <Row className={styles.myl2}>
-                  <Col className={styles.myl2}>
-                    <Col>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
-                    <Col>Illustration&nbsp;&nbsp;</Col>
-                    <Col>€250&nbsp;&nbsp;</Col>
-                  </Col>
+                  <Row className={styles.colMain}>
+                 
+                    <Col className={styles.col1}>1</Col>
+                    <Col className={styles.col2}>Illustration&nbsp;&nbsp;</Col>
+                    <Col className={styles.col3}>€250</Col>
+                 
                   </Row>
-                  <Row className={styles.myl2}>
-                  <Col className={styles.myl2}>
-                    <Col>5&nbsp;&nbsp;&nbsp;</Col>
-                    <Col>Illustrations</Col>
-                    <Col>€1000</Col>
-                  </Col>
+                  <Row className={styles.colMain}>
+                 
+                    <Col className={styles.col1}>5</Col>
+                    <Col className={styles.col2}>Illustrations</Col>
+                    <Col className={styles.col3}>€1000</Col>
+                  
                   </Row>
-                  <Row className={styles.myl2}>
-                  <Col className={styles.myl2}>
-                    <Col>10&nbsp;</Col>
-                    <Col>Illustrations</Col>
-                    <Col>€1800</Col>
-                  </Col>
+                  <Row className={styles.colMain}>
+                 
+                    <Col className={styles.col1}>10</Col>
+                    <Col className={styles.col2}>Illustrations</Col>
+                    <Col className={styles.col3}>€1800</Col>
+                  
                   </Row>
-                  <Row className={styles.myl2}>
-                  <Col className={styles.myl2}>
-                    <Col>20</Col>
-                    <Col>Illustrations</Col>
-                    <Col>€3000</Col>
-                  </Col>
+                  <Row className={styles.colMain}>
+                  
+                    <Col className={styles.col1}>20</Col>
+                    <Col className={styles.col2}>Illustrations</Col>
+                    <Col className={styles.col3}>€3000</Col>
+                 
                   </Row>                          
               </Row>
              
@@ -151,7 +151,7 @@ export default function IllustrationServices() {
       
           
           <Col md={3}>
-          <Col className={styles.product} md={12}>         
+          <Col className={styles.product}>         
           <div className={styles.levelsbg}> 
             <Row className={styles.container1}>
               <Row>
@@ -159,33 +159,33 @@ export default function IllustrationServices() {
               </Row>
 
               <Row className={styles.container2}> 
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>1</Col>
-              <Col>Illustration&nbsp;&nbsp;&nbsp;&nbsp;</Col>
-              <Col>€350</Col>
-              </Col>
+              <Row className={styles.colMain}>
+             
+              <Col className={styles.col1}>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
+              <Col className={styles.col2}>Illustration&nbsp;&nbsp;</Col>
+              <Col className={styles.col3}>€350</Col>
+             
             </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>5&nbsp;&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€1500</Col>
-              </Col>
+              <Row className={styles.colMain}>
+             
+              <Col className={styles.col1}>5&nbsp;&nbsp;&nbsp;</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€1500</Col>
+              
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>10&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€2800</Col>
-              </Col>
+              <Row className={styles.colMain}>
+             
+              <Col className={styles.col1}>10&nbsp;</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€2800</Col>
+             
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>20</Col>
-              <Col>Illustrations</Col>
-              <Col>€4000</Col>
-              </Col>
+              <Row className={styles.colMain}>
+              
+              <Col className={styles.col1}>20</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€4000</Col>
+             
               </Row>
               </Row>
             </Row>
@@ -220,33 +220,33 @@ export default function IllustrationServices() {
               <Col  className={styles.thelevel}><h3 className="text-left">Level 3</h3></Col>
               </Row>
               <Row className={styles.container2}>
-            <Row className={styles.myl2}>
-            <Col className={styles.myl2}>
-              <Col>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustration&nbsp;&nbsp;</Col>
-              <Col>€450</Col>
-              </Col>
+            <Row className={styles.colMain}>
+            
+              <Col className={styles.col1}>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
+              <Col className={styles.col2}>Illustration&nbsp;&nbsp;</Col>
+              <Col className={styles.col3}>€450</Col>
+            
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>5&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€2000</Col>
-              </Col>
+              <Row  className={styles.colMain}>
+             
+              <Col className={styles.col1}>5&nbsp;&nbsp;&nbsp;</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€2000</Col>
+             
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>10&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€3800</Col>
-              </Col>
+              <Row  className={styles.colMain}>
+           
+              <Col className={styles.col1}>10&nbsp;</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€3800</Col>
+            
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>20</Col>
-              <Col>Illustrations</Col>
-              <Col>€7000</Col>
-              </Col>
+              <Row  className={styles.colMain}>
+             
+              <Col className={styles.col1}>20</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€7000</Col>
+            
               </Row>
               </Row>
             </Row>
@@ -280,33 +280,33 @@ export default function IllustrationServices() {
               <Col  className={styles.thelevel}><h3 className="text-left">Level 4</h3></Col>
               </Row>
               <Row className={styles.container2}>
-            <Row className={styles.myl2}>
-            <Col className={styles.myl2}>
-              <Col>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustration&nbsp;&nbsp;</Col>
-              <Col>€1000</Col>
-              </Col>
+            <Row className={styles.colMain}>
+           
+              <Col className={styles.col1}>1&nbsp;&nbsp;&nbsp;&nbsp;</Col>
+              <Col className={styles.col2}>Illustration&nbsp;&nbsp;</Col>
+              <Col className={styles.col3}>€1000</Col>
+              
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>5&nbsp;&nbsp;&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€4500</Col>
-              </Col>
+              <Row  className={styles.colMain}>
+             
+              <Col className={styles.col1}>5&nbsp;&nbsp;&nbsp;</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€4500</Col>
+             
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>10&nbsp;</Col>
-              <Col>Illustrations</Col>
-              <Col>€8000</Col>
-              </Col>
+              <Row  className={styles.colMain}>
+             
+              <Col className={styles.col1}>10&nbsp;</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€8000</Col>
+              
               </Row>
-              <Row className={styles.myl2}>
-              <Col className={styles.myl2}>
-              <Col>20</Col>
-              <Col>Illustrations</Col>
-              <Col>€14000</Col>
-              </Col>
+              <Row  className={styles.colMain}>
+              
+              <Col className={styles.col1}>20</Col>
+              <Col className={styles.col2}>Illustrations</Col>
+              <Col className={styles.col3}>€14000</Col>
+              
               </Row>
               </Row>
             </Row>

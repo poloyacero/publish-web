@@ -1,10 +1,18 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import { Row, Col, Button,Form} from 'react-bootstrap';
 import styles from './forms.module.css';
 import styleIn from '../../../styles/inputstyle.module.css'
 
 export default function Proform() {
+  const [interiorcolor,setInteriorcolor]=React.useState("");
+  const [papertype, setPapertype] = useState('')
+
+  const handleChange=(e:any) =>{
+    setInteriorcolor(e.target.value);
+    console.log(interiorcolor);
+  }
+
   return (
     <>
     <Form.Group as={Row}>
@@ -134,10 +142,39 @@ export default function Proform() {
           <Col md={3}>Trim Size</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Print Book and Ebook € 350</option>
-              <option>Print Book Only € 300</option>                  
-              <option>Edisabledbook Only € 250</option>  
+          <option value=""></option>
+              <option value="4.000&quot; x 6.000&quot; (152mm x 102 mm)">4.000" x 6.000" (152mm x 102 mm)</option>
+              <option value="4.000&quot; x 7.000&quot; (178mm x 102 mm)">4.000" x 7.000" (178mm x 102 mm)</option>
+              <option value="4.250&quot; x 7.000&quot; (178mm x 108 mm)">4.250" x 7.000" (178mm x 108 mm)</option>
+              <option value="4.370&quot; x 7.000&quot; (178mm x 111mm)">4.370" x 7.000" (178mm x 111mm)</option>
+              <option value="4.720&quot; x 7.480&quot; (190mm x 120mm)">4.720" x 7.480" (190mm x 120mm)</option>
+              <option value="5.000&quot; x 7.000&quot; (178mm x 127mm)">5.000" x 7.000" (178mm x 127mm)</option>
+              <option value="5.000&quot; x 8.000&quot; (203mm x 127mm)">5.000" x 8.000" (203mm x 127mm)</option>
+              <option value="5.060&quot; x 7.810&quot; (198mm x 129mm)">5.060" x 7.810" (198mm x 129mm)</option>
+              <option value="5.250&quot; x 8.000&quot; (203mm x 133mm)">5.250" x 8.000" (203mm x 133mm)</option>
+              <option value="5.500&quot; x 8.500&quot; (216mm x 140mm)">5.500" x 8.500" (216mm x 140mm)</option>
+              <option value="5.500&quot; x 8.250&quot; (210mm x 140mm)">5.500" x 8.250" (210mm x 140mm)</option>
+              <option value="5.500&quot; x 8.380&quot; (213mm x 140mm)">5.500" x 8.380" (213mm x 140mm)</option>
+              <option value="5.500&quot; x 7.500&quot; (191mm x 140mm)">5.500" x 7.500" (191mm x 140mm)</option>
+              <option value="5.830&quot; x 8.270&quot; (210mm x 148mm) A5">5.830" x 8.270" (210mm x 148mm) A5</option>
+              <option value="6.000&quot; x 9.000&quot; (229mm x 152mm)">6.000" x 9.000" (229mm x 152mm)</option>
+              <option value="6.140&quot; x 9.210&quot; (234mm x 156mm)">6.140" x 9.210" (234mm x 156mm)</option>
+              <option value="6.500&quot; x 6.500&quot; (165mm x 165mm)">6.500" x 6.500" (165mm x 165mm)</option>
+              <option value="6.625&quot; x 10.250&quot; (260mm x 168mm)">6.625" x 10.250" (260mm x 168mm)</option>
+              <option value="6.690&quot; x 9.610&quot; (244mm x 170mm)">6.690" x 9.610" (244mm x 170mm)</option>
+              <option value="7.000&quot; x 10.000&quot; (254mm x 178mm)">7.000" x 10.000" (254mm x 178mm)</option>
+              <option value="7.440&quot; x 9.690&quot; (246mm x 189mm)">7.440" x 9.690" (246mm x 189mm)</option>
+              <option value="7.500&quot; x 9.250&quot; (235mm x 191mm)">7.500" x 9.250" (235mm x 191mm)</option>
+              <option value="8.000&quot; x 10.000&quot; (254mm x 203mm)">8.000" x 10.000" (254mm x 203mm)</option>
+              <option value="8.000&quot; x 10.880&quot; (276mm x 203mm)">8.000" x 10.880" (276mm x 203mm)</option>
+              <option value="8.000&quot; x 8.000&quot; (203mm x 203mm)">8.000" x 8.000" (203mm x 203mm)</option>
+              <option value="8.250&quot; x 11.000&quot; (280mm x 210mm)">8.250" x 11.000" (280mm x 210mm)</option>
+              <option value="8.250&quot; x 10.750&quot; (273mm x 210 mm)">8.250" x 10.750" (273mm x 210 mm)</option>
+              <option value="8.268&quot; x 11.693&quot; (297mm x 210mm) A4">8.268" x 11.693" (297mm x 210mm) A4</option>
+              <option value="8.500&quot; x 8.500&quot; (216mm x 216mm)">8.500" x 8.500" (216mm x 216mm)</option>
+              <option value="8.500&quot; x 11.000&quot; (280mm x 216mm)">8.500" x 11.000" (280mm x 216mm)</option>
+              <option value="8.500&quot; x 9.000&quot; (229mm x 216mm)">8.500" x 9.000" (229mm x 216mm)</option>
+              <option value="11.000&quot; x 8.500&quot; (216mm x 280mm)">11.000" x 8.500" (216mm x 280mm)</option> 
           </Form.Control>
           </Col>
           </Row>
@@ -145,11 +182,10 @@ export default function Proform() {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={3}>Interior Color</Col> 
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Print Book and Ebook € 350</option>
-              <option>Print Book Only € 300</option>                  
-              <option>Ebook Only € 250</option>  
+          <Form.Control className={styleIn.inputselect2} as="select" defaultValue={interiorcolor} onChange={ handleChange }>
+          <option></option>
+              <option>Black and White</option>
+              <option>Color</option>  
           </Form.Control>
           </Col>
           </Row>
@@ -158,10 +194,20 @@ export default function Proform() {
           <Col md={3}>Paper Type</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Print Book and Ebook € 350</option>
-              <option>Print Book Only € 300</option>                  
-              <option>Ebook Only € 250</option>  
+          <option> </option>              
+                { interiorcolor==="Black and White"?(
+                  <>
+              <option>White</option>
+              <option>Creme</option>
+              <option>Eggshell</option> 
+              </> 
+                ):(
+                  <>
+              <option>Standard Color 50 lb</option>
+              <option>Standard Color 70 lb</option>
+              <option>Premium Color 50 lb</option> 
+                  </>
+                )}                   
           </Form.Control>
           </Col>
           </Row>
@@ -170,10 +216,9 @@ export default function Proform() {
           <Col md={3}>Binding Type</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Print Book and Ebook € 350</option>
-              <option>Print Book Only € 300</option>                  
-              <option>Ebook Only € 250</option>  
+              <option> </option>
+              <option>Paperback</option>
+              <option>Hardback</option> 
           </Form.Control>
           </Col>
           </Row>
@@ -182,10 +227,10 @@ export default function Proform() {
           <Col md={3}>Laminate</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Print Book and Ebook € 350</option>
-              <option>Print Book Only € 300</option>                  
-              <option>Ebook Only € 250</option>  
+          <option> </option>
+              <option>Gloss</option>
+              <option>Matte</option>
+              <option>Texture</option>
           </Form.Control>
           </Col>
           </Row>
@@ -194,22 +239,17 @@ export default function Proform() {
           <Col md={3}>Page Count</Col>
           <Col md={8}>
           <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Print Book and Ebook € 350</option>
-              <option>Print Book Only € 300</option>                  
-              <option>Ebook Only € 250</option>  
+          <option> </option>
+              <option>22</option>
+              <option>28</option>
+              <option>200</option> 
           </Form.Control>
           </Col>
           </Row>         
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={3}>Quantity</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-              <option> </option>                                
-              <option>Print Book and Ebook € 350</option>
-              <option>Print Book Only € 300</option>                  
-              <option>Ebook Only € 250</option>  
-          </Form.Control> 
+          <Form.Control className={styleIn.inputtext}  type="text" />
           </Col>
           </Row>                
         </Col>

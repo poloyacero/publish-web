@@ -9,23 +9,32 @@ import styles from './FooterMenu.module.css';
 
 interface FooterProps {}
 
-const Footer = ({ ...props }: FooterProps) => {
+  const Footer = ({ ...props }: FooterProps) => {
   const [firstname, setFirstname] = React.useState('')
   const [email, setEmail] = React.useState('')
   const [lastname, setLastname] = React.useState('')
   const [phonenumber, setPhonenumber] = React.useState('')
-  const [subjectmsg, setSubjectmsg] = React.useState('')
+  const [subjectmsg, setSubjectmsg] = React.useState('Subject')
   const [subjects, setSubjects] = React.useState('')
   const [submitted, setSubmitted] = React.useState(false)
+  const [noSubject, setNosubject] = React.useState(true)
   
   const handleSubject = () => { 
-    if(subjects===""){
-      setSubjects(subjects+" "+subjectmsg);
-    }else{
+    if(subjectmsg!=="Subject"){ 
+     
     setSubjects(subjects+" "+subjectmsg+",");
+    setNosubject(false)
   }
     console.log("subjects:",subjects)
   }
+
+
+  const clearSubject = () => { 
+    setSubjects("")
+    setNosubject(true)
+  }
+
+
    useEffect(() => {
       
     handleSubject(); 
@@ -101,9 +110,9 @@ const Footer = ({ ...props }: FooterProps) => {
                  Subject
                 </Form.Text> */}
                 {/* <Form.Control type="text" className={styles.footerinput} placeholder="Subject" /> */}
-                <Form.Control className={styles.footerinputselect} as="select" defaultValue="Services" onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
-                  <option disabled>Subject</option>
-                  <optgroup label="General Inquiries">                  
+                <Form.Control className={styles.footerinputselect} as="select" onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
+                  <option disabled selected>Subject</option>
+                  <optgroup label="General Inquiries">                                  
                   <option>Services</option>
                   <option>Book Printing</option>                  
                   <option>Book Distribution</option>
@@ -137,7 +146,8 @@ const Footer = ({ ...props }: FooterProps) => {
                   </optgroup>
 
                 </Form.Control>
-                <Row><Col><br/><p className={styles.copyright}>Subjects:{subjects}</p></Col></Row>
+                <Row><Col><br/><p className={styles.copyright}>{subjects}
+                {noSubject? <span> </span>: <span onClick={()=>{clearSubject()}}>(clear)</span>}</p></Col></Row>
                 <Row><Col className={styles.checkboxlabel}><Form.Check type="checkbox"label="I agree to the Privacy Policy and Terms and Condition" name="selectstyles"  id="styles1"/></Col>
                </Row>
                    <br/>             
