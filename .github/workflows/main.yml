@@ -7,7 +7,7 @@ on:
       - master
   pull_request:
     branches:
-      - master
+      - master 
 
 env:
   ssh_key_path: ~/.ssh/thepublishing.pem
