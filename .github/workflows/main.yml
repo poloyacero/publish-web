@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - '*'
-      - 'master'
+      - master
+  pull_request:
+    branches:
+      - master
 
 env:
   ssh_key_path: ~/.ssh/thepublishing.pem
@@ -32,7 +35,7 @@ jobs:
 
   deploy:
     
-    if: github.ref == 'refs/heads/master'
+    #if: github.ref == 'refs/heads/master'
     needs: build
     runs-on: ubuntu-latest
     steps:
