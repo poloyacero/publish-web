@@ -273,6 +273,11 @@
     width: 120px;
     justify-content: center;
     overflow: hidden;
+    border: none !important;
+  }
+
+  button.navbar-toggler.ml-auto.hidden-sm-up.float-xs-right:focus {
+    outline: none !important;
   }
   #dropdownNextLevel {
     color: #fff !important;
