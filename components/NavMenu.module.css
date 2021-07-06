@@ -209,10 +209,7 @@
   border-color: #7b6b5b;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.navbar-toggle {
-  border: none;
-  outline: none;
-}
+
 @media screen and (max-width: 1030px) {
   .logo {
     width: 145px;
@@ -279,11 +276,6 @@
     border: 0px !important;
     outline: none !important;
     border-color: blue !important;
-  }
-
-  .navbar-toggle {
-    border-color: blue !important;
-    outline: none !important;
   }
 
   #dropdownNextLevel {
