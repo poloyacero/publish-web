@@ -6,11 +6,21 @@
   color: #7b6b5b;
 }
 .indenttext {
-  padding-left: 15px;
+  padding-left: 18px;
+  font-size: 25px;
+  font-weight: bold;
 }
 .indentcheckbox {
   padding-left: 35px;
 }
 .indentselectbox {
   padding-left: 20px;
+}
+
+@media screen and (max-width: 1030px) {
+  .indenttext {
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
 }
