@@ -1,6 +1,6 @@
 
 import React,{useState} from 'react';
-import { Row, Col, Button,Form} from 'react-bootstrap';
+import { Row, Col, Button,Form,Image} from 'react-bootstrap';
 import styles from './Forms.module.css';
 import styleIn from '../../../styles/inputstyle.module.css'
 
@@ -59,10 +59,10 @@ export default function Printbookonly() {
         />  
           <Form.Group>
             <br/>
-            <div className="input-group mb-3">
-          <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-          <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload Manuscript</label>
-          </div>  
+            <div className={styles.fileinputs}> 
+          <div className={styles.fakefile}><Row><Col className={styles.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styles.formcolbutton2}><Button className={styles.submitbuttondashboard}>Upload Manuscript</Button></Col></Row></div>
+          <Form.Control type="file" className={styles.formfile}/>
+          </div>
           </Form.Group>
         </Col>     
        </Col>
@@ -140,10 +140,10 @@ export default function Printbookonly() {
         />
            <br/>
           <Form.Group>    
-        <div className="input-group mb-3">
-          <input type="file" className={"form-control "+styleIn.brownborder} id="inputGroupFile02"/>
-          <label className={"input-group-text "+ styleIn.brownandwhite} htmlFor="inputGroupFile02">Upload File</label>
-        </div>
+          <div className={styles.fileinputs}> 
+          <div className={styles.fakefile}><Row><Col className={styles.formcolbutton1}><Image src="/img/services/upload-file.png" width="auto" height="auto" /></Col><Col className={styles.formcolbutton2}><Button className={styles.submitbuttondashboard}>Upload File</Button></Col></Row></div>
+          <Form.Control type="file" className={styles.formfile}/>
+          </div>
          </Form.Group>
           </Col>
          </Col>
@@ -365,7 +365,37 @@ export default function Printbookonly() {
                 label="Print Advertisment"
                 name="marketing6"               
                
-              />  
+              /> 
+              <Form.Check
+              type="checkbox"
+              label="Royalty Program"
+              name="marketing"
+              id="royaltyprog"
+            />     
+             <Form.Check
+              type="checkbox"
+              label="Sale Sheets"
+              name="marketing"
+              id="salesheets"
+            />     
+             <Form.Check
+              type="checkbox"
+              label="Advanced Reader Copies"
+              name="marketing"
+              id="advreader"
+            />                  
+             <Form.Check
+              type="checkbox"
+              label="Social Media "
+              name="marketing"
+              id="socialmedia"
+            />  
+             <Form.Check
+              type="checkbox"
+              label="Book Return Program"
+              name="marketing"
+              id="bookreturn"
+            />        
                <br/> <br/> <br/> 
               <Button className={styles.submitbuttondashboard}>Submit Request</Button>
               <br/> <br/> <br/>

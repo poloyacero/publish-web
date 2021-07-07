@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
-import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
@@ -24,16 +23,16 @@ export default function reportdashboard() {
         <Container fluid>
           <Container>
             <Row className={styles.ctext} >
-               <Sidebar/>
-             <Col md={7}>
+             
+             <Col md={8}>
                
                
-               <Row className={styles2.dropdownreportcontainer}>
+               <Row className={styles2.dropdownmenucontainer}>
                 <Col>
                 
                  <Row>
                   <Col>             
-                   <h4 className={styles2.dropheaderlabelreport}>Please Select Report</h4>                        
+                   <h4 className={styles2.dropheaderlabel2}>Please Select Report</h4>                        
                   </Col>      
                  </Row>
                       <br/>
@@ -112,40 +111,38 @@ export default function reportdashboard() {
                 <Row>
                <Col className={styles2.indentcheckbox}> 
                <br/>            
-                <h4 className={styles2.homeheaderlabel}>Date Range</h4>                        
+                <h4 className={styles2.homeheaderlabel}>Date Range</h4> 
+               
+                <Row>
+                
+                 <Col md={5}>                
+               <Form.Control
+               type="date"              
+               name="reportdate"
+               
+             />  </Col>
+             <Col md={1} className="text-center">to</Col>
+               <Col md={5}>
+                 <Form.Control
+               type="date"              
+               name="reportdate"
+               
+             />               
+             </Col> 
+            
+             </Row>                       
                </Col>  
                <br/>
               </Row>
                
-               <Row>
-                 
-                    <Col md={5}>                
-                  <Form.Control
-                  type="date"              
-                  name="reportdate"
-                  
-                />  </Col>
-                <Col md={1} className="text-center">to</Col>
-                  <Col md={5}>
-                    <Form.Control
-                  type="date"              
-                  name="reportdate"
-                  
-                />               
-                </Col> 
-               
-                </Row>
+              
 
                 <br/> 
                 <Row>
                <Col className={styles2.indentcheckbox}> 
                <br/>            
-                <h4 className={styles2.homeheaderlabel}>Email Address</h4>                        
-               </Col>  
-               <br/>
-               </Row>
-               
-               <Row>
+                <h4 className={styles2.homeheaderlabel}>Email Address</h4>
+                <Row>
                   <Col md={8}  className={styleIn.accountinput}>                
                       <Form.Control
                       type="email"              
@@ -158,17 +155,23 @@ export default function reportdashboard() {
                       placeholder="Re-type Email address"
                     />           
                   </Col> 
-                </Row>
-
-               </Col>
-               </Row>
-                
+                </Row> 
                 <br/> <br/> <br/>  <br/> <br/> <br/> 
 
-<Row className="form-group text-right">
-<Col md={4}><Button className={styleIn.commonbutton}>Submit Request</Button></Col> <Col md={3}></Col><Col md={6}></Col>
-</Row>
-<br/> <br/> <br/>
+              <Row className="form-group text-right">
+              <Col md={4}><Button className={styleIn.commonbutton}>Submit Request</Button></Col> <Col md={3}></Col><Col md={6}></Col>
+              </Row>
+              <br/> <br/> <br/>
+              </Col>
+              </Row>                       
+               </Col>  
+               <br/>
+               </Row>
+               
+             
+               
+                
+            
               </Col>  
             </Row>
           </Container>   
