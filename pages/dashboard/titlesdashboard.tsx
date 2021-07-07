@@ -28,6 +28,7 @@ export default function titlesdashboard() {
                 <h4 className={styles2.dropheaderlabel2}>Titles Added</h4>
                 </Row>
                 <br></br>
+                {'@media (min-width: 320px)'? (<p>hello</p>):(<p>Hi</p>)}
                 <Row className="text-center">
                   <Col md={2} className={styles2.documentsheader} >Title</Col>
                   <Col md={2} className={styles2.documentsheader}>ISBN</Col>

@@ -67,6 +67,18 @@ div.fakefile {
     width: 280px;
     height: auto;
   }
+  .formcolbutton1 {
+    padding-top: 10px;
+  }
+  .formcolbutton2 {
+    padding: 0px;
+    padding-top: 10px;
+  }
+  div.fileinputs {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   .submitbuttondashboard {
     border-radius: 0 !important;
     display: block;
