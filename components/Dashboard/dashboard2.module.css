@@ -140,6 +140,9 @@
 .indentcheckbox {
   padding-left: 35px;
 }
+.indentinputtext1 {
+  padding-left: 35px !important;
+}
 .accountnotes2 {
   font-size: 12px;
 }

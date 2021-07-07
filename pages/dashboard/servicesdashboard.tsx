@@ -205,7 +205,38 @@ export default function servicesdashboard() {
               label="Print Advertisement"
               name="marketing"
               id="printads"
-            />                             
+            />     
+
+             <Form.Check
+              type="checkbox"
+              label="Royalty Program"
+              name="marketing"
+              id="royaltyprog"
+            />     
+             <Form.Check
+              type="checkbox"
+              label="Sale Sheets"
+              name="marketing"
+              id="salesheets"
+            />     
+             <Form.Check
+              type="checkbox"
+              label="Advanced Reader Copies"
+              name="marketing"
+              id="advreader"
+            />                  
+             <Form.Check
+              type="checkbox"
+              label="Social Media "
+              name="marketing"
+              id="socialmedia"
+            />  
+             <Form.Check
+              type="checkbox"
+              label="Book Return Program"
+              name="marketing"
+              id="bookreturn"
+            />                              
                 </Col> 
                 </Row>
                 <br/> <br/> <br/>  <br/> <br/> <br/> 

@@ -29,15 +29,15 @@ export default function createbook() {
           <Container>
             <Row >
                <Sidebar/>
-                <Col md={6}>
+                <Col md={7}>
                   <Row  className={styles.createcontainer}>
              <Col>
                  <Col className={styles.indentselectbox}>
-                    <Form.Control className={styleIn.inputselect} as="select" defaultValue={createtype} onChange={(e)=>{setCreatetype(e.target.value)}}>
+                    <Form.Control className={styleIn.inputselect2} as="select" defaultValue={createtype} onChange={(e)=>{setCreatetype(e.target.value)}}>
                           <option>Select Creation</option>                                
                           <option>Print Book and Ebook € 350</option>
                           <option>Print Book Only € 300</option>                  
-                          <option>Ebook Only € 250</option>  
+                          {/* <option>Ebook Only € 250</option>   */}
                     </Form.Control>
                     </Col>
                     { createtype==="Print Book and Ebook € 350"?(

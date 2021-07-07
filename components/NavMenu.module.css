@@ -267,6 +267,12 @@
   .navmenu div {
     background: #7b6b5b !important;
   }
+
+  .togglecontainer .navbar-toggler {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
   .togglecontainer {
     padding-left: 0px;
     padding-right: 25px;
@@ -275,7 +281,6 @@
     overflow: hidden;
     border: 0px !important;
     outline: none !important;
-    border-color: blue !important;
   }
 
   #dropdownNextLevel {
