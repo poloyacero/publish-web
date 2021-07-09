@@ -35,12 +35,14 @@ export default function deluxepkg() {
               <Col md={4} className={styles.pkgdetails2}><b>Edit and Design</b><br/>
                     Paperback Format<br/>
                     E-Book Format<br/>
+                    Copyediting<br/>
                     Standard Text & Layout Formatting<br/>
                     1 Round Layout Revisions<br/>
+                    Basic Cover Design<br/>
                     </Col>
                     <Col md={4} className={styles.pkgdetails2}>
                     <b>Post-publication features:</b><br/>
-                    5 Paperback Copies<br/>
+                    3 Paperback Copies<br/>
                     2 ISBN<br/>
                     Print Book Registration<br/>
                     Amazon Look Inside<br/>
@@ -53,11 +55,9 @@ export default function deluxepkg() {
                     <Col md={3} className={styles.pkgdetails2}>
                     <b>Marketing services:</b><br/>
                     20 Bookmarks<br/>
-                    20 Business Cards<br/>
-                    50 30 Bookmarks<br/>
-                    30 Business Cards<br/>
-                    30 Postcards<br/>
-                    3Posters<br/>
+                    20 Business Cards<br/> 
+                    20 Postcards<br/>
+                    2Posters<br/>
                     </Col>
                     </Row>
                     </Col>

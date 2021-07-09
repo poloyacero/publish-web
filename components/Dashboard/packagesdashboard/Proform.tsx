@@ -238,12 +238,7 @@ export default function Proform() {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={3}>Page Count</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-          <option> </option>
-              <option>22</option>
-              <option>28</option>
-              <option>200</option> 
-          </Form.Control>
+          <Form.Control className={styleIn.inputtext}  type="text" />
           </Col>
           </Row>         
           <Row className={"form-group "+styleIn.textalignright}>  

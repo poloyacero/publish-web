@@ -35,6 +35,10 @@ const [ebook, setEbook] = useState('')
 
 const [editorial, setEditorial] = useState(false);
 const [editorialvalue, setEditorialvalue] = useState('');
+const [developmental, setDevelopmental] = useState(false);
+const [developmentalvalue, setDevelopmentalvalue] = useState('');
+const [contentedit, setContentedit] = useState(false);
+const [contenteditvalue, setContenteditvalue] = useState('');
 const [lineediting, setLineediting] = useState(false);
 const [lineeditingvalue, setLineeditingvalue] = useState('');
 const [copyediting, setCopyediting] = useState(false);
@@ -86,7 +90,14 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       setEditorialvalue("Editorial Assessment");
     }if(lineediting===true){
       setLineeditingvalue("Line Editing")
-    }if(copyediting===true){
+    }
+    if(developmental===true){
+      setDevelopmentalvalue("Developmental Editing")
+    }
+    if(contentedit===true){
+      setContenteditvalue("Content Editing")
+    }
+    if(copyediting===true){
       setCopyeditingvalue("Copyediting")
     }
     if(proof===true){
@@ -185,7 +196,9 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       videobookvalue,
       pressreleasevalue,
       authoreventsvalue,
-      printadsvalue
+      printadsvalue,
+      developmentalvalue,
+      contenteditvalue
 
     }
   fetch('/api/sendMail', {
@@ -678,6 +691,22 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 onChange={(e)=>{setLineediting(e.target.checked)}}
                 className={styles.checkboxline} 
               />
+               <Form.Check
+                type="checkbox"
+                label="Developmental Editing"
+                name="additonalservices2"               
+                checked={developmental}                
+                onChange={(e)=>{setDevelopmental(e.target.checked)}}
+                className={styles.checkboxline} 
+              />
+               <Form.Check
+                type="checkbox"
+                label="Content Editing"
+                name="additonalservices2"               
+                checked={contentedit}                
+                onChange={(e)=>{setContentedit(e.target.checked)}}
+                className={styles.checkboxline} 
+              />
               <Form.Check
                 type="checkbox"
                 label="Copyediting"
@@ -710,14 +739,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 onChange={(e)=>{setDataentry(e.target.checked)}}
                 className={styles.checkboxline} 
               />
-              <Form.Check
-                type="checkbox"
-                label="Text and Layout Format"
-                name="additonalservices6"               
-                checked={textformat}                
-                onChange={(e)=>{setTextformat(e.target.checked)}} 
-                className={styles.checkboxline}
-              />          
+                 
             </Col>
           </Form.Group>
         </Col>
@@ -761,6 +783,23 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 onChange={(e)=>{setHardback(e.target.checked)}} 
                 className={styles.checkboxline}
               />   
+              <Form.Check
+              type="checkbox"
+              label="Book Description"
+              name="additonalservices6"               
+              checked={textformat}                
+              onChange={(e)=>{setTextformat(e.target.checked)}} 
+              className={styles.checkboxline}
+            />       
+
+               <Form.Check
+                type="checkbox"
+                label="Text and Layout Format"
+                name="additonalservices6"               
+                checked={textformat}                
+                onChange={(e)=>{setTextformat(e.target.checked)}} 
+                className={styles.checkboxline}
+              />       
             </Col>
           </Form.Group>
         </Col>
@@ -855,15 +894,55 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 onChange={(e)=>{setAuthorevents(e.target.checked)}}
                 className={styles.checkboxline} 
               />
-              <Form.Check
+              {/* <Form.Check
                 type="checkbox"
                 label="Print Advertisement"
                 name="additonalservices20"               
                 checked={printads}                
                 onChange={(e)=>{setPrintads(e.target.checked)}} 
                 className={styles.checkboxline}
-              />              
-             
+              />    */}
+              <Form.Check
+                type="checkbox"
+                label="Royalty Program"
+                name="additonalservices21"               
+                checked={printads}                
+                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                className={styles.checkboxline}
+              />   
+               <Form.Check
+                type="checkbox"
+                label="Sale Sheets"
+                name="additonalservices22"               
+                checked={printads}                
+                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                className={styles.checkboxline}
+              />      
+              <Form.Check
+                type="checkbox"
+                label="Advanced Reader Copies"
+                name="additonalservices23"               
+                checked={printads}                
+                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                className={styles.checkboxline}
+              />
+              <Form.Check
+                type="checkbox"
+                label="Social Media"
+                name="additonalservices24"               
+                checked={printads}                
+                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                className={styles.checkboxline}
+              />                      
+             <Form.Check
+                type="checkbox"
+                label="Book Return Program"
+                name="additonalservices25"               
+                checked={printads}                
+                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                className={styles.checkboxline}
+              />          
+
             </Col>
           </Form.Group>
         </Col>

@@ -47,9 +47,8 @@ export default function elitepkg() {
                     </Col>
                     <Col md={4} className={styles.pkgdetails2}>
                     <b>Post-publication features:</b><br/>
-                      50 Paperback Copies<br/>
-                      10 Hardback Copies<br/>
-                      20 BookStub Cards<br/>
+                      40 Paperback Copies<br/>
+                      8 Hardback Copies<br/>                     
                       2 Leather-Bound<br/>
                       3 ISBN<br/>
                       Copyright Registration<br/>
@@ -65,13 +64,12 @@ export default function elitepkg() {
                     </Col>
                     <Col md={3} className={styles.pkgdetails2}>
                     <b>Marketing services:</b><br/>
-                      200 Bookmarks<br/>
-                      200 Business Cards<br/>
-                      200 Postcards<br/>
-                      20 Posters<br/>
+                      150 Bookmarks<br/>
+                      150 Business Cards<br/>
+                      150 Postcards<br/>
+                      15 Posters<br/>
                       Advance Website<br/>
-                      Press Release Campaign<br/>
-                      Author Events<br/>
+                      Press Release Campaign<br/>                      
                       Social Media<br/>
                       Audio Book<br/>
                       Video Book<br/>

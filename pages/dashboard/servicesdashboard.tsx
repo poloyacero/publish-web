@@ -52,6 +52,18 @@ export default function servicesdashboard() {
               name="editing"
               id="linediting"
             /> 
+            <Form.Check
+              type="checkbox"
+              label="Developmental Editing"
+              name="editing"
+              id="developmentalediting"
+            /> 
+            <Form.Check
+              type="checkbox"
+              label="Content Editing"
+              name="editing"
+              id="contentediting"
+            /> 
                 <Form.Check
               type="checkbox"
               label="Copy Editing"
@@ -76,12 +88,7 @@ export default function servicesdashboard() {
               name="editing"
               id="dataentry"
             />          
-             <Form.Check
-              type="checkbox"
-              label="Text and Layout Format"
-              name="editing"
-              id="textandlayout"
-            />                              
+                                       
                 </Col> 
                 </Row>
 
@@ -117,6 +124,12 @@ export default function servicesdashboard() {
               name="design"
               id="hardbackupgrade"
             /> 
+             <Form.Check
+              type="checkbox"
+              label="Text and Layout Format"
+              name="editing"
+              id="textandlayout"
+            />   
                          
                 </Col> 
                 </Row>
