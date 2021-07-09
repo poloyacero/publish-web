@@ -268,12 +268,7 @@ export default function Starterform() {
           <Row className={"form-group "+styleIn.textalignright}>  
           <Col md={3}>Page Count</Col>
           <Col md={8}>
-          <Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
-          <option> </option>
-              <option>22</option>
-              <option>28</option>
-              <option>200</option> 
-          </Form.Control>
+          <Form.Control className={styleIn.inputtext}  type="text" />
           </Col>
           </Row>         
           <Row className={"form-group "+styleIn.textalignright}>  
@@ -295,30 +290,30 @@ export default function Starterform() {
           <br></br><br></br>
       <p className={styles.formlabel}>Get Distribution Services</p>
       <Col className={styles.formindent}>
-              <Form.Check
+              {/* <Form.Check
                 type="checkbox"
                 label="ISBN" 
                 name="distribution1"
                             
-              />
-              <Form.Check
+              /> */}
+              {/* <Form.Check
                 type="checkbox"
                 label="Ebook Distribution"
                 name="distribution2"               
                
-              />
+              /> */}
               <Form.Check
                 type="checkbox"
                 label="Copyright Registration"
                 name="distribution3"               
                
               />  
-               <Form.Check
+               {/* <Form.Check
                 type="checkbox"
                 label="Print Book Distribution"
                 name="distribution4"               
                
-              />  
+              />   */}
               </Col>
               <br></br><br></br>
           <h3 className={styles.formheaderlabel}>MARKETING</h3>

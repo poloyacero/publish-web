@@ -55,10 +55,12 @@ export default function PackagesPage() {
           <b>Edit and Design</b><br/>
             Paperback Format<br/>
             E-Book Format<br/>
+            Copyediting<br/>
             Standard Text and Layout Formatting<br/>
             1 Round Layout Revisions<br/>
+            Basic Cover Design<br/>
             <b>Post-publication features:</b><br/>
-            5 Paperback Copies<br/>
+            3 Paperback Copies<br/>
             2 ISBN <br/>
             Print Book Registration<br/>
             Amazon Look Inside<br/>
@@ -68,10 +70,10 @@ export default function PackagesPage() {
             Online Book Sales Account<br/>
             Royalties<br/>
             <b>Marketing services:</b><br/>
-            30 Bookmarks<br/>
-            30 Business Cards<br/>
-            30 Postcards<br/>
-            3Posters<br/>
+            20 Bookmarks<br/>
+            2 Business Cards<br/>
+            20 Postcards<br/>
+            2Posters<br/>
 
           </p>
         </Package>
@@ -88,19 +90,16 @@ export default function PackagesPage() {
               Design Consultation<br/>
               Basic Cover Design<br/>
               <b>Post-publication features:</b><br/>
-              15 Paperback Copies<br/>
-              3 Hardback Copies<br/>
-              10 BookStub Cards<br/>
-              3 ISBN<br/>
-              Copyright Registration<br/>
+              10 Paperback Copies<br/>
+              2 Hardback Copies<br/>             
+              3 ISBN<br/>              
               Print Book Registration<br/>
               Amazon Look Inside<br/>
               Google Books Preview<br/>
               Barnes and Noble Read Instantly<br/>
               Worldwide Online Book Distribution<br/>
               Online Book Sales Account<br/>
-              Royalties<br/>
-              Book Return Program  12 Months<br/>
+              Royalties<br/>              
               <b>Marketing services:</b><br/>
               50 Bookmarks<br/>
               50 Business Cards<br/>
@@ -108,7 +107,6 @@ export default function PackagesPage() {
               5 Posters<br/>
               Basic Web Design<br/>
               Press Release Campaign <br/>
-
           </p>
         </Package>
         <Package title="Elite" price={16000} width={3} currency="€">
@@ -125,9 +123,8 @@ export default function PackagesPage() {
             Design Consultation<br/>
             Advance Cover Design<br/>
             <b>Post-publication features:</b><br/>
-            50 Paperback Copies<br/>
-            10 Hardback Copies<br/>
-            20 BookStub Cards<br/>
+            40 Paperback Copies<br/>
+            8 Hardback Copies<br/>           
             2 Leather-Bound <br/>
             3 ISBN<br/>
             Copyright Registration<br/>
@@ -141,17 +138,15 @@ export default function PackagesPage() {
             100% Royalty Program 3 years<br/>
             Book Return Program  12 Months<br/>
             <b>Marketing services:</b><br/>
-            200 Bookmarks<br/>
-            200 Business Cards<br/>
-            200 Postcards<br/>
-            20 Posters<br/>
+            150 Bookmarks<br/>
+            150 Business Cards<br/>
+            150 Postcards<br/>
+            15 Posters<br/>
             Advance Website<br/>
-            Press Release Campaign <br/>
-            Author Events<br/>
+            Press Release Campaign <br/>           
             Social Media <br/>
             Audio Book<br/>
             Video Book<br/>
-
           </p>
         </Package>
       </PageLayout>

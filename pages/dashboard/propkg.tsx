@@ -45,19 +45,16 @@ export default function propkg() {
                     </Col>
                     <Col md={4} className={styles.pkgdetails2}>
                     <b>Post-publication features:</b><br/>
-                      15 Paperback Copies<br/>
-                      3 Hardback Copies<br/>
-                      10 BookStub Cards<br/>
-                      3 ISBN<br/>
-                      Copyright Registration<br/>
+                      10 Paperback Copies<br/>
+                      2 Hardback Copies<br/>                      
+                      3 ISBN<br/>                     
                       Print Book Registration<br/>
                       Amazon Look Inside<br/>
                       Google Books Preview<br/>
                       Barnes and Noble Read Instantly<br/>
                       Worldwide Online Book Distribution<br/>
                       Online Book Sales Account<br/>
-                      Royalties<br/>
-                      Book Return Program 12 Months<br/>
+                      Royalties<br/>                     
                     </Col>
                     <Col md={3} className={styles.pkgdetails2}>
                     <b>Marketing services:</b><br/>

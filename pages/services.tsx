@@ -153,7 +153,7 @@ export default function Services() {
 
               <p>Drawing in a prospective reader with an intriguing book description plus a good book cover can close the deal.</p>
 
-              <p className={styles.servicesparag}>Hardback Upgrage<br/><span className={styles.servicesspan}>
+              <p className={styles.servicesparag}>Hardback Upgrade<br/><span className={styles.servicesspan}>
               €400-500 per cover</span></p>
 
               <p></p>
