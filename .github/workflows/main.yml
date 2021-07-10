@@ -33,8 +33,7 @@ jobs:
       - run: npm build
 
   deploy:
-    if: github.ref == 'refs/heads/master'
-    if: github.event.pull_request.base.ref == 'master' && github.event_name == 'pull_request'
+    if: github.ref == 'refs/heads/master' || github.event.pull_request.base.ref == 'master' && github.event_name == 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     steps:
