@@ -47,6 +47,8 @@ export default function (req, res) {
         <b>Editing:</b><br/>
         ${req.body.editorialvalue}<br/>
         ${req.body.lineeditingvalue}<br/>
+        ${req.body.developmentalvalue}<br/>
+        ${req.body.contenteditvalue}<br/>
         ${req.body.copyeditingvalue}<br/>
         ${req.body.prooflvalue}<br/>
         ${req.body.indexingvalue}<br/>
@@ -56,7 +58,8 @@ export default function (req, res) {
         ${req.body.illustrationsvalue}<br/>
         ${req.body.coverdesignvalue}<br/>
         ${req.body.interiordesignvalue}<br/>
-        ${req.body.hardbackvalue}<br/>
+        ${req.body.bookdescvalue}<br/>
+        ${req.body.hardbackvalue}<br/>        
         <br/><b>Distribution:</b><br/>
         ${req.body.printbookvalue}<br/>
         ${req.body.ebookdistvalue}<br/>
@@ -68,9 +71,12 @@ export default function (req, res) {
         ${req.body.videobookvalue}<br/>
         ${req.body.pressreleasevalue}<br/>
         ${req.body.authoreventsvalue}<br/>
-        ${req.body.printadsvalue}<br/>     
-    
-
+        ${req.body.printadsvalue}<br/> 
+        ${req.body.royaltyprogvalue}<br/>  
+        ${req.body.salesheetsvalue}<br/>  
+        ${req.body.socialmediavalue}<br/>  
+        ${req.body.boreprogvalue}<br/>  
+             
         <br/><br/>
         <p>Sent from: ${req.body.email}</p>`,
   };

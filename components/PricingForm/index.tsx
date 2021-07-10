@@ -32,7 +32,7 @@ const [shipto, setShipto] = useState('')
 const [shiptoprovince, setShiptoprovince] = useState('')
 const [printinglocation, setPrintinglocation] = useState('')
 const [ebook, setEbook] = useState('')
-
+//Editing
 const [editorial, setEditorial] = useState(false);
 const [editorialvalue, setEditorialvalue] = useState('');
 const [developmental, setDevelopmental] = useState(false);
@@ -49,8 +49,9 @@ const [indexing, setIndexing] = useState(false);
 const [indexingvalue, setIndexingvalue] = useState('');
 const [dataentry, setDataentry] = useState(false);
 const [dataentryvalue, setDataentryvalue] = useState('');
-const [textformat, setTextformat] = useState(false);
-const [textformatvalue, setTextformatvalue] = useState('');
+
+//Design
+
 const [illustrations, setIllustrations] = useState(false);
 const [illustrationsvalue, setIllustrationsvalue] = useState('');
 const [coverdesign, setCoverdesign] = useState(false);
@@ -59,6 +60,12 @@ const [interiordesign, setInteriordesign] = useState(false);
 const [interiordesignvalue, setInteriordesignvalue] = useState('');
 const [hardback, setHardback] = useState(false);
 const [hardbackvalue, setHardbackvalue] = useState('');
+const [bookdesc, setBookdesc] = useState(false);
+const [bookdescvalue, setBookdescvalue] = useState('');
+const [textformat, setTextformat] = useState(false);
+const [textformatvalue, setTextformatvalue] = useState('');
+
+//Distribution
 const [printbook, setPrintbook] = useState(false);
 const [printbookvalue, setPrintbookvalue] = useState('');
 const [ebookdist, setEbookdist] = useState(false);
@@ -67,6 +74,8 @@ const [copyright, setCopyright] = useState(false);
 const [copyrightvalue, setCopyrightvalue] = useState('');
 const [isbn, setIsbn] = useState(false);
 const [isbnvalue, setIsbnvalue] = useState('');
+
+//Marketing
 const [website, setWebsite] = useState(false);
 const [websitevalue, setWebsitevalue] = useState('');
 const [audiobook, setAudiobook] = useState(false);
@@ -79,6 +88,17 @@ const [authorevents, setAuthorevents] = useState(false);
 const [authoreventsvalue, setAuthoreventsvalue] = useState('');
 const [printads, setPrintads] = useState(false);
 const [printadsvalue, setPrintadsvalue] = useState('');
+
+const [royaltyprog, setRoyaltyprog] = useState(false);
+const [royaltyprogvalue, setRoyaltyprogvalue] = useState('');
+const [salesheets, setSalesheets] = useState(false);
+const [salesheetsvalue, setSalesheetsvalue] = useState('');
+const [adrecop, setAdrecop] = useState(false);
+const [adrecopvalue, setAdrecopvalue] = useState('');
+const [socialmedia, setSocialmedia] = useState(false);
+const [socialmediavalue, setSocialmediavalue] = useState('');
+const [boreprog, setBoreprog] = useState(false);
+const [boreprogvalue, setBoreprogvalue] = useState('');
 
   
   const handleChange=(e:any) =>{
@@ -121,8 +141,11 @@ const [printadsvalue, setPrintadsvalue] = useState('');
     if(interiordesign===true){
       setInteriordesignvalue("Book Interior Design")
     }
-    else if(hardback===true){
+    if(hardback===true){
       setHardbackvalue("Hardback Upgrade")
+    }
+    if(bookdesc===true){
+      setBookdescvalue("Book Description")
     }
     if(printbook===true){
       setPrintbookvalue("Print Book Distribution")
@@ -145,7 +168,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
     if(videobook===true){
       setVideobookvalue("Video Book")
     }
-    else if(pressrelease===true){
+    if(pressrelease===true){
       setPressreleasevalue("Press Release Campaign")
     }
     if(authorevents===true){
@@ -153,6 +176,22 @@ const [printadsvalue, setPrintadsvalue] = useState('');
     }
     if(printads===true){
       setPrintadsvalue("Print Advertisement")
+    }
+
+    if(royaltyprog===true){
+      setRoyaltyprogvalue("Royalty Program")
+    }
+    if(salesheets===true){
+      setSalesheetsvalue("Sale Sheets")
+    }
+    if(adrecop===true){
+      setAdrecopvalue("Advanced Reader Copies")
+    }
+    if(socialmedia===true){
+      setSocialmediavalue("Social Media")
+    }
+    if(boreprog===true){
+      setBoreprogvalue("Book Return Program")
     }
 
   
@@ -198,10 +237,16 @@ const [printadsvalue, setPrintadsvalue] = useState('');
       authoreventsvalue,
       printadsvalue,
       developmentalvalue,
-      contenteditvalue
+      contenteditvalue,
+      bookdescvalue,
+      royaltyprogvalue,
+      salesheetsvalue,
+      adrecopvalue,
+      socialmediavalue,
+      boreprogvalue
 
     }
-  fetch('/api/sendMail', {
+  fetch('/api/pricingMail', {
       method: 'POST',
       headers: {
         'Accept': 'application/json, text/plain, */*',
@@ -343,12 +388,8 @@ const [printadsvalue, setPrintadsvalue] = useState('');
         <Col className={styles.labelleft} md={{ span: 4, offset: 0 }}><Form.Label className={styles.label}>Page Count</Form.Label></Col>
         <Col md={{ span: 4, offset: 0 }}>
           <Form.Group as={Row} controlId="exampleForm.ControlSelect1" className={styles.indentcol}>
-            <Form.Control className={styles.input}  as="select" defaultValue={pagecount} onChange={(e)=>{setPagecount(e.target.value)}}>
-              <option> </option>
-              <option>22</option>
-              <option>28</option>
-              <option>200</option>              
-            </Form.Control>
+         
+            <Form.Control className={styles.input} type="text" defaultValue={pagecount} onChange={(e)=>{setPagecount(e.target.value)}}/>
           </Form.Group>
         </Col>
       </Row>
@@ -754,7 +795,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Illustrations"
-                name="additonalservices7"               
+                name="additonalservices6"               
                 checked={illustrations}                
                 onChange={(e)=>{setIllustrations(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -762,7 +803,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Book Cover Design"
-                name="additonalservices8"               
+                name="additonalservices7"               
                 checked={coverdesign}                
                 onChange={(e)=>{setCoverdesign(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -778,7 +819,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Hardback Upgrade"
-                name="additonalservices10"               
+                name="additonalservices9"               
                 checked={hardback}                
                 onChange={(e)=>{setHardback(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -786,16 +827,16 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
               type="checkbox"
               label="Book Description"
-              name="additonalservices6"               
-              checked={textformat}                
-              onChange={(e)=>{setTextformat(e.target.checked)}} 
+              name="additonalservices10"               
+              checked={bookdesc}                
+              onChange={(e)=>{setBookdesc(e.target.checked)}} 
               className={styles.checkboxline}
             />       
 
                <Form.Check
                 type="checkbox"
                 label="Text and Layout Format"
-                name="additonalservices6"               
+                name="additonalservices11"               
                 checked={textformat}                
                 onChange={(e)=>{setTextformat(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -814,7 +855,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Print Book Distribution"
-                name="additonalservices11"               
+                name="additonalservices12"               
                 checked={printbook}                
                 onChange={(e)=>{setPrintbook(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -822,7 +863,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Ebook Distribution"
-                name="additonalservices12"               
+                name="additonalservices13"               
                 checked={ebookdist}                
                 onChange={(e)=>{setEbookdist(e.target.checked)}}
                 className={styles.checkboxline} 
@@ -830,7 +871,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Copyright Registration"
-                name="additonalservices13"               
+                name="additonalservices14"               
                 checked={copyright}                
                 onChange={(e)=>{setCopyright(e.target.checked)}}
                 className={styles.checkboxline}
@@ -838,7 +879,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="ISBN"
-                name="additonalservices14"               
+                name="additonalservices15"               
                 checked={isbn}                
                 onChange={(e)=>{setIsbn(e.target.checked)}}
                 className={styles.checkboxline}
@@ -857,7 +898,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Author Website"
-                name="additonalservices15"               
+                name="additonalservices16"               
                 checked={website}                
                 onChange={(e)=>{setWebsite(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -865,7 +906,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Audio Book"
-                name="additonalservices16"               
+                name="additonalservices17"               
                 checked={audiobook}                
                 onChange={(e)=>{setAudiobook(e.target.checked)}}
                 className={styles.checkboxline}
@@ -873,7 +914,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Video Book"
-                name="additonalservices17"               
+                name="additonalservices18"               
                 checked={videobook}                
                 onChange={(e)=>{setVideobook(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -881,7 +922,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Press Release Campaign"
-                name="additonalservices18"               
+                name="additonalservices19"               
                 checked={pressrelease}                
                 onChange={(e)=>{setPressrelease(e.target.checked)}} 
                 className={styles.checkboxline}
@@ -889,7 +930,7 @@ const [printadsvalue, setPrintadsvalue] = useState('');
               <Form.Check
                 type="checkbox"
                 label="Author Events"
-                name="additonalservices19"               
+                name="additonalservices20"               
                 checked={authorevents}                
                 onChange={(e)=>{setAuthorevents(e.target.checked)}}
                 className={styles.checkboxline} 
@@ -906,40 +947,40 @@ const [printadsvalue, setPrintadsvalue] = useState('');
                 type="checkbox"
                 label="Royalty Program"
                 name="additonalservices21"               
-                checked={printads}                
-                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                checked={royaltyprog}                
+                onChange={(e)=>{setRoyaltyprog(e.target.checked)}} 
                 className={styles.checkboxline}
               />   
                <Form.Check
                 type="checkbox"
                 label="Sale Sheets"
                 name="additonalservices22"               
-                checked={printads}                
-                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                checked={salesheets}                
+                onChange={(e)=>{setSalesheets(e.target.checked)}} 
                 className={styles.checkboxline}
               />      
               <Form.Check
                 type="checkbox"
                 label="Advanced Reader Copies"
                 name="additonalservices23"               
-                checked={printads}                
-                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                checked={adrecop}                
+                onChange={(e)=>{setAdrecop(e.target.checked)}} 
                 className={styles.checkboxline}
               />
               <Form.Check
                 type="checkbox"
                 label="Social Media"
                 name="additonalservices24"               
-                checked={printads}                
-                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                checked={socialmedia}                
+                onChange={(e)=>{setSocialmedia(e.target.checked)}} 
                 className={styles.checkboxline}
               />                      
              <Form.Check
                 type="checkbox"
                 label="Book Return Program"
                 name="additonalservices25"               
-                checked={printads}                
-                onChange={(e)=>{setPrintads(e.target.checked)}} 
+                checked={boreprog}                
+                onChange={(e)=>{setBoreprog(e.target.checked)}} 
                 className={styles.checkboxline}
               />          
 

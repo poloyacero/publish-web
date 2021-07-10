@@ -27,7 +27,7 @@ export default function (req, res) {
     from: req.body.email, // String
     subject: "Inquiry from Publishing",
     text: "Hi Im" + req.body.name,
-    html: `<div>Let’s Get Package<br/><br/>
+    html: `<div>Requested Package<br/><br/>
         Hi I'm ${req.body.firstname} ${req.body.lastname}<br/><br/>        
        <br/>
         <br/><b>Your Package:</b><br/>
