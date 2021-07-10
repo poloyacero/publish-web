@@ -33,13 +33,7 @@ export default function servicesdashboard() {
                </Row>
                <Row>
                 <Col className={styles.indentcheckbox}>
-                <br/>
-               <Form.Check
-              type="checkbox"
-              label="Editing"
-              name="editing"
-              id="editing"
-            />  
+                <br/>              
                 <Form.Check
               type="checkbox"
               label="Editorial Assessment"
