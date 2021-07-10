@@ -4,11 +4,9 @@ on:
   push:
     branches:
       - '*'
-      - master
   pull_request:
     branches:
       - '*'
-      - master
 
 env:
   ssh_key_path: ~/.ssh/thepublishing.pem
@@ -35,7 +33,7 @@ jobs:
       - run: npm build
 
   deploy:
-    if: github.ref == 'refs/heads/master' || 'refs/heads/gabz'
+    if: github.event.pull_request.base.ref == 'master' && github.event_name == 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     steps:
