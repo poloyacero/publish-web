@@ -3,7 +3,7 @@ export default function (req, res) {
   const cors = require("cors")({ origin: true });
 
   let nodemailer = require("nodemailer");
-
+  console.log("password:", process.env.PASSWORD);
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     // SMTP is unlike most network protocols, which only have a single port number.
@@ -25,18 +25,23 @@ export default function (req, res) {
 
   const mailData = {
     to: "admin@thepublishing.com", // String or array of strings ['You <you@example.com>', 'another@example.com']
-    from: req.body.email, // String
+    from: "admin@thepublishing.com", // String
     cc: "gb@thepublishing.com,js@thepublishing.com", //CC
-    subject: req.body.subjectmsg,
+    subject: "Create Print Book and Ebook € 350",
     text: "Hi Im" + req.body.name,
-    html: `<div>Help Mail<br/><br/>
-        Hi I'm ${req.body.firstname} ${req.body.lastname}<br/><br/>        
-        ${req.body.message}
-        <br/><br/>
-        <b>Contact number:</b><br/>
-        ${req.body.phonenumber}<br/>      
-        <br/><br/>
-        <p>Sent from: ${req.body.email}</p>`,
+    html: `<div>Creating Print Book and Ebook € 350<br/><br/>
+       Is your manuscript ready? ${req.body.manuscriptready}<br/><br/>        
+       <br/>
+       Is your manuscript professionally edited? ${req.body.manuscriptedited}<br/><br/>
+       <br/>
+       Attachements:
+       `,
+    attachments: [
+      {
+        // file on disk as an attachment
+        path: `${req.body.manuscriptfile}`, // stream this file
+      },
+    ],
   };
 
   transporter.sendMail(mailData, (err, data) => {
