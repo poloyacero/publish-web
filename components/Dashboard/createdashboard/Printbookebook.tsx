@@ -3,16 +3,65 @@ import React,{useState} from 'react';
 import { Row, Col, Button,Form,Image} from 'react-bootstrap';
 import styles from './Forms.module.css';
 import styleIn from '../../../styles/inputstyle.module.css'
+import swal from 'sweetalert'
 
 export default function Printbookebook() {
   const [interiorcolor,setInteriorcolor]=React.useState("");
   const [papertype, setPapertype] = useState('')
 
-  const handleChange=(e:any) =>{
-    setInteriorcolor(e.target.value);
-    console.log(interiorcolor);
-  }
+  const [manuscriptready, setManuscriptready] = React.useState("")
+  const [manuscriptedited, setManuscriptedited] = React.useState("")
+  let [manuscriptfile, setManuscriptfile] = React.useState("")
+   
+  
+ console.log("Ready?",manuscriptready)
+ console.log("Edited?",manuscriptedited)
+ manuscriptfile= manuscriptfile.replace("C:\\fakepath\\", "\\uploads\\");
+ console.log("File:?",manuscriptfile)
+ 
+ const handleChange=(e:any) =>{
+  setInteriorcolor(e.target.value);
+  
+  console.log(interiorcolor);
+}
 
+const handleUpload=(e:any) =>{
+  setManuscriptfile(e.target.value);
+}
+
+  const handleSubmit = (e:any) => { 
+    
+    e.preventDefault()
+    console.log('Sending...') 
+
+  let data = {
+      manuscriptready,
+      manuscriptedited,
+      manuscriptfile
+           
+    }
+  fetch('/api/printbookandebook', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      console.log(data)
+      if (res.status === 200) {
+        console.log('Response succeeded!')      
+        setManuscriptready("")
+        setManuscriptedited("")
+        setManuscriptfile('')
+         
+        swal("Mail Sent!", "Thank you!", "success");
+      }
+     
+    })
+    
+  }
   return (
     <>
     <Form.Group as={Row}>
@@ -30,12 +79,16 @@ export default function Printbookebook() {
               label="Yes"
               name="manuscriptready"
               id="manuyes"
+              value="Yes" 
+              onChange={(e)=>{setManuscriptready(e.target.value)}}
             />
             <Form.Check
               type="radio"
               label="No"
               name="manuscriptready"
               id="manuno"
+              value="No" 
+              onChange={(e)=>{setManuscriptready(e.target.value)}}
             />
             </Col>       
           </Col>
@@ -50,21 +103,28 @@ export default function Printbookebook() {
           label="Yes"
           name="profmanu"
           id="profmanuyes"
+          value="Yes" 
+          onChange={(e)=>{setManuscriptedited(e.target.value)}}
         />
         <Form.Check
           type="radio"
           label="No"
           name="profmanu"
           id="profmanuno"
+          value="No" 
+          onChange={(e)=>{setManuscriptedited(e.target.value)}}
         />  
           <Form.Group>
             <br/>
            <div className={styles.fileinputs}> 
-          <div className={styles.fakefile}><Row><Col className={styles.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styles.formcolbutton2}><Button className={styles.submitbuttondashboard}>Upload Manuscript</Button></Col></Row></div>
-          <Form.Control type="file" className={styles.formfile}/>
+          <div className={styles.fakefile}><Row><Col className={styles.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styles.formcolbutton2}><Button className={styles.submitbuttondashboard} onMouseDown={(e)=>{handleSubmit(e)}}>Upload Manuscript</Button></Col></Row></div>
+          <Form.Control type="file" className={styles.formfile} id="file-id"  
+          onChange={handleUpload}/>
+          <br/>
+          Note: create an "uploads" folder on your root directory (ex. c:\uploads)
           </div>
           </Form.Group>
-        </Col>     
+        </Col>
        </Col>
      </Form.Group>
     

@@ -26,6 +26,7 @@ export default function (req, res) {
   const mailData = {
     to: "admin@thepublishing.com", // String or array of strings ['You <you@example.com>', 'another@example.com']
     from: req.body.email, // String
+    cc: "gb@thepublishing.com,js@thepublishing.com", //CC
     subject: "Inquiry from Publishing",
     text: "Hi Im" + req.body.name,
     html: `<div>Let’s Get Started<br/><br/>
@@ -45,37 +46,37 @@ export default function (req, res) {
         <br/><br/>
         <b>Additional Services:</b><br/><br/>
         <b>Editing:</b><br/>
-        ${req.body.editorialvalue}<br/>
-        ${req.body.lineeditingvalue}<br/>
-        ${req.body.developmentalvalue}<br/>
-        ${req.body.contenteditvalue}<br/>
-        ${req.body.copyeditingvalue}<br/>
-        ${req.body.prooflvalue}<br/>
-        ${req.body.indexingvalue}<br/>
-        ${req.body.dataentryvalue}<br/>
-        ${req.body.textformatvalue}<br/>
+        ${req.body.editorialvalue}
+        ${req.body.lineeditingvalue}
+        ${req.body.developmentalvalue}
+        ${req.body.contenteditvalue}
+        ${req.body.copyeditingvalue}
+        ${req.body.prooflvalue}
+        ${req.body.indexingvalue}
+        ${req.body.dataentryvalue}
+        ${req.body.textformatvalue}
         <br/><b>Design:</b><br/>
-        ${req.body.illustrationsvalue}<br/>
-        ${req.body.coverdesignvalue}<br/>
-        ${req.body.interiordesignvalue}<br/>
-        ${req.body.bookdescvalue}<br/>
-        ${req.body.hardbackvalue}<br/>        
+        ${req.body.illustrationsvalue}
+        ${req.body.coverdesignvalue}
+        ${req.body.interiordesignvalue}
+        ${req.body.bookdescvalue}
+        ${req.body.hardbackvalue}       
         <br/><b>Distribution:</b><br/>
-        ${req.body.printbookvalue}<br/>
-        ${req.body.ebookdistvalue}<br/>
-        ${req.body.copyrightvalue}<br/>
+        ${req.body.printbookvalue}
+        ${req.body.ebookdistvalue}
+        ${req.body.copyrightvalue}
         ${req.body.isbnvalue}<br/>
         <br/><b>Marketing:</b><br/>
-        ${req.body.websitevalue}<br/>
-        ${req.body.audiobookvalue}<br/>        
-        ${req.body.videobookvalue}<br/>
-        ${req.body.pressreleasevalue}<br/>
-        ${req.body.authoreventsvalue}<br/>
-        ${req.body.printadsvalue}<br/> 
-        ${req.body.royaltyprogvalue}<br/>  
-        ${req.body.salesheetsvalue}<br/>  
-        ${req.body.socialmediavalue}<br/>  
-        ${req.body.boreprogvalue}<br/>  
+        ${req.body.websitevalue}
+        ${req.body.audiobookvalue}       
+        ${req.body.videobookvalue}
+        ${req.body.pressreleasevalue}
+        ${req.body.authoreventsvalue}
+        ${req.body.printadsvalue}
+        ${req.body.royaltyprogvalue}
+        ${req.body.salesheetsvalue} 
+        ${req.body.socialmediavalue}
+        ${req.body.boreprogvalue} 
              
         <br/><br/>
         <p>Sent from: ${req.body.email}</p>`,

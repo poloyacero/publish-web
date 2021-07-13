@@ -107,91 +107,91 @@ const [boreprogvalue, setBoreprogvalue] = useState('');
   }
   useEffect(() => {
     if(editorial===true){
-      setEditorialvalue("Editorial Assessment");
+      setEditorialvalue("Editorial Assessment <br/>");
     }if(lineediting===true){
-      setLineeditingvalue("Line Editing")
+      setLineeditingvalue("Line Editing <br/>")
     }
     if(developmental===true){
-      setDevelopmentalvalue("Developmental Editing")
+      setDevelopmentalvalue("Developmental Editing <br/>")
     }
     if(contentedit===true){
-      setContenteditvalue("Content Editing")
+      setContenteditvalue("Content Editing <br/>")
     }
     if(copyediting===true){
-      setCopyeditingvalue("Copyediting")
+      setCopyeditingvalue("Copyediting <br/>")
     }
     if(proof===true){
-      setProoflvalue("Proofreading")
+      setProoflvalue("Proofreading <br/>")
     }
     if(indexing===true){
-      setIndexingvalue("Indexing")
+      setIndexingvalue("Indexing <br/>")
     }
     if(dataentry===true){
-      setDataentryvalue("Data Entry")
+      setDataentryvalue("Data Entry <br/>")
     }
     if(textformat===true){
-      setTextformatvalue("Text and Layout Format")
+      setTextformatvalue("Text and Layout Format <br/>")
     }
     if(illustrations===true){
-      setIllustrationsvalue("Illustrations")
+      setIllustrationsvalue("Illustrations <br/>")
     }
     else if(coverdesign===true){
-      setCoverdesignvalue("Book Cover Design")
+      setCoverdesignvalue("Book Cover Design <br/>")
     }
     if(interiordesign===true){
-      setInteriordesignvalue("Book Interior Design")
+      setInteriordesignvalue("Book Interior Design <br/>")
     }
     if(hardback===true){
-      setHardbackvalue("Hardback Upgrade")
+      setHardbackvalue("Hardback Upgrade <br/>")
     }
     if(bookdesc===true){
-      setBookdescvalue("Book Description")
+      setBookdescvalue("Book Description <br/>")
     }
     if(printbook===true){
-      setPrintbookvalue("Print Book Distribution")
+      setPrintbookvalue("Print Book Distribution <br/>")
     }
     if(ebookdist===true){
-      setEbookdistvalue("Ebook Distribution")
+      setEbookdistvalue("Ebook Distribution <br/>")
     }
     if(copyright===true){
-      setCopyrightvalue("Copyright Registration")
+      setCopyrightvalue("Copyright Registration <br/>")
     }
     if(isbn===true){
-      setIsbnvalue("ISBN")
+      setIsbnvalue("ISBN <br/>")
     }
     if(website===true){
-      setWebsitevalue("Author Website")
+      setWebsitevalue("Author Website <br/>")
     }
     if(audiobook===true){
-      setAudiobookvalue("Audio Book")
+      setAudiobookvalue("Audio Book <br/>")
     }
     if(videobook===true){
-      setVideobookvalue("Video Book")
+      setVideobookvalue("Video Book <br/>")
     }
     if(pressrelease===true){
-      setPressreleasevalue("Press Release Campaign")
+      setPressreleasevalue("Press Release Campaign <br/>")
     }
     if(authorevents===true){
-      setAuthoreventsvalue("Author Events")
+      setAuthoreventsvalue("Author Events <br/>")
     }
     if(printads===true){
-      setPrintadsvalue("Print Advertisement")
+      setPrintadsvalue("Print Advertisement <br/>")
     }
 
     if(royaltyprog===true){
-      setRoyaltyprogvalue("Royalty Program")
+      setRoyaltyprogvalue("Royalty Program <br/>")
     }
     if(salesheets===true){
-      setSalesheetsvalue("Sale Sheets")
+      setSalesheetsvalue("Sale Sheets <br/>")
     }
     if(adrecop===true){
-      setAdrecopvalue("Advanced Reader Copies")
+      setAdrecopvalue("Advanced Reader Copies <br/>")
     }
     if(socialmedia===true){
-      setSocialmediavalue("Social Media")
+      setSocialmediavalue("Social Media <br/>")
     }
     if(boreprog===true){
-      setBoreprogvalue("Book Return Program")
+      setBoreprogvalue("Book Return Program <br/>")
     }
 
   
