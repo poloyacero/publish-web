@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^1.0.0-rc.3",
     "@netlify/plugin-nextjs": "^3.3.0",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",

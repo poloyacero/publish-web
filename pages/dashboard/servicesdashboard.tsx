@@ -5,8 +5,10 @@ import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../components/Dashboard/servicesdashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
-import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
+import { Col, Container, Row ,Form,Button,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
+import S3upload from '../../components/Dashboard/UploadImageToS3WithNativeSdk'
+import swal from 'sweetalert';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -24,8 +26,76 @@ export default function servicesdashboard() {
           <Container>
             <Row>
                <Sidebar/>
-             <Col md={6}>
-               
+             <Col md={8}>
+             <Row>
+               <Col className={styles.servicescontainer}>             
+                <h4 className={styles.servicesheaderlabel}>BOOK DETAILS</h4>                        
+               </Col>      
+               </Row>
+
+               <Row>
+                <Col className={styles.indentcheckbox}>
+               <Form.Control className={styleIn.accountinput} type="text" defaultValue="BOOK TITLE"/>
+               <span>If you do not yet have a title for your work, please put in Untitled</span> 
+               </Col>
+               </Row>
+               <Row>
+                <Col className={styles.indentcheckbox}>
+               <Form.Group>
+            <br/>
+           <div className={styleIn.fileinputs}> 
+          <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styleIn.formcolbutton2}><Button className={styleIn.submitbuttondashboard} onMouseDown={(e)=>{swal("Under maintenance", "Thank you!", "error")}}>Upload Manuscript</Button></Col></Row></div>
+          <Form.Control type="file" className={styleIn.formfile} id="file-id" onClick={()=>{swal("Under maintenance", "Thank you!", "error")}}/>
+          <br/>
+          <span>File uploaded should not be more than 100MB</span> 
+          </div>
+          </Form.Group>
+          </Col>
+          </Row>
+         
+          <Row>
+            <Col className={styles.indentcheckbox}>
+            <p>General information about your book.</p>
+            <Form.Control  as="textarea" rows={15} value="Book Synopsis"/>
+            </Col>
+          </Row>
+          <Row>
+               <Col className={styles.servicescontainer}>             
+                <h4 className={styles.servicesheaderlabel}>Packages</h4>                        
+               </Col>      
+               </Row>
+               <Row>
+                <Col className={styles.indentcheckbox}>
+                <br/>  
+                                     
+                <Form.Check
+              type="checkbox"
+              label="Starter"
+              name="editing"
+              id="linediting"
+            /> 
+            <Form.Check
+              type="checkbox"
+              label="Deluxe"
+              name="editing"
+              id="developmentalediting"
+            /> 
+            <Form.Check
+              type="checkbox"
+              label="Pro"
+              name="editing"
+              id="contentediting"
+            /> 
+                <Form.Check
+              type="checkbox"
+              label="Elite"
+              name="editing"
+              id="copyediting"
+            />     
+                                       
+                </Col> 
+                </Row>
+
                <Row>
                <Col className={styles.servicescontainer}>             
                 <h4 className={styles.servicesheaderlabel}>Editing</h4>                        
@@ -33,7 +103,8 @@ export default function servicesdashboard() {
                </Row>
                <Row>
                 <Col className={styles.indentcheckbox}>
-                <br/>              
+                <br/>  
+                         
                 <Form.Check
               type="checkbox"
               label="Editorial Assessment"
