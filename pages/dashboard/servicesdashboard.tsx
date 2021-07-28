@@ -4,8 +4,9 @@ import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../components/Dashboard/servicesdashboard.module.css'
+import styles2 from '../../components/Dashboard/Dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
-import { Col, Container, Row ,Form,Button,Image} from 'react-bootstrap'
+import { Col, Container, Row ,Form,Button,Image,Modal} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import swal from 'sweetalert';
 import { AnyARecord } from 'dns'
@@ -15,8 +16,43 @@ import Imageupload from "../../components/Dashboard/UploadImageToS3WithNativeSdk
 
 
 export default function servicesdashboard() {
-
-
+  const [modalShow, setModalShow] = React.useState(false);
+  function Mypopupmessage(props:any) {
+    return (
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
+        <Modal.Header closeButton>
+          {/* <Modal.Title id="contained-modal-title-vcenter">
+            Modal heading
+          </Modal.Title> */}
+        </Modal.Header>
+        <Modal.Body>
+        <Row>
+             <Col className={styles2.rqstheader}>Request Submitted</Col>
+           </Row>
+        <Row>
+             <Col className={styles2.rqstmessage}>
+               <br/> <br/>
+             <p>Thank you for your submission of inquiries to The Publishing.</p>
+             <p>We will get back to you with our offer in the shortest time possible.</p>
+             <p>An email or one of our customer service will contact you.</p>
+             </Col>
+           </Row>
+           <Row>
+             <Col className={styles2.rqstreminder+" align-middle"}><b>Important reminder:</b> Please make sure all the account Information are correct and complete.</Col>
+           </Row>
+        </Modal.Body>
+        {/* <Modal.Footer>
+          <Button onClick={props.onHide}>Close</Button>
+        </Modal.Footer> */}
+      </Modal>
+    );
+  }
+  
 
     return (
         <div className={styles.container}>
@@ -32,6 +68,7 @@ export default function servicesdashboard() {
             <Row>
                <Sidebar/>
              <Col md={8}>
+
              <Row>
                <Col className={styles.servicescontainer}>             
                 <h4 className={styles.servicesheaderlabel}>BOOK DETAILS</h4>                        
@@ -40,7 +77,7 @@ export default function servicesdashboard() {
 
                <Row>
                 <Col className={styles.indentcheckbox}> 
-                               
+                <Mypopupmessage show={modalShow} onHide={() => setModalShow(false)}/>              
                <Form.Control className={styleIn.accountinput} type="text" defaultValue="BOOK TITLE"/>
                <span className={styles.spannotes}>If you do not yet have a title for your work, please put in Untitled</span> 
                </Col>
@@ -50,7 +87,7 @@ export default function servicesdashboard() {
                <Form.Group>
             <br/>
            <div className={styleIn.fileinputs}> 
-          <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styleIn.formcolbutton2}><Button className={styleIn.submitbuttondashboard} >Upload Manuscript</Button></Col></Row></div>
+          <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styleIn.formcolbutton2}><Button className={styleIn.submitbuttondashboard} onClick={() => setModalShow(true)}>Upload Manuscript</Button></Col></Row></div>
           <Form.Control type="file" className={styleIn.formfile} id="file-id" />
            <br/>
            
