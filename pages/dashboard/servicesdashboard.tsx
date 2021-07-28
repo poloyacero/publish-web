@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef} from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/Nav'
@@ -7,12 +7,17 @@ import styles from '../../components/Dashboard/servicesdashboard.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
-import S3upload from '../../components/Dashboard/UploadImageToS3WithNativeSdk'
 import swal from 'sweetalert';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { AnyARecord } from 'dns'
+import Imageupload from "../../components/Dashboard/UploadImageToS3WithNativeSdk"
+
+
 
 
 export default function servicesdashboard() {
+
+
+
     return (
         <div className={styles.container}>
       <Head>
@@ -21,7 +26,7 @@ export default function servicesdashboard() {
       </Head>
       <NavMenu />
       <NavMenuDashboard/> 
-   
+      
         <Container fluid>
           <Container>
             <Row>
@@ -34,9 +39,10 @@ export default function servicesdashboard() {
                </Row>
 
                <Row>
-                <Col className={styles.indentcheckbox}>
+                <Col className={styles.indentcheckbox}> 
+                               
                <Form.Control className={styleIn.accountinput} type="text" defaultValue="BOOK TITLE"/>
-               <span>If you do not yet have a title for your work, please put in Untitled</span> 
+               <span className={styles.spannotes}>If you do not yet have a title for your work, please put in Untitled</span> 
                </Col>
                </Row>
                <Row>
@@ -44,19 +50,21 @@ export default function servicesdashboard() {
                <Form.Group>
             <br/>
            <div className={styleIn.fileinputs}> 
-          <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styleIn.formcolbutton2}><Button className={styleIn.submitbuttondashboard} onMouseDown={(e)=>{swal("Under maintenance", "Thank you!", "error")}}>Upload Manuscript</Button></Col></Row></div>
-          <Form.Control type="file" className={styleIn.formfile} id="file-id" onClick={()=>{swal("Under maintenance", "Thank you!", "error")}}/>
-          <br/>
-          <span>File uploaded should not be more than 100MB</span> 
+          <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto" /></Col><Col className={styleIn.formcolbutton2}><Button className={styleIn.submitbuttondashboard} >Upload Manuscript</Button></Col></Row></div>
+          <Form.Control type="file" className={styleIn.formfile} id="file-id" />
+           <br/>
+           
           </div>
+          <span className={styles.spannotes2}>File uploaded should not be more than 100MB</span>
           </Form.Group>
+          <br/>
           </Col>
           </Row>
          
           <Row>
             <Col className={styles.indentcheckbox}>
             <p>General information about your book.</p>
-            <Form.Control  as="textarea" rows={15} value="Book Synopsis"/>
+            <Form.Control  as="textarea" rows={15} defaultValue="Book Synopsis"/>
             </Col>
           </Row>
           <Row>

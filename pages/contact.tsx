@@ -1,12 +1,57 @@
 import Head from "next/head";
 import NavMenu from "../components/Nav";
 import PageLayout from '../components/PageLayout';
-
+import swal from 'sweetalert'
 import styles from '../styles/Home.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap';
 import Footer from "../components/Footer";
+import React,{ useEffect,useState } from "react";
 
 export default function Contact() {
+
+  const [firstname, setFirstname] = React.useState('')
+  const [email, setEmail] = React.useState('')
+  const [lastname, setLastname] = React.useState('')
+  const [phonenumber, setPhonenumber] = React.useState('')  
+  const [message, setMessage] = React.useState('')
+  const [submitted, setSubmitted] = React.useState(false)
+  
+  
+  const handleSubmit = (e:any) => { 
+    e.preventDefault()
+    console.log('Sending...')    
+    
+
+  let data = {
+      firstname,
+      lastname,
+      email,
+      phonenumber,      
+      message     
+    }
+  fetch('/api/userMail', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      console.log(data)
+      if (res.status === 200) {
+        console.log('Response succeeded!')
+        setSubmitted(true)
+        setFirstname('')
+        setEmail('')
+        setLastname('')
+        setPhonenumber('')         
+        setMessage('')   
+        swal("Message sent!", "Thank You!", "success");
+       }
+     
+    })
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -33,13 +78,13 @@ export default function Contact() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   First Name
                 </Form.Text>
-                <Form.Control type="text" />
+                <Form.Control type="text"  onChange={(e)=>{setFirstname(e.target.value)}} name="firstname"/>
                 </Col>
                  <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Last Name
                 </Form.Text>
-                <Form.Control type="text"  />
+                <Form.Control type="text"  onChange={(e)=>{setLastname(e.target.value)}} name="lastname" />
                 </Col>                          
             </Row>
             <Row>
@@ -47,23 +92,23 @@ export default function Contact() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Email
                 </Form.Text>
-                <Form.Control type="email"  />
+                <Form.Control type="email" onChange={(e)=>{setEmail(e.target.value)}} name="email"  />
               </Col>
                 
                 <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Phone
                 </Form.Text>
-                <Form.Control type="text" />
+                <Form.Control type="tel" onChange={(e)=>{setPhonenumber(e.target.value)}} name="phonenumber" />
                 </Col>
             </Row>
            <Row> <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                  Message
                 </Form.Text>
-                <Form.Control  as="textarea" rows={5}/>
+                <Form.Control  as="textarea" rows={5}  onChange={(e)=>{setMessage(e.target.value)}} name="message"/>
                 <p></p>
-                <Button className={styles.sendButton} variant="primary" type="submit">SUBMIT</Button>
+                <Button className={styles.sendButton} variant="primary" type="submit" onClick={(e)=>{handleSubmit(e)}}>SUBMIT</Button>
                 </Col></Row>
             
             </Col></Row>

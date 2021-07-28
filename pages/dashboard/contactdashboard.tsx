@@ -93,13 +93,13 @@ export default function contactdashboard() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   First Name
                 </Form.Text>
-                <Form.Control type="text" />
+                <Form.Control type="text"  onChange={(e)=>{setFirstname(e.target.value)}} name="firstname"/>
                 </Col>
                  <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Last Name
                 </Form.Text>
-                <Form.Control type="text"  />
+                <Form.Control type="text"  onChange={(e)=>{setLastname(e.target.value)}} name="lastname"  />
                 </Col>                          
             </Row>
             <Row>
@@ -107,23 +107,23 @@ export default function contactdashboard() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Email
                 </Form.Text>
-                <Form.Control type="email"  />
+                <Form.Control type="email"  onChange={(e)=>{setEmail(e.target.value)}} name="email"  />
               </Col>
                 
                 <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Phone
                 </Form.Text>
-                <Form.Control type="text" />
+                <Form.Control type="tel" onChange={(e)=>{setPhonenumber(e.target.value)}} name="phonenumber"/>
                 </Col>
             </Row>
            <Row> <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                  Message
                 </Form.Text>
-                <Form.Control  as="textarea" rows={5}/>
+                <Form.Control  as="textarea" rows={5}   onChange={(e)=>{setMessage(e.target.value)}} name="message"/>
                 <p></p>
-                <Button className={styles.sendButton} variant="primary" type="submit">SUBMIT</Button>
+                <Button className={styles.sendButton} variant="primary" type="submit" onClick={(e)=>{handleSubmit(e)}}>SUBMIT</Button>
                 </Col></Row>
             
             </Col></Row>

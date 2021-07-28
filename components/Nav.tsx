@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { Navbar, Nav, Container, Row, Col, Image, NavDropdown, Form ,Button} from 'react-bootstrap';
 import Link from 'next/link';
 
@@ -13,6 +13,40 @@ interface NavProps {
 const NavMenu = ({ ...props }: NavProps) => {
   const [modalShowCreate, setModalShowCreate] = React.useState(false);
   const [modalShowSignin, setModalShowSignin] = React.useState(false);
+
+  const axios = require('axios');
+  const [formData, setFormData] = useState({});
+
+  const updateInput = (e:any) => {
+    setFormData({
+      ...formData,
+      [e.target.value]: e.target.value,
+    });
+  };
+  const handleSubmit = (event:any) => {
+    event.preventDefault();
+    handleLogin();
+    setFormData({
+      email: "",
+      password: "",     
+    });
+  };
+  const handleLogin = () => {
+    // http://account.dev.thepublishing.com/auth/health http://account.dev.thepublishing.com/oauth/token
+    axios.get('http://account.dev.thepublishing.com/auth/health')
+  .then(function (response:any) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error:any) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+    
+  };
 
   return (
     <Container fluid style={{background: '#f0e3d5'}}>
@@ -138,12 +172,14 @@ const NavMenu = ({ ...props }: NavProps) => {
         onHide={() => setModalShowSignin(false)}
       >      
         <Container>
+        <Form onSubmit={handleSubmit}>
           <Row className="justify-content-md-center">
             <Col>
+           
               <Form.Group as={Row}>
                 <Col md={12}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control className={styles.inputnav} type="email" name="email"/>
+                  <Form.Control className={styles.inputnav} onChange={updateInput} type="email" name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -151,7 +187,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={12}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control className={styles.inputnav} type="password" name="password"/>                  
+                  <Form.Control className={styles.inputnav} onChange={updateInput} type="password" name="password"/>                  
                 </Col>
                
               </Form.Group>
@@ -159,11 +195,12 @@ const NavMenu = ({ ...props }: NavProps) => {
             <Col>
               <Form.Group as={Row}>
                 <Col md={12}>                                   
-                  <Button onClick={props.onHide} className={styles.signinButton}>Log In</Button>
+                  <Button type="submit" onClick={props.onHide} className={styles.signinButton}>Log In</Button>
                 </Col>
                
               </Form.Group>
             </Col>
+
             <Col md={{ span: 12, offset: 0 }}>
               
                 <Col className={styles.forgotpasslink} md={12}>                                   
@@ -198,6 +235,8 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Form.Group>
             </Col>
           </Row>
+          </Form>
+
         </Container>
       </TheModal>
     </Container>

@@ -27,7 +27,7 @@ export default function (req, res) {
     to: "admin@thepublishing.com", // String or array of strings ['You <you@example.com>', 'another@example.com']
     from: req.body.email, // String
     cc: "gb@thepublishing.com,js@thepublishing.com", //CC
-    subject: req.body.subjectmsg,
+    subject: "Inquiry",
     text: "Hi Im" + req.body.name,
     html: `<div>Help Mail<br/><br/>
         Hi I'm ${req.body.firstname} ${req.body.lastname}<br/><br/>        
