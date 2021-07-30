@@ -328,7 +328,7 @@ export default function servicesdashboard() {
             <br/>
            <div className={styleIn.fileinputs}> 
           <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto"  onClick={openFileDialog}/></Col><Col className={styleIn.formcolbutton2}><Button className={styleIn.submitbuttondashboard} onClick={() => alert('Attaching file....')}>Attach Manuscript</Button></Col></Row></div>
-          <FileInput className={styleIn.formfile} onChange={handleFileChange} />
+          <FileInput className={styleIn.formfile} onChange={handleFileChange} accept=".jpg,.jpeg,.psd,.pdf,.docx,.doc"/>
            <br/>
            
           </div>
