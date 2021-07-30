@@ -27,19 +27,54 @@ export default function (req, res) {
     to: "admin@thepublishing.com", // String or array of strings ['You <you@example.com>', 'another@example.com']
     from: "admin@thepublishing.com", // String
     cc: "gb@thepublishing.com,js@thepublishing.com", //CC
-    subject: "Create Print Book and Ebook € 350",
+    subject: "Services Request by Client0023",
     text: "Hi Im" + req.body.name,
-    html: `<div>Creating Print Book and Ebook € 350<br/><br/>
-       Is your manuscript ready? ${req.body.manuscriptready}<br/><br/>        
+    html: `<div><h3>Book Details</h3><br/><br/>
+      <b> Book Title:</b> ${req.body.booktitle}<br/>        
        <br/>
-       Is your manuscript professionally edited? ${req.body.manuscriptedited}<br/><br/>
+       <b>Book Synopis:</b> <br/>${req.body.booksynopsis}<br/><br/>
        <br/>
+       <b>Package:</b>${req.body.package1}<br/><br/>
+       <b>Additional Services:</b><br/><br/>
+       <b>Editing:</b><br/>
+       ${req.body.editorialvalue}
+       ${req.body.lineeditingvalue}
+       ${req.body.developmentalvalue}
+       ${req.body.contenteditvalue}
+       ${req.body.copyeditingvalue}
+       ${req.body.prooflvalue}
+       ${req.body.indexingvalue}
+       ${req.body.dataentryvalue}
+       ${req.body.textformatvalue}
+       <br/><b>Design:</b><br/>
+       ${req.body.illustrationsvalue}
+       ${req.body.coverdesignvalue}
+       ${req.body.interiordesignvalue}
+       ${req.body.bookdescvalue}
+       ${req.body.hardbackvalue}       
+       <br/><b>Distribution:</b><br/>
+       ${req.body.printbookvalue}
+       ${req.body.ebookdistvalue}
+       ${req.body.copyrightvalue}
+       ${req.body.isbnvalue}<br/>
+       <br/><b>Marketing:</b><br/>
+       ${req.body.websitevalue}
+       ${req.body.audiobookvalue}       
+       ${req.body.videobookvalue}
+       ${req.body.pressreleasevalue}
+       ${req.body.authoreventsvalue}
+       ${req.body.printadsvalue}
+       ${req.body.royaltyprogvalue}
+       ${req.body.salesheetsvalue} 
+       ${req.body.socialmediavalue}
+       ${req.body.boreprogvalue} 
+            <br/>
        Attachements:
        `,
     attachments: [
       {
-        // file on disk as an attachment
-        path: `${req.body.manuscriptfile}`, // stream this file
+        // filename and content type is derived from path
+        path: `${req.body.imageUrl}`,
       },
     ],
   };

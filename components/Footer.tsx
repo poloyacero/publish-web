@@ -110,8 +110,8 @@ interface FooterProps {}
                  Subject
                 </Form.Text> */}
                 {/* <Form.Control type="text" className={styles.footerinput} placeholder="Subject" /> */}
-                <Form.Control className={styles.footerinputselect} as="select" onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
-                  <option disabled selected>Subject</option>
+                <Form.Control className={styles.footerinputselect} as="select" defaultValue="Select" onChange={(e)=>{setSubjectmsg(e.target.value)}} name="subjectmsg">
+                  <option disabled>Subject</option>
                   <optgroup label="General Inquiries">                                  
                   <option>Services</option>
                   <option>Book Printing</option>                  

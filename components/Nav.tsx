@@ -1,51 +1,105 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import { Navbar, Nav, Container, Row, Col, Image, NavDropdown, Form ,Button} from 'react-bootstrap';
 import Link from 'next/link';
-
+import swal from 'sweetalert';
 import styles from './NavMenu.module.css';
 import TheModal from './TheModal';
+import { useRouter } from 'next/router'
+
 
 interface NavProps {
   className?: string;
   onHide?:any;  
+  router?:string;
+  usernameData?:any;
 }
 
 const NavMenu = ({ ...props }: NavProps) => {
   const [modalShowCreate, setModalShowCreate] = React.useState(false);
   const [modalShowSignin, setModalShowSignin] = React.useState(false);
+  var QueryString = require('querystring');
 
   const axios = require('axios');
-  const [formData, setFormData] = useState({});
+ 
+  const [loginError, setLoginError] = useState('')
+  const router = useRouter()
+  
+  const [usernameData, setUsernameData] = useState("");
+  const [passwordData, setPasswordData] = useState("");
+  const [valPasswordData, setValPasswordData] = useState("");
+  const [clientName, setClientName] = useState("");
 
-  const updateInput = (e:any) => {
-    setFormData({
-      ...formData,
-      [e.target.value]: e.target.value,
-    });
-  };
+  useEffect(() => {
+    // Getting the error details from URL
+    if (router.query.error) {
+      
+    }
+  }, [router])
+
+
   const handleSubmit = (event:any) => {
     event.preventDefault();
-    handleLogin();
-    setFormData({
-      email: "",
-      password: "",     
-    });
+    handleLogin();    
+  };
+  const handleSubmitReg = (event:any) => {
+    event.preventDefault();
+    handleRegister();    
   };
   const handleLogin = () => {
     // http://account.dev.thepublishing.com/auth/health http://account.dev.thepublishing.com/oauth/token
-    axios.get('http://account.dev.thepublishing.com/auth/health')
-  .then(function (response:any) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error:any) {
-    // handle error
-    console.log(error);
-  })
-  .then(function () {
-    // always executed
-  });
-    
+     
+  axios.post('http://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
+    username: usernameData, 
+    password: passwordData,
+    client_id:'TkpttxtKbhlMdO8',
+    client_secret:'6ER/XiF1fgY4fk3j8soAyQM2dmj3B7',
+    grant_type: 'password'
+        }), {
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            }
+        }).then(function (response:any) {
+          setUsernameData("")
+          setPasswordData("")
+          setModalShowSignin(false)
+          console.log(response);
+          window.location.href = "/dashboard/homedashboard";
+        })
+        .catch(function (error:any) {
+          console.log(error);
+          localStorage.clear()
+          swal("Invalid username or password!", "Try again", "error");
+          setModalShowSignin(true)
+          //window.location.href = "/";
+        })
+        .then(function () {
+          // always executed
+        });  
+  };
+
+  const handleRegister = () => {
+    if(passwordData===valPasswordData){    
+  axios.post('http://account.dev.thepublishing.com/auth/register', QueryString.stringify({
+    username: usernameData, 
+    password: passwordData,
+    contact_name:clientName    
+        }), {
+            headers: {
+                "Content-Type": "application/json",
+            }
+        }).then(function (response:any) {
+          setModalShowSignin(false)
+          console.log(response);
+        })
+        .catch(function (error:any) {
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+        });  
+      } else{
+        alert("validate password did not match!")
+      }
   };
 
   return (
@@ -120,12 +174,13 @@ const NavMenu = ({ ...props }: NavProps) => {
         onHide={() => setModalShowCreate(false)}
       >
         <Container>
+        <Form onSubmit={handleSubmitReg}>
           <Row>
             <Col md={{ span: 12, offset: 0 }}>
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Contact Name</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="text" name="contact-name"/>
+                  <Form.Control className={styles.inputnav1} type="text"  value={clientName} onChange={(e)=>{setClientName(e.target.value)}} name="contact-name"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -133,7 +188,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="email" name="email"/>
+                  <Form.Control className={styles.inputnav1} type="email"  value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -141,7 +196,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="password" name="password"/>
+                  <Form.Control className={styles.inputnav1} type="password"  value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}}name="password"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -149,7 +204,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Validate Password</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="password" name="validate"/>
+                  <Form.Control className={styles.inputnav1} type="password"  value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="validate"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -157,12 +212,13 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col className={styles.forgotpasslink1} md={12}>   
                 <br/>                                
-                <Nav.Link href="/dashboard/homedashboard"><Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}>Create Account </Button></Nav.Link>
+                <Button type="submit" data-dismiss-modal className={styles.createButton}>Create Account </Button>
                 </Col>
                
               </Form.Group>
             </Col>
           </Row>
+          </Form>
         </Container>
       </TheModal>
       <TheModal 
@@ -179,7 +235,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={12}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control className={styles.inputnav} onChange={updateInput} type="email" name="email"/>
+                  <Form.Control className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -187,7 +243,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={12}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control className={styles.inputnav} onChange={updateInput} type="password" name="password"/>                  
+                  <Form.Control className={styles.inputnav} type="password" value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>                  
                 </Col>
                
               </Form.Group>
@@ -195,7 +251,7 @@ const NavMenu = ({ ...props }: NavProps) => {
             <Col>
               <Form.Group as={Row}>
                 <Col md={12}>                                   
-                  <Button type="submit" onClick={props.onHide} className={styles.signinButton}>Log In</Button>
+                  <Button type="submit" className={styles.signinButton}>Log In</Button>
                 </Col>
                
               </Form.Group>
