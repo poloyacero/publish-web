@@ -1,7 +1,7 @@
 
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
-import NavMenu from '../../components/Nav'
+import NavMenu from '../../components/NavDashboard'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'

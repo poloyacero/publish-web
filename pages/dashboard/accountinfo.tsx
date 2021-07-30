@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
-import NavMenu from '../../components/Nav'
+import NavMenu from '../../components/NavDashboard'
 import styles from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
