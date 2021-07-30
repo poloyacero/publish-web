@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
-import NavMenu from '../../components/Nav'
+import NavMenu from '../../components/NavDashboard'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
@@ -310,7 +310,7 @@ export default function billinginfo() {
            <br></br><br></br>
            <Form.Group>
              <Row className="align-items-center">
-            <Col className={"form-group "+styles2.textalignment} md={3}>Payment Type</Col>
+            <Col className={"form-group "+styles2.textalignment} md={3}>Electronic Payment</Col>
             <Col className={"form-group "+styles2.textalignment} md={1}>
             <Form.Check
               type="radio"
@@ -337,18 +337,8 @@ export default function billinginfo() {
                                                         Europe
                       </Col>
             </Row>
-            <br/>
-            <Row className="align-items-center">
-            <Col className="form-group" md={3}> </Col>
-            <Col className={"form-group "+styles2.textalignment} md={1}>
-            <Form.Check
-              type="radio"
-              label=""
-              name="cardselect"
-              id="paypal"
-            /> </Col> <Col md={8} className="text-left"> <Image src="/img/paypal.png" width="80px" height="auto" /></Col>
-            </Row>        
-            <br/>  
+            <br/>       
+           
             <br/>
             <br/>
             <Row className="align-items-right">

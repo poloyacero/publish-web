@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import type { AppProps /*, AppContext */ } from 'next/app'
 import Head from "next/head";
 
+
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
@@ -19,6 +20,7 @@ crossOrigin="anonymous"
 </Head>
 
 <Component {...pageProps} />
+
 </>
   )
   

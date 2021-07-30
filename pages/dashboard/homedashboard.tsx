@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import Sidebar from '../../components/Dashboard/Sidebar'
-import NavMenu from '../../components/Nav'
+import NavMenu from '../../components/NavDashboard'
 import styles from '../../components/Dashboard/homedashboard.module.css'
 import { Col, Container, Row ,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";

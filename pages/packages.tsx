@@ -146,6 +146,7 @@ export default function PackagesPage() {
             Press Release Campaign <br/>           
             Social Media <br/>
             Audio Book<br/>
+            
             Video Book<br/>
           </p>
         </Package>

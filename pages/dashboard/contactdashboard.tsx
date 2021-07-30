@@ -1,22 +1,37 @@
-import Head from "next/head";
-import NavMenu from "../components/Nav";
-import PageLayout from '../components/PageLayout';
+import React,{useEffect} from 'react'
+import Head from 'next/head'
+import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
+import NavMenu from '../../components/NavDashboard'
+import styles from '../../styles/Home.module.css'
+import styles2 from '../../components/Dashboard/dashboard2.module.css'
+import styleIn from '../../styles/inputstyle.module.css'
+import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
+import FooterDashboard from "../../components/FooterDashboard";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import swal from 'sweetalert'
-import styles from '../styles/Home.module.css'
-import { Col, Container, Row ,Form,Button} from 'react-bootstrap';
-import Footer from "../components/Footer";
-import React,{ useEffect,useState } from "react";
 
-export default function Contact() {
-
+export default function contactdashboard() {
   const [firstname, setFirstname] = React.useState('')
   const [email, setEmail] = React.useState('')
   const [lastname, setLastname] = React.useState('')
-  const [phonenumber, setPhonenumber] = React.useState('')  
+  const [phonenumber, setPhonenumber] = React.useState('')
+  const [subjectmsg, setSubjectmsg] = React.useState('')
   const [message, setMessage] = React.useState('')
   const [submitted, setSubmitted] = React.useState(false)
   
-  
+  useEffect(() => {
+   initializedata();
+  }, [])
+
+
+  function initializedata(){
+    setFirstname('Gabriel')
+    setLastname('Balbuena')
+    setEmail('balbuenagf@gmail.com')    
+    setPhonenumber('423452344') 
+    setSubjectmsg('User Chat') 
+    console.log("data initialized")  
+  }
   const handleSubmit = (e:any) => { 
     e.preventDefault()
     console.log('Sending...')    
@@ -26,7 +41,8 @@ export default function Contact() {
       firstname,
       lastname,
       email,
-      phonenumber,      
+      phonenumber,
+      subjectmsg ,
       message     
     }
   fetch('/api/userMail', {
@@ -45,35 +61,34 @@ export default function Contact() {
         setFirstname('')
         setEmail('')
         setLastname('')
-        setPhonenumber('')         
+        setPhonenumber('') 
+        setSubjectmsg('')
         setMessage('')   
         swal("Message sent!", "Thank You!", "success");
        }
      
     })
   }
-  return (
-    <div className={styles.container}>
+    return (
+        <div className={styles.container}>
       <Head>
-        <title>Contact Us</title>
+        <title>Contact</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
-      <PageLayout>
+      <NavMenuDashboard className={styles.home}/> 
+   
         <Container fluid>
-          <Container className="container">
-            <Row className={styles.heading}>
-              <h1>Contact Us</h1>
-            </Row>
-          </Container>
-        </Container>
-        <Container fluid>
-          <Container className="container">
-          <Form className={styles.form}>
+          <Container  className={styles.ctext}>
+            <Row className={styles2.dropdownmenucontainer}>
+             
+                <Col>
+                <h3 className={styles2.dropheaderlabel2}>Contact</h3>
+                <br></br>
+                <Form className={styles.form}>
               <Form.Group className={styles.formGroup} controlId="formBasicEmail">
             <Row><Col>
-              
-            <Row>  
+                <Row>  
               <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   First Name
@@ -84,7 +99,7 @@ export default function Contact() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Last Name
                 </Form.Text>
-                <Form.Control type="text"  onChange={(e)=>{setLastname(e.target.value)}} name="lastname" />
+                <Form.Control type="text"  onChange={(e)=>{setLastname(e.target.value)}} name="lastname"  />
                 </Col>                          
             </Row>
             <Row>
@@ -92,21 +107,21 @@ export default function Contact() {
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Email
                 </Form.Text>
-                <Form.Control type="email" onChange={(e)=>{setEmail(e.target.value)}} name="email"  />
+                <Form.Control type="email"  onChange={(e)=>{setEmail(e.target.value)}} name="email"  />
               </Col>
                 
                 <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                   Phone
                 </Form.Text>
-                <Form.Control type="tel" onChange={(e)=>{setPhonenumber(e.target.value)}} name="phonenumber" />
+                <Form.Control type="tel" onChange={(e)=>{setPhonenumber(e.target.value)}} name="phonenumber"/>
                 </Col>
             </Row>
            <Row> <Col>
                 <Form.Text className="text-muted" style={{paddingBottom: '5px'}}>
                  Message
                 </Form.Text>
-                <Form.Control  as="textarea" rows={5}  onChange={(e)=>{setMessage(e.target.value)}} name="message"/>
+                <Form.Control  as="textarea" rows={5}   onChange={(e)=>{setMessage(e.target.value)}} name="message"/>
                 <p></p>
                 <Button className={styles.sendButton} variant="primary" type="submit" onClick={(e)=>{handleSubmit(e)}}>SUBMIT</Button>
                 </Col></Row>
@@ -143,10 +158,15 @@ export default function Contact() {
               
               </Col>
             </Row>
-          </Container>
+              <br/> <br/> <br/>
+             </Col>
+           
+            </Row>
+          </Container>   
+       
         </Container>
-        </PageLayout>
-      <Footer />
-    </div>
-  )
+     
+      <FooterDashboard />    
+        </div>
+    )
 }
