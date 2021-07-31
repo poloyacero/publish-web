@@ -1,16 +1,89 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/NavDashboard'
 import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
-import { Col, Container, Row ,Form,Button,Image} from 'react-bootstrap'
+import { Col, Container, Row ,Form,Button,Image, NavLink} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import swal from "sweetalert"
+import withAuth from "../../components/withAuth";
+import axios from 'axios'
 
-export default function billinginfo() {
-
+const billinginfo=()=> {  
+  
+  const [email, setEmail] = useState("");  
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [businessname, setBusinessname] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [stateprovince, setStateprovince] = useState("");
+  const [postalcode, setPostalcode] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  const [paymenttype, setPaymenttype] = useState("");
+  
+  const updateInput = (e:any) => {
+    setPaymenttype(e.target.value)
+    
+  };
+  const handleSubmit = (e:any) => { 
+    e.preventDefault()
+    console.log('Sending')       
+  
+    let data = {
+    email, 
+    firstname,
+    lastname, 
+    businessname,
+    address,
+    city,
+    stateprovince,
+    postalcode,
+    phonenumber,
+    paymenttype   
+      
+    }
+  fetch('/api/billinginfo', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      console.log(data)
+      if (res.status === 200) {
+        console.log('Response succeeded!')                   
+        swal("Sent!", "Thank You!", "success");
+        window.location.href = "/dashboard/homedashboard"
+      }
+     })
+  }
+  useEffect(() => {
+    // Getting the error details from URL
+  getuser();
+  }, [email])
+  async function getuser () {
+      
+      let webApiUrl = 'http://account.dev.thepublishing.com/auth/info';
+      let tokenStr = localStorage.getItem("AccessToken");
+      
+      try {
+        const response = await axios.get(webApiUrl, 
+          { headers: {"Authorization" : `Bearer ${tokenStr}`} 
+         
+        });
+        console.log(response);        
+        setEmail(response.data.object.email)
+      } catch (error) {
+        console.error(error);
+      }
+      };
+    
     return (
         <div className={styles.container}>
       <Head>
@@ -31,16 +104,16 @@ export default function billinginfo() {
                <Row className={"form-group "+styles2.textalignment}>               
                <Col>
                <Form.Group as={Row}>
-               <Col className="form-group" md={3}>First Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-               <Col className="form-group" md={3}>Last Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>First Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setFirstname(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>Last Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setLastname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setBusinessname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setAddress(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setCity(e.target.value)}}/> </Col>
                   
-               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" defaultValue=" " onChange={(e)=>{setStateprovince(e.target.value)}}>
               <option value=""></option>
               <option value="USA">United States</option>
               <option value="GBR">United Kingdom</option>
@@ -297,10 +370,9 @@ export default function billinginfo() {
               <option value="ZWE">Zimbabwe</option>
             </Form.Control> 
             </Col>
-            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPostalcode(e.target.value)}}/> </Col>
+            
+            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPhonenumber(e.target.value)}}/> </Col>
            
             </Form.Group>
             <br></br>
@@ -317,6 +389,8 @@ export default function billinginfo() {
               label=""
               name="cardselect"
               id="dkk"
+              value="ThePublishing ApS DKK 7780 – 6481469 Denmark"                           
+              onChange={updateInput}
             /></Col>
             <Col md={8} className="text-left"><br/>ThePublishing ApS<br/>  
                                               DKK 7780 – 6481469<br/>
@@ -332,6 +406,8 @@ export default function billinginfo() {
               label=""
               name="cardselect"
               id="europe"
+              value="ThePublishing ApS EUR 7780 – 6481477 Europe"                           
+              onChange={updateInput}
             /> </Col> <Col md={8} className="text-left"><br/>ThePublishing ApS<br/>   
                                                         EUR 7780 – 6481477<br/>  
                                                         Europe
@@ -342,7 +418,7 @@ export default function billinginfo() {
             <br/>
             <br/>
             <Row className="align-items-right">
-            <Col className="form-group" md={3}><Col className={styles2.savebuttonindent}><Button className={styles2.dashsavebutton}>Submit</Button></Col> </Col>
+            <Col className="form-group" md={3}><Col className={styles2.savebuttonindent}><NavLink href="/dashboard/homedashboard"><Button className={styles2.dashsavebutton} onClick={handleSubmit}>Submit</Button></NavLink></Col> </Col>
             <Col className="form-group text-left" md={1}>
             </Col> <Col md={8} className="right"> </Col>
             </Row>        
@@ -364,3 +440,4 @@ export default function billinginfo() {
         </div>
     )
 }
+export default withAuth(billinginfo);

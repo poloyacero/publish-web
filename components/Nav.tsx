@@ -15,6 +15,7 @@ interface NavProps {
 }
 
 const NavMenu = ({ ...props }: NavProps) => {
+  
   const [modalShowCreate, setModalShowCreate] = React.useState(false);
   const [modalShowSignin, setModalShowSignin] = React.useState(false);
   var QueryString = require('querystring');
@@ -31,6 +32,7 @@ const NavMenu = ({ ...props }: NavProps) => {
 
   useEffect(() => {
     // Getting the error details from URL
+  
     if (router.query.error) {
       
     }
@@ -47,13 +49,14 @@ const NavMenu = ({ ...props }: NavProps) => {
   };
   const handleLogin = () => {
     // http://account.dev.thepublishing.com/auth/health http://account.dev.thepublishing.com/oauth/token
-     
-  axios.post('http://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
+  
+    
+    axios.post('http://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
     username: usernameData, 
     password: passwordData,
-    client_id:'TkpttxtKbhlMdO8',
-    client_secret:'6ER/XiF1fgY4fk3j8soAyQM2dmj3B7',
-    grant_type: 'password'
+    client_id:process.env.NEXT_PUBLIC_CLIENT_ID,
+    client_secret: process.env.NEXT_PUBLIC_CLIENT_SECRET,
+    grant_type: process.env.NEXT_PUBLIC_GRANT_TYPE
         }), {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
@@ -62,7 +65,8 @@ const NavMenu = ({ ...props }: NavProps) => {
           setUsernameData("")
           setPasswordData("")
           setModalShowSignin(false)
-          console.log(response);
+          console.log("response",response.data.access_token);
+          localStorage.setItem('AccessToken', response.data.access_token);
           window.location.href = "/dashboard/homedashboard";
         })
         .catch(function (error:any) {

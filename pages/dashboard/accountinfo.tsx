@@ -1,14 +1,85 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import Head from 'next/head'
 import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/NavDashboard'
 import styles from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
-import { Col, Container, Row ,Form,Button} from 'react-bootstrap'
+import { Col, Container, Row ,Form,Button, NavLink} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import swal from "sweetalert"
+import withAuth from "../../components/withAuth";
+import axios from 'axios'
 
-export default function accountinfo() {
+ const accountinfo=() =>{
+  const [loginID, setLogInID] = useState("000000000000");
+  const [email, setEmail] = useState("user@gmail.com");
+  const [businesstype, setBusinesstype] = useState("");
+  const [fullname, setFullname] = useState("");
+  const [businessname, setBusinessname] = useState("");
+  const [address, setAddress] = useState("");
+  const [city, setCity] = useState("");
+  const [stateprovince, setStateprovince] = useState("");
+  const [postalcode, setPostalcode] = useState("");
+  const [phonenumber, setPhonenumber] = useState("");
+  
+  
+  const handleSubmit = (e:any) => { 
+    e.preventDefault()
+    console.log('Sending')       
+  
+    let data = {
+    email, 
+    loginID,      
+    businesstype,
+    fullname,
+    businessname,
+    address,
+    city,
+    stateprovince,
+    postalcode,
+    phonenumber    
+      
+    }
+  fetch('/api/accountinfo', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+      console.log('Response received')
+      console.log(data)
+      if (res.status === 200) {
+        console.log('Response succeeded!')                   
+        swal("Sent!", "Thank You!", "success");
+        window.location.href = "/dashboard/homedashboard"
+      }
+     })
+  }
+  useEffect(() => {
+    // Getting the error details from URL
+  getuser();
+  }, [email])
+  async function getuser () {
+      
+      let webApiUrl = 'http://account.dev.thepublishing.com/auth/info';
+      let tokenStr = localStorage.getItem("AccessToken");
+      
+      try {
+        const response = await axios.get(webApiUrl, 
+          { headers: {"Authorization" : `Bearer ${tokenStr}`} 
+         
+        });
+        console.log(response);
+        setLogInID(response.data.object.id)
+        setEmail(response.data.object.email)
+      } catch (error) {
+        console.error(error);
+      }
+      };
+    
     return (
         <div>
       <Head>
@@ -26,13 +97,13 @@ export default function accountinfo() {
                 <h3 className={styles.dropheaderlabel2}>Account Information</h3>
                 <br></br>
                 <Row className={"form-group "+styles.textalignment}>
-              <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput}  type="text" defaultValue=" "/> </Col>
+              <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput} type="text" value={loginID}/> </Col>
                </Row>
-               <Row className={"form-group "+styles.textalignment}>
+               {/* <Row className={"form-group "+styles.textalignment}>
                  <Col md={3}>Acount Number</Col><Col md={9}></Col>
-               </Row>
+               </Row> */}
                <Row className={"form-group "+styles.textalignment}>
-               <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.accountinput}   as="select" defaultValue=" ">
+               <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.accountinput}   as="select" defaultValue="Select"  onChange={(e)=>{setBusinesstype(e.target.value)}}>
               <option> </option>                                
               <option>Sole Proprietor</option>
               <option>Company</option>                  
@@ -49,15 +120,15 @@ export default function accountinfo() {
                <Row className={"form-group "+styles.textalignment}>               
                <Col>
                <Form.Group as={Row}>
-               <Col className="form-group" md={3}>Full Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>Full Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setFullname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setBusinessname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setAddress(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setCity(e.target.value)}}/> </Col>
                   
-               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" defaultValue=" ">
+               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" defaultValue=" " onChange={(e)=>{setStateprovince(e.target.value)}}>
               <option value=""></option>
               <option value="USA">United States</option>
               <option value="GBR">United Kingdom</option>
@@ -314,16 +385,15 @@ export default function accountinfo() {
               <option value="ZWE">Zimbabwe</option>
             </Form.Control> 
             </Col>
-            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Email Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
-            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" "/> </Col>
+            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPostalcode(e.target.value)}}/> </Col>
+           
+            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPhonenumber(e.target.value)}}/> </Col>
             <Col md={3}></Col><Col className="form-group" md={9}><p className={styles.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/> 
                               The Publishing shall not be liable for undeliverable shipments where a valid phone number is not provided.</p></Col>
                               <br/> <br/> <br/> 
               <Row>
                 <Col  className={styles.dashbuttoncontainer}>
-                <Col md={'auto'}><Button className={styles.dashsavebutton}>Save</Button></Col> <Col md={'auto'}><Button className={styles.dashsavebutton}>Cancel</Button></Col>
+                <Col md={'auto'}><NavLink href="/dashboard/homedashboard"><Button className={styles.dashsavebutton} onClick={handleSubmit}>Save</Button></NavLink></Col> <Col md={'auto'}><NavLink href="/dashboard/homedashboard"><Button className={styles.dashsavebutton}>Cancel</Button></NavLink></Col>
                 </Col>
               </Row>
               <br/> <br/> <br/>
@@ -340,3 +410,4 @@ export default function accountinfo() {
         </div>
     )
 }
+export default withAuth(accountinfo);

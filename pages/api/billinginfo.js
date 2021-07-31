@@ -1,5 +1,4 @@
 export default function (req, res) {
-  require("dotenv").config();
   const cors = require("cors")({ origin: true });
 
   let nodemailer = require("nodemailer");
@@ -22,29 +21,36 @@ export default function (req, res) {
       pass: process.env.NEXT_PUBLIC_PASSWORD,
     },
   });
+
   const mailData = {
     to: "admin@thepublishing.com", // String or array of strings ['You <you@example.com>', 'another@example.com']
     from: req.body.email, // String
     cc: "gb@thepublishing.com,js@thepublishing.com", //CC
-    subject: "Inquiry from Publishing",
-    text: "Hi Im" + req.body.name,
-    html: `<div>Requested Package<br/><br/>
-        Hi I'm ${req.body.firstname} ${req.body.lastname}<br/><br/>        
-       <br/>
-        <br/><b>Your Package:</b><br/>
-        ${req.body.packagevalue}<br/>      
-        <br/><br/>
-        <p>Sent from: ${req.body.email}</p>`,
+    subject: "User Payment Information",
+    text: "Hi Im" + req.body.fullname,
+    html: `<div>User Billing Information<br/><br/>
+        First Name: ${req.body.firstname}<br/>       
+        Last Name: ${req.body.lastname}<br/>
+        Business name: ${req.body.businessname}<br/>
+        Address: ${req.body.address}<br/>
+        City: ${req.body.city}<br/>
+        State: ${req.body.stateprovince}<br/>
+        Postal Code: ${req.body.postalcode}<br/>
+        Email: ${req.body.email}<br/>
+        Phone Number: ${req.body.phonenumber}<br/>
+        Electronic Payment: ${req.body.paymenttype}<br/>
+                   
+        <br/>`,
   };
 
   transporter.sendMail(mailData, (err, data) => {
     if (err) {
       console.log(err);
       res.send("error" + JSON.stringify(err));
-      console.log("mail not sent");
+      console.log("mail not sent!!");
     } else {
-      console.log("mail send");
-      res.send("success");
+      console.log("mail send!");
+      res.send("success!!");
     }
   });
 }

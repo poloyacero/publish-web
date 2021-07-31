@@ -1,9 +1,8 @@
 export default function (req, res) {
-  require("dotenv").config();
   const cors = require("cors")({ origin: true });
 
   let nodemailer = require("nodemailer");
-  console.log("password:", process.env.PASSWORD);
+
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     // SMTP is unlike most network protocols, which only have a single port number.
@@ -19,7 +18,7 @@ export default function (req, res) {
     secure: true, // use TLS
     auth: {
       user: "admin@thepublishing.com",
-      pass: process.env.PASSWORD,
+      pass: process.env.NEXT_PUBLIC_PASSWORD,
     },
   });
 
@@ -27,8 +26,8 @@ export default function (req, res) {
     to: "admin@thepublishing.com", // String or array of strings ['You <you@example.com>', 'another@example.com']
     from: "admin@thepublishing.com", // String
     cc: "gb@thepublishing.com,js@thepublishing.com", //CC
-    subject: "Services Request by Client0023",
-    text: "Hi Im" + req.body.name,
+    subject: `Services Request by ${req.body.user}`,
+    text: "Hi Im" + req.body.user,
     html: `<div><h3>Book Details</h3><br/><br/>
       <b> Book Title:</b> ${req.body.booktitle}<br/>        
        <br/>
@@ -69,6 +68,7 @@ export default function (req, res) {
        ${req.body.socialmediavalue}
        ${req.body.boreprogvalue} 
             <br/>
+            Email: ${req.body.email}   <br/>  
        Attachements:
        `,
     attachments: [

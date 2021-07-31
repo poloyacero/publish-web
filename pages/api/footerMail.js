@@ -1,9 +1,8 @@
 export default function (req, res) {
-  require("dotenv").config();
   const cors = require("cors")({ origin: true });
 
   let nodemailer = require("nodemailer");
-  console.log("password:", process.env.PASSWORD);
+
   const transporter = nodemailer.createTransport({
     service: "Gmail",
     // SMTP is unlike most network protocols, which only have a single port number.
@@ -19,7 +18,7 @@ export default function (req, res) {
     secure: true, // use TLS
     auth: {
       user: "admin@thepublishing.com",
-      pass: process.env.PASSWORD,
+      pass: process.env.NEXT_PUBLIC_PASSWORD,
     },
   });
 

@@ -1,5 +1,4 @@
 export default function (req, res) {
-  require("dotenv").config();
   const cors = require("cors")({ origin: true });
 
   let nodemailer = require("nodemailer");
@@ -19,7 +18,7 @@ export default function (req, res) {
     secure: true, // use TLS
     auth: {
       user: "admin@thepublishing.com",
-      pass: process.env.PASSWORD,
+      pass: process.env.NEXT_PUBLIC_PASSWORD,
     },
   });
 
