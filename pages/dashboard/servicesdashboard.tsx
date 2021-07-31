@@ -10,16 +10,17 @@ import { Col, Container, Row ,Form,Button,Image,Modal} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
 import swal from 'sweetalert';
 import { useS3Upload } from 'next-s3-upload';
+import withAuth from "../../components/withAuth";
+import axios from 'axios'
 
-
-
-export default function servicesdashboard() {
+const servicesdashboard=()=>{
   const [modalShow, setModalShow] = React.useState(false);
 
   const [booktitle, setBooktitle] = useState('')
   const [booksynopsis, setBooksynopsis] = useState('')
   //Package
-  const [packagechoice, setPackagechoice] = useState(false); 
+  const [user, setUser] = useState(""); 
+  const [email, setEmail] = useState("");
   const [package1, setPackage] = useState("");  
 
   
@@ -91,7 +92,7 @@ export default function servicesdashboard() {
   const [socialmediavalue, setSocialmediavalue] = useState('');
   const [boreprog, setBoreprog] = useState(false);
   const [boreprogvalue, setBoreprogvalue] = useState('');
-  const [formData, setFormData] = useState({});
+  
 
   const updateInput = (e:any) => {
     setPackage(e.target.value)
@@ -99,6 +100,10 @@ export default function servicesdashboard() {
   };
     
     useEffect(() => { 
+
+
+      if(user===""){getuser()}
+
       console.log(package1)        
       if(editorial===true){
         setEditorialvalue("Editorial Assessment <br/>");
@@ -194,7 +199,9 @@ export default function servicesdashboard() {
       e.preventDefault()
       console.log('Sending')   
       console.log('ImgeUrl',imageUrl)    
-    let data = { 
+    let data = {
+        user,
+        email, 
         package1,      
         booktitle,
         booksynopsis,
@@ -256,7 +263,24 @@ export default function servicesdashboard() {
       setImageUrl(url); 
       swal("File Attached!", "", "success");   
     };
-
+    async function getuser () {
+      
+      let webApiUrl = 'http://account.dev.thepublishing.com/auth/info';
+      let tokenStr = localStorage.getItem("AccessToken");
+      
+      try {
+        const response = await axios.get(webApiUrl, 
+          { headers: {"Authorization" : `Bearer ${tokenStr}`} 
+         
+        });
+        console.log(response);
+        setUser(response.data.object.contact_name)
+        setEmail(response.data.object.email)
+      } catch (error) {
+        console.error(error);
+      }
+      };
+    
   function Mypopupmessage(props:any) {
     return (
       <Modal
@@ -692,3 +716,4 @@ export default function servicesdashboard() {
         </div>
     )
 }
+export default withAuth(servicesdashboard);

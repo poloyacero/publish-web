@@ -6,9 +6,13 @@ import NavMenu from '../../components/NavDashboard'
 import styles from '../../components/Dashboard/homedashboard.module.css'
 import { Col, Container, Row ,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
+import { signIn, signOut, useSession, } from 'next-auth/client';
+import withAuth from "../../components/withAuth";
 
 
-export default function homedashboard() {
+const homedashboard=() =>{
+
+  
     return (
         <div className={styles.container}>
       <Head>
@@ -16,6 +20,7 @@ export default function homedashboard() {
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />
+    
       <NavMenuDashboard/>  
    
         <Container fluid>
@@ -35,8 +40,9 @@ export default function homedashboard() {
           </Container>   
        
         </Container>
-     
+      
         <FooterDashboard />    
         </div>
     )
 }
+export default withAuth(homedashboard);
