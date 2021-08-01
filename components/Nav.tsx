@@ -92,7 +92,8 @@ const NavMenu = ({ ...props }: NavProps) => {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         }).then(function (response:any) {
-          setModalShowSignin(false)
+          setModalShowCreate(false)
+          setModalShowSignin(true)
           console.log(response);
         })
         .catch(function (error:any) {

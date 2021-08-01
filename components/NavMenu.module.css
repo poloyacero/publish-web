@@ -218,18 +218,20 @@
     padding-bottom: 18px;
   }
   .navbar {
+    width: 100%;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 35px;
     display: flex;
     flex-direction: row;
-    overflow: hidden;
     align-items: flex-start !important;
   }
   .container {
     width: 50%;
   }
-
+  .modalcontainer {
+    width: 200px;
+  }
   .logoWrapper {
     display: flex;
     width: 150px;

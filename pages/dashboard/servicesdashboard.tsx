@@ -4,7 +4,7 @@ import NavMenuDashboard from '../../components/Dashboard/Navdashboard'
 import NavMenu from '../../components/NavDashboard'
 import Sidebar from '../../components/Dashboard/Sidebar'
 import styles from '../../components/Dashboard/servicesdashboard.module.css'
-import styles2 from '../../components/Dashboard/Dashboard2.module.css'
+import styles2 from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button,Image,Modal} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
