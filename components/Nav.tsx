@@ -142,7 +142,7 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={{ span: 2, offset: 0, order: 'last'}} className={styles.utilityMenu}>
              <Col className={styles.utilitycontainer}>
               
-            <Link href="/#" passHref>
+            <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus}>
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
@@ -160,7 +160,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Nav.Link>
             </Link> */}
           
-            <Nav.Link className={styles.utilityMenus} onClick={() => setModalShowSignin(true)}>
+            <Nav.Link href="/#" className={styles.utilityMenus} onClick={() => setModalShowSignin(true)}>
               <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                 <path fillRule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
