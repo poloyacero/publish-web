@@ -23,7 +23,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
     }, [user])
      async function getuser () {
       
-      let webApiUrl = 'http://account.dev.thepublishing.com/auth/info';
+      let webApiUrl = 'https://account.dev.thepublishing.com/auth/info';
       let tokenStr = localStorage.getItem("AccessToken");
       
       try {

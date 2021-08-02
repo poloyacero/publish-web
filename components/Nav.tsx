@@ -42,7 +42,7 @@ const NavMenu = ({ ...props }: NavProps) => {
     // http://account.dev.thepublishing.com/auth/health http://account.dev.thepublishing.com/oauth/token
   
     
-    axios.post('http://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
+    axios.post('https://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
     username: usernameData, 
     password: passwordData,
     client_id:process.env.NEXT_PUBLIC_CLIENT_ID,
@@ -75,7 +75,7 @@ const NavMenu = ({ ...props }: NavProps) => {
 
   const handleRegister = () => {
     if(passwordData===valPasswordData){    
-  axios.post('http://account.dev.thepublishing.com/auth/register', QueryString.stringify({
+  axios.post('https://account.dev.thepublishing.com/auth/register', QueryString.stringify({
     email: usernameData, 
     password: passwordData,
     contact_name:clientName    
