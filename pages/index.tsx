@@ -6,7 +6,7 @@ import CarouselSlider from '../components/Carousel';
 import FeaturedProducts from '../components/FeaturedProducts';
 import FeaturedServices from '../components/FeaturedServices';
 import FeaturedPackages from '../components/FeaturedPackages';
-import { signIn, signOut, useSession, } from 'next-auth/client';
+
 
 export default function Home() {
   return (

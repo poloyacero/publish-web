@@ -30,15 +30,6 @@ const NavMenu = ({ ...props }: NavProps) => {
   const [valPasswordData, setValPasswordData] = useState("");
   const [clientName, setClientName] = useState("");
 
-  useEffect(() => {
-    // Getting the error details from URL
-  
-    if (router.query.error) {
-      
-    }
-  }, [router])
-
-
   const handleSubmit = (event:any) => {
     event.preventDefault();
     handleLogin();    
@@ -62,12 +53,13 @@ const NavMenu = ({ ...props }: NavProps) => {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         }).then(function (response:any) {
-          setUsernameData("")
-          setPasswordData("")
+         
           setModalShowSignin(false)
           console.log("response",response.data.access_token);
           localStorage.setItem('AccessToken', response.data.access_token);
           window.location.href = "/dashboard/homedashboard";
+          setUsernameData("")
+          setPasswordData("")
         })
         .catch(function (error:any) {
           console.log(error);
