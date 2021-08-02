@@ -6,7 +6,6 @@ import NavMenu from '../../components/NavDashboard'
 import styles from '../../components/Dashboard/homedashboard.module.css'
 import { Col, Container, Row ,Image} from 'react-bootstrap'
 import FooterDashboard from "../../components/FooterDashboard";
-import { signIn, signOut, useSession, } from 'next-auth/client';
 import withAuth from "../../components/withAuth";
 
 

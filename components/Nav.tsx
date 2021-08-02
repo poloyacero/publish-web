@@ -152,7 +152,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               </Nav.Link>
             </Link> */}
           
-            <Nav.Link href="/#" className={styles.utilityMenus} onClick={() => setModalShowSignin(true)}>
+            <Nav.Link  className={styles.utilityMenus} onClick={() => setModalShowSignin(true)}>
               <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                 <path fillRule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
