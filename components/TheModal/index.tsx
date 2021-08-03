@@ -13,13 +13,12 @@ interface TheModalProps {
 
 const TheModal = ({ children, ...props }: TheModalProps) => {
   return (
-    <>
+    
     
     <Modal
       {...props}
       
-      aria-labelledby="example-modal-sizes-title-sm"
-      centered
+      left
     >
       <Modal.Header closeButton className={styles.modalHeader}>
         <Modal.Title className={styles.modalTitle} id="contained-modal-title-vcenter">
@@ -34,7 +33,7 @@ const TheModal = ({ children, ...props }: TheModalProps) => {
       </Modal.Footer>
     </Modal>
     
-    </>
+   
   )
 }
 

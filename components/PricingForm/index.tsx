@@ -103,7 +103,7 @@ const [boreprogvalue, setBoreprogvalue] = useState('');
   
   const handleChange=(e:any) =>{
     setInteriorcolor(e.target.value);
-    console.log(interiorcolor);
+    
   }
   useEffect(() => {
     if(editorial===true){

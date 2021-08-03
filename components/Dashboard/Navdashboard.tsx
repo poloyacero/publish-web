@@ -23,15 +23,14 @@ const Navdashboard = ({ ...props }: DNavProps) => {
     }, [user])
      async function getuser () {
       
-      let webApiUrl = 'http://account.dev.thepublishing.com/auth/info';
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
       let tokenStr = localStorage.getItem("AccessToken");
       
       try {
         const response = await axios.get(webApiUrl, 
           { headers: {"Authorization" : `Bearer ${tokenStr}`} 
          
-        });
-        console.log(response);
+        });        
         setUser(response.data.object.contact_name)
       } catch (error) {
         console.error(error);
@@ -55,7 +54,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/compensationinfo">Compensation</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/documentsinfo">Documents</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/emaildashboard">Email</NavDropdown.Item> */}
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#"><span onClick={logout}>Logout</span></NavDropdown.Item>
+                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/"><span onClick={logout}>Logout</span></NavDropdown.Item>
                     </NavDropdown>    
                     </Col>
                    <Col md={10}  className={styles.navbarlinkcontainer}>              

@@ -10,9 +10,9 @@ import FooterDashboard from "../../components/FooterDashboard";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import swal from 'sweetalert'
 import withAuth from "../../components/withAuth";
+import axios from 'axios'
 
-
-export default function contactdashboard() {
+const contactdashboard=()=> {
   const [firstname, setFirstname] = React.useState('')
   const [email, setEmail] = React.useState('')
   const [lastname, setLastname] = React.useState('')
@@ -21,19 +21,6 @@ export default function contactdashboard() {
   const [message, setMessage] = React.useState('')
   const [submitted, setSubmitted] = React.useState(false)
   
-  useEffect(() => {
-   initializedata();
-  }, [])
-
-
-  function initializedata(){
-    setFirstname('Gabriel')
-    setLastname('Balbuena')
-    setEmail('balbuenagf@gmail.com')    
-    setPhonenumber('423452344') 
-    setSubjectmsg('User Chat') 
-    console.log("data initialized")  
-  }
   const handleSubmit = (e:any) => { 
     e.preventDefault()
     console.log('Sending...')    
@@ -56,7 +43,7 @@ export default function contactdashboard() {
       body: JSON.stringify(data)
     }).then((res) => {
       console.log('Response received')
-      console.log(data)
+      
       if (res.status === 200) {
         console.log('Response succeeded!')
         setSubmitted(true)
@@ -71,6 +58,28 @@ export default function contactdashboard() {
      
     })
   }
+
+  useEffect(() => {
+    // Getting the error details from URL
+  getuser();
+  }, [email])
+  async function getuser () {
+      
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
+      let tokenStr = localStorage.getItem("AccessToken");
+      
+      try {
+        const response = await axios.get(webApiUrl, 
+          { headers: {"Authorization" : `Bearer ${tokenStr}`} 
+         
+        });
+              
+        setEmail(response.data.object.email)
+      } catch (error) {
+        console.error(error);
+      }
+      };
+    
     return (
         <div className={styles.container}>
       <Head>
@@ -172,3 +181,4 @@ export default function contactdashboard() {
         </div>
     )
 }
+export default withAuth(contactdashboard);

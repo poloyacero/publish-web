@@ -18,6 +18,7 @@ const NavMenu = ({ ...props }: NavProps) => {
   
   const [modalShowCreate, setModalShowCreate] = React.useState(false);
   const [modalShowSignin, setModalShowSignin] = React.useState(false);
+  const [modalShowPassRec, setModalShowPassRec] = React.useState(false);
   var QueryString = require('querystring');
 
   const axios = require('axios');
@@ -38,11 +39,39 @@ const NavMenu = ({ ...props }: NavProps) => {
     event.preventDefault();
     handleRegister();    
   };
+  const handleSubmitPassRec = (event:any) => {
+    event.preventDefault();
+    handlePassRec();    
+  };
+  const handlePassRec = () => {
+    if(passwordData===valPasswordData){    
+  axios.post('https://account.dev.thepublishing.com/auth/register', QueryString.stringify({
+    email: usernameData, 
+    password: passwordData,
+    contact_name:clientName    
+        }), {
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            }
+        }).then(function (response:any) {
+          setModalShowCreate(false)
+          setModalShowSignin(true)         
+        })
+        .catch(function (error:any) {
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+        });  
+      } else{
+        alert("validate password did not match!")
+      }
+  };
   const handleLogin = () => {
     // http://account.dev.thepublishing.com/auth/health http://account.dev.thepublishing.com/oauth/token
   
     
-    axios.post('http://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
+    axios.post('https://account.thepublishing.com/oauth/token', QueryString.stringify({
     username: usernameData, 
     password: passwordData,
     client_id:process.env.NEXT_PUBLIC_CLIENT_ID,
@@ -54,8 +83,7 @@ const NavMenu = ({ ...props }: NavProps) => {
             }
         }).then(function (response:any) {
          
-          setModalShowSignin(false)
-          console.log("response",response.data.access_token);
+          setModalShowSignin(false)         
           localStorage.setItem('AccessToken', response.data.access_token);
           window.location.href = "/dashboard/homedashboard";
           setUsernameData("")
@@ -75,7 +103,7 @@ const NavMenu = ({ ...props }: NavProps) => {
 
   const handleRegister = () => {
     if(passwordData===valPasswordData){    
-  axios.post('http://account.dev.thepublishing.com/auth/register', QueryString.stringify({
+  axios.post('https://account.thepublishing.com/auth/register', QueryString.stringify({
     email: usernameData, 
     password: passwordData,
     contact_name:clientName    
@@ -85,8 +113,7 @@ const NavMenu = ({ ...props }: NavProps) => {
             }
         }).then(function (response:any) {
           setModalShowCreate(false)
-          setModalShowSignin(true)
-          console.log(response);
+          setModalShowSignin(true)         
         })
         .catch(function (error:any) {
           console.log(error);
@@ -161,10 +188,107 @@ const NavMenu = ({ ...props }: NavProps) => {
             </Nav.Link>
            
             </Col>
+          
+            <TheModal 
+        title="Sign In"
+        size="sm"
+        show={modalShowSignin}
+        onHide={() => setModalShowSignin(false)}
+      >      
+        <Container>
+        <Form onSubmit={handleSubmit}>
+        <Form.Group as={Row}>
+            <Col>
+                       
+            
+                  <Form.Label className={styles.label}>Email</Form.Label>
+                  <Form.Control className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
+                        
+                  <Form.Label className={styles.label}>Password</Form.Label>
+                  <Form.Control className={styles.inputnav} type="password" value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>                  
+                                  
+         
+                <br/>                                 
+                  <Button type="submit" className={styles.signinButton}>Log In</Button>
+                <div className={styles.centered}>
+                <span className={styles.forgotpasslink}>                                   
+                  <Link href="/#" ><span onClick={() => setModalShowSignin(false)} onMouseUp={() => setModalShowPassRec(true)}style={{cursor: "pointer"}}>Forgot Password?</span></Link>
+                </span>
+        
+              
+                <span className={styles.forgotpasslink}>                                   
+                  <br/><br/>
+                  <hr></hr>
+                </span>
+                  
+              
+                <span className={styles.haveaccount}>                                   
+                  Do you have an account?
+                </span>               
+             
+            
+                <span className={styles.createlink}>   
+                <br/>                                
+                <Button data-dismiss-modal onClick={() => setModalShowSignin(false)} onMouseUp={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link href="/#"> Create Account</Nav.Link></Button>
+                </span>
+               
+                </div>
+            </Col>
+         </Form.Group>
+          </Form>
+
+        </Container>
+      </TheModal>
+    
           </Col>
         </Navbar>
         </Row>
+        
       </Container>
+      <TheModal 
+        title="Password Recovery"
+        show={modalShowPassRec}
+        onHide={() => setModalShowPassRec(false)}
+        size="sm"
+      >
+        <Container>
+        <Form onSubmit={handleSubmitPassRec}>
+        <Form.Group as={Row}>
+            <Col className={styles.forgotsection}>
+            <Image src="img/forgotlogo.png"/>
+              <Form.Group as={Row}>
+                <Col className={styles.centered}>
+               
+                  <br/>
+                  <p className={styles.labelforgothead}><b>Trouble Logging In?</b></p>
+                  <Form.Label className={styles.labelforgot}>Enter your email and we'll send you a link<br/>to get back into your account.</Form.Label>
+                  <Form.Control className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
+                  <br/>
+                  <Button type="submit" className={styles.signinButton}>Send Login Link</Button>
+                  
+                  <Col>
+                  <br/><br/>
+                  <hr></hr>
+                <Col className={styles.haveaccount}>                                   
+                  Do you have an account?
+                </Col>               
+                <Col className={styles.createlink}>   
+                <br/>                                
+                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link href="/#"> Create Account</Nav.Link></Button>
+                </Col>
+            </Col>
+                </Col>
+            
+              </Form.Group>
+            </Col>
+            
+            
+          </Form.Group>
+          </Form>
+        </Container>
+      </TheModal>
+     
+     
       <TheModal 
         title="Create an Account"
         show={modalShowCreate}
@@ -218,80 +342,9 @@ const NavMenu = ({ ...props }: NavProps) => {
           </Form>
         </Container>
       </TheModal>
-      <TheModal 
-        title="Sign In"
-        size="sm"
-        show={modalShowSignin}
-        onHide={() => setModalShowSignin(false)}
-      >      
-        <Container>
-        <Form onSubmit={handleSubmit}>
-          <Row className="justify-content-md-center">
-            <Col>
-           
-              <Form.Group as={Row}>
-                <Col md={12}>
-                  <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
-                </Col>
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group as={Row}>
-                <Col md={12}>
-                  <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control className={styles.inputnav} type="password" value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>                  
-                </Col>
-               
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group as={Row}>
-                <Col md={12}>                                   
-                  <Button type="submit" className={styles.signinButton}>Log In</Button>
-                </Col>
-               
-              </Form.Group>
-            </Col>
-
-            <Col md={{ span: 12, offset: 0 }}>
-              
-                <Col className={styles.forgotpasslink} md={12}>                                   
-                  <Link href="/">Forgot Password?</Link>
-                </Col>
-               
-             
-            </Col>
-            <Col md={{ span: 12, offset: 0 }}>
-              
-                <Col className={styles.forgotpasslink} md={12}>                                   
-                  <br/><br/>
-                  <hr></hr>
-                </Col>
-               
-             
-            </Col>
-            <Col md={{ span: 12, offset: 0 }}>
-              
-                <Col className={styles.haveaccount} md={12}>                                   
-                  Do you have an account?
-                </Col>               
-             
-            </Col>
-            <Col>
-              <Form.Group as={Row}>
-                <Col className={styles.createlink} md={12}>   
-                <br/>                                
-                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link href="/#"> Create Account</Nav.Link></Button>
-                </Col>
-               
-              </Form.Group>
-            </Col>
-          </Row>
-          </Form>
-
-        </Container>
-      </TheModal>
+     
+     
+      
     </Container>
   );
 };

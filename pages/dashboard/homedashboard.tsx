@@ -13,6 +13,7 @@ const homedashboard=() =>{
 
   
     return (
+      <>
         <div className={styles.container}>
       <Head>
         <title>Home Dashboard</title>
@@ -42,6 +43,7 @@ const homedashboard=() =>{
       
         <FooterDashboard />    
         </div>
+        </>
     )
 }
 export default withAuth(homedashboard);

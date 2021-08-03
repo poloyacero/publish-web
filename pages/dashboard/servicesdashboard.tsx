@@ -104,7 +104,7 @@ const servicesdashboard=()=>{
 
       if(user===""){getuser()}
 
-      console.log(package1)        
+              
       if(editorial===true){
         setEditorialvalue("Editorial Assessment <br/>");
       }if(lineediting===true){
@@ -198,7 +198,7 @@ const servicesdashboard=()=>{
     const handleSubmit = (e:any) => { 
       e.preventDefault()
       console.log('Sending')   
-      console.log('ImgeUrl',imageUrl)    
+       
     let data = {
         user,
         email, 
@@ -246,7 +246,7 @@ const servicesdashboard=()=>{
         body: JSON.stringify(data)
       }).then((res) => {
         console.log('Response received')
-        console.log(data)
+       
         if (res.status === 200) {
           console.log('Response succeeded!')                   
           swal("Sent!", "Thank You!", "success");
@@ -265,7 +265,7 @@ const servicesdashboard=()=>{
     };
     async function getuser () {
       
-      let webApiUrl = 'http://account.dev.thepublishing.com/auth/info';
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
       let tokenStr = localStorage.getItem("AccessToken");
       
       try {
@@ -273,7 +273,7 @@ const servicesdashboard=()=>{
           { headers: {"Authorization" : `Bearer ${tokenStr}`} 
          
         });
-        console.log(response);
+       
         setUser(response.data.object.contact_name)
         setEmail(response.data.object.email)
       } catch (error) {
