@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import swal from 'sweetalert';
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import {  Button, Col, Container, Form, FormControl, InputGroup, Nav, Row } from 'react-bootstrap';
 
 import styles from './FooterMenu.module.css';
+import axios from 'axios';
 
 
 interface FooterProps {}
@@ -18,6 +19,8 @@ interface FooterProps {}
   const [subjects, setSubjects] = React.useState('')
   const [submitted, setSubmitted] = React.useState(false)
   const [noSubject, setNosubject] = React.useState(true)
+  const [islogin, setIslogin] = useState(""); 
+  
   
   const handleSubject = () => { 
     if(subjectmsg!=="Subject"){ 
@@ -76,10 +79,33 @@ interface FooterProps {}
     })
     
   }
+  useEffect(() => {
+    // Getting the error details from URL
+  getuser();
+  }, [islogin])
+  async function getuser () {
+      
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
+      let tokenStr = localStorage.getItem("AccessToken");
+      
+      try {
+        const response = await axios.get(webApiUrl, 
+          { headers: {"Authorization" : `Bearer ${tokenStr}`} 
+         
+        });
+              
+        setIslogin("true")
+      } catch (error) {
+        console.error(error);
+      }
+      };
 
 
   return (
+   
     <Container fluid style={{background: '#f0e3d5'}}>
+       {!islogin? ( 
+        <>
       <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
         <Row className="justify-content-md-center">
           <Col md={'auto'} className={styles.left}>
@@ -185,7 +211,47 @@ interface FooterProps {}
             </Col></Row>  
             </Col></Row>  
       </Container>
+      </>
+      ):( 
+        <>
+        <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
+        <Row className="justify-content-md-center">
+          <Col md={'auto'} className={styles.left}>
+           
+          </Col>
+        </Row>
+        <Row><Col><br/><br/></Col></Row>
+      
+        <Row className="justify-content-md-center">
+             <Col><Row className={styles.center}>
+                <Col className={styles.footerlink} ><Link href="/about">About</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/contact">Contact</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/privacy-policy">Privacy</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/terms-of-use">Terms</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/services">Services</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/distribution">Distribution</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/packages">Packages</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/add-on">Add on</Link></Col>                
+                <Col className={styles.footerlink} ><Link href="/illustration-services">Illustrations</Link></Col>
+                </Row>
+                </Col>
+               </Row>
+               <Row><Col><br/><br/></Col></Row>
+              <Row className="justify-content-md-center">
+                <Col>
+                <Row className={styles.center}><Col className={styles.footerlink}>
+                <Link href="/"><a><Image src="/logo.png" width="125%" height="30px" /></a></Link>
+              <div className={styles.copyright}>
+              <p>CVR 42434558 Copyright © All Rights Reserved ThePublshing</p>
+            </div> 
+            </Col></Row>  
+            </Col></Row>  
+      </Container>
+      </>
+
+      )}
     </Container>
+   
   );
 }
 

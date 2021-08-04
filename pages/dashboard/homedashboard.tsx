@@ -5,7 +5,7 @@ import Sidebar from '../../components/Dashboard/Sidebar'
 import NavMenu from '../../components/NavDashboard'
 import styles from '../../components/Dashboard/homedashboard.module.css'
 import { Col, Container, Row ,Image} from 'react-bootstrap'
-import FooterDashboard from "../../components/FooterDashboard";
+import FooterDashboard from "../../components/Footer";
 import withAuth from "../../components/withAuth";
 
 

@@ -1,7 +1,8 @@
 // HOC/withAuth.jsx
 import { useRouter } from "next/router";
 const withAuth = (WrappedComponent) => {
-   
+
+
   return (props) => {
     // checks whether we are on client / browser or server.
     if (typeof window !== "undefined") {

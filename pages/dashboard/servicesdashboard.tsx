@@ -7,7 +7,7 @@ import styles from '../../components/Dashboard/servicesdashboard.module.css'
 import styles2 from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button,Image,Modal} from 'react-bootstrap'
-import FooterDashboard from "../../components/FooterDashboard";
+import FooterDashboard from "../../components/Footer";
 import swal from 'sweetalert';
 import { useS3Upload } from 'next-s3-upload';
 import withAuth from "../../components/withAuth";

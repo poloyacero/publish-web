@@ -8,14 +8,17 @@ import FeaturedServices from '../components/FeaturedServices';
 import FeaturedPackages from '../components/FeaturedPackages';
 
 
+
 export default function Home() {
+  
+     
   return (
     <div className={styles.container}>
       <Head>
         <title>Home</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
-      <NavMenu className={styles.home}/>
+      <NavMenu className={styles.home} />
       <CarouselSlider />
       <FeaturedProducts />
       <FeaturedServices />

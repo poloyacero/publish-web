@@ -5,7 +5,7 @@ import NavMenu from '../../components/NavDashboard'
 import styles from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button, NavLink} from 'react-bootstrap'
-import FooterDashboard from "../../components/FooterDashboard";
+import FooterDashboard from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import swal from "sweetalert"
 import withAuth from "../../components/withAuth";
@@ -13,7 +13,7 @@ import axios from 'axios'
 
  const accountinfo=() =>{
   const [loginID, setLogInID] = useState("000000000000");
-  const [email, setEmail] = useState("user@gmail.com");
+  const [email, setEmail] = useState("loading...");
   const [businesstype, setBusinesstype] = useState("");
   const [fullname, setFullname] = useState("");
   const [businessname, setBusinessname] = useState("");
@@ -97,7 +97,7 @@ import axios from 'axios'
                 <h3 className={styles.dropheaderlabel2}>Account Information</h3>
                 <br></br>
                 <Row className={"form-group "+styles.textalignment}>
-              <Col md={3}>Login ID</Col><Col md={9}><Form.Control className={styleIn.accountinput} type="text" value={loginID}/> </Col>
+              <Col md={3}>Email</Col><Col md={9}><Form.Control className={styleIn.accountinput} type="text" value={email}/> </Col>
                </Row>
                {/* <Row className={"form-group "+styles.textalignment}>
                  <Col md={3}>Acount Number</Col><Col md={9}></Col>

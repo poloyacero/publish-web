@@ -7,6 +7,7 @@ import TheModal from './TheModal';
 import { useRouter } from 'next/router'
 
 
+
 interface NavProps {
   className?: string;
   onHide?:any;  
@@ -20,16 +21,12 @@ const NavMenu = ({ ...props }: NavProps) => {
   const [modalShowSignin, setModalShowSignin] = React.useState(false);
   const [modalShowPassRec, setModalShowPassRec] = React.useState(false);
   var QueryString = require('querystring');
-
-  const axios = require('axios');
- 
-  const [loginError, setLoginError] = useState('')
-  const router = useRouter()
-  
+  const axios = require('axios');  
   const [usernameData, setUsernameData] = useState("");
   const [passwordData, setPasswordData] = useState("");
   const [valPasswordData, setValPasswordData] = useState("");
   const [clientName, setClientName] = useState("");
+  const [islogin, setIslogin] = useState("");
 
   const handleSubmit = (event:any) => {
     event.preventDefault();
@@ -83,8 +80,10 @@ const NavMenu = ({ ...props }: NavProps) => {
             }
         }).then(function (response:any) {
          
-          setModalShowSignin(false)         
+          setModalShowSignin(false)
+            
           localStorage.setItem('AccessToken', response.data.access_token);
+                
           window.location.href = "/dashboard/homedashboard";
           setUsernameData("")
           setPasswordData("")
@@ -125,7 +124,27 @@ const NavMenu = ({ ...props }: NavProps) => {
         alert("validate password did not match!")
       }
   };
-
+  
+ useEffect(() => {
+    // Getting the error details from URL
+  getuser();
+  }, [islogin])
+  async function getuser () {
+      
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
+      let tokenStr = localStorage.getItem("AccessToken");
+      
+      try {
+        const response = await axios.get(webApiUrl, 
+          { headers: {"Authorization" : `Bearer ${tokenStr}`} 
+         
+        });
+              
+        setIslogin("true")
+      } catch (error) {
+        console.error(error);
+      }
+      };
   return (
     <Container fluid style={{background: '#f0e3d5'}}>
       <Container className={"container " + props.className} >
@@ -161,14 +180,14 @@ const NavMenu = ({ ...props }: NavProps) => {
           <Col md={{ span: 2, offset: 0, order: 'last'}} className={styles.utilityMenu}>
              <Col className={styles.utilitycontainer}>
               
-            <Link href="/" passHref>
+            {/* <Link href="/" passHref>
               <Nav.Link className={styles.utilityMenus}>
                 <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                   <path fillRule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
                   <path fillRule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
                 </svg>
               </Nav.Link>
-            </Link>
+            </Link> */}
             
            
             {/* <Link href="/" passHref> hide cart.
@@ -178,15 +197,24 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </svg>
               </Nav.Link>
             </Link> */}
-          
-            <Nav.Link  className={styles.utilityMenus} onClick={() => setModalShowSignin(true)}>
+           {!islogin? 
+              <Nav.Link  className={styles.utilityMenus} onClick={() => setModalShowSignin(true)}>
               <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
                 <path fillRule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
                 <path fillRule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
               </svg>
             </Nav.Link>
-           
+           :
+           <Nav.Link href="/dashboard/homedashboard" className={styles.utilityMenus}>
+           <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" className="bi bi-person-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+             <path d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z"/>
+             <path fillRule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+             <path fillRule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/>
+           </svg>
+         </Nav.Link>
+             
+          }
             </Col>
           
             <TheModal 
@@ -208,11 +236,12 @@ const NavMenu = ({ ...props }: NavProps) => {
                   <Form.Control className={styles.inputnav} type="password" value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>                  
                                   
          
-                <br/>                                 
+                <br/>   
+                <div className={styles.centered}>                              
                   <Button type="submit" className={styles.signinButton}>Log In</Button>
-                <div className={styles.centered}>
+               <br/>
                 <span className={styles.forgotpasslink}>                                   
-                  <Link href="/#" ><span onClick={() => setModalShowSignin(false)} onMouseUp={() => setModalShowPassRec(true)}style={{cursor: "pointer"}}>Forgot Password?</span></Link>
+                 <span onClick={() => setModalShowSignin(false)} onMouseUp={() => setModalShowPassRec(true)}style={{cursor: "pointer"}}>Forgot Password?</span>
                 </span>
         
               
@@ -229,7 +258,7 @@ const NavMenu = ({ ...props }: NavProps) => {
             
                 <span className={styles.createlink}>   
                 <br/>                                
-                <Button data-dismiss-modal onClick={() => setModalShowSignin(false)} onMouseUp={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link href="/#"> Create Account</Nav.Link></Button>
+                <Button data-dismiss-modal onClick={() => setModalShowSignin(false)} onMouseUp={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link> Create Account</Nav.Link></Button>
                 </span>
                
                 </div>
@@ -274,7 +303,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 </Col>               
                 <Col className={styles.createlink}>   
                 <br/>                                
-                <Button data-dismiss-modal onClick={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link href="/#"> Create Account</Nav.Link></Button>
+                <Button data-dismiss-modal onClick={() => setModalShowPassRec(false)} onMouseUp={() => setModalShowCreate(true)} className={styles.createButton}><Nav.Link> Create Account</Nav.Link></Button>
                 </Col>
             </Col>
                 </Col>
