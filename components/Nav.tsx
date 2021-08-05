@@ -21,7 +21,8 @@ const NavMenu = ({ ...props }: NavProps) => {
   const [modalShowSignin, setModalShowSignin] = React.useState(false);
   const [modalShowPassRec, setModalShowPassRec] = React.useState(false);
   var QueryString = require('querystring');
-  const axios = require('axios');  
+  const axios = require('axios'); 
+  const [email, setEmail] = useState(""); 
   const [usernameData, setUsernameData] = useState("");
   const [passwordData, setPasswordData] = useState("");
   const [valPasswordData, setValPasswordData] = useState("");
@@ -41,33 +42,31 @@ const NavMenu = ({ ...props }: NavProps) => {
     handlePassRec();    
   };
   const handlePassRec = () => {
-    if(passwordData===valPasswordData){    
-  axios.post('https://account.dev.thepublishing.com/auth/register', QueryString.stringify({
-    email: usernameData, 
-    password: passwordData,
-    contact_name:clientName    
+       
+  axios.post('https://account.thepublishing.com/auth/forgot-password', QueryString.stringify({
+    email: email  
+     
         }), {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         }).then(function (response:any) {
+          console.log(response)
           setModalShowCreate(false)
-          setModalShowSignin(true)         
+          setModalShowSignin(true) 
+          swal("Sent. Check your email!", "Thank you!", "success");        
         })
         .catch(function (error:any) {
+          swal("Unregistered email!", "try again!", "error");  
           console.log(error);
         })
         .then(function () {
           // always executed
         });  
-      } else{
-        alert("validate password did not match!")
-      }
+     
   };
   const handleLogin = () => {
-    // http://account.dev.thepublishing.com/auth/health http://account.dev.thepublishing.com/oauth/token
-  
-    
+       
     axios.post('https://account.thepublishing.com/oauth/token', QueryString.stringify({
     username: usernameData, 
     password: passwordData,
@@ -111,6 +110,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         }).then(function (response:any) {
+          swal("Registered successfully!", "Thank you!", "success");
           setModalShowCreate(false)
           setModalShowSignin(true)         
         })
@@ -126,8 +126,9 @@ const NavMenu = ({ ...props }: NavProps) => {
   };
   
  useEffect(() => {
-    // Getting the error details from URL
+  
   getuser();
+
   }, [islogin])
   async function getuser () {
       
@@ -291,7 +292,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                   <br/>
                   <p className={styles.labelforgothead}><b>Trouble Logging In?</b></p>
                   <Form.Label className={styles.labelforgot}>Enter your email and we'll send you a link<br/>to get back into your account.</Form.Label>
-                  <Form.Control className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
+                  <Form.Control className={styles.inputnav} value={email} onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
                   <br/>
                   <Button type="submit" className={styles.signinButton}>Send Login Link</Button>
                   

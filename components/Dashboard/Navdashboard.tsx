@@ -13,8 +13,8 @@ interface DNavProps {
 
 const Navdashboard = ({ ...props }: DNavProps) => { 
   const [user, setUser] = useState("");
-  function logout(){
-    localStorage.removeItem('AccessToken');
+   function logout(){  
+      localStorage.removeItem('AccessToken');       
     
      }
      useEffect(() => {
@@ -47,7 +47,7 @@ const Navdashboard = ({ ...props }: DNavProps) => {
               <Navbar className={styles.navbardash} expand="lg">
                     <Col md={1} className={styles.navbardropcontainer}>
                     <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">{user}</NavDropdown.Item>
+                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo"><b>{user}</b></NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/billinginfo">Payment Information</NavDropdown.Item>
                     {/* <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/payopeninvoices">Pay Open Invoices</NavDropdown.Item>      

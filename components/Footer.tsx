@@ -80,8 +80,9 @@ interface FooterProps {}
     
   }
   useEffect(() => {
-    // Getting the error details from URL
+  
   getuser();
+   
   }, [islogin])
   async function getuser () {
       

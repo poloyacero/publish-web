@@ -22,42 +22,42 @@ import axios from 'axios'
   const [stateprovince, setStateprovince] = useState("");
   const [postalcode, setPostalcode] = useState("");
   const [phonenumber, setPhonenumber] = useState("");
+  var QueryString = require('querystring');
   
+  // const handleSubmit = (e:any) => { 
+  //   e.preventDefault()
+  //   console.log('Sending')       
   
-  const handleSubmit = (e:any) => { 
-    e.preventDefault()
-    console.log('Sending')       
-  
-    let data = {
-    email, 
-    loginID,      
-    businesstype,
-    fullname,
-    businessname,
-    address,
-    city,
-    stateprovince,
-    postalcode,
-    phonenumber    
+  //   let data = {
+  //   email, 
+  //   loginID,      
+  //   businesstype,
+  //   fullname,
+  //   businessname,
+  //   address,
+  //   city,
+  //   stateprovince,
+  //   postalcode,
+  //   phonenumber    
       
-    }
-  fetch('/api/accountinfo', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then((res) => {
-      console.log('Response received')
+  //   }
+  // fetch('/api/accountinfo', {
+  //     method: 'PATCH',
+  //     headers: {
+  //       'Accept': 'application/json, text/plain, */*',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(data)
+  //   }).then((res) => {
+  //     console.log('Response received')
  
-      if (res.status === 200) {
-        console.log('Response succeeded!')                   
-        swal("Sent!", "Thank You!", "success");
-        window.location.href = "/dashboard/homedashboard"
-      }
-     })
-  }
+  //     if (res.status === 200) {
+  //       console.log('Response succeeded!')                   
+  //       swal("Sent!", "Thank You!", "success");
+  //       window.location.href = "/dashboard/homedashboard"
+  //     }
+  //    })
+  // }
   useEffect(() => {
     // Getting the error details from URL
   getuser();
@@ -74,12 +74,46 @@ import axios from 'axios'
         });
         
         setLogInID(response.data.object.id)
+        setFullname(response.data.object.contact_name)
         setEmail(response.data.object.email)
       } catch (error) {
         console.error(error);
       }
       };
     
+      const handleSubmitUpdate = (event:any) => {
+        event.preventDefault();
+        handleUpdate();    
+      };
+      const handleUpdate = () => {
+      
+        let tokenStr = localStorage.getItem("AccessToken");  
+      axios.patch('https://account.thepublishing.com/auth/profile', QueryString.stringify({
+        business_type:businesstype,
+        fullname:fullname,
+        business_name:businessname,
+        address:address,
+        city:city,
+        state_province:stateprovince,
+        postal_code:postalcode,
+        phone:phonenumber 
+        
+            }), {
+                headers: {"Authorization" : `Bearer ${tokenStr}`,
+                    "Content-Type": "application/x-www-form-urlencoded",
+                }
+            }).then(function (response:any) {
+
+              swal("Profile updated successfully!", "Thank you!", "success");                     
+            })
+            .catch(function (error:any) {
+              console.log(error);
+            })
+            .then(function () {
+              // always executed
+            });  
+         
+      };
     return (
         <div>
       <Head>
@@ -97,7 +131,7 @@ import axios from 'axios'
                 <h3 className={styles.dropheaderlabel2}>Account Information</h3>
                 <br></br>
                 <Row className={"form-group "+styles.textalignment}>
-              <Col md={3}>Email</Col><Col md={9}><Form.Control className={styleIn.accountinput} type="text" value={email}/> </Col>
+              <Col md={3}>Email</Col><Col md={9}><Form.Control readOnly className={styleIn.accountinput} type="text" value={email}/> </Col>
                </Row>
                {/* <Row className={"form-group "+styles.textalignment}>
                  <Col md={3}>Acount Number</Col><Col md={9}></Col>
@@ -120,7 +154,7 @@ import axios from 'axios'
                <Row className={"form-group "+styles.textalignment}>               
                <Col>
                <Form.Group as={Row}>
-               <Col className="form-group" md={3}>Full Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setFullname(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>Full Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={fullname} onChange={(e)=>{setFullname(e.target.value)}}/> </Col>
                
                <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setBusinessname(e.target.value)}}/> </Col>
                
@@ -393,7 +427,7 @@ import axios from 'axios'
                               <br/> <br/> <br/> 
               <Row>
                 <Col  className={styles.dashbuttoncontainer}>
-                <Col md={'auto'}><NavLink href="/dashboard/homedashboard"><Button className={styles.dashsavebutton} onClick={handleSubmit}>Save</Button></NavLink></Col> <Col md={'auto'}><NavLink href="/dashboard/homedashboard"><Button className={styles.dashsavebutton}>Cancel</Button></NavLink></Col>
+                <Col md={'auto'}><NavLink href="/dashboard/homedashboard"><Button className={styles.dashsavebutton} onClick={handleSubmitUpdate}>Save</Button></NavLink></Col> <Col md={'auto'}><NavLink href="/dashboard/homedashboard"><Button className={styles.dashsavebutton}>Cancel</Button></NavLink></Col>
                 </Col>
               </Row>
               <br/> <br/> <br/>
