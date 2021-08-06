@@ -116,12 +116,13 @@ const NavMenu = ({ ...props }: NavProps) => {
         })
         .catch(function (error:any) {
           console.log(error);
+          swal("Email already in use!", "Try another email", "error");
         })
         .then(function () {
           // always executed
         });  
       } else{
-        alert("validate password did not match!")
+        swal("Password did not match!", "Try again", "error");
       }
   };
   
