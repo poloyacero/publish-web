@@ -95,7 +95,7 @@ export default function Emailconfirmation() {
 <br/>
 <p style={{textAlign:"center"}}>
 We love hearing from you!<br/>
-Have any questions? Please check <a href="mailto:admin@thepublishing.com">contact us.</a>
+Have any questions? Please <a href="mailto:admin@thepublishing.com">contact us.</a>
 </p>
             </Row>
           </Container>
