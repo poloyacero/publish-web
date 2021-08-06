@@ -23,7 +23,8 @@ export default function Newpassword() {
   };
   const handlePassRec = () => {
     if(passwordData===valPasswordData){    
-  axios.post('https://account.thepublishing.com/auth/reset-password', QueryString.stringify({
+  
+    axios.post('https://account.thepublishing.com/auth/reset-password', QueryString.stringify({
     password:passwordData,
     email:router.query.email,
     code:router.query.code
@@ -34,7 +35,12 @@ export default function Newpassword() {
             }
         }).then(function (response:any) {
           
-          swal("Password Changed!", "Thank you!", "success");        
+          swal("Password Changed!", "Thank you!", "success").then(success => {
+            if (success) {
+              console.log(success);
+              router.push("/")
+            }
+          })             
         })
         .catch(function (error:any) {
           console.log(error);
@@ -44,7 +50,7 @@ export default function Newpassword() {
           // always executed
         });  
       } else{
-        alert("validate password did not match!")
+        swal("Password did not match!", "Try again", "error");
       }
   };
  
@@ -73,12 +79,12 @@ export default function Newpassword() {
                   <br/>
                   <h3>Create New Password</h3>
                   <br/>
-                  <p className={styles.labelforgot}>Your new password must be different<br/>from your previous used password.</p>
+                  
                   <Form.Label>Password</Form.Label>
-                  <Form.Control className={styles.inputnav} value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>
+                  <Form.Control type="password" className={styles.inputnav} value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>
                   <p className={styles.labelforgot}>Must be at least 8 characters</p>
                   <Form.Label>Confirm Password</Form.Label>
-                  <Form.Control className={styles.inputnav} value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="password"/>
+                  <Form.Control type="password" className={styles.inputnav} value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="password"/>
                   <p className={styles.labelforgot}>Both passwords must match.</p>
               <br/>
                   <Button type="submit"  className={styles.sendButton}>Reset Password</Button>

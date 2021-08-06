@@ -76,6 +76,13 @@ import axios from 'axios'
         setLogInID(response.data.object.id)
         setFullname(response.data.object.contact_name)
         setEmail(response.data.object.email)
+        setBusinesstype(response.data.object.business)
+        setBusinessname(response.data.object.business_name)
+        setCity(response.data.object.city)
+        setAddress(response.data.object.address)
+        setStateprovince(response.data.object.state_province)
+        setPostalcode(response.data.object.postal_code)
+        setPhonenumber(response.data.object.phone)
       } catch (error) {
         console.error(error);
       }
@@ -89,8 +96,8 @@ import axios from 'axios'
       
         let tokenStr = localStorage.getItem("AccessToken");  
       axios.patch('https://account.thepublishing.com/auth/profile', QueryString.stringify({
-        business_type:businesstype,
-        fullname:fullname,
+        business:businesstype,
+        contact_name:fullname,
         business_name:businessname,
         address:address,
         city:city,
@@ -138,14 +145,15 @@ import axios from 'axios'
                  <Col md={3}>Acount Number</Col><Col md={9}></Col>
                </Row> */}
                <Row className={"form-group "+styles.textalignment}>
-               <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.accountinput}   as="select" defaultValue="Select"  onChange={(e)=>{setBusinesstype(e.target.value)}}>
-              <option> </option>                                
-              <option>Sole Proprietor</option>
-              <option>Company</option>                  
-              <option>Government</option>
-              <option>Univeristy</option>                  
-              <option>Non-Profit</option> 
-              <option>Other</option>  
+               <Col md={3}>Business</Col><Col md={9}> <Form.Control className={styleIn.accountinput}   as="select" value={businesstype}  onChange={(e)=>{setBusinesstype(e.target.value)}}>
+              <option></option>                                
+              <option value="sole_proprietor">Sole Proprietor</option>
+              <option value="company">Company</option>                  
+              <option value="government">Government</option>
+              <option value="university">Univeristy</option>                  
+              <option value="non-profit">Non-Profit</option> 
+              <option value="other">Other</option>  
+             
               </Form.Control> 
               </Col>
                </Row>
@@ -157,13 +165,13 @@ import axios from 'axios'
                <Form.Group as={Row}>
                <Col className="form-group" md={3}>Full Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={fullname} onChange={(e)=>{setFullname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setBusinessname(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={businessname} onChange={(e)=>{setBusinessname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setAddress(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={address} onChange={(e)=>{setAddress(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setCity(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/> </Col>
                   
-               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" defaultValue=" " onChange={(e)=>{setStateprovince(e.target.value)}}>
+               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" value={stateprovince} onChange={(e)=>{setStateprovince(e.target.value)}}>
               <option value=""></option>
               <option value="USA">United States</option>
               <option value="GBR">United Kingdom</option>
@@ -420,9 +428,9 @@ import axios from 'axios'
               <option value="ZWE">Zimbabwe</option>
             </Form.Control> 
             </Col>
-            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPostalcode(e.target.value)}}/> </Col>
+            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={postalcode} onChange={(e)=>{setPostalcode(e.target.value)}}/> </Col>
            
-            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPhonenumber(e.target.value)}}/> </Col>
+            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={phonenumber} onChange={(e)=>{setPhonenumber(e.target.value)}}/> </Col>
             <Col md={3}></Col><Col className="form-group" md={9}><p className={styles.accountnotes}>The phone number entered above will be shared with the shipping company selected. <br/> 
                               The Publishing shall not be liable for undeliverable shipments where a valid phone number is not provided.</p></Col>
                               <br/> <br/> <br/> 

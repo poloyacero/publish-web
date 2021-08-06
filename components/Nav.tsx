@@ -52,7 +52,7 @@ const NavMenu = ({ ...props }: NavProps) => {
             }
         }).then(function (response:any) {
           console.log(response)
-          setModalShowCreate(false)
+          setModalShowPassRec(false)
           setModalShowSignin(true) 
           swal("Sent. Check your email!", "Thank you!", "success");        
         })
