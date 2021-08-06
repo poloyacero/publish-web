@@ -81,10 +81,10 @@ export default function Newpassword() {
                   <br/>
                   
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" className={styles.inputnav} value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>
+                  <Form.Control type="password" required className={styles.inputnav} value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>
                   <p className={styles.labelforgot}>Must be at least 8 characters</p>
                   <Form.Label>Confirm Password</Form.Label>
-                  <Form.Control type="password" className={styles.inputnav} value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="password"/>
+                  <Form.Control required type="password" className={styles.inputnav} value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="password"/>
                   <p className={styles.labelforgot}>Both passwords must match.</p>
               <br/>
                   <Button type="submit"  className={styles.sendButton}>Reset Password</Button>
