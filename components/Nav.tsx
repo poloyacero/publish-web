@@ -232,10 +232,10 @@ const NavMenu = ({ ...props }: NavProps) => {
                        
             
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
+                  <Form.Control required className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
                         
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control className={styles.inputnav} type="password" value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>                  
+                  <Form.Control required className={styles.inputnav} type="password" value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>                  
                                   
          
                 <br/>   
@@ -293,7 +293,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                   <br/>
                   <p className={styles.labelforgothead}><b>Trouble Logging In?</b></p>
                   <Form.Label className={styles.labelforgot}>Enter your email and we'll send you a link<br/>to get back into your account.</Form.Label>
-                  <Form.Control className={styles.inputnav} value={email} onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
+                  <Form.Control required className={styles.inputnav} value={email} onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
                   <br/>
                   <Button type="submit" className={styles.signinButton}>Send Password Reset Link</Button>
                   
@@ -332,7 +332,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Contact Name</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="text"  value={clientName} onChange={(e)=>{setClientName(e.target.value)}} name="contact-name"/>
+                  <Form.Control required className={styles.inputnav1} type="text"  value={clientName} onChange={(e)=>{setClientName(e.target.value)}} name="contact-name"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -340,7 +340,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="email"  value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
+                  <Form.Control required className={styles.inputnav1} type="email"  value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -348,7 +348,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="password"  value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}}name="password"/>
+                  <Form.Control required className={styles.inputnav1} type="password"  value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}}name="password"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -356,7 +356,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Validate Password</Form.Label>
-                  <Form.Control className={styles.inputnav1} type="password"  value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="validate"/>
+                  <Form.Control required className={styles.inputnav1} type="password"  value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="validate"/>
                 </Col>
               </Form.Group>
             </Col>
