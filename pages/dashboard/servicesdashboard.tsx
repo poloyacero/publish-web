@@ -251,6 +251,9 @@ const servicesdashboard=()=>{
           console.log('Response succeeded!')                   
           swal("Sent!", "Thank You!", "success");
           window.location.href = "/dashboard/servicesdashboard"
+        }else{
+          swal("not sent!", "Try again!", "error"); 
+
         }
        })
     }
@@ -278,6 +281,7 @@ const servicesdashboard=()=>{
         setEmail(response.data.object.email)
       } catch (error) {
         console.error(error);
+        swal("not loggin!", "Try again!", "error"); 
       }
       };
     

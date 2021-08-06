@@ -108,6 +108,7 @@ import axios from 'axios'
             })
             .catch(function (error:any) {
               console.log(error);
+              swal("not sent!", "Try again!", "error"); 
             })
             .then(function () {
               // always executed

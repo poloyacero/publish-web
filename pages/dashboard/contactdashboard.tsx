@@ -54,6 +54,8 @@ const contactdashboard=()=> {
         setSubjectmsg('')
         setMessage('')   
         swal("Message sent!", "Thank You!", "success");
+       }else{
+        swal("not sent!", "Try again!", "error"); 
        }
      
     })

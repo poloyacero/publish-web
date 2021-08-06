@@ -6,11 +6,14 @@ import styles from './Newpassword.module.css'
 import { Col, Container, Row ,Form,Button} from 'react-bootstrap';
 import Footer from "../components/Footer";
 import React,{ useEffect,useState } from "react";
+import { useRouter } from 'next/router'
 
 export default function Newpassword() {
+  const router = useRouter()
   const axios = require('axios'); 
   var QueryString = require('querystring');
-  
+  const [emailData, setEmailData] = useState("");
+  const [codeData, setCodeData] = useState("");
   const [passwordData, setPasswordData] = useState("");
   const [valPasswordData, setValPasswordData] = useState("");
 
@@ -20,19 +23,22 @@ export default function Newpassword() {
   };
   const handlePassRec = () => {
     if(passwordData===valPasswordData){    
-  axios.post('https://account.thepublishing.com/auth/forgot-password', QueryString.stringify({
-    password:passwordData 
+  axios.post('https://account.thepublishing.com/auth/reset-password', QueryString.stringify({
+    password:passwordData,
+    email:router.query.email,
+    code:router.query.code
      
         }), {
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         }).then(function (response:any) {
-        
-          swal("Sent. Check your email!", "Thank you!", "success");        
+          
+          swal("Password Changed!", "Thank you!", "success");        
         })
         .catch(function (error:any) {
           console.log(error);
+          swal("Code expired!", "Try again!", "error");    
         })
         .then(function () {
           // always executed
@@ -72,7 +78,7 @@ export default function Newpassword() {
                   <Form.Control className={styles.inputnav} value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>
                   <p className={styles.labelforgot}>Must be at least 8 characters</p>
                   <Form.Label>Confirm Password</Form.Label>
-                  <Form.Control className={styles.inputnav} value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>
+                  <Form.Control className={styles.inputnav} value={valPasswordData} onChange={(e)=>{setValPasswordData(e.target.value)}} name="password"/>
                   <p className={styles.labelforgot}>Both passwords must match.</p>
               <br/>
                   <Button type="submit"  className={styles.sendButton}>Reset Password</Button>

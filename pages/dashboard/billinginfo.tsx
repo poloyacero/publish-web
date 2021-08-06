@@ -61,6 +61,9 @@ const billinginfo=()=> {
         swal("Sent!", "Thank You!", "success");
         window.location.href = "/dashboard/homedashboard"
       }
+      else{
+        swal("not sent!", "Try again!", "error"); 
+      }
      })
   }
   useEffect(() => {

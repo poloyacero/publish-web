@@ -110,7 +110,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         }).then(function (response:any) {
-          swal("Registered successfully!", "Thank you!", "success");
+          swal("Registered successfully!", "Verify your email. Thank you!", "success");
           setModalShowCreate(false)
           setModalShowSignin(true)         
         })
@@ -294,7 +294,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                   <Form.Label className={styles.labelforgot}>Enter your email and we'll send you a link<br/>to get back into your account.</Form.Label>
                   <Form.Control className={styles.inputnav} value={email} onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
                   <br/>
-                  <Button type="submit" className={styles.signinButton}>Send Login Link</Button>
+                  <Button type="submit" className={styles.signinButton}>Send Password Reset Link</Button>
                   
                   <Col>
                   <br/><br/>

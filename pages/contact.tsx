@@ -58,7 +58,7 @@ export default function Contact() {
         <title>Contact Us</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
-      <NavMenu/>
+      <NavMenu />
       <PageLayout>
         <Container fluid>
           <Container className="container">
