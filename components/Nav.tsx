@@ -42,7 +42,7 @@ const NavMenu = ({ ...props }: NavProps) => {
     handlePassRec();    
   };
   const handlePassRec = () => {
-       
+       if(email!==""){
   axios.post('https://account.thepublishing.com/auth/forgot-password', QueryString.stringify({
     email: email  
      
@@ -51,7 +51,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                 "Content-Type": "application/x-www-form-urlencoded",
             }
         }).then(function (response:any) {
-          console.log(response)
+          
           setModalShowPassRec(false)
           setModalShowSignin(true) 
           swal("Sent. Check your email!", "Thank you!", "success");        
@@ -63,7 +63,9 @@ const NavMenu = ({ ...props }: NavProps) => {
         .then(function () {
           // always executed
         });  
-     
+      }else{
+        swal("Email required!", "try again!", "error");
+      }
   };
   const handleLogin = () => {
        
@@ -100,8 +102,9 @@ const NavMenu = ({ ...props }: NavProps) => {
   };
 
   const handleRegister = () => {
-    if(passwordData===valPasswordData){    
-  axios.post('https://account.thepublishing.com/auth/register', QueryString.stringify({
+    if(passwordData===valPasswordData){ 
+      if(usernameData!=="" && clientName!==""){  
+    axios.post('https://account.thepublishing.com/auth/register', QueryString.stringify({
     email: usernameData, 
     password: passwordData,
     contact_name:clientName    
@@ -120,7 +123,10 @@ const NavMenu = ({ ...props }: NavProps) => {
         })
         .then(function () {
           // always executed
-        });  
+        }); 
+      } else{
+        swal("Please fill the form!", "Try again", "error");
+      }
       } else{
         swal("Password did not match!", "Try again", "error");
       }
@@ -219,7 +225,14 @@ const NavMenu = ({ ...props }: NavProps) => {
           }
             </Col>
           
-            <TheModal 
+           
+    
+          </Col>
+        </Navbar>
+        </Row>
+        
+      </Container>
+      <TheModal 
         title="Sign In"
         size="sm"
         show={modalShowSignin}
@@ -232,7 +245,7 @@ const NavMenu = ({ ...props }: NavProps) => {
                        
             
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control required className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
+                  <Form.Control type="email" required className={styles.inputnav} value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
                         
                   <Form.Label className={styles.label}>Password</Form.Label>
                   <Form.Control required className={styles.inputnav} type="password" value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}} name="password"/>                  
@@ -270,12 +283,6 @@ const NavMenu = ({ ...props }: NavProps) => {
 
         </Container>
       </TheModal>
-    
-          </Col>
-        </Navbar>
-        </Row>
-        
-      </Container>
       <TheModal 
         title="Password Recovery"
         show={modalShowPassRec}
@@ -293,9 +300,9 @@ const NavMenu = ({ ...props }: NavProps) => {
                   <br/>
                   <p className={styles.labelforgothead}><b>Trouble Logging In?</b></p>
                   <Form.Label className={styles.labelforgot}>Enter your email and we'll send you a link<br/>to get back into your account.</Form.Label>
-                  <Form.Control required className={styles.inputnav} value={email} onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
+                  <Form.Control type="email" required className={styles.inputnav} value={email} onChange={(e)=>{setEmail(e.target.value)}} name="email"/>
                   <br/>
-                  <Button type="submit" className={styles.signinButton}>Send Password Reset Link</Button>
+                  <Button type="submit" className={styles.sendlinkButton}>Send Password Reset Link</Button>
                   
                   <Col>
                   <br/><br/>
@@ -332,7 +339,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Contact Name</Form.Label>
-                  <Form.Control required className={styles.inputnav1} type="text"  value={clientName} onChange={(e)=>{setClientName(e.target.value)}} name="contact-name"/>
+                  <Form.Control  className={styles.inputnav1} type="text"  value={clientName} onChange={(e)=>{setClientName(e.target.value)}} name="contact-name"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -340,7 +347,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Email</Form.Label>
-                  <Form.Control required className={styles.inputnav1} type="email"  value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
+                  <Form.Control  className={styles.inputnav1} type="email"  value={usernameData} onChange={(e)=>{setUsernameData(e.target.value)}} name="email"/>
                 </Col>
               </Form.Group>
             </Col>
@@ -348,7 +355,7 @@ const NavMenu = ({ ...props }: NavProps) => {
               <Form.Group as={Row}>
                 <Col md={6}>
                   <Form.Label className={styles.label}>Password</Form.Label>
-                  <Form.Control required className={styles.inputnav1} type="password"  value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}}name="password"/>
+                  <Form.Control  className={styles.inputnav1} type="password"  value={passwordData} onChange={(e)=>{setPasswordData(e.target.value)}}name="password"/>
                 </Col>
               </Form.Group>
             </Col>

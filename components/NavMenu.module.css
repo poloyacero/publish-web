@@ -7,6 +7,7 @@
   padding-left: 0px;
   padding-right: 0px;
   padding-top: 55px;
+  overflow: hidden;
 }
 .centered {
   text-align: center;
@@ -224,7 +225,20 @@
   border-color: #7b6b5b;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+.sendlinkButton {
+  background-color: #7b6b5b;
+  border-color: #7b6b5b;
+  text-align: center;
+  font-size: 14px;
+  width: 235px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
+.sendlinkButton:hover {
+  background-color: #8f7c69;
+  border-color: #7b6b5b;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .forgotsection img {
   width: 100px;
   height: auto;
@@ -248,9 +262,7 @@
     flex-direction: row;
     align-items: flex-start !important;
   }
-  .container {
-    width: 50%;
-  }
+
   .modalcontainer {
     width: 200px;
   }
