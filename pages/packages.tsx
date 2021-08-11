@@ -71,7 +71,7 @@ export default function PackagesPage() {
             Royalties<br/>
             <b>Marketing services:</b><br/>
             20 Bookmarks<br/>
-            2 Business Cards<br/>
+            20 Business Cards<br/>
             20 Postcards<br/>
             2Posters<br/>
 
@@ -125,7 +125,7 @@ export default function PackagesPage() {
             <b>Post-publication features:</b><br/>
             40 Paperback Copies<br/>
             8 Hardback Copies<br/>           
-            2 Leather-Bound <br/>
+            10 illustrations (Level 3 <br/>
             3 ISBN<br/>
             Copyright Registration<br/>
             Print Book Registration<br/>

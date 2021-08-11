@@ -17,7 +17,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
     <Container fluid style={{ background: '#f0e3d5' }}>
       <Container>
         <Carousel  className={styles.carouselWrapper}>
-          <Carousel.Item interval={1000}>
+          <Carousel.Item interval={5000}>
             <img
               className="d-block w-100"
               src="/img/sliderbg.jpg"
@@ -30,7 +30,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/Slider.png" />
           </Carousel.Item>
-          <Carousel.Item interval={1000}>
+          <Carousel.Item interval={5000}>
             <img
               className="d-block w-100"
               src="/img/sliderbg.jpg"
@@ -43,7 +43,8 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/splash.png" />
           </Carousel.Item>
-          <Carousel.Item>
+          
+          <Carousel.Item interval={5000}>
             <img
               className="d-block w-100"
               src="/img/sliderbg.jpg"
