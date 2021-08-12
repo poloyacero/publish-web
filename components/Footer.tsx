@@ -107,7 +107,7 @@ interface FooterProps {}
     <Container fluid style={{background: '#f0e3d5'}}>
        {!islogin? ( 
         <>
-      <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
+      <Container style={{marginTop: '30px', marginBottom: '30px'}} >
         <Row className="justify-content-md-center">
           <Col md={'auto'} className={styles.left}>
          <Nav.Link href="/pricing"><h1 className={styles.footerh1}>Let's Create a Book</h1></Nav.Link>
@@ -200,14 +200,24 @@ interface FooterProps {}
                   <Col className={styles.footerlink} ><Link href="/illustration-services">Illustrations</Link></Col>
                   </Row>
              </Col>
-        </Row>
-               <Row><Col><br/><br/></Col></Row>
+        </Row> <br/><br/>
+               <Row className={styles.socialmediawrapper}>
+               
+                 <Col className={styles.socialmedialink} > <a href="https://www.facebook.com/thepublishingaps" className="fa fa-facebook"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-twitter"></a></Col> 
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-linkedin"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-youtube"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-instagram"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-pinterest"></a></Col>
+            
+           </Row>
+           <br/><br/>
               <Row className="justify-content-md-center">
                 <Col>
                 <Row className={styles.center}><Col className={styles.footerlink}>
                 <Link href="/"><a><Image src="/logo.png" width="125%" height="30px" /></a></Link>
               <div className={styles.copyright}>
-              <p>CVR 42434558 Copyright © All Rights Reserved ThePublshing</p>
+              <p>CVR-nr 42434655 Copyright © All Rights Reserved ThePublishing</p>
             </div> 
             </Col></Row>  
             </Col></Row>  
@@ -237,13 +247,24 @@ interface FooterProps {}
                 </Row>
                 </Col>
                </Row>
-               <Row><Col><br/><br/></Col></Row>
+               <br/><br/>
+               <Row className={styles.socialmediawrapper}>
+               
+                 <Col className={styles.socialmedialink} > <a href="https://www.facebook.com/thepublishingaps" className="fa fa-facebook"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-twitter"></a></Col> 
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-linkedin"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-youtube"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-instagram"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-pinterest"></a></Col>
+            
+           </Row>
+           <br/><br/>
               <Row className="justify-content-md-center">
                 <Col>
                 <Row className={styles.center}><Col className={styles.footerlink}>
                 <Link href="/"><a><Image src="/logo.png" width="125%" height="30px" /></a></Link>
               <div className={styles.copyright}>
-              <p>CVR 42434558 Copyright © All Rights Reserved ThePublshing</p>
+              <p>CVR-nr 42434655 Copyright © All Rights Reserved ThePublishing</p>
             </div> 
             </Col></Row>  
             </Col></Row>  
