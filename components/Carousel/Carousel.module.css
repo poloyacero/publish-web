@@ -73,15 +73,6 @@
   width: 200px;
 }
 
-.carouselWrapper2 {
-  display: none;
-  flex-direction: column;
-  height: auto;
-  width: 300px;
-  justify-items: center;
-  margin: auto;
-}
-
 .carouselImage2 {
   top: 10px;
   width: 40%;

@@ -16,7 +16,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
   return (
     <Container fluid style={{ background: '#f0e3d5' }}>
       <Container>
-        <Carousel  className={styles.carouselWrapper}>
+        <Carousel>
           <Carousel.Item interval={5000}>
             <img
               className="d-block w-100"

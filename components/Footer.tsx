@@ -205,7 +205,7 @@ interface FooterProps {}
                
                  <Col className={styles.socialmedialink} > <a href="https://www.facebook.com/thepublishingaps" className="fa fa-facebook"></a></Col>                
                  <Col className={styles.socialmedialink} > <a href="https://www.linkedin.com/company/the-publishing" className="fa fa-linkedin"></a></Col>
-                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-youtube"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="https://www.youtube.com/channel/UClmZY_nzJMTwEfcJDzj3_Yw" className="fa fa-youtube"></a></Col>
                  <Col className={styles.socialmedialink} > <a href="https://www.instagram.com/thepublishing.admin" className="fa fa-instagram"></a></Col>
                 
             
