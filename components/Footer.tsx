@@ -203,12 +203,11 @@ interface FooterProps {}
         </Row> <br/><br/>
                <Row className={styles.socialmediawrapper}>
                
-                 <Col className={styles.socialmedialink} > <a href="https://www.facebook.com/thepublishingaps" className="fa fa-facebook"></a></Col>
-                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-twitter"></a></Col> 
-                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-linkedin"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="https://www.facebook.com/thepublishingaps" className="fa fa-facebook"></a></Col>                
+                 <Col className={styles.socialmedialink} > <a href="https://www.linkedin.com/company/the-publishing" className="fa fa-linkedin"></a></Col>
                  <Col className={styles.socialmedialink} > <a href="#" className="fa fa-youtube"></a></Col>
-                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-instagram"></a></Col>
-                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-pinterest"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="https://www.instagram.com/thepublishing.admin" className="fa fa-instagram"></a></Col>
+                
             
            </Row>
            <br/><br/>

@@ -94,7 +94,7 @@
   color: #7b6b5b;
 }
 .socialmediawrapper {
-  width: 50%;
+  width: 30%;
   margin: auto;
 }
 .socialmedialink a {
@@ -456,5 +456,9 @@
   .fa-rss {
     background: #ff6600;
     color: white;
+  }
+  .socialmediawrapper {
+    width: 80%;
+    margin: auto;
   }
 }
