@@ -38,7 +38,7 @@ export default function Newpassword() {
           swal("Password Changed!", "Thank you!", "success").then(success => {
             if (success) {
               console.log(success);
-              router.push("/")
+              router.push("/logged_in")
             }
           })             
         })
@@ -57,7 +57,7 @@ export default function Newpassword() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Contact Us</title>
+        <title>Reset Password</title>
         <link rel="icon" href="/thepublishing.svg" />
       </Head>
       <NavMenu />

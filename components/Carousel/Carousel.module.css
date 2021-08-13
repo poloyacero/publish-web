@@ -1,3 +1,11 @@
+.carouselWrapper {
+  height: auto;
+  width: auto;
+}
+
+.carouselWrapper2 {
+  display: none;
+}
 .carouselCaption {
   left: 15%;
   top: 20%;
