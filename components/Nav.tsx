@@ -28,6 +28,7 @@ const NavMenu = ({ ...props }: NavProps) => {
   const [valPasswordData, setValPasswordData] = useState("");
   const [clientName, setClientName] = useState("");
   const [islogin, setIslogin] = useState("");
+  const [isloading, setIsloading] = useState(false);
 
   const handleSubmit = (event:any) => {
     event.preventDefault();
@@ -104,6 +105,7 @@ const NavMenu = ({ ...props }: NavProps) => {
   const handleRegister = () => {
     if(passwordData===valPasswordData){ 
       if(usernameData!=="" && clientName!==""){  
+    setIsloading(true) 
     axios.post('https://account.thepublishing.com/auth/register', QueryString.stringify({
     email: usernameData, 
     password: passwordData,
@@ -114,6 +116,7 @@ const NavMenu = ({ ...props }: NavProps) => {
             }
         }).then(function (response:any) {
           swal("Registered successfully!", "Verify your email. Thank you!", "success");
+          setIsloading(false)
           setModalShowCreate(false)
           setModalShowSignin(true)         
         })
@@ -370,8 +373,9 @@ const NavMenu = ({ ...props }: NavProps) => {
             <Col>
               <Form.Group as={Row}>
                 <Col className={styles.forgotpasslink1} md={12}>   
-                <br/>                                
-                <Button type="submit" data-dismiss-modal className={styles.createButton}>Create Account </Button>
+                <br/> 
+                {isloading? <Button data-dismiss-modal className={styles.createButton}>Loading...</Button>:<Button type="submit" data-dismiss-modal className={styles.createButton}>Create Account </Button>}                               
+                
                 </Col>
                
               </Form.Group>

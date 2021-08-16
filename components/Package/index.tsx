@@ -22,7 +22,8 @@ interface PackageProps {
   const [email, setEmail] = React.useState('')
   const [lastname, setLastname] = React.useState('')
   const [packagevalue, setPackagevalue] = React.useState('')
-  const [submitted, setSubmitted] = React.useState(false)  
+  const [submitted, setSubmitted] = React.useState(false)
+  const [isloading, setIsloading] = React.useState(false)    
   
   function handlepkg1(){
     setModalShowSignin(true)
@@ -41,10 +42,9 @@ interface PackageProps {
     setPackagevalue('Elite<br/>€ 16000<br/><br/>Edit and Design<br/>Paperback Format<br/>Hardcover Format<br/>E-Book Format<br/>Data Entry<br/>Copyediting<br/> Indexing<br/>Custom Text & Layout Formatting<br/>2 Rounds Layout Revisions<br/>Design Consultation<br/>Advance Cover Design<br/>Post-publication features:<br/>50 Paperback Copies<br/>10 Hardback Copies<br/>20 BookStub Cards<br/>2 Leather-Bound<br/>3 ISBN<br/>Copyright Registration<br/>Print Book Registration<br/>Amazon Look Inside<br/>Google Books Preview<br/>Barnes and Noble Read Instantly<br/>Worldwide Online Book Distribution<br/>Online Book Sales Account<br/>Royalties<br/>100% Royalty Program 3 years<br/>Book Return Program 12 Months<br/>Marketing services:<br/>200 Bookmarks<br/>200 Business Cards<br/> 200 Postcards<br/>20 Posters<br/>Advance Website<br/>Press Release Campaign<br/>Author Events<br/>Social Media<br/>Audio Book<br/>Video Book');
   }
   const handleSubmit = (e:any) => { 
+    if(firstname!==""&&email!==""){
     e.preventDefault()
-    console.log('Sending new 6-9:00') 
-
-    console.log('Package',packagevalue) 
+ setIsloading(true)
 
   let data = {
       firstname,
@@ -61,7 +61,7 @@ interface PackageProps {
       body: JSON.stringify(data)
     }).then((res) => {
       console.log('Response received')
-      console.log(data)
+      
       if (res.status === 200) {
         console.log('Response succeeded!')
         setSubmitted(true)
@@ -70,9 +70,14 @@ interface PackageProps {
         setLastname('')
         setPackagevalue('')
         swal("Sent!", "Thank You!", "success");
+        setIsloading(false)
       }
       setModalShowSignin(false);
+      setIsloading(false)
     })
+  }else{
+    swal("Please fill form", "Thank You!", "error");
+  }
   }
   return (
     <Col className={styles.package} md={props.width}>
@@ -158,7 +163,7 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>First name</Form.Label>
-          <Form.Control className={styles.inputnav} value={firstname}  onChange={(e)=>{setFirstname(e.target.value)}} type="text" name="name"/>
+          <Form.Control required className={styles.inputnav} value={firstname}  onChange={(e)=>{setFirstname(e.target.value)}} type="text" name="name"/>
         </Col>
       </Form.Group>
     </Col>
@@ -175,15 +180,16 @@ onHide={() => setModalShowSignin(false)}
       <Form.Group as={Row}>
         <Col md={12}>
           <Form.Label className={styles.label}>Email</Form.Label>
-          <Form.Control className={styles.inputnav} value={email}  onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email"/>                  
+          <Form.Control required className={styles.inputnav} value={email}  onChange={(e)=>{setEmail(e.target.value)}} type="email" name="email"/>                  
         </Col>
        
       </Form.Group>
     </Col>
     <Col>
       <Form.Group as={Row}>
-        <Col md={12}>                                   
-          <Button onClick={props.onHide} className={styles.signinButton} onMouseDown={(e)=>{handleSubmit(e)}}>Get Package</Button>
+        <Col md={12}> 
+        {isloading?<Button className={styles.signinButton} >Loading...</Button>:<Button onClick={props.onHide} className={styles.signinButton} onMouseDown={(e)=>{handleSubmit(e)}}>Get Package</Button>}                                 
+          
         </Col>
        
       </Form.Group>

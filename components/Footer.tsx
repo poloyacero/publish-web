@@ -17,7 +17,7 @@ interface FooterProps {}
   const [phonenumber, setPhonenumber] = React.useState('')
   const [subjectmsg, setSubjectmsg] = React.useState('Subject')
   const [subjects, setSubjects] = React.useState('')
-  const [submitted, setSubmitted] = React.useState(false)
+  const [isloading, setIsloading] = React.useState(false)
   const [noSubject, setNosubject] = React.useState(true)
   const [islogin, setIslogin] = useState(""); 
   
@@ -45,9 +45,11 @@ interface FooterProps {}
    }, [subjectmsg])
 
   const handleSubmit = (e:any) => { 
+    if(firstname!==""&&email!==""&&phonenumber!==""){
     e.preventDefault()
     console.log('Sending...') 
 
+ setIsloading(true)
   let data = {
       firstname,
       lastname,
@@ -67,17 +69,20 @@ interface FooterProps {}
       console.log(data)
       if (res.status === 200) {
         console.log('Response succeeded!')
-        setSubmitted(true)
         setFirstname('')
         setEmail('')
         setLastname('')
         setPhonenumber('') 
         setSubjectmsg('')    
-        swal("Mail Sent!", "Thank you!", "success");
+        swal("Mail Sent!", "Thank you!", "success").then((success)=>{
+          setIsloading(false)
+        })
       }
      
     })
-    
+  }else{
+    swal("Please fill form", "Thank you!", "error");
+  }
   }
   useEffect(() => {
   
@@ -177,8 +182,9 @@ interface FooterProps {}
                 {noSubject? <span> </span>: <span onClick={()=>{clearSubject()}}>(clear)</span>}</p></Col></Row>
                 <Row><Col className={styles.checkboxlabel}><Form.Check type="checkbox"label="I agree to the Privacy Policy and Terms and Condition" name="selectstyles"  id="styles1"/></Col>
                </Row>
-                   <br/>             
-                <Button className={styles.sendmail} onClick={(e)=>{handleSubmit(e)}}>SEND MAIL</Button>
+                   <br/>  
+                   {isloading?  <Button className={styles.sendmail} >LOADING...</Button>: <Button className={styles.sendmail} onClick={(e)=>{handleSubmit(e)}}>SEND MAIL</Button>}           
+               
               </Form.Group>
             </Form>
               

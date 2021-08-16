@@ -15,7 +15,8 @@ import axios from 'axios'
 
 const servicesdashboard=()=>{
   const [modalShow, setModalShow] = React.useState(false);
-
+  const [isloading, setIsloading] = React.useState(false);
+  const [isattached, setIsattached] = React.useState(false);
   const [booktitle, setBooktitle] = useState('')
   const [booksynopsis, setBooksynopsis] = useState('')
   //Package
@@ -198,7 +199,7 @@ const servicesdashboard=()=>{
     const handleSubmit = (e:any) => { 
       e.preventDefault()
       console.log('Sending')   
-       
+     setIsloading(true)  
     let data = {
         user,
         email, 
@@ -250,10 +251,12 @@ const servicesdashboard=()=>{
         if (res.status === 200) {
           console.log('Response succeeded!')                   
           swal("Sent!", "Thank You!", "success");
+          setIsloading(false)
+          setIsattached(false)
           window.location.href = "/dashboard/servicesdashboard"
         }else{
           swal("not sent!", "Try again!", "error"); 
-
+          setIsloading(false)
         }
        })
     }
@@ -264,7 +267,10 @@ const servicesdashboard=()=>{
     let handleFileChange = async (file:any) => {
       let { url } = await uploadToS3(file);
       setImageUrl(url); 
-      swal("File Attached!", "", "success");   
+      swal("File Attached!", "", "success").then((success)=>{
+        setIsattached(true)  
+      })
+       
     };
     async function getuser () {
       
@@ -355,7 +361,7 @@ const servicesdashboard=()=>{
                <Form.Group>
             <br/>
            <div className={styleIn.fileinputs}> 
-          <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto"  onClick={openFileDialog}/></Col><Col className={styleIn.formcolbutton2}><Button className={styleIn.submitbuttondashboard} onClick={() => alert('Attaching file....')}>Attach Manuscript</Button></Col></Row></div>
+          <div className={styleIn.fakefile}><Row><Col className={styleIn.formcolbutton1}><Image src="/img/services/upload-manuscript.png" width="auto" height="auto"  onClick={openFileDialog}/></Col><Col className={styleIn.formcolbutton2}>{isattached?<Button onClick={()=>{swal("Attached Already!")}} className={styleIn.submitbuttondashboard} >Attach Manuscript</Button>:<Button className={styleIn.submitbuttondashboard} >Attach Manuscript</Button>}</Col></Row></div>
           <FileInput className={styleIn.formfile} onChange={handleFileChange} accept=".jpg,.jpeg,.psd,.pdf,.docx,.doc"/>
            <br/>
            
