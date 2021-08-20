@@ -45,7 +45,7 @@ export default function PackagesPage() {
             <b>Marketing services:</b><br/>
             20 Bookmarks<br/>
             20 Business Cards<br/>
-            50 Postcards<br/>
+            20 Postcards<br/>
 
 
           </p>
@@ -105,7 +105,7 @@ export default function PackagesPage() {
               50 Business Cards<br/>
               50 Postcards<br/>
               5 Posters<br/>
-              Basic Web Design<br/>
+              Basic Website<br/>
               Press Release Campaign <br/>
           </p>
         </Package>
