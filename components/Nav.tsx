@@ -71,6 +71,7 @@ const NavMenu = ({ ...props }: NavProps) => {
   const handleLogin = () => {
        
     axios.post('https://account.thepublishing.com/oauth/token', QueryString.stringify({
+
     username: usernameData, 
     password: passwordData,
     client_id:process.env.NEXT_PUBLIC_CLIENT_ID,
@@ -103,10 +104,12 @@ const NavMenu = ({ ...props }: NavProps) => {
   };
 
   const handleRegister = () => {
+
     if(passwordData===valPasswordData){ 
       if(usernameData!=="" && clientName!==""){  
     setIsloading(true) 
     axios.post('https://account.thepublishing.com/auth/register', QueryString.stringify({
+
     email: usernameData, 
     password: passwordData,
     contact_name:clientName    

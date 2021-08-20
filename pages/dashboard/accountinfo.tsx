@@ -64,7 +64,9 @@ import axios from 'axios'
   }, [email])
   async function getuser () {
       
+
       let webApiUrl = 'https://account.thepublishing.com/auth/info';
+
       let tokenStr = localStorage.getItem("AccessToken");
       
       try {
