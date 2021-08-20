@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import swal from 'sweetalert';
-import React,{useEffect} from 'react'
+import React,{useEffect,useState} from 'react'
 import {  Button, Col, Container, Form, FormControl, InputGroup, Nav, Row } from 'react-bootstrap';
 
 import styles from './FooterMenu.module.css';
+import axios from 'axios';
 
 
 interface FooterProps {}
@@ -16,8 +17,10 @@ interface FooterProps {}
   const [phonenumber, setPhonenumber] = React.useState('')
   const [subjectmsg, setSubjectmsg] = React.useState('Subject')
   const [subjects, setSubjects] = React.useState('')
-  const [submitted, setSubmitted] = React.useState(false)
+  const [isloading, setIsloading] = React.useState(false)
   const [noSubject, setNosubject] = React.useState(true)
+  const [islogin, setIslogin] = useState(""); 
+  
   
   const handleSubject = () => { 
     if(subjectmsg!=="Subject"){ 
@@ -42,9 +45,11 @@ interface FooterProps {}
    }, [subjectmsg])
 
   const handleSubmit = (e:any) => { 
+    if(firstname!==""&&email!==""&&phonenumber!==""){
     e.preventDefault()
     console.log('Sending...') 
 
+ setIsloading(true)
   let data = {
       firstname,
       lastname,
@@ -64,23 +69,50 @@ interface FooterProps {}
       console.log(data)
       if (res.status === 200) {
         console.log('Response succeeded!')
-        setSubmitted(true)
         setFirstname('')
         setEmail('')
         setLastname('')
         setPhonenumber('') 
         setSubjectmsg('')    
-        swal("Mail Sent!", "Thank you!", "success");
+        swal("Mail Sent!", "Thank you!", "success").then((success)=>{
+          setIsloading(false)
+        })
       }
      
     })
-    
+  }else{
+    swal("Please fill form", "Thank you!", "error");
   }
+  }
+  useEffect(() => {
+  
+  getuser();
+   
+  }, [islogin])
+  async function getuser () {
+      
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
+      let tokenStr = localStorage.getItem("AccessToken");
+      
+      try {
+        const response = await axios.get(webApiUrl, 
+          { headers: {"Authorization" : `Bearer ${tokenStr}`} 
+         
+        });
+              
+        setIslogin("true")
+      } catch (error) {
+        console.error(error);
+      }
+      };
 
 
   return (
+   
     <Container fluid style={{background: '#f0e3d5'}}>
-      <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
+       {!islogin? ( 
+        <>
+      <Container style={{marginTop: '30px', marginBottom: '30px'}} >
         <Row className="justify-content-md-center">
           <Col md={'auto'} className={styles.left}>
          <Nav.Link href="/pricing"><h1 className={styles.footerh1}>Let's Create a Book</h1></Nav.Link>
@@ -150,8 +182,9 @@ interface FooterProps {}
                 {noSubject? <span> </span>: <span onClick={()=>{clearSubject()}}>(clear)</span>}</p></Col></Row>
                 <Row><Col className={styles.checkboxlabel}><Form.Check type="checkbox"label="I agree to the Privacy Policy and Terms and Condition" name="selectstyles"  id="styles1"/></Col>
                </Row>
-                   <br/>             
-                <Button className={styles.sendmail} onClick={(e)=>{handleSubmit(e)}}>SEND MAIL</Button>
+                   <br/>  
+                   {isloading?  <Button className={styles.sendmail} >LOADING...</Button>: <Button className={styles.sendmail} onClick={(e)=>{handleSubmit(e)}}>SEND MAIL</Button>}           
+               
               </Form.Group>
             </Form>
               
@@ -173,19 +206,79 @@ interface FooterProps {}
                   <Col className={styles.footerlink} ><Link href="/illustration-services">Illustrations</Link></Col>
                   </Row>
              </Col>
-        </Row>
-               <Row><Col><br/><br/></Col></Row>
+        </Row> <br/><br/>
+               <Row className={styles.socialmediawrapper}>
+               
+                 <Col className={styles.socialmedialink} > <a href="https://www.facebook.com/thepublishingaps" className="fa fa-facebook"></a></Col>                
+                 <Col className={styles.socialmedialink} > <a href="https://www.linkedin.com/company/the-publishing" className="fa fa-linkedin"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="https://www.youtube.com/channel/UClmZY_nzJMTwEfcJDzj3_Yw" className="fa fa-youtube"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="https://www.instagram.com/thepublishing.admin" className="fa fa-instagram"></a></Col>
+                
+            
+           </Row>
+           <br/><br/>
               <Row className="justify-content-md-center">
                 <Col>
                 <Row className={styles.center}><Col className={styles.footerlink}>
                 <Link href="/"><a><Image src="/logo.png" width="125%" height="30px" /></a></Link>
               <div className={styles.copyright}>
-              <p>CVR 42434558 Copyright © All Rights Reserved ThePublshing</p>
+              <p>CVR-nr 42434655 Copyright © All Rights Reserved ThePublishing</p>
             </div> 
             </Col></Row>  
             </Col></Row>  
       </Container>
+      </>
+      ):( 
+        <>
+        <Container className="container" style={{marginTop: '30px', marginBottom: '30px'}} >
+        <Row className="justify-content-md-center">
+          <Col md={'auto'} className={styles.left}>
+           
+          </Col>
+        </Row>
+        <Row><Col><br/><br/></Col></Row>
+      
+        <Row className="justify-content-md-center">
+             <Col><Row className={styles.center}>
+                <Col className={styles.footerlink} ><Link href="/about">About</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/contact">Contact</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/privacy-policy">Privacy</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/terms-of-use">Terms</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/services">Services</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/distribution">Distribution</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/packages">Packages</Link></Col>
+                <Col className={styles.footerlink} ><Link href="/add-on">Add on</Link></Col>                
+                <Col className={styles.footerlink} ><Link href="/illustration-services">Illustrations</Link></Col>
+                </Row>
+                </Col>
+               </Row>
+               <br/><br/>
+               <Row className={styles.socialmediawrapper}>
+               
+                 <Col className={styles.socialmedialink} > <a href="https://www.facebook.com/thepublishingaps" className="fa fa-facebook"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-twitter"></a></Col> 
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-linkedin"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-youtube"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-instagram"></a></Col>
+                 <Col className={styles.socialmedialink} > <a href="#" className="fa fa-pinterest"></a></Col>
+            
+           </Row>
+           <br/><br/>
+              <Row className="justify-content-md-center">
+                <Col>
+                <Row className={styles.center}><Col className={styles.footerlink}>
+                <Link href="/"><a><Image src="/logo.png" width="125%" height="30px" /></a></Link>
+              <div className={styles.copyright}>
+              <p>CVR-nr 42434655 Copyright © All Rights Reserved ThePublishing</p>
+            </div> 
+            </Col></Row>  
+            </Col></Row>  
+      </Container>
+      </>
+
+      )}
     </Container>
+   
   );
 }
 

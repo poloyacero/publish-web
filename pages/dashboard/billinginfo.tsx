@@ -6,7 +6,7 @@ import styles from '../../styles/Home.module.css'
 import styles2 from '../../components/Dashboard/dashboard2.module.css'
 import styleIn from '../../styles/inputstyle.module.css'
 import { Col, Container, Row ,Form,Button,Image, NavLink} from 'react-bootstrap'
-import FooterDashboard from "../../components/FooterDashboard";
+import FooterDashboard from "../../components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import swal from "sweetalert"
 import withAuth from "../../components/withAuth";
@@ -55,11 +55,14 @@ const billinginfo=()=> {
       body: JSON.stringify(data)
     }).then((res) => {
       console.log('Response received')
-      console.log(data)
+      
       if (res.status === 200) {
         console.log('Response succeeded!')                   
         swal("Sent!", "Thank You!", "success");
         window.location.href = "/dashboard/homedashboard"
+      }
+      else{
+        swal("not sent!", "Try again!", "error"); 
       }
      })
   }
@@ -69,7 +72,9 @@ const billinginfo=()=> {
   }, [email])
   async function getuser () {
       
-      let webApiUrl = 'https://account.dev.thepublishing.com/auth/info';
+
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
+
       let tokenStr = localStorage.getItem("AccessToken");
       
       try {
@@ -77,8 +82,14 @@ const billinginfo=()=> {
           { headers: {"Authorization" : `Bearer ${tokenStr}`} 
          
         });
-        console.log(response);        
-        setEmail(response.data.object.email)
+        
+        setEmail(response.data.object.email)      
+        setBusinessname(response.data.object.business_name)
+        setCity(response.data.object.city)
+        setAddress(response.data.object.address)
+        setStateprovince(response.data.object.state_province)
+        setPostalcode(response.data.object.postal_code)
+        setPhonenumber(response.data.object.phone)
       } catch (error) {
         console.error(error);
       }
@@ -107,13 +118,13 @@ const billinginfo=()=> {
                <Col className="form-group" md={3}>First Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setFirstname(e.target.value)}}/> </Col>
                <Col className="form-group" md={3}>Last Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setLastname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setBusinessname(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>Business Name</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={businessname} onChange={(e)=>{setBusinessname(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setAddress(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>Address</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={address} onChange={(e)=>{setAddress(e.target.value)}}/> </Col>
                
-               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setCity(e.target.value)}}/> </Col>
+               <Col className="form-group" md={3}>City</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/> </Col>
                   
-               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" defaultValue=" " onChange={(e)=>{setStateprovince(e.target.value)}}>
+               <Col className="form-group" md={3}>State/Province</Col><Col className="form-group" md={9}><Form.Control className={styleIn.inputselect2} as="select" value={stateprovince} onChange={(e)=>{setStateprovince(e.target.value)}}>
               <option value=""></option>
               <option value="USA">United States</option>
               <option value="GBR">United Kingdom</option>
@@ -370,9 +381,9 @@ const billinginfo=()=> {
               <option value="ZWE">Zimbabwe</option>
             </Form.Control> 
             </Col>
-            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPostalcode(e.target.value)}}/> </Col>
+            <Col className="form-group" md={3}>Postal Code</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={postalcode} onChange={(e)=>{setPostalcode(e.target.value)}}/> </Col>
             
-            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" defaultValue=" " onChange={(e)=>{setPhonenumber(e.target.value)}}/> </Col>
+            <Col className="form-group" md={3}>Phone</Col><Col className="form-group" md={9}><Form.Control className={styleIn.accountinput} type="text" value={phonenumber} onChange={(e)=>{setPhonenumber(e.target.value)}}/> </Col>
            
             </Form.Group>
             <br></br>

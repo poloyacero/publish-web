@@ -16,8 +16,10 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
   return (
     <Container fluid style={{ background: '#f0e3d5' }}>
       <Container>
-        <Carousel  className={styles.carouselWrapper}>
-          <Carousel.Item interval={1000}>
+      <Row className={styles.carouselWrapper}>
+       <Col>
+        <Carousel>
+          <Carousel.Item interval={5000}>
             <img
               className="d-block w-100"
               src="/img/sliderbg.jpg"
@@ -30,7 +32,7 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/Slider.png" />
           </Carousel.Item>
-          <Carousel.Item interval={1000}>
+          <Carousel.Item interval={5000}>
             <img
               className="d-block w-100"
               src="/img/sliderbg.jpg"
@@ -43,7 +45,8 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             <Link href="/pricing"><Nav.Link className={styles.carouselLink} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
             <Image className={styles.carouselImage} src="/img/splash.png" />
           </Carousel.Item>
-          <Carousel.Item>
+          
+          <Carousel.Item interval={5000}>
             <img
               className="d-block w-100"
               src="/img/sliderbg.jpg"
@@ -57,6 +60,41 @@ const CarouselSlider = ({ ...props }: CarouselProps) => {
             <Image className={styles.carouselImage} src="/img/stock.png" />
           </Carousel.Item>
         </Carousel>
+        </Col>
+     </Row>
+<Row className={styles.carouselWrapper2}>
+  <Col>
+  <br/><br/>
+            <p className={styles.carouselCaption2}>
+              <h3>Publish</h3>
+              <p>Create and publish your<br/> own book in your way.</p>
+              <Image className={styles.carouselImage2} src="/img/Slider.png" />
+             <Link href="/pricing"><Nav.Link className={styles.carouselLink2} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
+           
+            </p>
+  </Col>
+  <Col><br/><br/>
+
+            <p className={styles.carouselCaption2}>
+              <h3>Print</h3>
+              <p>Your thought. Our ink.<br/>Printing made easier.</p>
+              <Image className={styles.carouselImage2} src="/img/splash.png" />
+             <Link href="/pricing"><Nav.Link className={styles.carouselLink2} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
+           
+            </p>
+  </Col>
+  <Col>
+<br/><br/>
+            <p className={styles.carouselCaption2}>
+              <h3>Sell</h3>
+              <p>Sell your book on your own <br/>website & around the world.</p>
+              <Image className={styles.carouselImage2} src="/img/stock.png" />
+             <Link href="/pricing"><Nav.Link className={styles.carouselLink2} onClick={() => setModalShowCreate(true)}>Get Started</Nav.Link></Link>
+           
+            </p>
+  </Col>
+</Row>
+
       </Container>
       <TheModal 
         title="Create an Account"

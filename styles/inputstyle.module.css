@@ -101,12 +101,12 @@
 
 .commonbutton {
   border-radius: 1 !important;
-  display: block;
   height: 45px;
   background-color: #7b6b5b;
   border: none;
   color: #fafafa;
   padding: 10px;
+  width: 250px;
 }
 
 .commonbutton:hover {

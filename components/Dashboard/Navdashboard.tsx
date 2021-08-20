@@ -13,8 +13,8 @@ interface DNavProps {
 
 const Navdashboard = ({ ...props }: DNavProps) => { 
   const [user, setUser] = useState("");
-  function logout(){
-    localStorage.removeItem('AccessToken');
+   function logout(){  
+      localStorage.removeItem('AccessToken');       
     
      }
      useEffect(() => {
@@ -23,15 +23,16 @@ const Navdashboard = ({ ...props }: DNavProps) => {
     }, [user])
      async function getuser () {
       
-      let webApiUrl = 'https://account.dev.thepublishing.com/auth/info';
+
+      let webApiUrl = 'https://account.thepublishing.com/auth/info';
+
       let tokenStr = localStorage.getItem("AccessToken");
       
       try {
         const response = await axios.get(webApiUrl, 
           { headers: {"Authorization" : `Bearer ${tokenStr}`} 
          
-        });
-        console.log(response);
+        });        
         setUser(response.data.object.contact_name)
       } catch (error) {
         console.error(error);
@@ -48,14 +49,14 @@ const Navdashboard = ({ ...props }: DNavProps) => {
               <Navbar className={styles.navbardash} expand="lg">
                     <Col md={1} className={styles.navbardropcontainer}>
                     <NavDropdown title={<AiOutlineMenu/>}  id={styles.menus}  className={styles.navmenu}>
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">{user}</NavDropdown.Item>
+                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo"><b>{user}</b></NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/accountinfo">Account Information</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/billinginfo">Payment Information</NavDropdown.Item>
                     {/* <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/payopeninvoices">Pay Open Invoices</NavDropdown.Item>      
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/compensationinfo">Compensation</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/documentsinfo">Documents</NavDropdown.Item>
                     <NavDropdown.Item id={styles.dropdownNextLevel} href="/dashboard/emaildashboard">Email</NavDropdown.Item> */}
-                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/#"><span onClick={logout}>Logout</span></NavDropdown.Item>
+                    <NavDropdown.Item id={styles.dropdownNextLevel} href="/"><span onClick={logout}>Logout</span></NavDropdown.Item>
                     </NavDropdown>    
                     </Col>
                    <Col md={10}  className={styles.navbarlinkcontainer}>              

@@ -4,21 +4,10 @@
   padding-left: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 102px;
-}
-.modalcontainer {
-  width: 300px;
-}
-.modalTitle {
-  font-size: 20px;
-}
-.modal-ku {
-  width: 350px;
-  margin: auto;
+  font-size: 80px;
+  overflow: hidden;
 }
 
-@media screen and (max-width: 1030px) {
-  .modalcontainer {
-    width: 300px;
-  }
+.modalTitle {
+  font-size: 20px;
 }
