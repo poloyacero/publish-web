@@ -48,7 +48,7 @@ const Navdashboard = ({ ...props }: NavProps) => {
   const handleLogin = () => {
     // http://account.dev.thepublishing.com/auth/health http://account.dev.thepublishing.com/oauth/token
      
-  axios.post('http://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
+  axios.post('https://account.dev.thepublishing.com/oauth/token', QueryString.stringify({
     username: usernameData, 
     password: passwordData,
     client_id:'TkpttxtKbhlMdO8',
@@ -79,7 +79,7 @@ const Navdashboard = ({ ...props }: NavProps) => {
 
   const handleRegister = () => {
     if(passwordData===valPasswordData){    
-  axios.post('http://account.dev.thepublishing.com/auth/register', QueryString.stringify({
+  axios.post('https://account.dev.thepublishing.com/auth/register', QueryString.stringify({
     email: usernameData, 
     password: passwordData,
     contact_name:clientName    
