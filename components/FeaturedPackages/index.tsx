@@ -15,12 +15,12 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
           <Row>
             <Col className={styles.featuredPrice} md={3}>
               <div>
-                <h3>Starter</h3><br/>
+                <h3>Beginner</h3><br/>
                 <span>€900</span>
               </div>
             </Col>
             <Col className={styles.description} md={4}>
-              <p>If you are looking for a basic deal for your book, our Starter package is just what you need. It can be a good avenue for you to try our services.</p>
+              <p>If you are looking for a basic deal for your book, our Beginner package is just what you need. It can be a good avenue for you to try our services.</p>
               <Link href="/packages" passHref><Nav.Link className={styles.link}>View Packages</Nav.Link></Link>
             </Col>
             <Col className="image" md={5}><Image src="/img/package1.png" /></Col>
@@ -38,7 +38,7 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
             </Col>
             <Col className={styles.featuredPrice + ' ' + styles.featuredPriceRight} md={3}>
               <div>
-                <h3>Deluxe</h3><br/>
+                <h3>Intermediate</h3><br/>
                 <span>€1900</span>
               </div>
             </Col>
@@ -51,12 +51,12 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
           <Row>
             <Col className={styles.featuredPrice} md={3}>
               <div>
-                <h3>Pro</h3><br/>
+                <h3>Advanced</h3><br/>
                 <span>€4000</span>
               </div>
             </Col>
             <Col className={styles.description} md={4}>
-              <p>Would you like to take your book to the next level? Take advantage of a better deal with our Pro package.</p>
+              <p>Would you like to take your book to the next level? Take advantage of a better deal with our Advanced package.</p>
               <Link href="/packages" passHref><Nav.Link className={styles.link}>View Packages</Nav.Link></Link>
             </Col>
             <Col className="image" md={5}><Image src="/img/package3.png" /></Col>
@@ -69,12 +69,12 @@ const FeaturedPackages = ({ ...props }: FeaturedPackagesProps) => {
           <Row>
             <Col className="image" md={5}><Image src="/img/package4.png" /></Col>
             <Col className={styles.description} md={4}>
-              <p>Let your readers easily find your book! Grab the best deal and try our Elite package.</p>
+              <p>Let your readers easily find your book! Grab the best deal and try our Expert package.</p>
               <Link href="/packages" passHref><Nav.Link className={styles.link}>View Packages</Nav.Link></Link>
             </Col>
             <Col className={styles.featuredPrice + ' ' + styles.featuredPriceRight} md={3}>
               <div>
-                <h3>Elite</h3><br/>
+                <h3>Expert</h3><br/>
                 <span>€16000</span>
               </div>
             </Col>

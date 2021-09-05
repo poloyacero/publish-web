@@ -285,7 +285,7 @@ export default function Starterform() {
           <br/>
           <p className={styles.formlabel}></p>
           <Col className={styles.formindent}>
-          <p>Included in starter package.</p>
+          <p>Included in Beginner package.</p>
           </Col>
           <br></br><br></br>
       <p className={styles.formlabel}>Get Distribution Services</p>

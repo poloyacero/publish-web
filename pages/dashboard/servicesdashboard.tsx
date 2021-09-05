@@ -391,18 +391,18 @@ const servicesdashboard=()=>{
                                      
                 <Form.Check
               type="radio"
-              label="Starter"
+              label="Beginner"
               name="pkg"
-              id="starterpkg"
-              value="Starter Package"                           
+              id="Beginnerpkg"
+              value="Beginner Package"                           
               onChange={updateInput}
             /> 
             <Form.Check
               type="radio"
-              label="Deluxe"
+              label="Intermediate"
               name="pkg"
-              id="deluxepkg"
-              value="Deluxe Package"                           
+              id="Intermediatepkg"
+              value="Intermediate Package"                           
               onChange={updateInput}
             /> 
             <Form.Check
@@ -410,15 +410,15 @@ const servicesdashboard=()=>{
               label="Pro"
               name="pkg"
               id="propkg"
-              value="Pro Package"
+              value="Advanced Package"
               onChange={updateInput}
             /> 
                 <Form.Check
               type="radio"
-              label="Elite"
+              label="Expert"
               name="pkg"
-              id="elitepkg"
-              value="Elite Package"
+              id="Expertpkg"
+              value="Expert Package"
               onChange={updateInput}
             />     
                                        

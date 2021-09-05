@@ -30,7 +30,7 @@ const homedashboard=() =>{
                 <Col>
              <Col className={styles.homecontainer}>
              <h2 className={styles.ctext}>Welcome to the Publishing!</h2>
-             <p><Image src="/img/homepic.png" width="480px" height="auto" /></p>
+             <p><Image src="/img/homepicnew.png" width="480px" height="auto" /></p>
 
              <p className={styles.howtohelp}>How we can help you?<br/>
              <span className={styles.contactnumber}>+45 2090 1011</span></p>

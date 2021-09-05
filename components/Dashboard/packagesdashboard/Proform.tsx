@@ -255,7 +255,7 @@ export default function Proform() {
           <br/>
           <p className={styles.formlabel}></p>
           <Col className={styles.formindent}>
-           <p>Included in pro package.</p>
+           <p>Included in Advanced package.</p>
           </Col>
                
               <br></br><br></br>

@@ -27,11 +27,11 @@ interface PackageProps {
   
   function handlepkg1(){
     setModalShowSignin(true)
-    setPackagevalue('Starter<br/>€ 900<br/><br/>Edit and Design <br/>Paperback Format <br/>E-Book Format <br/>Standard Text and Layout Formatting <br/>1 Round Layout Revisions <br/>Post-publication features: <br/>3 Paperback Copies <br/>2 ISBN <br/>Print Book Registration <br/>Amazon Look Inside <br/>Google Books Preview <br/>Barnes and Noble Read Instantly <br/>Worldwide Online Book Distribution <br/>Online Book Sales Account<br/>Royalties <br/>Marketing services: <br/>20 Bookmarks <br/>20 Business Cards <br/>50 Postcards');
+    setPackagevalue('Beginner<br/>€ 900<br/><br/>Edit and Design <br/>Paperback Format <br/>E-Book Format <br/>Standard Text and Layout Formatting <br/>1 Round Layout Revisions <br/>Post-publication features: <br/>3 Paperback Copies <br/>2 ISBN <br/>Print Book Registration <br/>Amazon Look Inside <br/>Google Books Preview <br/>Barnes and Noble Read Instantly <br/>Worldwide Online Book Distribution <br/>Online Book Sales Account<br/>Royalties <br/>Marketing services: <br/>20 Bookmarks <br/>20 Business Cards <br/>50 Postcards');
     }
   function handlepkg2(){
     setModalShowSignin(true)
-    setPackagevalue('Deluxe<br/>€ 1500<br/><br/>Edit and Design <br/>Paperback Format <br/>E-Book Format <br/>Standard Text and Layout Formatting <br/>1 Round Layout Revisions <br/>Post-publication features: <br/>5 Paperback Copies <br/>2 ISBN <br/>Print Book Registration <br/>Amazon Look Inside <br/>Google Books Preview <br/>Barnes and Noble Read Instantly <br/>Worldwide Online Book Distribution <br/>Online Book Sales Account<br/>Royalties <br/>Marketing services: <br/>30 Bookmarks <br/>30 Business Cards <br/>50 Postcards');
+    setPackagevalue('Intermediate<br/>€ 1500<br/><br/>Edit and Design <br/>Paperback Format <br/>E-Book Format <br/>Standard Text and Layout Formatting <br/>1 Round Layout Revisions <br/>Post-publication features: <br/>5 Paperback Copies <br/>2 ISBN <br/>Print Book Registration <br/>Amazon Look Inside <br/>Google Books Preview <br/>Barnes and Noble Read Instantly <br/>Worldwide Online Book Distribution <br/>Online Book Sales Account<br/>Royalties <br/>Marketing services: <br/>30 Bookmarks <br/>30 Business Cards <br/>50 Postcards');
   }
   function handlepkg3(){
     setModalShowSignin(true)
@@ -39,7 +39,7 @@ interface PackageProps {
   }
   function handlepkg4(){
     setModalShowSignin(true)
-    setPackagevalue('Elite<br/>€ 16000<br/><br/>Edit and Design<br/>Paperback Format<br/>Hardcover Format<br/>E-Book Format<br/>Data Entry<br/>Copyediting<br/> Indexing<br/>Custom Text & Layout Formatting<br/>2 Rounds Layout Revisions<br/>Design Consultation<br/>Advance Cover Design<br/>Post-publication features:<br/>50 Paperback Copies<br/>10 Hardback Copies<br/>20 BookStub Cards<br/>2 Leather-Bound<br/>3 ISBN<br/>Copyright Registration<br/>Print Book Registration<br/>Amazon Look Inside<br/>Google Books Preview<br/>Barnes and Noble Read Instantly<br/>Worldwide Online Book Distribution<br/>Online Book Sales Account<br/>Royalties<br/>100% Royalty Program 3 years<br/>Book Return Program 12 Months<br/>Marketing services:<br/>200 Bookmarks<br/>200 Business Cards<br/> 200 Postcards<br/>20 Posters<br/>Advance Website<br/>Press Release Campaign<br/>Author Events<br/>Social Media<br/>Audio Book<br/>Video Book');
+    setPackagevalue('Expert<br/>€ 16000<br/><br/>Edit and Design<br/>Paperback Format<br/>Hardcover Format<br/>E-Book Format<br/>Data Entry<br/>Copyediting<br/> Indexing<br/>Custom Text & Layout Formatting<br/>2 Rounds Layout Revisions<br/>Design Consultation<br/>Advance Cover Design<br/>Post-publication features:<br/>50 Paperback Copies<br/>10 Hardback Copies<br/>20 BookStub Cards<br/>2 Leather-Bound<br/>3 ISBN<br/>Copyright Registration<br/>Print Book Registration<br/>Amazon Look Inside<br/>Google Books Preview<br/>Barnes and Noble Read Instantly<br/>Worldwide Online Book Distribution<br/>Online Book Sales Account<br/>Royalties<br/>100% Royalty Program 3 years<br/>Book Return Program 12 Months<br/>Marketing services:<br/>200 Bookmarks<br/>200 Business Cards<br/> 200 Postcards<br/>20 Posters<br/>Advance Website<br/>Press Release Campaign<br/>Author Events<br/>Social Media<br/>Audio Book<br/>Video Book');
   }
   const handleSubmit = (e:any) => { 
     if(firstname!==""&&email!==""){
@@ -85,13 +85,13 @@ interface PackageProps {
         <h3>{props.title}</h3>
         <span>{props.currency + ' ' + props.price}</span>
         <div className={styles.packageContent}>{children}</div>
-        {props.title==="Starter"? (
+        {props.title==="Beginner"? (
           <Button className={styles.button} onClick={() => handlepkg1()}>Get Package</Button>
-        ):props.title==="Deluxe"?(
+        ):props.title==="Intermediate"?(
           <Button className={styles.button} onClick={() => handlepkg2()}>Get Package</Button>
         ):props.title==="Pro"?(
           <Button className={styles.button} onClick={() => handlepkg3()}>Get Package</Button>
-        ):props.title==="Elite"?(
+        ):props.title==="Expert"?(
           <Button className={styles.button} onClick={() => handlepkg4()}>Get Package</Button>
         ):(
          <></>

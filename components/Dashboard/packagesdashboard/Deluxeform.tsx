@@ -285,7 +285,7 @@ export default function Deluxeform() {
           <br/>
           <p className={styles.formlabel}></p>
           <Col className={styles.formindent}>
-          <p>Included in deluxe package.</p>
+          <p>Included in Intermediate package.</p>
           </Col>
           <br></br><br></br>
       <p className={styles.formlabel}>Get Distribution Services</p>
