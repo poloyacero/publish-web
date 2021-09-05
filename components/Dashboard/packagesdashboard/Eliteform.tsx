@@ -219,14 +219,14 @@ export default function Eliteform() {
           <br/>
           <p className={styles.formlabel}></p>
           <Col className={styles.formindent}>
-           <p>Included in elite package. </p>
+           <p>Included in Expert package. </p>
           </Col>
          
               <br></br><br></br>
           <h3 className={styles.formheaderlabel}>MARKETING</h3>
           <br></br>   
            <Col className={styles.formindent}>
-             <p>Included in elite package. </p>
+             <p>Included in Expert package. </p>
                <br/> <br/> <br/> 
               <Button className={styles.submitbuttondashboard}>Submit Request</Button>
               <br/> <br/> <br/>

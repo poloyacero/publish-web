@@ -25,7 +25,7 @@ export default function PackagesPage() {
         <p className={styles.bannerCenter}>All-inclusive Self-Publishing Packages At A Great Deal!</p>
       </Banner>
       <PageLayout>
-        <Package title="Starter" price={900} width={3} currency="€">
+        <Package title="Beginner" price={900} width={3} currency="€">
           <p>
             <b>Edit and Design</b><br/>
             Paperback Format<br/>
@@ -50,7 +50,7 @@ export default function PackagesPage() {
 
           </p>
         </Package>
-        <Package title="Deluxe" price={1900} width={3} currency="€">
+        <Package title="Intermediate" price={1900} width={3} currency="€">
           <p>
           <b>Edit and Design</b><br/>
             Paperback Format<br/>
@@ -77,7 +77,7 @@ export default function PackagesPage() {
 
           </p>
         </Package>
-        <Package title="Pro" price={4000} width={3} currency="€">
+        <Package title="Advanced" price={4000} width={3} currency="€">
           <p>
           <b>Edit and Design</b><br/>
               Paperback Format<br/>
@@ -109,7 +109,7 @@ export default function PackagesPage() {
               Press Release Campaign <br/>
           </p>
         </Package>
-        <Package title="Elite" price={16000} width={3} currency="€">
+        <Package title="Expert" price={16000} width={3} currency="€">
           <p>
           <b>Edit and Design</b><br/>
             Paperback Format<br/>
