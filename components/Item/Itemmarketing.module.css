@@ -1,6 +1,6 @@
 .item {
   color: #7b6b5b;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   justify-items: center;
 }
 
@@ -9,9 +9,10 @@
   padding-left: 120px;
 }
 
-.item h3 {
+.item h6 {
   margin-bottom: 0px;
   line-height: 25px;
+  cursor: pointer;
 }
 
 .item img {
@@ -23,7 +24,9 @@
 .item p {
   font-size: 28px;
 }
-
+.item a {
+  cursor: pointer;
+}
 .item span {
   font-size: 13px;
 }

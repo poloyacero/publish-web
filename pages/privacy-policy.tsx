@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 import { Col, Container, Row } from 'react-bootstrap';
 import Footer from "../components/Footer";
 
-export default function SelfPublish() {
+export default function PrivacyPolicy() {
   return (
     <div className={styles.container}>
       <Head>

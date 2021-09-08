@@ -286,7 +286,9 @@ export default function Services() {
 
               <p>We do offer a variety of book promotion services, to help you as little or as much as you need.</p>
 
-              <p>Consider the following tactics to market your book:</p>
+              <p className={styles.serviceslink}><Link href="/marketing"><a><b>See Full Marketing Services</b></a></Link></p>
+              
+              {/* <p>Consider the following tactics to market your book:</p>
 
               <p className={styles.servicesparag}>Author Website<br/><span className={styles.servicesspan}> 
               €500-1500 per author (basic/ advance)</span></p>
@@ -340,7 +342,7 @@ export default function Services() {
               <p></p>
 
               <p className={styles.servicesparag}>Book Return Program<br/><span className={styles.servicesspan}> 
-              €700-4000 per package</span></p>
+              €700-4000 per package</span></p> */}
 
               <p></p>
               </Col>

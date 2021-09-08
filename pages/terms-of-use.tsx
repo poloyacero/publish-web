@@ -6,7 +6,7 @@ import styles from '../styles/Home.module.css'
 import { Col, Container, Row } from 'react-bootstrap';
 import Footer from "../components/Footer";
 
-export default function SelfPublish() {
+export default function TermsOfUse() {
   return (
     <div className={styles.container}>
       <Head>
@@ -25,7 +25,7 @@ export default function SelfPublish() {
         <Container fluid>
           <Container className="container">
             <Row>
-              <Col>
+              <Col className={styles.privacy}>
                 <p><b>Citation</b> - The rates indicated in The Publishing, or any approved rates upon pricing through email are subject to change or still tentative depending on the service it is comprised with once received. Please note that these charges are based on the existing production prices, which takes precedence over the entire rates listed. </p>
                 <p><b>Terms of Service Agreement</b> - To utilize The Publishing services, you are expected to: (a) agree with The Publishing Terms and Conditions, (b) be of legal age to form binding agreements under legal grounds with the company, (c) remain from accepting services under the state’s regulations which you are residing from or from which these services are being employed. </p>
                 <p>Completing the registration process with The Publishing would denote your compliance with the business’s protocols as administered by our Terms & Conditions. The Publishing declares its right to any document alteration with supplemented conditions for a specific service or event at its sole discretion. </p>

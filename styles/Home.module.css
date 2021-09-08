@@ -247,7 +247,9 @@
 .privacy p {
   font-size: 15px;
 }
-
+.privacy {
+  color: #7b6b5b;
+}
 .privacy ol li {
   font-size: 15px;
 }
