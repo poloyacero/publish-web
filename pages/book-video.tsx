@@ -18,7 +18,7 @@ export default function BookVideo() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Book Video Advertising Premium</h1>
+              <h4><b>Book Video Advertising Premium</b></h4>
               <h5>€4,900</h5>
             </Row>
           </Container>
@@ -35,7 +35,7 @@ export default function BookVideo() {
 <li>We need to create awareness and curiosity on what your book is all about.<br/><br/></li> 
 </ul>
 <div className={styles.title}>
-<h4>Book Video</h4>
+<h4><b>Book Video</b></h4>
 <h5>€2800 per minute</h5>
 </div>
 <p>

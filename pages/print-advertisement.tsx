@@ -18,7 +18,7 @@ export default function PrintAdvertisement() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Print Advertisement</h1>
+              <h4><b>Inflight Magazine</b></h4>
               <h5>€15,000 (¼ Page), €26,000 (½ Page), €45,000 (Full Page)</h5>
             </Row>
           </Container>

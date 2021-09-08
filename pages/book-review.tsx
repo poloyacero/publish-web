@@ -18,7 +18,7 @@ export default function BookReview() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Book Review</h1>
+              <h4><b>Book Review</b></h4>
               <h5>€3,400</h5>
             </Row>
           </Container>

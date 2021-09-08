@@ -18,7 +18,7 @@ export default function SalesSheets() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Sales Sheets</h1>
+              <h4><b>Sales Sheets</b></h4>
               <h5>€500-1500 per book</h5>
             </Row>
           </Container>

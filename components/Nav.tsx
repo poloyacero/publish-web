@@ -202,7 +202,8 @@ const NavMenu = ({ ...props }: NavProps) => {
                       <NavDropdown.Item id={styles.dropdownNextLevel} href="/publicity">Publicity Campaign</NavDropdown.Item>
                       <NavDropdown.Item id={styles.dropdownNextLevel} href="/sales-sheets">Sale Sheets</NavDropdown.Item>
                       <NavDropdown.Item id={styles.dropdownNextLevel} href="/advanced-reader">Advanced Reader Copies</NavDropdown.Item>
-
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/author-interview">Author Interview</NavDropdown.Item>
+                      
                   </NavDropdown>     
                 </Nav>
                 

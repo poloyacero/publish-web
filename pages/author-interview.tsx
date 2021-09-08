@@ -18,7 +18,7 @@ export default function AuthorInterview() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Author Interview</h1>
+            <h4><b>Author Interview</b></h4>
               <h5></h5>
             </Row>
           </Container>
@@ -30,9 +30,7 @@ export default function AuthorInterview() {
              
 
               <p>Not available now due to the pandemic.</p>
-              <p>
-*Note that all social media marketing are add-on marketing services. Published cost for this will be sent in a separate email.
-</p>
+              
 
               </Col>
             </Row>

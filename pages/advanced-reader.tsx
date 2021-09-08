@@ -18,7 +18,7 @@ export default function AdvancedReader() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Advanced Reader Copies</h1>
+            <h4><b>Advanced Reader Copies</b></h4>
               <h5>€500-1500 per book</h5>
             </Row>
           </Container>
