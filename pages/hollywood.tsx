@@ -18,7 +18,7 @@ export default function Hollywood() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Hollywood Pitch</h1>
+              <h4><b>Hollywood Pitch</b></h4>
               <h5>€2,190</h5>
             </Row>
           </Container>
@@ -35,7 +35,7 @@ export default function Hollywood() {
               </ul>
 
               <div className={styles.title}>
-              <h4>Hollywood Book-to-Screen</h4>
+              <h4><b>Hollywood Book-to-Screen</b></h4>
               <h5>€14,200</h5>
               </div>
 

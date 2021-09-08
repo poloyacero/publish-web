@@ -18,7 +18,7 @@ export default function AudioBook() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Audio Book</h1>
+            <h4><b>Audio Book</b></h4>
               <h5>€2500 per book (10,000 words)</h5>
             </Row>
           </Container>

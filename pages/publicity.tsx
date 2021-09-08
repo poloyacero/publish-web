@@ -18,7 +18,7 @@ export default function Publicity() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Publicity Campaign</h1>
+              <h4><b>Publicity Campaign</b></h4>
               <h5>€26,000</h5>
             </Row>
           </Container>

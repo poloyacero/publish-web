@@ -18,7 +18,7 @@ export default function BookReturn() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Bookstore Returnability Program</h1>
+              <h4><b>Bookstore Returnability Program</b></h4>
               <h5>€500</h5>
             </Row>
           </Container>

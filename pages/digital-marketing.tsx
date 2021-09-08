@@ -18,8 +18,8 @@ export default function DigitalMarketing() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Digital Marketing Services</h1>
-              <p> [under this category are all marketing services that can be categorized as such]</p>
+              <h4><b>Digital Marketing Services</b></h4>
+              <h5> [under this category are all marketing services that can be categorized as such]</h5>
             </Row>
           </Container>
         </Container>
@@ -55,7 +55,9 @@ export default function DigitalMarketing() {
 <h5>€500-1500 per author (Basic/Advance)</h5>
 </div>
 <p>If you hope to create an engaged audience over time, a website is the first step. It’s important to have your website when you publish a book. By lending credibility to your name as an author, a website is a great place for readers to go to learn more about you, your book, your events, and more.</p>
-
+<p>
+*Note that all social media marketing are add-on marketing services. Published cost for this will be sent in a separate email.
+</p>
 
               </Col>
             </Row>

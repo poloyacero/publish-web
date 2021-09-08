@@ -18,7 +18,7 @@ export default function BookExhibit() {
         <Container fluid>
           <Container className="container">
             <Row className={styles.heading}>
-              <h1>Book Exhibit Extreme (BEE)</h1>
+              <h4><b>Book Exhibit Extreme (BEE)</b></h4>
               <h5>€2,600</h5>
             </Row>
           </Container>
