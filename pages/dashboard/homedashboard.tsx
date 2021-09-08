@@ -33,7 +33,7 @@ const homedashboard=() =>{
              <p><Image src="/img/homepicnew.png" width="480px" height="auto" /></p>
 
              <p className={styles.howtohelp}>How we can help you?<br/>
-             <span className={styles.contactnumber}>+45 2090 1011</span></p>
+             <span className={styles.contactnumber}>+45 36 96 89 84</span></p>
              </Col> 
              </Col>
             </Row>

@@ -188,7 +188,24 @@ const NavMenu = ({ ...props }: NavProps) => {
                   </NavDropdown> */}
                   <Link href="/services" passHref><Nav.Link className={styles.navmenu}>Services</Nav.Link></Link>
                   <Link href="/products" passHref><Nav.Link className={styles.navmenu}>Products</Nav.Link></Link>
+                                           
+                     <NavDropdown title="Marketing" id="collasible-nav-dropdown" className={styles.navmenu}>
+
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/digital-marketing">Digital Marketing Services</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/print-advertisement">Print Advertisement</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/book-exhibit">Book Exhibit Extreme</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/book-video">Book Video</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/book-return">Book Return and Royalty Program</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/audio-book">Audio Book</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/book-review">Book Review</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/hollywood">Hollywood World</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/publicity">Publicity Campaign</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/sales-sheets">Sale Sheets</NavDropdown.Item>
+                      <NavDropdown.Item id={styles.dropdownNextLevel} href="/advanced-reader">Advanced Reader Copies</NavDropdown.Item>
+
+                  </NavDropdown>     
                 </Nav>
+                
               </Navbar.Collapse>
           </Col>
           <Col md={{ span: 2, offset: 0, order: 'last'}} className={styles.utilityMenu}>

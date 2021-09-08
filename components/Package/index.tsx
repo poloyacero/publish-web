@@ -89,7 +89,7 @@ interface PackageProps {
           <Button className={styles.button} onClick={() => handlepkg1()}>Get Package</Button>
         ):props.title==="Intermediate"?(
           <Button className={styles.button} onClick={() => handlepkg2()}>Get Package</Button>
-        ):props.title==="Pro"?(
+        ):props.title==="Advanced"?(
           <Button className={styles.button} onClick={() => handlepkg3()}>Get Package</Button>
         ):props.title==="Expert"?(
           <Button className={styles.button} onClick={() => handlepkg4()}>Get Package</Button>

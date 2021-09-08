@@ -138,7 +138,7 @@ export default function Contact() {
               <Col>
               <p><b>Inquiries and Customer Service</b></p>
               <h1>
-               +45 2090 1011
+              +45 36 96 89 84
               </h1>             
               
               </Col>
