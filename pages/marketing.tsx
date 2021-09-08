@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import NavMenu from '../components/Nav';
 
 import styles from '../styles/Home.module.css'
-import Item from '../components/Item/marketingitem';
+import Item from '../components/Item2';
 import { Container, Row } from 'react-bootstrap';
 
 export default function MarketingPage() {

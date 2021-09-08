@@ -1,0 +1,53 @@
+.item {
+  color: #7b6b5b;
+  margin-bottom: 10px;
+  justify-items: center;
+}
+
+.itemPad {
+  padding: 15px;
+  padding-left: 120px;
+}
+
+.item h6 {
+  margin-bottom: 0px;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.item img {
+  margin: auto;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.item p {
+  font-size: 28px;
+}
+.item a {
+  cursor: pointer;
+}
+.item span {
+  font-size: 13px;
+}
+
+.content p {
+  font-size: 14px !important;
+}
+
+.mgBottom {
+  margin-bottom: 25px !important;
+}
+
+@media screen and (max-width: 1030px) {
+  .item img {
+    margin: 0;
+    margin-bottom: 15px;
+    width: auto;
+  }
+  .itemPad {
+    padding: 15px;
+    padding-left: 0px;
+    text-align: center;
+  }
+}
