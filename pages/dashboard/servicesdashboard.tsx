@@ -12,6 +12,7 @@ import swal from 'sweetalert';
 import { useS3Upload } from 'next-s3-upload';
 import withAuth from "../../components/withAuth";
 import axios from 'axios'
+import BookExhibit from '../book-exhibit'
 
 const servicesdashboard=()=>{
   const [modalShow, setModalShow] = React.useState(false);
@@ -91,8 +92,33 @@ const servicesdashboard=()=>{
   const [adrecopvalue, setAdrecopvalue] = useState('');
   const [socialmedia, setSocialmedia] = useState(false);
   const [socialmediavalue, setSocialmediavalue] = useState('');
+  const [socialmedia30, setSocialmedia30] = useState(false);
+  const [socialmedia30value, setSocialmedia30value] = useState('');
+  const [socialmedia90, setSocialmedia90] = useState(false);
+  const [socialmedia90value, setSocialmedia90value] = useState('');
+  const [socialmediaxt, setSocialmediaxt] = useState(false);
+  const [socialmediaxtvalue, setSocialmediaxtvalue] = useState('');
   const [boreprog, setBoreprog] = useState(false);
   const [boreprogvalue, setBoreprogvalue] = useState('');
+
+  const [inflight, setInflight] = useState(false);
+  const [inflightvalue, setInflightvalue] = useState('');
+  const [publishers, setPublishers] = useState(false);
+  const [publishersvalue, setPublishersvalue] = useState('');
+
+  const [exhibit, setExhibit] = useState(false);
+  const [exhibitvalue, setExhibitvalue] = useState('');
+  const [bookvideoprem, setBookvideoprem] = useState(false);
+  const [bookvideopremvalue, setBookvideopremvalue] = useState('');
+
+  const [bookreview, setBookreview] = useState(false);
+  const [bookreviewvalue, setBookreviewvalue] = useState('');
+  const [hollywoodpitch, setHollywoodpitch] = useState(false);
+  const [hollywoodpitchvalue, setHollywoodpitchvalue] = useState('');
+  const [hollywoodscreen, setHollywoodscreen] = useState(false);
+  const [hollywoodscreenvalue, setHollywoodscreenvalue] = useState('');
+  const [publicity, setPublicity] = useState(false);
+  const [publicityvalue, setPublicityvalue] = useState('');
   
 
   const updateInput = (e:any) => {
@@ -103,7 +129,9 @@ const servicesdashboard=()=>{
     useEffect(() => { 
 
 
-      if(user===""){getuser()}
+      if(user===""){
+        getuser()
+      }
 
               
       if(editorial===true){
@@ -166,7 +194,7 @@ const servicesdashboard=()=>{
         setAudiobookvalue("Audio Book <br/>")
       }
       if(videobook===true){
-        setVideobookvalue("Video Book <br/>")
+        setVideobookvalue("Book Video <br/>")
       }
       if(pressrelease===true){
         setPressreleasevalue("Press Release Campaign <br/>")
@@ -188,13 +216,48 @@ const servicesdashboard=()=>{
         setAdrecopvalue("Advanced Reader Copies <br/>")
       }
       if(socialmedia===true){
-        setSocialmediavalue("Social Media <br/>")
+        setSocialmediavalue("Social Media Marketing <br/>")
       }
-      if(boreprog===true){
-        setBoreprogvalue("Book Return Program <br/>")
+
+      if(socialmedia30===true){
+        setSocialmedia30value("Social Media Marketing Plus 30 days  <br/>")
       }
-  
-    
+
+      if(socialmedia90===true){
+        setSocialmedia90value("Social Media Marketing Plus 90 days  <br/>")
+      }
+      if(socialmediaxt===true){
+        setSocialmediaxtvalue("Social Media Marketing Extreme  <br/>")
+      }
+     
+      if(inflight===true){
+        setInflightvalue("Inflight Magazine  <br/>")
+      }
+      if(publishers===true){
+        setPublishersvalue("Publisher’s Weekly  <br/>")
+      }
+      
+      if(exhibit===true){
+        setExhibitvalue("Book Exhibit Extreme (BEE)  <br/>")
+      }
+
+      if(bookvideoprem===true){
+        setBookvideopremvalue("Book Video Advertising Premium  <br/>")
+      }
+      if(bookreview===true){
+        setBookreviewvalue("Book Review  <br/>")
+      }
+
+      if(hollywoodpitch===true){
+        setHollywoodpitchvalue("Hollywood Pitch  <br/>")
+      }
+
+      if(hollywoodscreen===true){
+        setHollywoodscreenvalue("Hollywood Book-to-Screen  <br/>")
+      }
+      if(publicity===true){
+        setPublicityvalue("Publicity Campaign  <br/>")
+      }
     });
     const handleSubmit = (e:any) => { 
       e.preventDefault()
@@ -235,7 +298,18 @@ const servicesdashboard=()=>{
         adrecopvalue,
         socialmediavalue,
         boreprogvalue,
-        imageUrl
+        imageUrl,
+        socialmedia30value,
+        socialmedia90value,
+        socialmediaxtvalue,
+        inflightvalue,
+        publishersvalue,
+        exhibitvalue,
+        bookvideopremvalue,
+        bookreviewvalue,
+        hollywoodpitchvalue,
+        hollywoodscreenvalue,
+        publicityvalue
   
       }
     fetch('/api/printbookandebook', {
@@ -607,47 +681,74 @@ const servicesdashboard=()=>{
                          
                 </Col> 
                 </Row>
-
+   {/* MARKETING-- */}
                 <Row>
                <Col className={styles.servicescontainer}>             
                 <h4 className={styles.servicesheaderlabel}>Marketing</h4>                        
                </Col>      
                </Row>
+               
                <Row>
                 <Col className={styles.indentcheckbox}>
-                <br/>
+                <h5>Digital Marketing Services</h5>
+                
                <Form.Check
+              type="checkbox"
+              label="Social Media Marketing"
+              name="socialmediamarketing"
+              id="socialmediawebsite"
+              checked={website}                
+              onChange={(e)=>{setSocialmedia(e.target.checked)}} 
+            />  
+            <Form.Check
+              type="checkbox"
+              label="Social Media Marketing Plus 30 days"
+              name="socialmedia30marketing"
+              id="socialmedia30marketing"
+              checked={website}                
+              onChange={(e)=>{setSocialmedia30(e.target.checked)}} 
+            />  
+             <Form.Check
+              type="checkbox"
+              label="Social Media Marketing Plus 90 days"
+              name="socialmedia90marketing"
+              id="socialmedia90marketing"
+              checked={website}                
+              onChange={(e)=>{setSocialmedia90(e.target.checked)}} 
+            />  
+             <Form.Check
+              type="checkbox"
+              label="Social Media Marketing Extreme "
+              name="socialmediaxtmarketing"
+              id="socialmediaxtmarketing"
+              checked={website}                
+              onChange={(e)=>{setSocialmediaxt(e.target.checked)}} 
+            />  
+             <Form.Check
               type="checkbox"
               label="Author Website"
               name="authormarketing"
               id="authorwebsite"
               checked={website}                
               onChange={(e)=>{setWebsite(e.target.checked)}} 
-            />  
-                <Form.Check
-              type="checkbox"
-              label="Audio Book"
-              name="audiobookmarketing"
-              id="audiobook"
-              onChange={(e)=>{setAudiobook(e.target.checked)}}
-
             /> 
-                {/* <Form.Check
+            <br/> 
+            <h5>Print Advertisement</h5>
+              <Form.Check
               type="checkbox"
-              label="Ebook Sales"
-              name="marketing"
-              id="ebooksales"
-              
-            />  */}
-                <Form.Check
-              type="checkbox"
-              label="Video Book"
-              name="videobookmarketing"
-              id="videobook"
-              checked={videobook}                
-              onChange={(e)=>{setVideobook(e.target.checked)}}
+              label="Inflight Magazine"
+              name="Inflightmarketing"
+              id="Inflight"
+              onChange={(e)=>{setInflight(e.target.checked)}}
             /> 
-                <Form.Check
+             <Form.Check
+              type="checkbox"
+              label="Publisher’s Weekly"
+              name="Publishermarketing"
+              id="Publisher"
+              onChange={(e)=>{setPublishers(e.target.checked)}}
+            /> 
+             <Form.Check
               type="checkbox"
               label="Press Release Compaign"
               name="pressreleasemarketing"
@@ -655,32 +756,88 @@ const servicesdashboard=()=>{
               checked={pressrelease}                
               onChange={(e)=>{setPressrelease(e.target.checked)}}
             /> 
-                <Form.Check
+             <br/>
+            <h5>Book Exhibit Extreme</h5>
+            <Form.Check
               type="checkbox"
-              label="Author Events"
-              name="authorventsmarketing"
-              id="authorevents"
-              checked={authorevents}                
-              onChange={(e)=>{setAuthorevents(e.target.checked)}}
-            />  
-             {/* <Form.Check
+              label="Book Exhibit Extreme (BEE)"
+              name="BookExhibitmarketing"
+              id="BookExhibit"
+              onChange={(e)=>{setExhibit(e.target.checked)}}
+            /> 
+             <br/>
+            <h5>Book Video</h5>
+            <Form.Check
               type="checkbox"
-              label="Print Advertisement"
-              name="marketing"
-              id="printads"
-            />      */}
+              label="Book Video Advertising Premium"
+              name="BookVideomarketing"
+              id="BookVideoprem"
+              onChange={(e)=>{setBookvideoprem(e.target.checked)}}
+            /> 
+            <Form.Check
+              type="checkbox"
+              label="Book Video"
+              name="videobookmarketing"
+              id="videobook"
+              checked={videobook}                
+              onChange={(e)=>{setVideobook(e.target.checked)}}
+            />             
+            <Form.Check
+              type="checkbox"
+              label="Bookstore Returnability Program"
+              name="BookstoreReturnabilitymarketing"
+              id="BookstoreReturnability"              
+              onChange={(e)=>{setBoreprog(e.target.checked)}} 
+            /> 
+          <br/>
+           <h5>Audio Book</h5>
 
              <Form.Check
               type="checkbox"
-              label="Royalty Program"
-              name="royaltymarketing"
-              id="royaltyprog"
+              label="Audio Book"
+              name="audiobookmarketing"
+              id="audiobook"
+              onChange={(e)=>{setAudiobook(e.target.checked)}}
+            />                                         
+               
+             <Form.Check
+              type="checkbox"
+              label="Book Review"
+              name="BookReviewmarketing"
+              id="BookReview"
               checked={royaltyprog}                
-              onChange={(e)=>{setRoyaltyprog(e.target.checked)}}
+              onChange={(e)=>{setBookreview(e.target.checked)}}
+            /> 
+             <br/>
+           <h5>Hollywood World</h5>
+           <Form.Check
+              type="checkbox"
+              label="Hollywood Pitch"
+              name="HollywoodPitchmarketing"
+              id="HollywoodPitch"
+              checked={salesheets}                
+              onChange={(e)=>{setHollywoodpitch(e.target.checked)}} 
+            />  
+            <Form.Check
+              type="checkbox"
+              label="Hollywood Book-to-Screen"
+              name="HollywoodBook-to-Screenmarketing"
+              id="HollywoodBook-to-Screen"
+              checked={salesheets}                
+              onChange={(e)=>{setHollywoodscreen(e.target.checked)}} 
+            />  
+            <br/>
+              <Form.Check
+              type="checkbox"
+              label="Publicity Campaign"
+              name="PublicityCampaignmarketing"
+              id="PublicityCampaign"
+              checked={salesheets}                
+              onChange={(e)=>{setPublicity(e.target.checked)}} 
             />     
              <Form.Check
               type="checkbox"
-              label="Sale Sheets"
+              label="Sales Sheets"
               name="salessheetsmarketing"
               id="salesheets"
               checked={salesheets}                
@@ -694,20 +851,12 @@ const servicesdashboard=()=>{
               checked={adrecop}                
               onChange={(e)=>{setAdrecop(e.target.checked)}} 
             />                  
+            
              <Form.Check
               type="checkbox"
-              label="Social Media "
-              name="socialmarketing"
-              id="socialmedia"
-              checked={socialmedia}                
-              onChange={(e)=>{setSocialmedia(e.target.checked)}}
-            />  
-             <Form.Check
-              type="checkbox"
-              label="Book Return Program"
-              name="bookreturnmaketing"
-              id="bookreturn"
-              onChange={(e)=>{setBoreprog(e.target.checked)}} 
+              label="Author Interview"
+              name="AuthorInterview"
+              disabled            
 
             />                              
                 </Col> 
