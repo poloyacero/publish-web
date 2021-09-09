@@ -5,10 +5,8 @@ import { Col, Container, Image, Nav, Row } from 'react-bootstrap';
 import styles from './Itemmarketing.module.css'
 
 interface ItemProps {
-  width: number; 
-  img: string; 
-  title?: string;
-  subtitle?: string;
+  width: number;  
+  title?: string;  
   children?: any;
   unit?: string;
   mlink?:string;

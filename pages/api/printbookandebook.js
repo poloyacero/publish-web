@@ -66,8 +66,19 @@ export default function (req, res) {
        ${req.body.royaltyprogvalue}
        ${req.body.salesheetsvalue} 
        ${req.body.socialmediavalue}
-       ${req.body.boreprogvalue} 
-            <br/>
+       ${req.body.boreprogvalue}
+       ${req.body.socialmedia30value}
+       ${req.body.socialmedia90value}
+       ${req.body.socialmediaxtvalue}
+       ${req.body.inflightvalue}
+       ${req.body.publishersvalue}
+       ${req.body.exhibitvalue}
+       ${req.body.bookvideopremvalue}
+       ${req.body.bookreviewvalue}
+       ${req.body.hollywoodpitchvalue}
+       ${req.body.hollywoodscreenvalue}
+       ${req.body.publicityvalue}
+           <br/>
             Email: ${req.body.email}   <br/>  
        Attachements:
        `,
